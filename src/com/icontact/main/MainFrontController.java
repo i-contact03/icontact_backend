@@ -1,4 +1,4 @@
-package com.icontact.idea;
+package com.icontact.main;
 
 import java.io.IOException;
 
@@ -8,15 +8,10 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 import com.icontact.Result;
-import com.icontact.idea.controller.CreateIdeaController;
-import com.icontact.idea.controller.GoodsMainController;
-import com.icontact.idea.controller.IdeaListOKController;
-import com.icontact.idea.controller.ShowGoodsOKController;
-import com.icontact.mypage.controller.MyMeterializeController;
 
 
 
-public class IdeaFrontController extends HttpServlet{
+public class MainFrontController extends HttpServlet{
 	
 	@Override
 	protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
@@ -26,22 +21,10 @@ public class IdeaFrontController extends HttpServlet{
 		String target = req.getRequestURI().replace(req.getContextPath() + "/", "").split("\\.")[0];
 		Result result = null;
 		
-//		아이디어뱅크 메인페이지 출력
-		if(target.equals("ideaList")) {
-			result = new IdeaListOKController().execute(req, resp);
+//		메인화면에 전제 항목 출력
+		if(target.equals("mainAllList")) {
+			result = new MainAllListOKController().execute(req, resp);
 				
-//		아이디어 상세보기 항목으로 이동
-		} else if(target.equals("goodsMain")){
-			result = new GoodsMainController().execute(req, resp);
-			
-//		아이디어 상세보기 항목 출력
-		} else if(target.equals("showGoods")){
-		result = new ShowGoodsOKController().execute(req, resp);
-		
-//		아이디어 작성하기
-		} else if(target.equals("createIdea")){
-			result = new CreateIdeaController().execute(req, resp);
-			
 		}
 		
 		if(result != null) {
