@@ -8,6 +8,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 import com.icontact.Result;
+import com.icontact.user.controller.CheckEmailOkController;
 import com.icontact.user.controller.CheckIdOkController;
 import com.icontact.user.controller.JoinOkController;
 import com.icontact.user.controller.LoginController;
@@ -25,10 +26,28 @@ public class UserFrontController extends HttpServlet{
 		String target = req.getRequestURI().replace(req.getContextPath() + "/", "").split("\\.")[0];
 		Result result = null;
 		
-		if(target.equals("")) {
-			result = new ().execute(req, resp);
+		if(target.equals("checkIdOk")) {
+			result = new CheckIdOkController().execute(req, resp);
 				
-		} 
+		} else if(target.equals("checkEmailOk")) {
+			result = new CheckEmailOkController().execute(req, resp);
+			
+		} else if(target.equals("join")){
+			result = new Result();
+			result.setPath("templates/user/join.jsp");
+			
+		} else if(target.equals("joinOk")){
+			result = new JoinOkController().execute(req, resp);
+			
+		} else if(target.equals("login")){
+			result = new LoginController().execute(req, resp);
+			
+		} else if(target.equals("loginOk")) {
+			result = new LoginOkController().execute(req, resp);
+			
+		} else if(target.equals("logout")) {
+			result = new LogoutController().execute(req, resp);
+		}
 		
 		if(result != null) {
 			if(result.isRedirect()) {
