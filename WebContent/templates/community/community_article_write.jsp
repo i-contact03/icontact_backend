@@ -6,8 +6,7 @@
 <meta charset="UTF-8">
 <title>게시물 작성하기</title>
 <link rel="icon" href="../../icon/favicon.png">
-<link rel="stylesheet" href="../../static/css/community_article_write.css" />
-<link href="https://hangeul.pstatic.net/hangeul_static/css/nanum-square.css" rel="stylesheet">
+<link rel="stylesheet" href="../../static/css/community_article_write.css" /> 
 <style>
 
 	@font-face {
@@ -16,21 +15,26 @@
 	}
    
 </style>
+
 </head>
 <body>
-	<div  style="background-color: #FAE57C;">
+	<div  style="background-color: #eacaff;">
 		<header class="header">
 			<div class="logo">
 				<a href="https://kmong.com">
-					<img src="//theme.zdassets.com/theme_assets/9204604/ed54b2d958a2f7b420f8412b529519e676c20bc3.png" class="logo-kmong">
+					<!-- <img src="//theme.zdassets.com/theme_assets/9204604/ed54b2d958a2f7b420f8412b529519e676c20bc3.png" class="logo-kmong"> -->
+					<img src="../../icon/logo.png" width="170px" height="52px"> <!-- .top-header-logo -->
 				</a>
-				<a href="https://support.kmong.com/hc/ko">
+				<!-- <a href="https://support.kmong.com/hc/ko">
 					<img src="//theme.zdassets.com/theme_assets/9204604/db54bfa5d2ad14572afe57b4b5582b04a38aa9e1.png" class="callcenter">
+				</a> -->
+				<a href="" class="callcenter">
+					정보 나눔
 				</a>
 			</div>
 			<div class="nav-wrapper">
-				<a href="https://support.kmong.com/hc/ko/requests/new" target="_parent">문의하기</a>
-				<a class="change-page-login" role="button" href="https://kmong.com/login?brand_id=360002309011&locale_id=69&return_to=https%3A%2F%2Fsupport.kmong.com%2Fhc%2Fko%2Frequests%2Fnew&target=zendesk&timestamp=1687257449">로그인</a>
+				<a href="https://support.kmong.com/hc/ko/requests/new" target="_parent" style="color: #666666;">게시물 등록하기</a>
+				<a class="change-page-login" role="button" href="https://kmong.com/login?brand_id=360002309011&locale_id=69&return_to=https%3A%2F%2Fsupport.kmong.com%2Fhc%2Fko%2Frequests%2Fnew&target=zendesk&timestamp=1687257449" style="color: blue;">한동석 님</a>
 			</div>
 		</header>
 	</div>
@@ -40,10 +44,11 @@
 			<nav class="sub-nav">
 				<ol class="page-course-map">
 				    <li title="크몽 고객센터">
-				        <a href="https://support.kmong.com/hc/ko">크몽 고객센터</a>
+				        <a href="https://support.kmong.com/hc/ko"><!-- 크몽 고객센터 -->정보나눔</a>
 				    </li>
 				    <li title="문의 등록">
-				        문의 등록
+				        <!-- 문의 등록 -->
+				        게시물 등록
 				    </li>
 				</ol>
 				<form role="search" class="search" action="/hc/ko/search" accept-charset="UTF-8" method="get">
@@ -52,8 +57,8 @@
 				</form>
 			</nav>
 			<h1>
-			    <div class="article-write-page-title">문의 등록</div>
-			    <div class="article-write-page-details">
+			    <div class="article-write-page-title">게시물 등록<!-- 문의 등록 --></div>
+			    <!-- <div class="article-write-page-details">
 			    	<a>
 			    		<em>
 			    			<strong>
@@ -64,12 +69,12 @@
 						</em>
 					</a>
 			    
-				</div>
+				</div> -->
   			</h1>	
   			<!-- ---------------------------------------- -->
 			<div class="form">
 
-				<div class="form-field required request_email">
+				<!-- <div class="form-field required request_email">
 					<label for="request_email">이메일 주소</label>
 					<input type="text" name="request[anonymous_requester_email]" id="request_email" aria-required="true">
 				</div>
@@ -79,7 +84,7 @@
 			      <input type="hidden" name="request[custom_fields]" id="request_custom_fields" autocomplete="off" data-tagger="[{&quot;label&quot;:&quot;-&quot;,&quot;value&quot;:&quot;&quot;},{&quot;label&quot;:&quot;의뢰인&quot;,&quot;value&quot;:&quot;의뢰인&quot;},{&quot;label&quot;:&quot;전문가&quot;,&quot;value&quot;:&quot;전문가&quot;},{&quot;label&quot;:&quot;공통&quot;,&quot;value&quot;:&quot;공통&quot;}]" aria-required="true" aria-describedby="request_custom_fields_hint" aria-labelledby="request_custom_fields_label" value="">
 			      <a class="custom-type-input" tabindex="0" aria-haspopup="true" aria-expanded="false" aria-controls="_spxcmpv6y" aria-required="true" aria-labelledby="request_custom_fields_label" aria-describedby="request_custom_fields_hint">-</a>
 			      <p id="request_custom_fields_hint">빠르고 정확한 안내를 위하여 서비스 이용 목적을 구분하여 선택해 주세요</p>
-			    </div>
+			    </div> -->
 			  
 			    <div class="form-field required  request_subject">
 			      <label id="request_subject_label" for="request_subject">제목</label>
@@ -89,16 +94,16 @@
 			    <div class="suggestion-list"></div>
 			      
 			    <div class="form-field text  required  request_description">
-			      <label id="request_description_label" for="request_description">설명</label>
+			      <label id="request_description_label" for="request_description"><!-- 설명 -->내용</label>
 			      <textarea name="request[description]" id="request_description" aria-required="true" aria-describedby="request_description_hint" aria-labelledby="request_description_label"></textarea>
 			      <input type="hidden" name="request[description_mimetype]" id="request_description_mimetype" value="text/plain" style="display: none;" autocomplete="off">
 			      
-			      <p id="request_description_hint">문의 내용에 관한 세부 정보를 입력해 주세요. 
-					저희 지원 스태프가 가능한 빨리 자세한 답변을 드리도록 하겠습니다.</p>
+			      <!-- <p id="request_description_hint">문의 내용에 관한 세부 정보를 입력해 주세요. 
+					저희 지원 스태프가 가능한 빨리 자세한 답변을 드리도록 하겠습니다.</p> -->
 			    </div>
 			
 			
-				<div class="form-field">
+				<!-- <div class="form-field">
 					<label for="request-attachments">
 					    첨부 파일
 					</label>
@@ -114,7 +119,7 @@
 					</div>
 
   					<ul id="request-attachments-pool" class="upload-pool" data-template="upload-template"></ul>
-					
+					 -->
 					<!-- 
 					<script type="text/html" id="upload-template">
 						<li class="upload-item" data-upload-item>
@@ -128,7 +133,7 @@
                         </li>
                     </script> 
                     -->
-				</div>
+				<!-- </div> -->
 
   				<footer>
   					<input type="submit" name="commit" value="제출" class="darker">
@@ -138,7 +143,7 @@
 		</div>
 	
 	</main>
-	<footer class="footer">
+<!-- 	<footer class="footer">
 	  <div class="footer-inner">
 	    <ol style="width:40%">
 	      <b>(주)크몽</b>
@@ -164,6 +169,24 @@
 	     <a href="https://support.kmong.com/hc/ko/requests/new">1:1 문의하기</a>&nbsp;&nbsp;
 	  </div>
 	  
+	</footer> -->
+	<footer class="footer">
+		<div class="footer-div">
+		    <ol style="width:40%">
+		        <b>iContact</b> | 서울특별시 강남구 테헤란로 146 현익빌딩 3층, 4층 | 대표 : 한동석<br>
+		        개인정보보호책임 : 한동석 | 사업자등록번호 : 613-81-65278<br>
+		        통신판매업번호 : 2015 - 서울강남 - 03148호<br>
+		        E-mail : koreais@koreaedugroup.com | Fax: 02-2135-2949 </ol>
+		    <ol><a href="https://support.kmong.com/hc/ko/categories/360001764912">커뮤니티</a></ol>
+		    <ol><a href="https://support.kmong.com/hc/ko/categories/360001643071">FAQ</a></ol>
+		    <ol><a href="https://support.kmong.com/hc/ko/articles/17612541189145"><b>회사소개</b></a></ol>
+		</div>
+		<div class="footer-div2">
+		    &nbsp;&nbsp; iContact &nbsp;&nbsp;&nbsp;
+		    <a href="https://support.kmong.com/hc/ko/categories/360001764912">커뮤니티</a>&nbsp;
+		    <a href="https://support.kmong.com/hc/ko/categories/360001643071">FAQ</a>&nbsp;
+		    <a href="https://support.kmong.com/hc/ko/articles/12244853101081">회사소개</a>&nbsp;
+		</div>
 	</footer>
 </body>
 </html>

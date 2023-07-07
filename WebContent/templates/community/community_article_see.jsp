@@ -7,8 +7,6 @@
 <title>게시글 상세보기</title>
 <link rel="icon" href="../../icon/favicon.png">
 <link rel="stylesheet" href="../../static/css/community_article_see.css" />
-<!-- <link href="https://hangeul.pstatic.net/hangeul_static/css/nanum-square.css" rel="stylesheet">
- -->
 <style>
 
 	@font-face {
@@ -19,19 +17,23 @@
 </style>
 </head>
 <body>
-	<div  style="background-color: #FAE57C;">
+	<div  style="background-color: #eacaff;">
 		<header class="header">
 			<div class="logo">
 				<a href="https://kmong.com">
-					<img src="//theme.zdassets.com/theme_assets/9204604/ed54b2d958a2f7b420f8412b529519e676c20bc3.png" class="logo-kmong">
+					<!-- <img src="//theme.zdassets.com/theme_assets/9204604/ed54b2d958a2f7b420f8412b529519e676c20bc3.png" class="logo-kmong"> -->
+					<img src="../../icon/logo.png" width="170px" height="52px" > <!-- .top-header-logo -->
 				</a>
-				<a href="https://support.kmong.com/hc/ko">
+				<!-- <a href="https://support.kmong.com/hc/ko">
 					<img src="//theme.zdassets.com/theme_assets/9204604/db54bfa5d2ad14572afe57b4b5582b04a38aa9e1.png" class="callcenter">
+				</a> -->
+				<a href="" class="callcenter">
+					정보 나눔
 				</a>
 			</div>
 			<div class="nav-wrapper">
-				<a href="https://support.kmong.com/hc/ko/requests/new" target="_parent">문의하기</a>
-				<a class="change-page-login" role="button" href="https://kmong.com/login?brand_id=360002309011&locale_id=69&return_to=https%3A%2F%2Fsupport.kmong.com%2Fhc%2Fko%2Frequests%2Fnew&target=zendesk&timestamp=1687257449">로그인</a>
+				<a href="https://support.kmong.com/hc/ko/requests/new" target="_parent" style="color: #666666;">게시물 등록하기</a>
+				<a class="change-page-login" role="button" href="https://kmong.com/login?brand_id=360002309011&locale_id=69&return_to=https%3A%2F%2Fsupport.kmong.com%2Fhc%2Fko%2Frequests%2Fnew&target=zendesk&timestamp=1687257449" style="color: blue;">한동석 님</a>
 			</div>
 		</header>
 	</div>
@@ -41,14 +43,14 @@
 		<div class="main-container">
 			<nav class="sub-nav">
 				<ol class="page-course-map">
-				    <li title="크몽 고객센터">
-				        <a href="https://support.kmong.com/hc/ko">크몽 고객센터</a>
+				    <li >
+				        <a href=""><!-- 크몽 고객센터 -->정보나눔</a>
 				    </li>
-				    <li title="공지사항">
-				    	<a href="https://support.kmong.com/hc/ko/categories/360001764912">공지사항</a>
-				    </li>
-				    <li title="전체공지">
-       					<a href="https://support.kmong.com/hc/ko/sections/360004425332">전체공지</a>
+				    <!-- <li >
+				    	<a href="">게시글공지사항</a>
+				    </li> -->
+				    <li >
+       					<a href="">[제목] 창업을 꿈꾸는 이들에게 알려주고 싶은 소중한 정보들<!-- 전체공지 --></a>
     				</li>
 				</ol>
 				<form role="search" class="search" action="/hc/ko/search" accept-charset="UTF-8" method="get">
@@ -61,7 +63,7 @@
 			<section class="article-sidebar">
 	      
 		        <section class="section-articles art-sidebar">
-		        <h3 class="article-sidebar-title sidenav-title">이 섹션의 문서</h3>
+		        <h3 class="article-sidebar-title sidenav-title"><!-- 이 섹션의 문서 -->게시글 목록</h3>
 		        <ul> 
 		          
 		            <li>
@@ -134,9 +136,14 @@
 		    <!-- ------------------------------ -->
 		    
 		    <article class="article">
-		      <header class="article-header">
+		      <!-- <header class="article-header">
 		        <h1 class="article-title">
 		          6월, 고객센터 운영 시간 안내  
+		        </h1>
+		      </header> -->
+		      <header class="article-header">
+		        <h1 class="article-title">
+		           [제목] 창업을 꿈꾸는 이들에게 알려주고 싶은 소중한 정보들 
 		        </h1>
 		      </header>
 
@@ -145,36 +152,40 @@
 		          <div class="article-body"> 
 					<div class="article-content">
 						<div class="article-body">
-							<p>안녕하세요. 크몽입니다!</p>
+							<p>안녕하세요, 여러분!</p>
 							<div class="article-content">
 								<div class="article-body">
-								<p class="art-text-align-left">2023년 6월, 내부 일정에 따라 고객센터 운영 시간을 아래와 같이 조정합니다.</p>
-								<p class="art-text-align-left">회원님의 너그러운 양해를 부탁드리며, 서비스 이용에 참고해 주시기 바랍니다.</p>
+								<p class="art-text-align-left">창업을 꿈꾸는 분들을 위해 오늘은 창업에 관한 소중한 정보들을 공유하려고 합니다. 저도 창업자로서 여러 경험을 겪어왔기 때문에 이 정보들이 여러분에게 도움이 될 것이라고 확신합니다. 함께 시작해볼까요?</p>
+								
 								<p class="art-text-align-center">&nbsp;</p>
 								<h3 id="">
-									<span class="art-color-orange">
+									<span class="art-color-color">
 										<strong>❚&nbsp;</strong>
 									</span>
 									<span class="art-color-black">
-										<strong>고객센터 운영시간</strong>
+										<strong>1. 비즈니스 아이디어의 중요성</strong>
 									</span>
 								</h3>
-								<p>
+								
+								<p class="art-text-align-left">   창업의 첫 단계는 좋은 비즈니스 아이디어를 발견하는 것입니다. 이때 가장 중요한 것은 현재 시장에서의 필요성과 경쟁력입니다. 자신의 관심 분야와 역량을 고려하여 창업 아이디어를 선정하고 타당성을 검증하는 것이 필요합니다.</p>
+								<!-- <p>
 									<span class="art-color-black art-font-size-large">　◾ 평일 10:30 ~ 18:00</span>
 									<span class="art-color-black6">&nbsp;(점심시간 13:00 ~ 14:00)</span>
-								</p>
+								</p> -->
 								<p class="art-text-align-left">&nbsp;</p>
 								<p class="art-text-align-left">
 									<span class="art-color-black">
 										<span class="art-font-size-large">
-											<span class="art-color-orange art-font-size-large">
+											<span class="art-color-color art-font-size-large">
 												<strong>❚&nbsp;</strong>
 											</span>
-											<strong>고객센터 휴무</strong>
+											<strong>2. 비즈니스 계획 수립</strong>
 										</span>
 									</span>
 								</p>
-								<p class="art-text-align-left">
+
+								<p class="art-text-align-left">   창업을 시작하기 전에 비즈니스 계획을 세우는 것은 매우 중요합니다. 비즈니스 모델, 시장 조사, 마케팅 전략, 재무 계획 등을 포함하여 구체적이고 실현 가능한 계획을 세우세요. 이를 토대로 향후 발전 방향을 설정할 수 있습니다.</p>
+								<!-- <p class="art-text-align-left">
 									<span class="art-color-black">
 										<span class="art-font-size-large">　◾ 6월 1일(목) | 크몽 내부 행사</span>
 									</span>
@@ -183,19 +194,21 @@
 									<span class="art-color-black">
 										<span class="art-font-size-large">　◾ 6월 6일(화) | 현충일&nbsp;</span>
 									</span>
-								</p>
+								</p> -->
 								<p class="art-text-align-left">&nbsp;</p>
-								<p id="">
+								<p >
 									<span class="art-font-size-large">
-										<span class="art-color-orange">
+										<span class="art-color-color">
 											<strong>❚&nbsp;</strong>
 										</span>
 										<span class="art-color-black">
-											<strong>고객센터 이용 안내</strong>
+											<strong>3. 자금 조달 방법</strong>
 										</span>
 									</span>
 								</p>
-								<p>
+
+								<p class="art-text-align-left">   대부분의 창업자들은 초기 자금 조달에 어려움을 겪습니다. 자기 자본, 투자자 유치, 대출, 정부 지원 등 다양한 자금 조달 방법을 탐색해보세요. 상황에 따라 여러 방법을 조합하여 자금을 조달할 수 있습니다.</p>
+								<!-- <p>
 									<span class="art-font-size-large">　</span>
 									<span class="art-font-size-large">◾ </span>
 									고객센터 휴무일에는 환불금, 수익금의 출금 업무도 중단되오니 서비스 이용에 참고해 주시기 바랍니다.
@@ -207,15 +220,17 @@
 										<span class="art-color-blue">1:1 문의</span>
 									</a>
 									] 채널을 통해 접수해 주시면, 순차적으로 답변해드리겠습니다.
-								</p>
+								</p> -->
 								<p>&nbsp;</p>
-								<p class="art-text-align-left">
+								<!-- <p class="art-text-align-left">
 									본격적인 여름이 시작되는 싱그러운 6월입니다.&nbsp;
 									<br>
 									날씨만큼이나 활기찬 한 달 보내시기를 바라겠습니다.
 								</p>
 								<p class="art-text-align-left">크몽이 회원님의 비즈니스를 항상 응원하겠습니다.</p>
-								<p class="art-text-align-left">감사합니다.</p>
+								<p class="art-text-align-left">감사합니다.</p> -->
+								<p class="art-text-align-left">창업은 도전적이고 어려운 여정이지만, 올바른 정보와 준비를 통해 성공할 수 있습니다. 위의 정보들을 참고하여 자신만의 비즈니스를 성공시키는 길을 걷길 바랍니다.</p>
+								<p class="art-text-align-left">응원합니다!</p>
 								</div>
 							</div>
 						</div>
@@ -234,7 +249,7 @@
 		        
 		      </section>
 		      <!-- ------------------- -->
-		      <footer>
+		      <!-- <footer>
 		        <div class="article-footer">
 		          
 		          
@@ -244,17 +259,17 @@
 		          <a class="ask-button-request darker" href="https://support.kmong.com/hc/ko/requests/new">문의하기</a>
 		        </p> 
 		        
-		        <!-- <div class="article-return-to-top">
+		        <div class="article-return-to-top">
 		          <a href="#article-container">맨 위로 돌아가기<span class="icon-arrow-up"></span></a>
-		        </div> -->
-		      </footer>
+		        </div>
+		      </footer> -->
 
       		  <section class="article-by-article">
       		  </section>
       		  
       		  <!-- 댓글 -->
       		  	<!-- 댓글 전체 틀 -->
-				<section id="gig-rate-evaluation" data-viewid="22" class="art-comment-bigBox e1n220e00"> <!-- css-13hm90j -->
+				<section  data-viewid="22" class="art-comment-bigBox"> <!-- css-13hm90j --> <!-- id="gig-rate-evaluation" -->
 					<!-- <div class="css-1fezyb e1n220e01"></div> -->
 					<!-- <div class="css-1ofqig9 e1bkn8vk0">
 						<div class="css-m786e7 e1bkn8vk3">서비스 평가</div>
@@ -306,7 +321,7 @@
 					
 				</div> -->
 				
-				<section class="css-0 eeze5550">
+				<section >	<!-- class="css-0 eeze5550" -->
 					<!-- <div class="css-uimfca eeze5555">
 						<div class="css-0 eeze5553">서비스 후기 41개</div>
 						<div class="css-0 eeze5554">
@@ -385,7 +400,7 @@
 						<!-- 메세지 작성 큰 틀 -->
 						<div class="comment-write-reply-area">	<!-- inbox-detail-message-area -->
 							<div class="comment-write-reply-textarea">	<!-- inbox-message-textarea -->
-								<textarea rows="1" placeholder="메시지를 입력하세요. (Enter: 줄바꿈, Ctrl + Enter: 전송)" ></textarea> 
+								<textarea rows="1" placeholder="댓글을 남겨보세요." ></textarea>	<!-- 메시지를 입력하세요. (Enter: 줄바꿈, Ctrl + Enter: 전송) --> 
 							</div>
 							
 							<!-- 댓글 메세지 입력 옆 첨부파일 드래그 존 --> 
@@ -394,18 +409,20 @@
 						<!-- ===---=== -->
 						 
 						<div class="comment-below-box margin-top-10"> <!-- flex-between-center margin-top-10 -->
-							<div class="comment-below-left-button-area"> <!-- inbox-left-button-area -->
+							
+							<!-- 커스터마이징 하면서 지운 부분 - 원래 댓글 작성칸의 파일첨부, 자주 쓰는 문구 칸 - 주석 처리 주석 부분 -->
+						<!-- 	<div class="comment-below-left-button-area"> 	 -->			<!-- inbox-left-button-area -->
 								<!-- <div id="inboxDetailDropzone" draggable="true" ondragleave="window.inboxDetailDrag(event)" ondragexit="window.inboxDetailDrag(event)"> -->
 									
 									<!-- 파일 첨부 -->
 									<!-- <div id="inbox" class="vue-dropzone dropzone dz-clickable" quotereferraldzremovedfile="function () { [native code] }"> -->
 										<!-- <div class="dz-message"> -->
-										<div>
-											<div class="comment-below-inbox-fileupload cursor">	<!-- inbox-fileupload cursor has-tooltip -->	<!-- data-original-title="null" -->
+										<!-- <div>
+											<div class="comment-below-inbox-fileupload cursor">	inbox-fileupload cursor has-tooltip	data-original-title="null"
 												<img src="https://d2v80xjmx68n4w.cloudfront.net/assets/icon/ic_clip.svg" alt="파일 첨부">
                         						파일 첨부
                     						</div>
-                    					</div>
+                    					</div> -->
                     					<!-- </div> -->
                     				<!-- </div> -->
                     				<!-- 첨부파일 드래그 인 --> 
@@ -423,26 +440,27 @@
                         				</div>
                         			</div> -->
                         		<!-- </div> --> 
-                        		<div class="comment-below-frequently-used-messages-button-wrapper">	<!-- InboxDetailMessageFooter__frequently-used-messages-btn-wrapper -->
-                        			<!----> 
-                        			<div> <!-- FrequentlyUsedMessages -->
-                        				<div>	<!-- v-popover -->
-                        					<div class="comment-frequently-used-messages-button-wrapper-final" >	<!-- trigger -->	<!-- style="display: inline-block;" -->
-                        						<button class="comment-below-frequently-used-messages-button-btn">	<!-- InboxDetailMessageFooter__frequently-used-messages-btn -->
+                        		<!-- <div class="comment-below-frequently-used-messages-button-wrapper">	InboxDetailMessageFooter__frequently-used-messages-btn-wrapper
+                        			 
+                        			<div> FrequentlyUsedMessages
+                        				<div>	v-popover
+                        					<div class="comment-frequently-used-messages-button-wrapper-final" >	trigger	style="display: inline-block;"
+                        						<button class="comment-below-frequently-used-messages-button-btn">	InboxDetailMessageFooter__frequently-used-messages-btn
                         							<img src="https://d2v80xjmx68n4w.cloudfront.net/assets/icon/ic_message.png" alt="메세지">
                         							자주 쓰는 문구
                     							</button> 
                     						</div> 
                     					</div> 
-                    					<!-- <div data-v-2246e5d3="" data-v-53fa6b31="" data-v-17d148f2="" class="v-portal" style="display: none;"></div> -->
+                    					<div data-v-2246e5d3="" data-v-53fa6b31="" data-v-17d148f2="" class="v-portal" style="display: none;"></div>
                     				</div>
                     			</div>
-                    
-                    		</div> 
+                     --><!-- 
+                    		</div>  -->
                     		
                     		<!-- 작성하기 버튼 (전송 버튼) -->
                     		<button  type="button" class="btn btn-yellow comment-inbox-send-btn darker">	 <!-- disabled="disabled" --><!-- btn btn-brand-yellow inbox-send-btn NGB -->
-          					  전송                                
+          					  <!-- 전송 -->
+          					  등록                                
        				 		</button>
        				 	</div>
        				 
@@ -458,26 +476,26 @@
 					<!-- css-0 eeze5551 -->
 					
 						<!-- 댓글 1번 전체 틀 -->
-						<div class="art-comment-container e1xbpfyj0"> <!-- css-1pbxcm0 -->
-							<div class="comment-info e1xbpfyj1"> <!-- css-1dzhvmf -->
-								<div size="32" shape="0" role="article" class="comment-profile-photo-box e1cdqjir2"> <!-- css-1kogf7s -->
-									<img src="https://d2v80xjmx68n4w.cloudfront.net/members/thumbs/xJ8sP7EUipfC1513226167.jpg" alt="avatar" shape="0" loading="lazy" class="comment-profile-photo-photo e1cdqjir1"> <!-- .css-8cswyy -->
+						<div class="art-comment-container"> <!-- css-1pbxcm0 -->
+							<div class="comment-info"> <!-- css-1dzhvmf -->
+								<div size="32" shape="0" role="article" class="comment-profile-photo-box"> <!-- css-1kogf7s -->
+									<img src="https://d2v80xjmx68n4w.cloudfront.net/members/thumbs/xJ8sP7EUipfC1513226167.jpg" alt="avatar" shape="0" loading="lazy" class="comment-profile-photo-photo"> <!-- .css-8cswyy -->
 								</div>
-								<div class="comment-profile-info e1xbpfyj3"> <!-- css-1ducpjo -->
+								<div class="comment-profile-info"> <!-- css-1ducpjo -->
 									<!-- 댓글 작성자 id -->
-									<div class="comment-profile-info-id e1xbpfyj13">K15*****</div> <!-- css-droc5n -->
+									<div class="comment-profile-info-id">K15*****</div> <!-- css-droc5n -->
 									<!-- 댓글 작성 시간 -->
-									<div class="comment-profile-info-timebox e1xbpfyj9"> <!-- css-rfmjwl -->
-										<div class="comment-profile-info-timelabel e1xbpfyj7">|</div> <!-- css-tp7tvo -->
-										<div class="comment-profile-info-timetime e1xbpfyj6">23.05.16 18:38</div> <!-- css-etjaip -->
+									<div class="comment-profile-info-timebox"> <!-- css-rfmjwl -->
+										<div class="comment-profile-info-timelabel">|</div> <!-- css-tp7tvo -->
+										<div class="comment-profile-info-timetime">23.05.16 18:38</div> <!-- css-etjaip -->
 									</div>
 								</div>
 								
 							</div>
 							<!-- 댓글 상세 내용 -->
-							<div class="comment-detailBox e1xbpfyj2"> <!-- css-1ffwdp1 -->
-								<div class="comment-detailTag e1xbpfyj10"> <!-- css-gg4vpm -->
-									<p class="comment-detailDetail e1xbpfyj11"> <!-- css-ao4x98 -->
+							<div class="comment-detailBox"> <!-- css-1ffwdp1 -->
+								<div class="comment-detailTag"> <!-- css-gg4vpm -->
+									<p class="comment-detailDetail"> <!-- css-ao4x98 -->
 										저렴한 비용에 높은 퀄리티의 기획서를 받아봤습니다. 수정도 잘 해주시고, 특히 해당 아이템에 대한 이해도가 높아서 좋았습니다.. 진즉에 의뢰를 드릴껄하는 후회가 드네요 ㅎㅎㅎ
 									</p>
 								</div>
@@ -490,26 +508,26 @@
 							
 						</div>
 						<!-- 댓글 넘버 2 -->
-						<div class="art-comment-container e1xbpfyj0">
-							<div class="comment-info e1xbpfyj1">
-								<div size="32" shape="0" role="article" class="comment-profile-photo-box e1cdqjir2">
-									<img src="https://kmong.com/img/tools/main_user_gray.png" alt="avatar" shape="0" loading="lazy" class="comment-profile-photo-photo e1cdqjir1">
+						<div class="art-comment-container">
+							<div class="comment-info">
+								<div size="32" shape="0" role="article" class="comment-profile-photo-box">
+									<img src="https://kmong.com/img/tools/main_user_gray.png" alt="avatar" shape="0" loading="lazy" class="comment-profile-photo-photo">
 								</div>
-								<div class="comment-profile-info e1xbpfyj3">
+								<div class="comment-profile-info">
 									<!-- 댓글 작성자 id -->
-									<div class="comment-profile-info-id e1xbpfyj13">YWM*****</div>
+									<div class="comment-profile-info-id">YWM*****</div>
 									<!-- 댓글 작성 시간 -->
-									<div class="comment-profile-info-timebox e1xbpfyj9">
-										<div class="comment-profile-info-timelabel e1xbpfyj7">|</div>
-										<div class="comment-profile-info-timetime e1xbpfyj6">23.05.11 17:00</div>
+									<div class="comment-profile-info-timebox">
+										<div class="comment-profile-info-timelabel">|</div>
+										<div class="comment-profile-info-timetime">23.05.11 17:00</div>
 									</div>
 								</div>
 								
 							</div>
 							<!-- 댓글 상세 내용 -->
-							<div class="comment-detailBox e1xbpfyj2">
-								<div class="comment-detailTag e1xbpfyj10">
-									<p class="comment-detailDetail e1xbpfyj11">
+							<div class="comment-detailBox">
+								<div class="comment-detailTag">
+									<p class="comment-detailDetail">
 										작업물 만족합니다. 크몽을 통해 스토리보드 제작은 처음이었지만 좋은 결과물이 나와서  걱정이 말끔히 사라졌습니다. 기회가 되면 앞으로도 계속 의뢰하고 싶습니다.
 									</p>
 								</div>
@@ -522,26 +540,26 @@
 							
 						</div>
 						<!-- 댓글 1번 전체 틀 -->
-						<div class="art-comment-container e1xbpfyj0"> <!-- css-1pbxcm0 -->
-							<div class="comment-info e1xbpfyj1"> <!-- css-1dzhvmf -->
-								<div size="32" shape="0" role="article" class="comment-profile-photo-box e1cdqjir2"> <!-- css-1kogf7s -->
-									<img src="https://d2v80xjmx68n4w.cloudfront.net/members/thumbs/xJ8sP7EUipfC1513226167.jpg" alt="avatar" shape="0" loading="lazy" class="comment-profile-photo-photo e1cdqjir1"> <!-- .css-8cswyy -->
+						<div class="art-comment-container"> <!-- css-1pbxcm0 -->
+							<div class="comment-info"> <!-- css-1dzhvmf -->
+								<div size="32" shape="0" role="article" class="comment-profile-photo-box"> <!-- css-1kogf7s -->
+									<img src="https://d2v80xjmx68n4w.cloudfront.net/members/thumbs/xJ8sP7EUipfC1513226167.jpg" alt="avatar" shape="0" loading="lazy" class="comment-profile-photo-photo"> <!-- .css-8cswyy -->
 								</div>
-								<div class="comment-profile-info e1xbpfyj3"> <!-- css-1ducpjo -->
+								<div class="comment-profile-info"> <!-- css-1ducpjo -->
 									<!-- 댓글 작성자 id -->
-									<div class="comment-profile-info-id e1xbpfyj13">K15*****</div> <!-- css-droc5n -->
+									<div class="comment-profile-info-id">K15*****</div> <!-- css-droc5n -->
 									<!-- 댓글 작성 시간 -->
-									<div class="comment-profile-info-timebox e1xbpfyj9"> <!-- css-rfmjwl -->
-										<div class="comment-profile-info-timelabel e1xbpfyj7">|</div> <!-- css-tp7tvo -->
-										<div class="comment-profile-info-timetime e1xbpfyj6">23.05.16 18:38</div> <!-- css-etjaip -->
+									<div class="comment-profile-info-timebox"> <!-- css-rfmjwl -->
+										<div class="comment-profile-info-timelabel">|</div> <!-- css-tp7tvo -->
+										<div class="comment-profile-info-timetime">23.05.16 18:38</div> <!-- css-etjaip -->
 									</div>
 								</div>
 								
 							</div>
 							<!-- 댓글 상세 내용 -->
-							<div class="comment-detailBox e1xbpfyj2"> <!-- css-1ffwdp1 -->
-								<div class="comment-detailTag e1xbpfyj10"> <!-- css-gg4vpm -->
-									<p class="comment-detailDetail e1xbpfyj11"> <!-- css-ao4x98 -->
+							<div class="comment-detailBox"> <!-- css-1ffwdp1 -->
+								<div class="comment-detailTag"> <!-- css-gg4vpm -->
+									<p class="comment-detailDetail"> <!-- css-ao4x98 -->
 										저렴한 비용에 높은 퀄리티의 기획서를 받아봤습니다. 수정도 잘 해주시고, 특히 해당 아이템에 대한 이해도가 높아서 좋았습니다.. 진즉에 의뢰를 드릴껄하는 후회가 드네요 ㅎㅎㅎ
 									</p>
 								</div>
@@ -554,26 +572,26 @@
 							
 						</div>
 						<!-- 댓글 1번 전체 틀 -->
-						<div class="art-comment-container e1xbpfyj0"> <!-- css-1pbxcm0 -->
-							<div class="comment-info e1xbpfyj1"> <!-- css-1dzhvmf -->
-								<div size="32" shape="0" role="article" class="comment-profile-photo-box e1cdqjir2"> <!-- css-1kogf7s -->
-									<img src="https://d2v80xjmx68n4w.cloudfront.net/members/thumbs/xJ8sP7EUipfC1513226167.jpg" alt="avatar" shape="0" loading="lazy" class="comment-profile-photo-photo e1cdqjir1"> <!-- .css-8cswyy -->
+						<div class="art-comment-container"> <!-- css-1pbxcm0 -->
+							<div class="comment-info"> <!-- css-1dzhvmf -->
+								<div size="32" shape="0" role="article" class="comment-profile-photo-box"> <!-- css-1kogf7s -->
+									<img src="https://d2v80xjmx68n4w.cloudfront.net/members/thumbs/xJ8sP7EUipfC1513226167.jpg" alt="avatar" shape="0" loading="lazy" class="comment-profile-photo-photo"> <!-- .css-8cswyy -->
 								</div>
-								<div class="comment-profile-info e1xbpfyj3"> <!-- css-1ducpjo -->
+								<div class="comment-profile-info"> <!-- css-1ducpjo -->
 									<!-- 댓글 작성자 id -->
-									<div class="comment-profile-info-id e1xbpfyj13">K15*****</div> <!-- css-droc5n -->
+									<div class="comment-profile-info-id">K15*****</div> <!-- css-droc5n -->
 									<!-- 댓글 작성 시간 -->
-									<div class="comment-profile-info-timebox e1xbpfyj9"> <!-- css-rfmjwl -->
-										<div class="comment-profile-info-timelabel e1xbpfyj7">|</div> <!-- css-tp7tvo -->
-										<div class="comment-profile-info-timetime e1xbpfyj6">23.05.16 18:38</div> <!-- css-etjaip -->
+									<div class="comment-profile-info-timebox"> <!-- css-rfmjwl -->
+										<div class="comment-profile-info-timelabel">|</div> <!-- css-tp7tvo -->
+										<div class="comment-profile-info-timetime">23.05.16 18:38</div> <!-- css-etjaip -->
 									</div>
 								</div>
 								
 							</div>
 							<!-- 댓글 상세 내용 -->
-							<div class="comment-detailBox e1xbpfyj2"> <!-- css-1ffwdp1 -->
-								<div class="comment-detailTag e1xbpfyj10"> <!-- css-gg4vpm -->
-									<p class="comment-detailDetail e1xbpfyj11"> <!-- css-ao4x98 -->
+							<div class="comment-detailBox"> <!-- css-1ffwdp1 -->
+								<div class="comment-detailTag"> <!-- css-gg4vpm -->
+									<p class="comment-detailDetail"> <!-- css-ao4x98 -->
 										저렴한 비용에 높은 퀄리티의 기획서를 받아봤습니다. 수정도 잘 해주시고, 특히 해당 아이템에 대한 이해도가 높아서 좋았습니다.. 진즉에 의뢰를 드릴껄하는 후회가 드네요 ㅎㅎㅎ
 									</p>
 								</div>
@@ -586,26 +604,26 @@
 							
 						</div>
 						<!-- 댓글 1번 전체 틀 -->
-						<div class="art-comment-container e1xbpfyj0"> <!-- css-1pbxcm0 -->
-							<div class="comment-info e1xbpfyj1"> <!-- css-1dzhvmf -->
+						<div class="art-comment-container"> <!-- css-1pbxcm0 -->
+							<div class="comment-info"> <!-- css-1dzhvmf -->
 								<div size="32" shape="0" role="article" class="comment-profile-photo-box e1cdqjir2"> <!-- css-1kogf7s -->
-									<img src="https://d2v80xjmx68n4w.cloudfront.net/members/thumbs/xJ8sP7EUipfC1513226167.jpg" alt="avatar" shape="0" loading="lazy" class="comment-profile-photo-photo e1cdqjir1"> <!-- .css-8cswyy -->
+									<img src="https://d2v80xjmx68n4w.cloudfront.net/members/thumbs/xJ8sP7EUipfC1513226167.jpg" alt="avatar" shape="0" loading="lazy" class="comment-profile-photo-photo"> <!-- .css-8cswyy -->
 								</div>
-								<div class="comment-profile-info e1xbpfyj3"> <!-- css-1ducpjo -->
+								<div class="comment-profile-info"> <!-- css-1ducpjo -->
 									<!-- 댓글 작성자 id -->
-									<div class="comment-profile-info-id e1xbpfyj13">K15*****</div> <!-- css-droc5n -->
+									<div class="comment-profile-info-id">K15*****</div> <!-- css-droc5n -->
 									<!-- 댓글 작성 시간 -->
-									<div class="comment-profile-info-timebox e1xbpfyj9"> <!-- css-rfmjwl -->
-										<div class="comment-profile-info-timelabel e1xbpfyj7">|</div> <!-- css-tp7tvo -->
-										<div class="comment-profile-info-timetime e1xbpfyj6">23.05.16 18:38</div> <!-- css-etjaip -->
+									<div class="comment-profile-info-timebox"> <!-- css-rfmjwl -->
+										<div class="comment-profile-info-timelabel">|</div> <!-- css-tp7tvo -->
+										<div class="comment-profile-info-timetime">23.05.16 18:38</div> <!-- css-etjaip -->
 									</div>
 								</div>
 								
 							</div>
 							<!-- 댓글 상세 내용 -->
-							<div class="comment-detailBox e1xbpfyj2"> <!-- css-1ffwdp1 -->
-								<div class="comment-detailTag e1xbpfyj10"> <!-- css-gg4vpm -->
-									<p class="comment-detailDetail e1xbpfyj11"> <!-- css-ao4x98 -->
+							<div class="comment-detailBox"> <!-- css-1ffwdp1 -->
+								<div class="comment-detailTag"> <!-- css-gg4vpm -->
+									<p class="comment-detailDetail"> <!-- css-ao4x98 -->
 										저렴한 비용에 높은 퀄리티의 기획서를 받아봤습니다. 수정도 잘 해주시고, 특히 해당 아이템에 대한 이해도가 높아서 좋았습니다.. 진즉에 의뢰를 드릴껄하는 후회가 드네요 ㅎㅎㅎ
 									</p>
 								</div>
@@ -618,26 +636,26 @@
 							
 						</div>
 						<!-- 댓글 1번 전체 틀 -->
-						<div class="art-comment-container e1xbpfyj0"> <!-- css-1pbxcm0 -->
-							<div class="comment-info e1xbpfyj1"> <!-- css-1dzhvmf -->
-								<div size="32" shape="0" role="article" class="comment-profile-photo-box e1cdqjir2"> <!-- css-1kogf7s -->
-									<img src="https://d2v80xjmx68n4w.cloudfront.net/members/thumbs/xJ8sP7EUipfC1513226167.jpg" alt="avatar" shape="0" loading="lazy" class="comment-profile-photo-photo e1cdqjir1"> <!-- .css-8cswyy -->
+						<div class="art-comment-container"> <!-- css-1pbxcm0 -->
+							<div class="comment-info"> <!-- css-1dzhvmf -->
+								<div size="32" shape="0" role="article" class="comment-profile-photo-box"> <!-- css-1kogf7s -->
+									<img src="https://d2v80xjmx68n4w.cloudfront.net/members/thumbs/xJ8sP7EUipfC1513226167.jpg" alt="avatar" shape="0" loading="lazy" class="comment-profile-photo-photo"> <!-- .css-8cswyy -->
 								</div>
-								<div class="comment-profile-info e1xbpfyj3"> <!-- css-1ducpjo -->
+								<div class="comment-profile-info"> <!-- css-1ducpjo -->
 									<!-- 댓글 작성자 id -->
-									<div class="comment-profile-info-id e1xbpfyj13">K15*****</div> <!-- css-droc5n -->
+									<div class="comment-profile-info-id">K15*****</div> <!-- css-droc5n -->
 									<!-- 댓글 작성 시간 -->
-									<div class="comment-profile-info-timebox e1xbpfyj9"> <!-- css-rfmjwl -->
-										<div class="comment-profile-info-timelabel e1xbpfyj7">|</div> <!-- css-tp7tvo -->
-										<div class="comment-profile-info-timetime e1xbpfyj6">23.05.16 18:38</div> <!-- css-etjaip -->
+									<div class="comment-profile-info-timebox"> <!-- css-rfmjwl -->
+										<div class="comment-profile-info-timelabel">|</div> <!-- css-tp7tvo -->
+										<div class="comment-profile-info-timetime">23.05.16 18:38</div> <!-- css-etjaip -->
 									</div>
 								</div>
 								
 							</div>
 							<!-- 댓글 상세 내용 -->
-							<div class="comment-detailBox e1xbpfyj2"> <!-- css-1ffwdp1 -->
-								<div class="comment-detailTag e1xbpfyj10"> <!-- css-gg4vpm -->
-									<p class="comment-detailDetail e1xbpfyj11"> <!-- css-ao4x98 -->
+							<div class="comment-detailBox"> <!-- css-1ffwdp1 -->
+								<div class="comment-detailTag"> <!-- css-gg4vpm -->
+									<p class="comment-detailDetail"> <!-- css-ao4x98 -->
 										저렴한 비용에 높은 퀄리티의 기획서를 받아봤습니다. 수정도 잘 해주시고, 특히 해당 아이템에 대한 이해도가 높아서 좋았습니다.. 진즉에 의뢰를 드릴껄하는 후회가 드네요 ㅎㅎㅎ
 									</p>
 								</div>
@@ -650,26 +668,26 @@
 							
 						</div>
 						<!-- 댓글 1번 전체 틀 -->
-						<div class="art-comment-container e1xbpfyj0"> <!-- css-1pbxcm0 -->
-							<div class="comment-info e1xbpfyj1"> <!-- css-1dzhvmf -->
-								<div size="32" shape="0" role="article" class="comment-profile-photo-box e1cdqjir2"> <!-- css-1kogf7s -->
-									<img src="https://d2v80xjmx68n4w.cloudfront.net/members/thumbs/xJ8sP7EUipfC1513226167.jpg" alt="avatar" shape="0" loading="lazy" class="comment-profile-photo-photo e1cdqjir1"> <!-- .css-8cswyy -->
+						<!-- <div class="art-comment-container"> css-1pbxcm0
+							<div class="comment-info"> css-1dzhvmf
+								<div size="32" shape="0" role="article" class="comment-profile-photo-box"> css-1kogf7s
+									<img src="https://d2v80xjmx68n4w.cloudfront.net/members/thumbs/xJ8sP7EUipfC1513226167.jpg" alt="avatar" shape="0" loading="lazy" class="comment-profile-photo-photo"> .css-8cswyy
 								</div>
-								<div class="comment-profile-info e1xbpfyj3"> <!-- css-1ducpjo -->
-									<!-- 댓글 작성자 id -->
-									<div class="comment-profile-info-id e1xbpfyj13">K15*****</div> <!-- css-droc5n -->
-									<!-- 댓글 작성 시간 -->
-									<div class="comment-profile-info-timebox e1xbpfyj9"> <!-- css-rfmjwl -->
-										<div class="comment-profile-info-timelabel e1xbpfyj7">|</div> <!-- css-tp7tvo -->
-										<div class="comment-profile-info-timetime e1xbpfyj6">23.05.16 18:38</div> <!-- css-etjaip -->
+								<div class="comment-profile-info"> css-1ducpjo
+									댓글 작성자 id
+									<div class="comment-profile-info-id">K15*****</div> css-droc5n
+									댓글 작성 시간
+									<div class="comment-profile-info-timebox"> css-rfmjwl
+										<div class="comment-profile-info-timelabel">|</div> css-tp7tvo
+										<div class="comment-profile-info-timetime">23.05.16 18:38</div> css-etjaip
 									</div>
 								</div>
 								
 							</div>
-							<!-- 댓글 상세 내용 -->
-							<div class="comment-detailBox e1xbpfyj2"> <!-- css-1ffwdp1 -->
-								<div class="comment-detailTag e1xbpfyj10"> <!-- css-gg4vpm -->
-									<p class="comment-detailDetail e1xbpfyj11"> <!-- css-ao4x98 -->
+							댓글 상세 내용
+							<div class="comment-detailBox"> css-1ffwdp1
+								<div class="comment-detailTag"> css-gg4vpm
+									<p class="comment-detailDetail"> css-ao4x98
 										저렴한 비용에 높은 퀄리티의 기획서를 받아봤습니다. 수정도 잘 해주시고, 특히 해당 아이템에 대한 이해도가 높아서 좋았습니다.. 진즉에 의뢰를 드릴껄하는 후회가 드네요 ㅎㅎㅎ
 									</p>
 								</div>
@@ -680,7 +698,7 @@
 							</div>
 							
 							
-						</div>
+						</div> -->
 						
 						
 						
@@ -699,7 +717,7 @@
 	
 	
 	<!-- -------------------------- -->
-	<footer class="footer">
+	<!-- <footer class="footer">
 	  <div class="footer-inner">
 	    <ol style="width:40%">
 	      <b>(주)크몽</b>
@@ -725,6 +743,24 @@
 	     <a href="https://support.kmong.com/hc/ko/requests/new">1:1 문의하기</a>&nbsp;&nbsp;
 	  </div>
 	  
+	</footer> -->
+	<footer class="footer">
+		<div class="footer-div">
+		    <ol style="width:40%">
+		        <b>iContact</b> | 서울특별시 강남구 테헤란로 146 현익빌딩 3층, 4층 | 대표 : 한동석<br>
+		        개인정보보호책임 : 한동석 | 사업자등록번호 : 613-81-65278<br>
+		        통신판매업번호 : 2015 - 서울강남 - 03148호<br>
+		        E-mail : koreais@koreaedugroup.com | Fax: 02-2135-2949 </ol>
+		    <ol><a href="https://support.kmong.com/hc/ko/categories/360001764912">커뮤니티</a></ol>
+		    <ol><a href="https://support.kmong.com/hc/ko/categories/360001643071">FAQ</a></ol>
+		    <ol><a href="https://support.kmong.com/hc/ko/articles/17612541189145"><b>회사소개</b></a></ol>
+		</div>
+		<div class="footer-div2">
+		    &nbsp;&nbsp; iContact &nbsp;&nbsp;&nbsp;
+		    <a href="https://support.kmong.com/hc/ko/categories/360001764912">커뮤니티</a>&nbsp;
+		    <a href="https://support.kmong.com/hc/ko/categories/360001643071">FAQ</a>&nbsp;
+		    <a href="https://support.kmong.com/hc/ko/articles/12244853101081">회사소개</a>&nbsp;
+		</div>
 	</footer>
 </body>
 <script src="https://code.jquery.com/jquery-3.7.0.min.js"></script>
