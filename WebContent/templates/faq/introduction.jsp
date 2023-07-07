@@ -6,8 +6,18 @@
 
 <head>
     <title>introduction</title>
-    <link rel="stylesheet" href="introduction.css">
-    <link rel="icon" href="kmongFavicon.png">
+    
+    <link rel="icon" href="../../icon/favicon.png">
+    <link rel="stylesheet" href="../../static/css/introduction.css">
+    
+    <style>
+
+		@font-face {
+			font-family: 'MetroSansMedium';
+			src: url('../../font/MetroSans-Medium.woff2');
+		}
+	   
+	</style>
 </head>
 
 

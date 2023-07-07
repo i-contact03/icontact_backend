@@ -7,9 +7,20 @@
     <meta charset="UTF-8">
     <title>FAQ</title>
 
+	<link rel="icon" href="../../icon/favicon.png">
+    <link rel="stylesheet" href="../../static/css/FAQ.css">
+    
+    
+    <style>
 
-    <link rel="stylesheet" href="FAQ.css">
-    <link rel="icon" href="kmongFavicon.png">
+		@font-face {
+			font-family: 'MetroSansMedium';
+			src: url('../../font/MetroSans-Medium.woff2');
+		}
+   
+	</style>
+    
+    
 </head>
 
 <body>

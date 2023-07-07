@@ -5,25 +5,14 @@
 <head>
 <meta charset="UTF-8">
 <title>전문가가 필요한 순간 | 프리랜서 마켓 No.1 크몽에서 전문가를 만나고 능력을 확장해보세요.</title>
-<link rel="icon" href="kmongFavicon.png">
-<link rel="stylesheet" href="join.css">
+<link rel="icon" href="../../icon/favicon.png">
+<link rel="stylesheet" href="../../static/css/join.css">
 
 <style>
 
 	@font-face {
-		font-family: 'MetroSansBold';
-		src: url('MetroSans-Bold.woff2'); /* 굵은글씨체 주소지정 */
-	}
-	
-	@font-face {
 		font-family: 'MetroSansMedium';
-		src: url('MetroSans-Medium.woff2');
-	}
-	
-	
-	@font-face {
-		font-family: 'MetroSansRegular';
-		src: url('MetroSans-Regular.woff2'); /* 가는글씨체 주소지정 */
+		src: url('../../font/MetroSans-Medium.woff2');
 	}
 	
 </style>

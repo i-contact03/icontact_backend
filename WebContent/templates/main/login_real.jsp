@@ -5,23 +5,13 @@
 <head>
 <meta charset="UTF-8">
 <title>로그인</title>
-<link rel="stylesheet" href="login_real.css">
+<link rel="icon" href="../../icon/favicon.png">
+<link rel="stylesheet" href="../../static/css/login_real.css">
 <style>
 
 	@font-face {
-		font-family: 'MetroSansBold';
-		src: url('MetroSans-Bold.woff2'); /* 굵은글씨체 주소지정 */
-	}
-	
-	@font-face {
 		font-family: 'MetroSansMedium';
-		src: url('MetroSans-Medium.woff2');
-	}
-	
-	
-	@font-face {
-		font-family: 'MetroSansRegular';
-		src: url('MetroSans-Regular.woff2'); /* 가는글씨체 주소지정 */
+		src: url('../../font/MetroSans-Medium.woff2');
 	}
 	
 </style>

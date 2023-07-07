@@ -5,24 +5,13 @@
 <head>
 <meta charset="UTF-8">
 <title>프리랜서마켓 No.1 크몽 | 디자인, IT·프로그래밍, 마케팅, 번역·통역, 경영진단, 법률 및 취업 관련 전문가들을 만나보세요</title>
-<link rel="icon" href="kmongFavicon.png">
-<link rel="stylesheet" href="mypage.css">
+<link rel="icon" href="../../icon/favicon.png">
+<link rel="stylesheet" href="../../static/css/mypage.css">
 <style>
 
 	@font-face {
-		font-family: 'MetroSansBold';
-		src: url('MetroSans-Bold.woff2'); /* 굵은글씨체 주소지정 */
-	}
-	
-	@font-face {
 		font-family: 'MetroSansMedium';
-		src: url('MetroSans-Medium.woff2');
-	}
-	
-	
-	@font-face {
-		font-family: 'MetroSansRegular';
-		src: url('MetroSans-Regular.woff2'); /* 가는글씨체 주소지정 */
+		src: url('../../font/MetroSans-Medium.woff2');
 	}
 	
 </style>
