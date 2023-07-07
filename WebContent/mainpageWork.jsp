@@ -17,8 +17,6 @@
 	
 </style>
 
-
-
 </head>
 <body>
 <header>
@@ -886,24 +884,23 @@
 
 
  <footer class="footer">
-        <div class="footer-div">
-            <ol style="width:40%">
-                <b>iContact</b> | 서울특별시 강남구 테헤란로 146 현익빌딩 3층, 4층 | 대표 : 한동석<br>
-                개인정보보호책임 : 한동석 | 사업자등록번호 : 613-81-65278<br>
-                통신판매업번호 : 2015 - 서울강남 - 03148호<br>
-                E-mail : koreais@koreaedugroup.com | Fax: 02-2135-2949 </ol>
-            <ol><a href="https://support.kmong.com/hc/ko/categories/360001764912">커뮤니티</a></ol>
-            <ol><a href="https://support.kmong.com/hc/ko/categories/360001643071">FAQ</a></ol>
-            <ol><a href="https://support.kmong.com/hc/ko/articles/17612541189145"><b>회사소개</b></a></ol>
-        </div>
-        <div class="footer-div2">
-            &nbsp;&nbsp; iContact &nbsp;&nbsp;&nbsp;
-            <a href="https://support.kmong.com/hc/ko/categories/360001764912">커뮤니티</a>&nbsp;
-            <a href="https://support.kmong.com/hc/ko/categories/360001643071">FAQ</a>&nbsp;
-            <a href="https://support.kmong.com/hc/ko/articles/12244853101081">회사소개</a>&nbsp;
-        </div>
-
-    </footer>
+	<div class="footer-div">
+	    <ol style="width:40%">
+	        <b>iContact</b> | 서울특별시 강남구 테헤란로 146 현익빌딩 3층, 4층 | 대표 : 한동석<br>
+	        개인정보보호책임 : 한동석 | 사업자등록번호 : 613-81-65278<br>
+	        통신판매업번호 : 2015 - 서울강남 - 03148호<br>
+	        E-mail : koreais@koreaedugroup.com | Fax: 02-2135-2949 </ol>
+	    <ol><a href="https://support.kmong.com/hc/ko/categories/360001764912">커뮤니티</a></ol>
+	    <ol><a href="https://support.kmong.com/hc/ko/categories/360001643071">FAQ</a></ol>
+	    <ol><a href="https://support.kmong.com/hc/ko/articles/17612541189145"><b>회사소개</b></a></ol>
+	</div>
+	<div class="footer-div2">
+	    &nbsp;&nbsp; iContact &nbsp;&nbsp;&nbsp;
+	    <a href="https://support.kmong.com/hc/ko/categories/360001764912">커뮤니티</a>&nbsp;
+	    <a href="https://support.kmong.com/hc/ko/categories/360001643071">FAQ</a>&nbsp;
+	    <a href="https://support.kmong.com/hc/ko/articles/12244853101081">회사소개</a>&nbsp;
+	</div>
+</footer>
 
 <script src="mainpage.js"></script>
 </body>
