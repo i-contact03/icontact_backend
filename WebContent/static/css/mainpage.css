@@ -1225,187 +1225,54 @@ a.top-header-menu:hover {
 	display: flex;
 }
 
-footer hr{
-	height: 1px;
-    margin: 0;
-    border: none;
-    background-color: rgb(0 0 0 / 12%);
+
+
+/* footer---------------------------------------------------------------- */
+
+.footer {
+  border-top: 1px solid #ddd;
+  margin-top: 60px;
+  padding: 30px 0;
+}
+
+.footer a {
+  color: #999;
+}
+
+.footer-div {
+  max-width: 1160px;
+  margin: 0 auto;
+  padding: 0 5%;
+  display: flex;
+  justify-content: space-between; 
+  display:none;
+}
+
+.footer-div2 {
+  margin: 0 auto;
+  padding: 0;
+  display: flex;
+  font-size:12px;
+  justify-content: space-between;
+  padding-bottom:40px;
+    
 }
 
 
-.footer-menu-wrapper{
-	width: 100%;
-    margin-left: auto;
-    margin-right: auto;
-    background-color: #ffffff;
-    position: relative;
-    max-width: 1280px;
-    display: flex;
-    flex-direction: column;
+
+@media (min-width: 1160px) {
+  .footer-div2 {
+  display:none;
+  }
 }
 
-.footer-menu-nav{
-	padding-top: 32px;
-    padding-bottom: 16px;
-    width: 100%;
-    max-width: 1200px;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    margin: 0 auto;
-}
 
-.footer-menu-content-wrapper{
-	padding-left: 16px;
-	padding-right: 16px;
-	flex: auto;
-}
-
-.footer-menu-content-wrapper ul{
-	margin: 0;
+@media (min-width: 1160px) {
+  .footer-div {
     padding: 0;
-}
-
-.footer-menu-content-wrapper a{
-	color: #97A1B6;
-}
-
-
-
-.footer-menu-content-wrapper li{
-	color: #97A1B6;
-	margin:0;
-	padding: 0;
-}
-
-.footer-menu-content-title{
-	font-size: 16px;
-    font-weight: bold;
-    margin: 0 0 8px 0;
-    line-height: 1.5;
-    letter-spacing: -0.34px;
-}
-
-.footer-menu-content-time{
-	font-size: 13px;
-    line-height: 2;
-    letter-spacing: -0.28px;
-    color: #9a9ba7;
-    margin: 0;
-}
-
-.footer-menue-content-inquiry{
-	outline: none;
-    border-width: 1px;
-    border-style: solid;
-    box-sizing: border-box;
-    border-radius: 4px;
-    line-height: 1;
-    font-weight: 500;
-    transition: background-color 0.3s,border-color 0.3s;
-    text-decoration: none;
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    cursor: pointer;
-    position: relative;
-    
-    user-select: none;
-    white-space: nowrap;
-    max-width: 100%;
-    height: 36px;
-    font-size: 14px;
-    padding: 0 16px;
-    min-width: 64px;
-    background-color: #fff;
-    border-color: #e4e5ed;
-    color: #303441;
-    margin-top: 16px;
-    border: 1px solid #555969;   
-}
-
-
-.footer-menue-content-inquiry span{
-	line-height: 1;
-	font-weight: 500;
-	cursor: pointer;
-	user-select: none;
-    white-space: nowrap;
-    font-size: 14px;
-    color: #303441;
-}
-
-.footer-store-wrapper{
-	display:flex;
-	justify-content: flex-end;
-	padding: 16px 128px;
-}
-
-.footer-store{
-	margin-right: 10px;
-}
-
-.footer-store a{
-	outline: none;
-    border-width: 1px;
-    border-style: solid;
-    box-sizing: border-box;
-    border-radius: 4px;
-    line-height: 1;
-    font-weight: 500;
-    
-    transition: background-color 0.3s,border-color 0.3s;
-        
-    text-decoration: none;
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    cursor: pointer;
-    position: relative;
-    user-select: none;
-    white-space: nowrap;
     width: 100%;
-    
-    max-width: 100%;
-    height: 42px;
-    font-size: 15px;
-    padding: 0 22px;
-    min-width: 64px;
-    background-color: #fff;
-    border-color: #e4e5ed;
-    color: #303441;
-    border: 1px solid #303441;
+    display:flex;
+    font-size:13px;
+  }
 }
-
-.footer-store-etc{
-	line-height: 1;
-	font-weight: 500;
-	cursor: pointer;
-	user-select: none;
-    white-space: nowrap;
-    font-size: 15px;
-    color: #303441;
-}
-
-
-.footer-store img{
-	line-height: 1;
-	font-weight: 500;
-	cursor: pointer;
-	user-select: none;
-    white-space: nowrap;
-    font-size: 15px;
-    color: #303441;
-}
-
-.footer-store-icon-wrapper{
-	line-height: 1;
-    font-weight: 500;
-    cursor: pointer;
-    user-select: none;
-    white-space: nowrap;
-    font-size: 15px;
-    color: #303441;
-}
-
 

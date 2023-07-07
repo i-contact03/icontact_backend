@@ -1289,7 +1289,6 @@ a.top-header-menu:hover {
 .footer-about {
   max-width: 247px;
   height: 132px;
-  font-family: NotoSansCJKkr;
   font-size: 13px;
   font-weight: normal;
   font-style: normal;
@@ -1311,7 +1310,6 @@ a.top-header-menu:hover {
 
 li {
     display: list-item;
-    text-align: -webkit-match-parent;
 }
 
 .sidenav-item.current-article, .sidenav-item:hover {
