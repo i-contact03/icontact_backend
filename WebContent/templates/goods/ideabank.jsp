@@ -5,27 +5,16 @@
 <head>
 <meta charset="UTF-8">
 <title>84,195개 리뷰로 증명된 42,695개 IT·프로그래밍 서비스를 5,000원에서 부터 만나보세요! | 프리랜서마켓 No.1 크몽</title>
-<link rel="icon" href="kmongFavicon.png">
-<link rel="stylesheet" href="ideabank.css"/>
-<link rel="stylesheet" href="goodsMain.css"/>
+<link rel="icon" href="../../icon/favicon.png">
+<link rel="stylesheet" href="../../static/css/ideabank.css"/>
+<link rel="stylesheet" href="../../static/css/goodsMain.css"/>
 <link href="https://hangeul.pstatic.net/hangeul_static/css/nanum-square-neo.css" rel="stylesheet">
 
 <style>
 
 	@font-face {
-		font-family: 'MetroSansBold';
-		src: url('MetroSans-Bold.woff2'); /* 굵은글씨체 주소지정 */
-	}
-	
-	@font-face {
 		font-family: 'MetroSansMedium';
-		src: url('MetroSans-Medium.woff2');
-	}
-	
-	
-	@font-face {
-		font-family: 'MetroSansRegular';
-		src: url('MetroSans-Regular.woff2'); /* 가는글씨체 주소지정 */
+		src: url('../../font/MetroSans-Medium.woff2');
 	}
 	
 </style>
