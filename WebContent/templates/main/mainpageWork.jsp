@@ -7,7 +7,7 @@
 <title>iContact</title>
 <link rel="icon" href="kmongFavicon.png">
 <link href="https://hangeul.pstatic.net/hangeul_static/css/nanum-square.css" rel="stylesheet">
-<link rel="stylesheet" href="mainpageWork.css">
+<link rel="stylesheet" href="../../static/css/mainpageWork.css">
 
 <style>
 

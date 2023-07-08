@@ -6,8 +6,9 @@
 <meta charset="UTF-8">
 <title>상품등록</title>
 <link rel="icon" href="kmongFavicon.png">
-<link rel="stylesheet" href="goods_register_1Work.css"/>
 
+ <link rel="stylesheet" href="../../static/css/goods_register_1Work.css">
+ 
 <style>
 
 	@font-face {

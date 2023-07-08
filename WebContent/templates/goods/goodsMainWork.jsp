@@ -6,8 +6,10 @@
 <meta charset="UTF-8">
 <title>홈페이지를 꼼꼼하고 완벽하게 제작해 드립니다.</title>
 <link rel="icon" href="kmongFavicon.png">
-<link rel="stylesheet" href="goodsMainWork.css"/>
-<link rel="stylesheet" href="ideabankWork.css"/>
+
+ <link rel="stylesheet" href="../../static/css/goodsMainWork.css">
+ <link rel="stylesheet" href="../../static/css/ideabankWork.css">
+
 <link href="https://hangeul.pstatic.net/hangeul_static/css/nanum-square-neo.css" rel="stylesheet">
 
 <style>

@@ -6,8 +6,10 @@
 <meta charset="UTF-8">
 <title>iContact</title>
 <link rel="icon" href="kmongFavicon.png">
-<link rel="stylesheet" href="ideabankWork.css"/>
-<link rel="stylesheet" href="goodsMainWork.css"/>
+
+ <link rel="stylesheet" href="../../static/css/goodsMainWork.css">
+ <link rel="stylesheet" href="../../static/css/ideabankWork.css">
+
 <link href="https://hangeul.pstatic.net/hangeul_static/css/nanum-square-neo.css" rel="stylesheet">
 
 <style>
