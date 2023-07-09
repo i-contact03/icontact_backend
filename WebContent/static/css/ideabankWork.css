@@ -1156,7 +1156,7 @@ div.left-top-category {
     position: absolute;
     inset: -120px auto auto -8px;
     margin: 0px;
-    transform: translate(294px, 261px);
+    transform: translate(710px, 261px);
 }
 
 .all-list-born {
@@ -1647,6 +1647,7 @@ div.left-top-category {
 
 .footer a {
   color: #999;
+  text-decoration: none;
 }
 
 .footer-div {
