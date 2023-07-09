@@ -944,6 +944,6 @@
 
     </footer>
 
-<script src="mainpage.js"></script>
+<script src="../../static/js/mainpage.js"></script>
 </body>
 </html>

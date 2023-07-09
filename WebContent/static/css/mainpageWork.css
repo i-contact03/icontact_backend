@@ -73,7 +73,7 @@ li {
 }
 
 .top-header-input-form{
-	font-family: 'NanumSquareAcb';
+	font-family: 'MetroSansMedium';
     box-sizing: border-box;
 	margin: 0 0 0 500px;
 	display: flex;
@@ -1265,7 +1265,6 @@ a.top-header-menu:hover {
 /***** Footer *****/
 
 .footer {
-  border-top: 1px solid #ddd;
   margin-top: 60px;
   padding: 30px 0;
 }

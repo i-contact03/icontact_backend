@@ -303,5 +303,5 @@
 </div>
 </body>
 <script type="module" src="https://code.jquery.com/jquery-3.7.0.min.js"></script>
-<script src="goods_register.js"></script>
+<script src="../../static/js/goods_register.js"></script>
 </html>
