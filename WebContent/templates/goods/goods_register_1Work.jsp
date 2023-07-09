@@ -5,7 +5,7 @@
 <head>
 <meta charset="UTF-8">
 <title>상품등록</title>
-<link rel="icon" href="kmongFavicon.png">
+<link rel="icon" href="../../icon/kmongFavicon.png">
 
  <link rel="stylesheet" href="../../static/css/goods_register_1Work.css">
  
@@ -13,18 +13,18 @@
 
 	@font-face {
 		font-family: 'MetroSansBold';
-		src: url('MetroSans-Bold.woff2'); /* 굵은글씨체 주소지정 */
+		src: url('../../font/MetroSans-Bold.woff2'); /* 굵은글씨체 주소지정 */
 	}
 	
 	@font-face {
 		font-family: 'MetroSansMedium';
-		src: url('MetroSans-Medium.woff2');
+		src: url('../../font/MetroSans-Medium.woff2');
 	}
 	
 	
 	@font-face {
 		font-family: 'MetroSansRegular';
-		src: url('MetroSans-Regular.woff2'); /* 가는글씨체 주소지정 */
+		src: url('../../font/MetroSans-Regular.woff2'); /* 가는글씨체 주소지정 */
 	}
 	
 </style>
