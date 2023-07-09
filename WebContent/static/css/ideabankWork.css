@@ -133,7 +133,7 @@ h3 {
 
 
 .top-header-input{
-	font-family: 'NanumSquareAcb';
+	font-family: 'MetroSansMedium';
 	font-size: 15px;
 	text-align: left;
 	border: 0px;
@@ -1641,7 +1641,6 @@ div.left-top-category {
 /***** Footer *****/
 
 .footer {
-  border-top: 1px solid #ddd;
   margin-top: 60px;
   padding: 30px 0;
 }
