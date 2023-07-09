@@ -5,7 +5,7 @@
 <head>
 <meta charset="UTF-8">
 <title>iContact</title>
-<link rel="icon" href="kmongFavicon.png">
+<link rel="icon" href="../../icon/favicon.png">
 <link href="https://hangeul.pstatic.net/hangeul_static/css/nanum-square.css" rel="stylesheet">
 <link rel="stylesheet" href="../../static/css/mainpageWork.css">
 
@@ -13,18 +13,18 @@
 
 	@font-face {
 		font-family: 'MetroSansBold';
-		src: url('MetroSans-Bold.woff2'); /* 굵은글씨체 주소지정 */
+		src: url('../../font/MetroSans-Bold.woff2'); /* 굵은글씨체 주소지정 */
 	}
 	
 	@font-face {
 		font-family: 'MetroSansMedium';
-		src: url('MetroSans-Medium.woff2');
+		src: url('../../font/MetroSans-Medium.woff2');
 	}
 	
 	
 	@font-face {
 		font-family: 'MetroSansRegular';
-		src: url('MetroSans-Regular.woff2'); /* 가는글씨체 주소지정 */
+		src: url('../../font/MetroSans-Regular.woff2'); /* 가는글씨체 주소지정 */
 	}
 	
 </style>
@@ -39,7 +39,7 @@
 		<!-- 로고 + 검색바 + 아이디어등록 + 마이크몽 + 프로필-->
 			<section class="top-header">
 				<svg class="top-header-logo" width="85" height="100%" viewBox="0 0 85 26" xmlns="http://www.w3.org/2000/svg">
-					<img src="images/KakaoTalk_20230703_002357368.png" width="100%" height="100%">
+					<img src="../../icon/logo.png" width="100%" height="100%">
 				</svg>
 				
 				<form action="" class="top-header-input-form">
@@ -462,7 +462,7 @@
 			<section class="membership-ad">
 				<a>
 					<div class="membership-ad-img-wrapper">
-						<img src="images/img.png" width="1168" height="160" loading="lazy" style="color: transparent;">
+						<img src="../../images/img.png" width="1168" height="160" loading="lazy" style="color: transparent;">
 					</div>
 				</a>
 			</section>
@@ -523,7 +523,7 @@
 			<!-- 크몽 FAQ에서 해결하세요! -->
 			<section class="kmong-enterprise-ad">
 				<a>
-					<img src="images/0011.png" width="1168" height="160">
+					<img src="../../images/0011.png" width="1168" height="160">
 				</a>
 			</section>
 			
@@ -908,7 +908,7 @@
 
 			<section class="kmong-pro-ad">
 				<a class="kmong-pro-ad-content">
-					<img src="images\0010.png" width="1168" height="160" loading="lazy" style="color: transparent;">
+					<img src="../../images\0010.png" width="1168" height="160" loading="lazy" style="color: transparent;">
 				</a>
 			</section>
 		</div>
