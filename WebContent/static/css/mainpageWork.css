@@ -1271,6 +1271,7 @@ a.top-header-menu:hover {
 
 .footer a {
   color: #999;
+  text-decoration: none;
 }
 
 .footer-div {
