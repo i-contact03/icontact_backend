@@ -1449,15 +1449,14 @@ a.top-header-menu:hover {
 
 /***** Footer *****/
 
-.footer {
-  border-top: 1px solid #ddd;
+ .footer {
   margin-top: 60px;
   padding: 30px 0;
-}
+} 
 
-.footer a {
+ .footer a {
   color: #999;
-}
+} 
 
 .footer-div {
   max-width: 1160px;
