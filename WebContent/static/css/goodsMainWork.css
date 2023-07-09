@@ -99,7 +99,7 @@ nav {
 }
 
 .top-header-input-form{
-	font-family: 'NanumSquareAcb';
+	font-family: 'MetroSansMedium';
     box-sizing: border-box;
 	margin: 0 0 0 500px;
 	display: flex;
@@ -113,7 +113,7 @@ nav {
 
 
 .top-header-input-wrapper{
-	font-family: 'NanumSquareAcb';
+	font-family: 'MetroSansMedium';
 	font-size: 14px;
 	text-decoration: none solid rgb(48, 52, 65);
 	word-spacing: 0px;
