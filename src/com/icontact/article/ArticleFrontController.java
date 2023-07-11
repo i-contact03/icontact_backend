@@ -8,6 +8,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 import com.icontact.Result;
+import com.icontact.article.controller.WriteOkController;
 
 
 
@@ -20,12 +21,14 @@ public class ArticleFrontController extends HttpServlet{
 //		사용자가 요청한 전체 URI 중에서 확장자 앞의 문자열 값을 분리
 		String target = req.getRequestURI().replace(req.getContextPath() + "/", "").split("\\.")[0];
 		Result result = null;
-		
-		if(target.equals("")) {
-			result = new ().execute(req, resp);
+//		글쓰기 페이지로 이동
+		if(target.equals("articleWrite")) {
+			result = new Result();
+			result.setPath("templates/community/community_article_write.jsp");
 				
+		} else if(target.equals("writeOk")) {
+			result = new WriteOkController().execute(req, resp);
 		}
-		
 		if(result != null) {
 			if(result.isRedirect()) {
 				resp.sendRedirect(result.getPath());
