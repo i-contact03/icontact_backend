@@ -18,7 +18,7 @@ function toggleBackgroundColor($element) {
 
   // 배경색을 변경합니다.
   if (currentColor === "rgb(242, 243, 247)") {
-    $element.css("background-color", "rgb(255, 212, 0)");
+    $element.css("background-color", "#eacaff");
   } else {
     $element.css("background-color", "rgb(242, 243, 247)");
   }
@@ -33,7 +33,7 @@ $checkBoxs.on("click", function () {
 // "모두 동의" 체크박스를 클릭했을 때 배경색을 변경하는 이벤트 핸들러를 등록합니다.
 $checkAll.on("click", function () {
     const currentColor = $checkAll.css("background-color");
-    const newColor = currentColor === "rgb(242, 243, 247)" ? "rgb(255, 212, 0)" : "rgb(242, 243, 247)";
+    const newColor = currentColor === "rgb(242, 243, 247)" ? "#eacaff" : "rgb(242, 243, 247)";
     toggleBackgroundColor($checkAll, newColor);
     toggleBackgroundColor($checkBoxs, newColor);
   
@@ -45,11 +45,11 @@ $checkAll.on("click", function () {
 // $checkAll의 배경색을 갱신하는 함수를 정의합니다.
 function updateCheckAllBackgroundColor() {
     const allChecked = $checkBoxs.length === $checkBoxs.filter(function() {
-      return $(this).css("background-color") === "rgb(255, 212, 0)";
+      return $(this).css("background-color") === "#eacaff";
     }).length;
   
     if (allChecked) {
-      $checkAll.css("background-color", "rgb(255, 212, 0)");
+      $checkAll.css("background-color", "#eacaff");
     } else {
       $checkAll.css("background-color", "rgb(242, 243, 247)");
     }
