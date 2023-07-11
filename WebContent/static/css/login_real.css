@@ -247,8 +247,8 @@ input {
     font-size: 15px;
     padding: 0px 22px;
     min-width: 64px;
-    background-color: #eacaff;
-    border-color: #eacaff;
+    background-color: rgb(255, 212, 0);
+    border-color: rgb(255, 212, 0);
     color: rgb(48, 52, 65);
 }
 
