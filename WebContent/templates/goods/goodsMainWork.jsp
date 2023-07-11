@@ -5,7 +5,7 @@
 <head>
 <meta charset="UTF-8">
 <title>홈페이지를 꼼꼼하고 완벽하게 제작해 드립니다.</title>
-<link rel="icon" href="kmongFavicon.png">
+<link rel="icon" href="../../icon/kmongFavicon.png">
 
  <link rel="stylesheet" href="../../static/css/goodsMainWork.css">
  <link rel="stylesheet" href="../../static/css/ideabankWork.css">
@@ -16,18 +16,18 @@
 
 	@font-face {
 		font-family: 'MetroSansBold';
-		src: url('MetroSans-Bold.woff2'); /* 굵은글씨체 주소지정 */
+		src: url('../../font/MetroSans-Bold.woff2'); /* 굵은글씨체 주소지정 */
 	}
 	
 	@font-face {
 		font-family: 'MetroSansMedium';
-		src: url('MetroSans-Medium.woff2');
+		src: url('../../font/MetroSans-Medium.woff2');
 	}
 	
 	
 	@font-face {
 		font-family: 'MetroSansRegular';
-		src: url('MetroSans-Regular.woff2'); /* 가는글씨체 주소지정 */
+		src: url('../../font/MetroSans-Regular.woff2'); /* 가는글씨체 주소지정 */
 	}
 	
 </style>
@@ -40,7 +40,7 @@
 		<!-- 로고 + 검색바 + 아이디어등록 + 마이크몽 + 프로필-->
 			<section class="top-header">
 				<svg class="top-header-logo" width="85" height="100%" viewBox="0 0 85 26" xmlns="http://www.w3.org/2000/svg">
-					<img src="images/KakaoTalk_20230703_002357368.png" width="100%" height="100%">
+					<img src="../../images/KakaoTalk_20230703_002357368.png" width="100%" height="100%">
 				</svg>
 				
 				<form action="" class="top-header-input-form">
@@ -257,7 +257,7 @@
 											<article class="portfolio">
 												<a class="portfolio-link">
 													<div class="portfolio-img">
-														<img src="img/potpolio1.jpg" class="portfolio-img1">
+														<img src="../../img/potpolio1.jpg" class="portfolio-img1">
 														<div class="liking">
 															<button class="liking2">
 																<span color="#f2f3f7" rotate="0" class="likings">
@@ -285,7 +285,7 @@
 											<article class="portfolio">
 												<a class="portfolio-link" href="">
 													<div class="portfolio-img">
-														<img src="img/potpolio2.jpg" class="portfolio-img1">
+														<img src="../../img/potpolio2.jpg" class="portfolio-img1">
 														<div class="liking">
 															<button class="liking2">
 																<span color="#f2f3f7" rotate="0" class="likings">
@@ -313,7 +313,7 @@
 											<article class="portfolio">
 												<a class="portfolio-link" href="">
 													<div class="portfolio-img">
-														<img src="img/potpolio3.jpg" class="portfolio-img1">
+														<img src="../../img/potpolio3.jpg" class="portfolio-img1">
 														<div class="liking">
 															<button class="liking2">
 																<span color="#f2f3f7" rotate="0" class="likings">
@@ -341,7 +341,7 @@
 											<article class="portfolio">
 												<a class="portfolio-link" href="">
 													<div class="portfolio-img">
-														<img src="img/potpolio4.jpg" class="portfolio-img1">
+														<img src="../../img/potpolio4.jpg" class="portfolio-img1">
 														<div class="liking">
 															<button class="liking2">
 																<span color="#f2f3f7" rotate="0" class="likings">
@@ -369,7 +369,7 @@
 											<article class="portfolio">
 												<a class="portfolio-link" href="">
 													<div class="portfolio-img">
-														<img src="img/potpolio5.jpg" class="portfolio-img1">
+														<img src="../../img/potpolio5.jpg" class="portfolio-img1">
 														<div class="liking">
 															<button class="liking2">
 																<span color="#f2f3f7" rotate="0" class="likings">
@@ -397,7 +397,7 @@
 											<article class="portfolio">
 												<a class="portfolio-link" href="">
 													<div class="portfolio-img">
-														<img src="img/potpolio6.jpg" class="portfolio-img1">
+														<img src="../../img/potpolio6.jpg" class="portfolio-img1">
 														<div class="liking">
 															<button class="liking2">
 																<span color="#f2f3f7" rotate="0" class="likings">
@@ -425,7 +425,7 @@
 											<article class="portfolio">
 												<a class="portfolio-link" href="">
 													<div class="portfolio-img">
-														<img src="img/potpolio7.jpg" class="portfolio-img1">
+														<img src="../../img/potpolio7.jpg" class="portfolio-img1">
 														<div class="liking">
 															<button class="liking2">
 																<span color="#f2f3f7" rotate="0" class="likings">
@@ -453,7 +453,7 @@
 											<article class="portfolio">
 												<a class="portfolio-link" href="">
 													<div class="portfolio-img">
-														<img src="img/potpolio8.jpg" class="portfolio-img1">
+														<img src="../../img/potpolio8.jpg" class="portfolio-img1">
 														<div class="liking">
 															<button class="liking2">
 																<span color="#f2f3f7" rotate="0" class="likings">
@@ -481,7 +481,7 @@
 											<article class="portfolio">
 												<a class="portfolio-link" href="">
 													<div class="portfolio-img">
-														<img src="img/potpolio9.jpg" class="portfolio-img1">
+														<img src="../../img/potpolio9.jpg" class="portfolio-img1">
 														<div class="liking">
 															<button class="liking2">
 																<span color="#f2f3f7" rotate="0" class="likings">
@@ -509,7 +509,7 @@
 											<article class="portfolio">
 												<a class="portfolio-link" href="">
 													<div class="portfolio-img">
-														<img src="img/potpolio10.jpg" class="portfolio-img1">
+														<img src="../../img/potpolio10.jpg" class="portfolio-img1">
 														<div class="liking">
 															<button class="liking2">
 																<span color="#f2f3f7" rotate="0" class="likings">
@@ -706,5 +706,5 @@
     
 </body>
 <script type="module" src="https://code.jquery.com/jquery-3.7.0.min.js"></script>
-<script src="goodsmain.js"></script>
+<script src="../../static/js/goodsmain.js"></script>
 </html>

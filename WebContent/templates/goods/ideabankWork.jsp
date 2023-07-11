@@ -16,18 +16,18 @@
 
 	@font-face {
 		font-family: 'MetroSansBold';
-		src: url('MetroSans-Bold.woff2'); /* 굵은글씨체 주소지정 */
+		src: url('../../font/MetroSans-Bold.woff2'); /* 굵은글씨체 주소지정 */
 	}
 	
 	@font-face {
 		font-family: 'MetroSansMedium';
-		src: url('MetroSans-Medium.woff2');
+		src: url('../../font/MetroSans-Medium.woff2');
 	}
 	
 	
 	@font-face {
 		font-family: 'MetroSansRegular';
-		src: url('MetroSans-Regular.woff2'); /* 가는글씨체 주소지정 */
+		src: url('../../font/MetroSans-Regular.woff2'); /* 가는글씨체 주소지정 */
 	}
 	
 </style>
@@ -41,7 +41,7 @@
 		<!-- 로고 + 검색바 + 아이디어등록 + 마이크몽 + 프로필-->
 			<section class="top-header">
 				<svg class="top-header-logo" width="85" height="100%" viewBox="0 0 85 26" xmlns="http://www.w3.org/2000/svg">
-					<img src="images/KakaoTalk_20230703_002357368.png" width="100%" height="100%">
+					<img src="../../images/KakaoTalk_20230703_002357368.png" width="100%" height="100%">
 				</svg>
 				
 				<form action="" class="top-header-input-form">
@@ -311,7 +311,7 @@
 			            					<div class="goods-height">
 			            						<div tabindex="0" class="goods-img">
 			  <!-- 사진 -->
-			            							<img onmouseover="expansion()" src="img/goods1.jpg" class="goods-img2">
+			            							<img onmouseover="expansion()" src="../../img/goods1.jpg" class="goods-img2">
 			            						</div>
 			            					</div>
 			            				</div>
@@ -345,7 +345,7 @@
 			            					<div class="goods-height">
 			            						<div tabindex="0" class="goods-img">
 			  <!-- 사진 -->
-			            							<img onmouseover="expansion()" src="img/goods10.jpg" class="goods-img2">
+			            							<img onmouseover="expansion()" src="../../img/goods10.jpg" class="goods-img2">
 			            						</div>
 			            					</div>
 			            				</div>
@@ -379,7 +379,7 @@
 			            					<div class="goods-height">
 			            						<div tabindex="0" class="goods-img">
 			  <!-- 사진 -->
-			            							<img onmouseover="expansion()" src="img/goods3.jpg" class="goods-img2">
+			            							<img onmouseover="expansion()" src="../../img/goods3.jpg" class="goods-img2">
 			            						</div>
 			            					</div>
 			            				</div>
@@ -413,7 +413,7 @@
 			            					<div class="goods-height">
 			            						<div tabindex="0" class="goods-img">
 			  <!-- 사진 -->
-			            							<img onmouseover="expansion()" src="img/goods4.jpg" class="goods-img2">
+			            							<img onmouseover="expansion()" src="../../img/goods4.jpg" class="goods-img2">
 			            						</div>
 			            					</div>
 			            				</div>
@@ -447,7 +447,7 @@
 			            					<div class="goods-height">
 			            						<div tabindex="0" class="goods-img">
 			  <!-- 사진 -->
-			            							<img onmouseover="expansion()" src="img/goods5.jpg" class="goods-img2">
+			            							<img onmouseover="expansion()" src="../../img/goods5.jpg" class="goods-img2">
 			            						</div>
 			            					</div>
 			            				</div>
@@ -481,7 +481,7 @@
 			            					<div class="goods-height">
 			            						<div tabindex="0" class="goods-img">
 			  <!-- 사진 -->
-			            							<img onmouseover="expansion()" src="img/goods6.jpg" class="goods-img2">
+			            							<img onmouseover="expansion()" src="../../img/goods6.jpg" class="goods-img2">
 			            						</div>
 			            					</div>
 			            				</div>
@@ -515,7 +515,7 @@
 			            					<div class="goods-height">
 			            						<div tabindex="0" class="goods-img">
 			  <!-- 사진 -->
-			            							<img onmouseover="expansion()" src="img/goods7.jpg" class="goods-img2">
+			            							<img onmouseover="expansion()" src="../../img/goods7.jpg" class="goods-img2">
 			            						</div>
 			            					</div>
 			            				</div>
@@ -549,7 +549,7 @@
 			            					<div class="goods-height">
 			            						<div tabindex="0" class="goods-img">
 			  <!-- 사진 -->
-			            							<img onmouseover="expansion()" src="img/goods8.jpg" class="goods-img2">
+			            							<img onmouseover="expansion()" src="../../img/goods8.jpg" class="goods-img2">
 			            						</div>
 			            					</div>
 			            				</div>
@@ -662,5 +662,5 @@
 </div>
 </body>
 <script type="module" src="https://code.jquery.com/jquery-3.7.0.min.js"></script>
-<script src="ideabank.js"></script>
+<script src="../../static/js/ideabank.js"></script>
 </html>
