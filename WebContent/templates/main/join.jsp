@@ -41,18 +41,35 @@
 					<div class="content-wrapper">
 						<div class="content-title">아이디</div>
 						<div class="input-wrapper">
+<<<<<<< HEAD
 							<input type="text"  placeholder="아이디를 입력해 주세요." name="user_identification" class="join-input" value=""> <!-- type="text" -->
 						</div>
 						
 						<!-- 유효성 검사 -->
 						<div></div>
+=======
+							<input type="text" id="userID"  placeholder="아이디를 입력해 주세요." name="user_identification" class="join-input" value=""> <!-- type="text" -->
+						</div>
+						
+					<!-- 유효성 검사 -->
+						<div class="css-red">
+							<div class="">
+								<p  class="id" color="red500"></p>
+							</div>
+						</div>
+
+>>>>>>> origin/master
 					</div>
 
 					<!-- 이메일 -->
 					<div class="content-wrapper">
 						<div class="content-title">이메일</div>
 						<div class="input-wrapper">
+<<<<<<< HEAD
 							<input type="email" placeholder="이메일을 입력해 주세요." name="user_email" autocomplete="email" class="join-input" value="">
+=======
+							<input type="email" id="email" placeholder="이메일을 입력해 주세요." name="user_email" autocomplete="email" class="join-input" value="">
+>>>>>>> origin/master
 						</div>
 						
 						<!-- 유효성 검사 -->
@@ -63,7 +80,18 @@
 					<div class="content-wrapper">
 						<div class="content-title">비밀번호</div>
 						<div class="input-wrapper">
+<<<<<<< HEAD
 							<input type="password" placeholder="비밀번호를 입력해 주세요. (8자리 이상)" name="user_password" autocomplete="current-password" class="join-input" value="">
+=======
+							<input type="password" id="password" placeholder="비밀번호를 입력해 주세요. (8자리 이상)" name="user_password" autocomplete="current-password" class="join-input" value="">
+						</div>
+						
+					<!-- 유효성 검사 -->
+							<div class="css-red">
+							<div class="">
+								<p  class="password" color="red500"></p>
+							</div>
+>>>>>>> origin/master
 						</div>
 						
 						<!-- 유효성 검사 -->
@@ -84,22 +112,48 @@
 					<div class="content-wrapper">
 						<div class="content-title">이름</div>
 						<div class="input-wrapper">
+<<<<<<< HEAD
 							<input type="text" placeholder="이름을 입력해 주세요." name="user_name" autocomplete="off" class="join-input" value="">
 						</div>
 						
 						<!-- 유효성 검사 -->
 						<div></div>
+=======
+							<input type="text" id="userName" placeholder="이름을 입력해 주세요." name="user_name" autocomplete="off" class="join-input" value="">
+						</div>
+						
+					<!-- 유효성 검사 -->
+						<div class="css-red">
+							<div class="">
+								<p  class="name" color="red500"></p>
+							</div>
+						</div>
+
+>>>>>>> origin/master
 					</div>
 					
 					<!-- 전화번호 -->
 					<div class="content-wrapper">
 						<div class="content-title">전화번호</div>
 						<div class="input-wrapper">
+<<<<<<< HEAD
 							<input type="tel" placeholder="전화번호를 입력해 주세요." name="user_call" autocomplete="tel" class="join-input" value="">
 						</div>
 						
 						<!-- 유효성 검사 -->
 						<div></div>
+=======
+							<input type="tel" id="userPhone" placeholder="전화번호를 입력해 주세요." name="user_call" autocomplete="tel" class="join-input" value="">
+						</div>
+						
+					<!-- 유효성 검사 -->
+						<div class="css-red">
+							<div class="">
+								<p  class="phone" color="red500"></p>
+							</div>
+						</div>
+
+>>>>>>> origin/master
 					</div>
 					
 
