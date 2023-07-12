@@ -34,72 +34,172 @@
 			</a>
 			
 			<div class="main-wrapper">
-				<form action="" class="join-form">
+				<form action="joinOk.user" class="join-form">
 					<h1 class="join-title">딱 이것만 체크하면 가입완료!</h1>
 					
 					<!-- 아이디 -->
 					<div class="content-wrapper">
 						<div class="content-title">아이디</div>
 						<div class="input-wrapper">
+<<<<<<< HEAD:WebContent/templates/main/join.jsp
+<<<<<<< HEAD
 							<input type="text"  placeholder="아이디를 입력해 주세요." name="user_identification" class="join-input" value=""> <!-- type="text" -->
 						</div>
 						
 						<!-- 유효성 검사 -->
 						<div></div>
+=======
+							<input type="text" id="userID"  placeholder="아이디를 입력해 주세요." name="user_identification" class="join-input" value=""> <!-- type="text" -->
+						</div>
+						
+=======
+							<input type="text" id="userIdentification"  placeholder="아이디를 입력해 주세요." name="userIdentification" class="join-input" value=""> <!-- type="text" -->
+						</div>
+						
+>>>>>>> icontact_backend:WebContent/templates/user/join.jsp
+					<!-- 유효성 검사 -->
+						<div class="css-red">
+							<div class="">
+								<p  class="id" color="red500"></p>
+							</div>
+						</div>
+
+<<<<<<< HEAD:WebContent/templates/main/join.jsp
+>>>>>>> origin/master
+=======
+>>>>>>> icontact_backend:WebContent/templates/user/join.jsp
 					</div>
 
 					<!-- 이메일 -->
 					<div class="content-wrapper">
 						<div class="content-title">이메일</div>
 						<div class="input-wrapper">
+<<<<<<< HEAD:WebContent/templates/main/join.jsp
+<<<<<<< HEAD
 							<input type="email" placeholder="이메일을 입력해 주세요." name="user_email" autocomplete="email" class="join-input" value="">
+=======
+							<input type="email" id="email" placeholder="이메일을 입력해 주세요." name="user_email" autocomplete="email" class="join-input" value="">
+>>>>>>> origin/master
+=======
+							<input type="email" id="userEmail" placeholder="이메일을 입력해 주세요." name="userEmail" autocomplete="email" class="join-input" value="">
+>>>>>>> icontact_backend:WebContent/templates/user/join.jsp
 						</div>
 						
 						<!-- 유효성 검사 -->
-						<div></div>
+						<div class="css-red">
+							<div class="">
+								<p  class="email" color="red500"></p>
+							</div>
+						</div>
+
 					</div>
 					
 					<!-- 비밀번호 -->
 					<div class="content-wrapper">
 						<div class="content-title">비밀번호</div>
 						<div class="input-wrapper">
+<<<<<<< HEAD:WebContent/templates/main/join.jsp
+<<<<<<< HEAD
 							<input type="password" placeholder="비밀번호를 입력해 주세요. (8자리 이상)" name="user_password" autocomplete="current-password" class="join-input" value="">
+=======
+							<input type="password" id="password" placeholder="비밀번호를 입력해 주세요. (8자리 이상)" name="user_password" autocomplete="current-password" class="join-input" value="">
+=======
+							<input type="password" id="userPassword" placeholder="비밀번호를 입력해 주세요. (8자리 이상)" name="userPassword" autocomplete="current-password" class="join-input" value="">
+>>>>>>> icontact_backend:WebContent/templates/user/join.jsp
 						</div>
 						
-						<!-- 유효성 검사 -->
-						<div></div>
+					<!-- 유효성 검사 -->
+							<div class="css-red">
+							<div class="">
+								<p  class="password" color="red500"></p>
+							</div>
+<<<<<<< HEAD:WebContent/templates/main/join.jsp
+>>>>>>> origin/master
+=======
+>>>>>>> icontact_backend:WebContent/templates/user/join.jsp
+						</div>
+						
 					</div>
 					
 					<!-- 비밀번호 확인 -->
 					<div class="content-wrapper" style="padding-bottom:8px;">
 						<div class="input-wrapper">
-							<input type="password" placeholder="비밀번호를 한번 더 입력해 주세요." name="passwordConfirm" autocomplete="current-password" class="join-input" value="">
+							<input type="password" id="userPassword2" placeholder="비밀번호를 한번 더 입력해 주세요." name="passwordConfirm" autocomplete="current-password" class="join-input" value="">
 						</div>
 						
-						<!-- 유효성 검사 -->
-						<div></div>					
+					<!-- 유효성 검사 -->
+							<div class="css-red">
+							<div class="">
+								<p  class="password2" color="red500"></p>
+							</div>
+						</div>		
+								
 					</div>
 					
 					<!-- 이름 -->
 					<div class="content-wrapper">
 						<div class="content-title">이름</div>
 						<div class="input-wrapper">
+<<<<<<< HEAD:WebContent/templates/main/join.jsp
+<<<<<<< HEAD
 							<input type="text" placeholder="이름을 입력해 주세요." name="user_name" autocomplete="off" class="join-input" value="">
 						</div>
 						
 						<!-- 유효성 검사 -->
 						<div></div>
+=======
+							<input type="text" id="userName" placeholder="이름을 입력해 주세요." name="user_name" autocomplete="off" class="join-input" value="">
+						</div>
+						
+=======
+							<input type="text" id="userName" placeholder="이름을 입력해 주세요." name="userName" autocomplete="off" class="join-input" value="">
+						</div>
+						
+>>>>>>> icontact_backend:WebContent/templates/user/join.jsp
+					<!-- 유효성 검사 -->
+						<div class="css-red">
+							<div class="">
+								<p  class="name" color="red500"></p>
+							</div>
+						</div>
+
+<<<<<<< HEAD:WebContent/templates/main/join.jsp
+>>>>>>> origin/master
+=======
+>>>>>>> icontact_backend:WebContent/templates/user/join.jsp
 					</div>
 					
 					<!-- 전화번호 -->
 					<div class="content-wrapper">
 						<div class="content-title">전화번호</div>
 						<div class="input-wrapper">
+<<<<<<< HEAD:WebContent/templates/main/join.jsp
+<<<<<<< HEAD
 							<input type="tel" placeholder="전화번호를 입력해 주세요." name="user_call" autocomplete="tel" class="join-input" value="">
 						</div>
 						
 						<!-- 유효성 검사 -->
 						<div></div>
+=======
+							<input type="tel" id="userPhone" placeholder="전화번호를 입력해 주세요." name="user_call" autocomplete="tel" class="join-input" value="">
+						</div>
+						
+=======
+							<input type="tel" id="userCall" placeholder="전화번호를 입력해 주세요." name="userCall" autocomplete="tel" class="join-input" value="">
+						</div>
+						
+>>>>>>> icontact_backend:WebContent/templates/user/join.jsp
+					<!-- 유효성 검사 -->
+						<div class="css-red">
+							<div class="">
+								<p  class="phone" color="red500"></p>
+							</div>
+						</div>
+
+<<<<<<< HEAD:WebContent/templates/main/join.jsp
+>>>>>>> origin/master
+=======
+>>>>>>> icontact_backend:WebContent/templates/user/join.jsp
 					</div>
 					
 
@@ -188,9 +288,9 @@
 					</div> -->
 					
 					<!-- 동의 버튼 -->
-					<div class="agreements-wrapper">
+					<div class="agreements-wrapper" >
 						<div class="agree-all-wrapper"> 
-							<div class="agree-all-container"> <!-- 여기 배경색 바뀌는 것 -->
+							<div class="agree-all-container" id="all"> <!-- 여기 배경색 바뀌는 것 -->
 								<span color="#ffffff" class="agree-all">
 									<svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" class="check">
 										<path d="M0 0h24v24H0V0z" fill="none"></path>
@@ -203,7 +303,7 @@
 						
 						<div class="agree-choice-wrapper">
 							<div class="agree-choice">
-								<div class="checkbox"> <!-- 여기 배경색 바뀌는 것 -->
+								<div class="checkbox" id=checkbox> <!-- 여기 배경색 바뀌는 것 -->
 									<span color="#ffffff" rotate="0" class="agree-all">
 										<svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor" class="check">
 											<path d="M0 0h24v24H0V0z" fill="none"></path>
@@ -218,7 +318,7 @@
 						
 						<div class="agree-choice-wrapper">
 							<div class="agree-choice">
-								<div class="checkbox">
+								<div class="checkbox" id=checkbox2>
 									<span color="#ffffff" rotate="0" class="agree-all">
 										<svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor" class="check">
 											<path d="M0 0h24v24H0V0z" fill="none"></path>
@@ -233,7 +333,7 @@
 						
 						<div class="agree-choice-wrapper">
 							<div class="agree-choice">
-								<div class="checkbox">
+								<div class="checkbox" id=checkbox3>
 									<span color="#ffffff" rotate="0" class="agree-all">
 										<svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor" class="check">
 											<path d="M0 0h24v24H0V0z" fill="none"></path>
@@ -248,7 +348,7 @@
 						
 						<div class="agree-choice-wrapper">
 							<div class="agree-choice">
-								<div class="checkbox">
+								<div class="checkbox" >
 									<span color="#ffffff" rotate="0" class="agree-all">
 										<svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor" class="check">
 											<path d="M0 0h24v24H0V0z" fill="none"></path>
@@ -276,7 +376,7 @@
 					</div>
 					
 					<!-- 회원가입 버튼 -->
-					<button class="join-btn darker">
+					<button class="join-btn darker" disabled>
 						<span>버튼만 누르면 가입완료!</span>
 					</button>
 				</form>
