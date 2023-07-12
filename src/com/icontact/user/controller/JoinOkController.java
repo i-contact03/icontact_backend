@@ -11,10 +11,27 @@ import com.icontact.Result;
 
 public class JoinOkController implements Action {
 
-	@Override
-	public Result execute(HttpServletRequest req, HttpServletResponse resp) throws IOException, ServletException {
-		// TODO Auto-generated method stub
-		return null;
+		UserDAO userDAO = new UserDAO();
+		UserVO userVO = new UserVO();
+		Result result = new Result();
+		
+
+		userVO.setUserIdentification(req.getParameter("userIdentification"));
+		userVO.setUserPassword(req.getParameter("userPassword"));
+		userVO.setUserName(req.getParameter("userName"));
+		userVO.setUserCall(req.getParameter("userCall"));
+		userVO.setUserEmail(req.getParameter("userEmail"));
+		
+
+		userDAO.insert(userVO);
+		
+
+		result.setRedirect(true);
+		
+
+		result.setPath(req.getContextPath() + "/login_real.user");
+		
+		return result;
 	}
 
 }
