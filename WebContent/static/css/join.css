@@ -268,7 +268,15 @@ body {
 .agree-all-container{
 	margin-right: 8px;
     display: inline-block;
-    background-color: rgb(255, 212, 0);
+<<<<<<< HEAD
+<<<<<<< HEAD
+    background-color: #eacaff;
+=======
+    background-color: rgb(242, 243, 247);
+>>>>>>> origin/master
+=======
+    background-color: rgb(242, 243, 247);
+>>>>>>> icontact_backend
     border-radius: 50%;
     padding: 2px;
     line-height: 1.15;
@@ -313,7 +321,15 @@ body {
 .checkbox{
 	margin-right: 8px;
     display: inline-block;
-    background-color: rgb(255, 212, 0);
+<<<<<<< HEAD
+<<<<<<< HEAD
+    background-color: #eacaff;
+=======
+    background-color: rgb(242, 243, 247);
+>>>>>>> origin/master
+=======
+    background-color: rgb(242, 243, 247);
+>>>>>>> icontact_backend
     border-radius: 50%;
     padding: 2px;
     line-height: 1.15;
@@ -343,8 +359,8 @@ body {
     font-size: 16px;
     padding: 0 24px;
     min-width: 80px;
-    background-color: #ffd400;
-    border-color: #ffd400;
+    background-color: #eacaff;
+    border-color: #eacaff;
     color: #303441;
     text-transform: none;
     overflow: visible;
@@ -365,3 +381,22 @@ body {
     text-align: center;
     line-height: normal;
 }
+
+
+.join-btn:disabled {
+    cursor: not-allowed;
+    background-color: rgb(228, 229, 237);
+    border-color: rgb(228, 229, 237);
+    color: rgb(154, 155, 167);
+}
+
+
+.css-red {
+    margin: 0px;
+    color: rgb(255, 64, 43);
+    font-size: 0.875rem;
+    font-weight: 400;
+    line-height: 1.429;
+    letter-spacing: 0px;
+}
+
