@@ -39,7 +39,7 @@ public class UserFrontController extends HttpServlet{
 			result = new Result();
 			result.setPath("templates/user/join.jsp");
 			
-		} else if(target.equals("joinOk")){
+		} else if(target.equals("templates/user/joinOk")){
 			result = new JoinOkController().execute(req, resp);
 			
 		} else if(target.equals("login")){

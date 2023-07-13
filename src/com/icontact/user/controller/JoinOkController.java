@@ -18,8 +18,6 @@ public class JoinOkController implements Action{
 	public Result execute(HttpServletRequest req, HttpServletResponse resp) throws IOException, ServletException {
 	
 		
-		System.out.println("콘솔창");
-		
 		UserDAO userDAO = new UserDAO();
 		UserVO userVO = new UserVO();
 		Result result = new Result();
