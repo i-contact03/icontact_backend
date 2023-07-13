@@ -22,9 +22,12 @@ public class UserFrontController extends HttpServlet{
 	protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
 		req.setCharacterEncoding("UTF-8");
 		
+		
 //		사용자가 요청한 전체 URI 중에서 확장자 앞의 문자열 값을 분리
 		String target = req.getRequestURI().replace(req.getContextPath() + "/", "").split("\\.")[0];
 		Result result = null;
+		
+		System.out.println(target);
 		
 		if(target.equals("checkIdOk")) {
 			result = new CheckIdOkController().execute(req, resp);
@@ -63,3 +66,4 @@ public class UserFrontController extends HttpServlet{
 			doGet(req, resp);
 		}
 }
+
