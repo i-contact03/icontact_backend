@@ -88,14 +88,14 @@
 			  
 			    <div class="form-field required  request_subject">
 			      <label id="request_subject_label" for="request_subject">제목</label>
-			      <input type="text" name="request[subject]" id="request_subject" maxlength="150" size="150" aria-required="true" aria-labelledby="request_subject_label">	      
+			      <input type="text" name="articleTitle" id="request_subject" maxlength="150" size="150" aria-required="true" aria-labelledby="request_subject_label">	      
 			    </div>
 			
 			    <div class="suggestion-list"></div>
 			      
 			    <div class="form-field text  required  request_description">
 			      <label id="request_description_label" for="request_description"><!-- 설명 -->내용</label>
-			      <textarea name="request[description]" id="request_description" aria-required="true" aria-describedby="request_description_hint" aria-labelledby="request_description_label"></textarea>
+			      <textarea name="articleContent" id="request_description" aria-required="true" aria-describedby="request_description_hint" aria-labelledby="request_description_label"></textarea>
 			      <input type="hidden" name="request[description_mimetype]" id="request_description_mimetype" value="text/plain" style="display: none;" autocomplete="off">
 			      
 			      <!-- <p id="request_description_hint">문의 내용에 관한 세부 정보를 입력해 주세요. 

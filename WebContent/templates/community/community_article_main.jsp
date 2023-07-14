@@ -20,7 +20,7 @@
 	<div  style="background-color: #eacaff;">
 		<header class="header">
 			<div class="logo">
-				<a href="https://kmong.com">
+				<a href="">
 					<!-- <img src="//theme.zdassets.com/theme_assets/9204604/ed54b2d958a2f7b420f8412b529519e676c20bc3.png" class="logo-kmong"> -->
 					<img src="../../icon/logo.png" width="170px" height="52px" > <!-- .top-header-logo -->
 				</a>
@@ -32,7 +32,7 @@
 				</a>
 			</div>
 			<div class="nav-wrapper">
-				<a href="https://support.kmong.com/hc/ko/requests/new" target="_parent" style="color: #666666;">게시물 등록하기</a>
+				<a href="" target="_parent" style="color: #666666;">게시물 등록하기</a>
 				<a class="change-page-login" role="button" href="https://kmong.com/login?brand_id=360002309011&locale_id=69&return_to=https%3A%2F%2Fsupport.kmong.com%2Fhc%2Fko%2Frequests%2Fnew&target=zendesk&timestamp=1687257449" style="color: blue;">한동석 님</a>
 			</div>
 		</header>
