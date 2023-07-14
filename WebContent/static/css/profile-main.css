@@ -5,6 +5,7 @@
 }
 
 
+
 body {
     margin: 0;
 }
@@ -437,7 +438,7 @@ a.top-header-menu:hover {
 .active-bar{
     width: 100%;
     height: 100%;
-    background-color: rgb(255, 212, 0);
+    background-color: #eacaff;
 
     display: none;
 }
@@ -542,7 +543,7 @@ a.top-header-menu:hover {
 }
 
 .profile-main-section-username{
-	font-family: 'NanumSquareAceb';
+	/* font-family: 'NanumSquareAceb'; */
 	font-size: 25px;
     color: #303441;
     height: 37px;
@@ -557,7 +558,7 @@ a.top-header-menu:hover {
 
 
 .profile-main-section-introduction span{
-	font-family: 'NanumSquareAcr';
+	/* font-family: 'NanumSquareAcr'; */
 	font-size: 18px;
     color: #727585;
     margin-left: 5px;
@@ -569,7 +570,7 @@ a.top-header-menu:hover {
 }
 
 .profile-main-section-button{
-	font-family: 'NanumSquareAcb';
+	/* font-family: 'NanumSquareAcb'; */
 	border: 0;
     border-radius: 6px;
     width: 269px;
@@ -580,7 +581,7 @@ a.top-header-menu:hover {
     font-size: 16px;
     color: #303441;
     font-weight: 500;
-    background: #ffd400;
+    background: #eacaff;
 }
 
 .profile-main-section-button:hover{
@@ -597,7 +598,7 @@ a.top-header-menu:hover {
 
 
 .profile-navigation-section-item{
-	font-family: 'NanumSquareAcb';
+	/* font-family: 'NanumSquareAcb'; */
 	display: flex;
     align-items: center;
     justify-content: center;
@@ -636,7 +637,7 @@ a.top-header-menu:hover {
 }
 
 .profile-section-title{
-	font-family: 'NanumSquareAceb';
+	/* font-family: 'NanumSquareAceb'; */
 	font-size: 18px;
 	color: #303441;
 	font-weight: 700;
@@ -644,7 +645,7 @@ a.top-header-menu:hover {
 }
 
 .profile-description{
-	font-family: 'NanumSquareAcb';
+	/* font-family: 'NanumSquareAcb'; */
 	font-size: 14px;
 	color: #303441;
 	line-height: 1.7;
@@ -665,7 +666,7 @@ a.top-header-menu:hover {
 }
 
 .profile-skill-section-tag{
-	font-family: 'NanumSquareAcb';
+	/* font-family: 'NanumSquareAcb'; */
 	align-items: center;
 	display: flex;
 	justify-content: center;
@@ -688,7 +689,7 @@ a.top-header-menu:hover {
 }
 
 .profile-skill-section-title{
-	font-family: 'NanumSquareAcb';
+	/* font-family: 'NanumSquareAcb'; */
 	font-size: 14px;
     color: #303441;
 }
@@ -702,7 +703,7 @@ a.top-header-menu:hover {
 }
 
 .profile-service-list-section-advertise{
-	font-family: 'NanumSquareAcb';
+	/* font-family: 'NanumSquareAcb'; */
 	color: #116ad4;
     font-size: 14px;
 	
@@ -727,7 +728,7 @@ a.top-header-menu:hover {
 }
 
 .profile-service-list-section-empty-sub{
-	font-family: 'NanumSquareAcb';
+	/* font-family: 'NanumSquareAcb'; */
 	margin-top: 24px;
     font-size: 12px;
     color: #303441;
@@ -735,7 +736,7 @@ a.top-header-menu:hover {
 
 
 .profile-service-list-section-empty-link{
-	font-family: 'NanumSquareAcb';
+	/* font-family: 'NanumSquareAcb'; */
 	margin-top: 4px;
     font-size: 15px;
     color: #116ad4;
@@ -759,7 +760,7 @@ a.top-header-menu:hover {
 }
 
 .profile-information-section-title{
-	font-family: 'NanumSquareAceb';
+	/* font-family: 'NanumSquareAceb'; */
 	font-size: 14px;
     color: #303441;
     font-weight: 700;
@@ -774,13 +775,13 @@ a.top-header-menu:hover {
 }
 
 .profile-information-section-information-title{
-	font-family: 'NanumSquareAcb';
+	/* font-family: 'NanumSquareAcb'; */
 	font-size: 14px;
     color: #727585;
 }
 
 .profile-information-section-information-description{
-	font-family: 'NanumSquareAceb';
+	/* font-family: 'NanumSquareAceb'; */
 	font-size: 14px;
     color: #303441;
     font-weight: 500;
@@ -792,6 +793,65 @@ a.top-header-menu:hover {
 /* footer */
 
 
+.footer {
+  border-top: 1px solid #ddd;
+  margin-top: 60px;
+  padding: 30px 0;
+}
+
+.footer a {
+  color: #999;
+}
+
+.footer-div {
+  max-width: 1160px;
+  margin: 0 auto;
+  padding: 0 5%;
+  display: flex;
+  justify-content: space-between; 
+  display:none;
+}
+
+.footer-div2 {
+  margin: 0 auto;
+  padding: 0;
+  display: flex;
+  font-size:12px;
+  justify-content: space-between;
+  padding-bottom:40px;
+    
+}
+
+@media (min-width: 1160px) {
+  .footer-div2 {
+  display:none;
+  }
+}
+
+.footer-about {
+  max-width: 247px;
+  height: 132px;
+  font-size: 13px;
+  font-weight: normal;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: 1.69;
+  letter-spacing: -0.3px;
+  color: #666666;
+}
+
+@media (min-width: 1160px) {
+  .footer-div {
+    padding: 0;
+    width: 100%;
+    display:flex;
+    font-size:13px;
+  }
+}
+
+
+
+/* 
 footer hr{
 	height: 1px;
     margin: 0;
@@ -976,7 +1036,7 @@ footer hr{
     font-size: 15px;
     color: #303441;
 }
-
+ */
 
 
 .block{

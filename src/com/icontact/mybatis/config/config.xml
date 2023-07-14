@@ -15,6 +15,9 @@
 		<typeAlias type="com.icontact.article.domain.ArticleVO" alias="articleVO"/>
 		<typeAlias type="com.icontact.mypage.domain.MypageVO" alias="mypageVO"/>
 		<typeAlias type="com.icontact.main.domain.MainDTO" alias="mainDTO"/>
+		
+		<typeAlias type="com.icontact.interest.domain.InterestVO" alias="interestVO"/>
+		<typeAlias type="com.icontact.user.domain.UserDTO" alias="userDTO"/>
 	</typeAliases>
 
 	<environments default="mysql">
@@ -37,6 +40,7 @@
 		<mapper resource="com/icontact/mybatis/mapper/articleMapper.xml"/>
 		<mapper resource="com/icontact/mybatis/mapper/mypageMapper.xml"/>
 		<mapper resource="com/icontact/mybatis/mapper/mainMapper.xml"/>
+		<mapper resource="com/icontact/mybatis/mapper/interestMapper.xml"/>
 	</mappers>
 </configuration>
 
