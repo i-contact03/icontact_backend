@@ -1,4 +1,4 @@
-package com.icontact.idea;
+package com.icontact.detail.image;
 
 import java.io.IOException;
 
@@ -16,7 +16,7 @@ import com.icontact.mypage.controller.MyMeterializeController;
 
 
 
-public class IdeaFrontController extends HttpServlet{
+public class DetailImageFrontController extends HttpServlet{
 	
 	@Override
 	protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
@@ -29,7 +29,6 @@ public class IdeaFrontController extends HttpServlet{
 //		아이디어뱅크 메인페이지 출력
 		if(target.equals("ideaListOk")) {
 			result = new IdeaListOkController().execute(req, resp);
-			System.out.println("프컨 들어옴!");
 				
 //		아이디어 상세보기 항목으로 이동
 		} else if(target.equals("goodsMain")){
@@ -42,7 +41,7 @@ public class IdeaFrontController extends HttpServlet{
 //		아이디어 작성하기로 이동
 		} else if(target.equals("writeIdea")){
 			result = new Result();
-			result.setPath("templates/goods/goods_register_1Work.jsp");
+			result.setPath("templates/goods_register_1Work.jsp");
 			
 //		아이디어 작성하기
 		} else if(target.equals("writeIdeaOk")){

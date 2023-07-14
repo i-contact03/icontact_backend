@@ -7,12 +7,14 @@
 	</settings>
 	
 	<typeAliases>
-		<typeAlias type="com.icontact.user.domain.UserVO" alias="UserVO"/>
-		<typeAlias type="com.icontact.idea.domain.IdeaVO" alias="IdeaVO"/>
-		<typeAlias type="com.icontact.comment.domain.CommentVO" alias="CommentVO"/>
-		<typeAlias type="com.icontact.article.domain.ArticleVO" alias="ArticleVO"/>
-		<typeAlias type="com.icontact.mypage.domain.MypageVO" alias="MypageVO"/>
-		<typeAlias type="com.icontact.main.domain.MainDTO" alias="MainDTO"/>
+		<typeAlias type="com.icontact.user.domain.UserVO" alias="userVO"/>
+		<typeAlias type="com.icontact.detail.image.domain.DetailImageVO" alias="detailImageVO"/>
+		<typeAlias type="com.icontact.idea.domain.IdeaVO" alias="ideaVO"/>
+		<typeAlias type="com.icontact.idea.domain.IdeaDTO" alias="ideaDTO"/>
+		<typeAlias type="com.icontact.comment.domain.CommentVO" alias="commentVO"/>
+		<typeAlias type="com.icontact.article.domain.ArticleVO" alias="articleVO"/>
+		<typeAlias type="com.icontact.mypage.domain.MypageVO" alias="mypageVO"/>
+		<typeAlias type="com.icontact.main.domain.MainDTO" alias="mainDTO"/>
 	</typeAliases>
 
 	<environments default="mysql">
@@ -30,6 +32,7 @@
 	<mappers>
 		<mapper resource="com/icontact/mybatis/mapper/userMapper.xml"/>
 		<mapper resource="com/icontact/mybatis/mapper/ideaMapper.xml"/>
+		<mapper resource="com/icontact/mybatis/mapper/detailImageMapper.xml"/>
 		<mapper resource="com/icontact/mybatis/mapper/commentMapper.xml"/>
 		<mapper resource="com/icontact/mybatis/mapper/articleMapper.xml"/>
 		<mapper resource="com/icontact/mybatis/mapper/mypageMapper.xml"/>

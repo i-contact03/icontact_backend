@@ -5,26 +5,15 @@
 <head>
 <meta charset="UTF-8">
 <title>상품등록</title>
-<link rel="icon" href="../../icon/kmongFavicon.png">
+<link rel="icon" href="../../icon/favicon.png">
 
  <link rel="stylesheet" href="../../static/css/goods_register_1Work.css">
  
 <style>
-
-	@font-face {
-		font-family: 'MetroSansBold';
-		src: url('../../font/MetroSans-Bold.woff2'); /* 굵은글씨체 주소지정 */
-	}
 	
 	@font-face {
 		font-family: 'MetroSansMedium';
 		src: url('../../font/MetroSans-Medium.woff2');
-	}
-	
-	
-	@font-face {
-		font-family: 'MetroSansRegular';
-		src: url('../../font/MetroSans-Regular.woff2'); /* 가는글씨체 주소지정 */
 	}
 	
 </style>
@@ -33,15 +22,16 @@
 <body>
 <div class="global-body">
 	<div id="master-body">
-		<div class="GigForm">
+	<!-- form 태그 시작 ---------------------------------------------------------------------------------------->
+		<form class="GigForm"  action="${pageContext.request.contextPath}/writeIdeaOk.idea" name="wirteForme" >
 			<header class="GigFormHeader">
 				<section class="header-form-main">
 					<div class="main-logo">
 						<a>
-							<img class="kmong-logo" src="images/KakaoTalk_20230703_002357368.png">
+							<img class="kmong-logo" src="../../icon/logo.png">
 						</a>
 					</div>
-					<button disabled="disabled" class="header-summit">제출하기</button>
+					<!-- <button disabled="disabled" class="header-summit">제출하기</button> -->
 				</section>
 				<div class="header-line"></div>
 				<div class="header-form"></div>
@@ -96,6 +86,16 @@
 								</div>
 								<div class="form-top-wrapper">
 									<span class="">최소 10글자 이상, 30이하로 입력해주세요.</span>
+								</div>
+								<div class="main-top-wrapper">
+									<span class="top-title">
+										<div class="top-title1">
+											<span>기본 정보</span>
+										</div>
+									</span>
+									<div class="top-input">
+										<input placeholder="간단한 한 줄 설명을 입력해주세요" maxlength="30" type="text" autocomplete="off" class="">
+									</div>
 								</div>
 							</div>
 						</div>
@@ -240,7 +240,7 @@
 				                        <div class="add-img-con">
 				                           <div class="uplodebox">
 				                              <div class="uplodebox-img">
-				                                 <img src="https://kmong.com/img/gig_form/img_gig_form_imageupload.png" width="88px">
+				                                 <!-- <input type="file"> --><img src="https://kmong.com/img/gig_form/img_gig_form_imageupload.png" width="88px">
 				                                 <div class="uplodebox-text">
 				                                 	652 x 488px<br>
 				                                 	(4:3 비율)
@@ -256,32 +256,82 @@
 				                  <div></div>
 				               </div>
 				            </div>
-					            <div>
-					            	<div class="main-top">
-					            		<div class="main-top-wrapper main-img3">
-					            			<span class="top-title mainimg-title">
-					            				<div class="top-title1">
-					            					<span>상세이미지등록</span>
-					            				</div>
-					            				<span class="main-sub-title">
-					            					<span class="sub-title-type">(선택)</span>
-					            					<span class="sub-title-type2">0</span>
-					            					 / 9
-					            				</span>
-					            			</span>
-					            			<div class="img-con">
-					            				<div class="add-img-con">
-					            					<div class="add-img-area">
-					            						<div class="detail-img">
-					            							<img src="https://kmong.com/img/gig_form/img_gig_form_imageupload.png" width="88px">
-					            						</div>
-					            					</div>
-					            					<div class="dummybox"></div>
-					            				</div>
-					            			</div>
-					            		</div>
-					            	</div>
-					            </div>
+				            <div>
+				            	<div class="main-top">
+				            		<div class="main-top-wrapper main-img3">
+				            			<span class="top-title mainimg-title">
+				            				<div class="top-title1">
+				            					<span>상세이미지등록</span>
+				            				</div>
+				            				<span class="main-sub-title">
+				            					<span class="sub-title-type">(선택)</span>
+				            					<span class="sub-title-type2">0</span>
+				            					 / 9
+				            				</span>
+				            			</span>
+				            			
+				            			<!-- 상세이미지 -->
+				            			<div class="img-con">
+				            				<div class="add-img-con"> <!-- 행 -->
+				            					<div class="add-img-area"> <!-- 열 -->
+				            						<div class="detail-img">
+				            							<img src="https://kmong.com/img/gig_form/img_gig_form_imageupload.png" width="88px">
+				            						</div>
+				            					</div>
+				            					<div class="add-img-area">
+				            						<div class="detail-img">
+				            							<img src="https://kmong.com/img/gig_form/img_gig_form_imageupload.png" width="88px">
+				            						</div>
+				            					</div>
+				            					<div class="add-img-area">
+				            						<div class="detail-img">
+				            							<img src="https://kmong.com/img/gig_form/img_gig_form_imageupload.png" width="88px">
+				            						</div>
+				            					</div>
+				            					<!-- <div class="dummybox"></div> -->
+				            				</div>
+				            				
+				            				<div class="add-img-con">
+				            					<div class="add-img-area">
+				            						<div class="detail-img">
+				            							<img src="https://kmong.com/img/gig_form/img_gig_form_imageupload.png" width="88px">
+				            						</div>
+				            					</div>
+				            					<div class="add-img-area">
+				            						<div class="detail-img">
+				            							<img src="https://kmong.com/img/gig_form/img_gig_form_imageupload.png" width="88px">
+				            						</div>
+				            					</div>
+				            					<div class="add-img-area">
+				            						<div class="detail-img">
+				            							<img src="https://kmong.com/img/gig_form/img_gig_form_imageupload.png" width="88px">
+				            						</div>
+				            					</div>
+				            					<!-- <div class="dummybox"></div> -->
+				            				</div>
+				            				
+				            				<div class="add-img-con">
+				            					<div class="add-img-area">
+				            						<div class="detail-img">
+				            							<img src="https://kmong.com/img/gig_form/img_gig_form_imageupload.png" width="88px">
+				            						</div>
+				            					</div>
+				            					<div class="add-img-area">
+				            						<div class="detail-img">
+				            							<img src="https://kmong.com/img/gig_form/img_gig_form_imageupload.png" width="88px">
+				            						</div>
+				            					</div>
+				            					<div class="add-img-area">
+				            						<div class="detail-img">
+				            							<img src="https://kmong.com/img/gig_form/img_gig_form_imageupload.png" width="88px">
+				            						</div>
+				            					</div>
+				            					<!-- <div class="dummybox"></div> -->
+				            				</div>
+				            			</div>
+				            		</div>
+				            	</div>
+				            </div>
 				            <div></div>
 				            <div></div>
 				         </div>
@@ -294,14 +344,20 @@
 			</main>
 			<footer class="footer-form">
 				<section class="footer-wrapper">
-					<button class="footer-save">저장</button>
-					<button class="footer-next">다음</button>
+					<button disabled="disabled" class="header-summit">등록하기</button>
+					<!-- <button class="footer-save">저장</button>
+					<button class="footer-next">다음</button> -->
 				</section>
 			</footer>
-		</div>
+			
+		</form>
+		<!-- form 태그 끝 ---------------------------------------------------------------------------------------->
 	</div>
 </div>
 </body>
-<script type="module" src="https://code.jquery.com/jquery-3.7.0.min.js"></script>
-<script src="../../static/js/goods_register.js"></script>
+<script src="https://code.jquery.com/jquery-3.6.1.min.js"></script>
+<script src="${pageContext.request.contextPath}/static/js/modal/modal.js"></script>
+<script src="https://rawgit.com/jackmoore/autosize/master/dist/autosize.min.js"></script>
+<script src="${pageContext.request.contextPath}/static/js/goods_dropdown_menu.js"></script>
+<script src="${pageContext.request.contextPath}/static/js/goods_register.js"></script>
 </html>

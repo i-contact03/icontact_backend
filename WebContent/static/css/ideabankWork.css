@@ -9,6 +9,11 @@
     box-sizing: border-box;
 }
 
+a {
+	text-decoration: none;
+	color: inherit;
+}
+
 li {
 	list-style: none;
 }
@@ -1441,9 +1446,9 @@ div.left-top-category {
     overflow: hidden;
     text-overflow: ellipsis;
     display: -webkit-box;
-    margin: 8px 0px 16px;
+    margin: 8px 0px;
     line-height: 21px;
-    height: 42px;
+    height: 25px;
     font-size: 17px;
     font-weight: bold;
     color: rgb(48, 52, 65);
