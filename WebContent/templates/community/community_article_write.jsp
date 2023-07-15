@@ -56,6 +56,7 @@
 					<input type="search" name="query" id="query" placeholder="검색" aria-label="검색">
 				</form>
 			</nav>
+			 <form action="${pageContext.request.contextPath}/writeOk.article" name="writeForm" method="post" enctype="multipart/form-data">
 			<h1>
 			    <div class="article-write-page-title">게시물 등록<!-- 문의 등록 --></div>
 			    <!-- <div class="article-write-page-details">
