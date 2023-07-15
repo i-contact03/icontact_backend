@@ -65,7 +65,7 @@
 								<!-- 로그인 이메일 -->
 								<div>
 									<div class="login-main-email-and-pw-box">	<!-- css-18xyxwl e1fnk6ig0 -->
-										<input type="email" required="" placeholder="이메일을 입력해 주세요." name="email" autocomplete="username" class="login-main-email-box-email-and-pw-area" value="">	<!-- .css-dka9py -->
+										<input type="text" required="" placeholder="아이디를 입력해 주세요." name="userIdentification" autocomplete="username" class="login-main-email-box-email-and-pw-area" value="">	<!-- .css-dka9py -->
 									</div>
 									<!-- <div>
 										<p class="login-main-warning-area">	
@@ -76,7 +76,7 @@
 								<!-- = -->
 								<div>
 									<div class="login-main-email-and-pw-box">	<!-- css-18xyxwl e1fnk6ig0 -->
-										<input type="password" required="" placeholder="비밀번호를 입력해 주세요." name="password" autocomplete="current-password" class="login-main-email-box-email-and-pw-area" value="">	<!-- css-dka9py e1fnk6ig1 -->
+										<input type="password" required="" placeholder="비밀번호를 입력해 주세요." name="userPassword" autocomplete="current-password" class="login-main-email-box-email-and-pw-area" value="">	<!-- css-dka9py e1fnk6ig1 -->
 									</div>
 									<!-- <div>
 										<p class="login-main-warning-area">

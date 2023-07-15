@@ -36,11 +36,13 @@ public class LoginOkController implements Action {
 //		전달받은 아이디와 비밀번호로 회원 번호 조회
 		userId = userDAO.login(userIdentification, userPassword);
 		
+		System.out.println(userId);
+		
 //		회원 번호가 없다면
 		if(userId == null) {
 //			로그인 실패
 //			login.jsp로 이동하면서 실패했다는 login=false를 같이 전달해준다(안내 모달창을 출력하기 위해서)
-			result.setPath(req.getContextPath() + "/login.user?login=false");
+			result.setPath(req.getContextPath() + "/templates/user/login.user?login=false");
 		}else {
 //			로그인 성공
 //			세션에 로그인된 회원의 번호 저장

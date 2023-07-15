@@ -60,7 +60,7 @@ public class LoginController implements Action {
 			result.setPath("login.jsp");
 		}
 		
-		System.out.println(result);
+		
 		return result;
 	}
 
