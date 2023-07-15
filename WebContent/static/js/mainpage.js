@@ -15,11 +15,11 @@ const banners = document.querySelectorAll("div.image");
 // 이미지는 총 11개 순서대로 009, 001 ~ 009, 001
 banners.forEach((banner, i) => { // 이미지, 인덱스
     if(i == 0) {
-        banner.style.backgroundImage = 'url(images/009.png)';
+        banner.style.backgroundImage = 'url(../../images/009.png)';
     } else if(i == 10){
-        banner.style.backgroundImage = 'url(images/001.png)';
+        banner.style.backgroundImage = 'url(../../images/001.png)';
     } else {
-        banner.style.backgroundImage = `url('images/00${i}.png')`
+        banner.style.backgroundImage = `url('../../images/00${i}.png')`
     }
 });
 
