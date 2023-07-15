@@ -43,11 +43,11 @@
 				</form>
 				
 				<div class="top-header-menu-wrapper">
-					<a class="top-header-menu" href="">
-						<span>아이디어등록</span>
+					<a class="top-header-menu" href="../user/login_real.jsp">
+						<span>로그인</span>
 					</a>
-					<a class="top-header-menu" href="">
-						<span>마이페이지</span>
+					<a class="top-header-menu" href="../user/join.jsp">
+						<span>회원가입</span>
 					</a>
 					<div>
 						<a class="top-header-user">

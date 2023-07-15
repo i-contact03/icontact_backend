@@ -22,30 +22,32 @@ public class UserFrontController extends HttpServlet{
 	protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
 		req.setCharacterEncoding("UTF-8");
 		
+		
 //		사용자가 요청한 전체 URI 중에서 확장자 앞의 문자열 값을 분리
 		String target = req.getRequestURI().replace(req.getContextPath() + "/", "").split("\\.")[0];
 		Result result = null;
 		
-		if(target.equals("checkIdOk")) {
+		
+		if(target.equals("templates/user/checkIdOk")) {
 			result = new CheckIdOkController().execute(req, resp);
 				
-		} else if(target.equals("checkEmailOk")) {
+		} else if(target.equals("templates/user/checkEmailOk")) {
 			result = new CheckEmailOkController().execute(req, resp);
 			
-		} else if(target.equals("join")){
+		} else if(target.equals("templates/user/join")){
 			result = new Result();
-			result.setPath("templates/user/join.jsp");
+			result.setPath("join.jsp");
 			
 		} else if(target.equals("joinOk")){
 			result = new JoinOkController().execute(req, resp);
 			
-		} else if(target.equals("login")){
+		} else if(target.equals("templates/user/login")){
 			result = new LoginController().execute(req, resp);
-			
+	
 		} else if(target.equals("loginOk")) {
 			result = new LoginOkController().execute(req, resp);
 			
-		} else if(target.equals("logout")) {
+		} else if(target.equals("templates/user/logout")) {
 			result = new LogoutController().execute(req, resp);
 		}
 		
@@ -63,3 +65,4 @@ public class UserFrontController extends HttpServlet{
 			doGet(req, resp);
 		}
 }
+

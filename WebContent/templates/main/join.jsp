@@ -34,7 +34,11 @@
 			</a>
 			
 			<div class="main-wrapper">
+<<<<<<< HEAD:WebContent/templates/main/join.jsp
 				<form action="" class="join-form">
+=======
+				<form action="${pageContext.request.contextPath}/joinOk.user" class="join-form">
+>>>>>>> icontact_backend:WebContent/templates/user/join.jsp
 					<h1 class="join-title">딱 이것만 체크하면 가입완료!</h1>
 					
 					<!-- 아이디 -->
