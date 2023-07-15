@@ -565,7 +565,7 @@ $("div#back").click(function(){
 
 
 
-let text= `
+let modalMessage = `
 	<!-- 로그인 팝업 전체 틀 -->
 	<div class="login-main-container-largest-full">	<!-- kmong-modal-root --><!-- style="position: fixed;z-index: 9999;inset: 0px;" -->
 		
