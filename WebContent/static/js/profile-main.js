@@ -8,10 +8,6 @@ showProfile();
 function showProfile(){
 	const $userIdentification = $("#userIdentification");
 	
-	
-	console.log(user);
-	console.log(user.userIdentification);
-	
 	let text1 = "";
 	
 	text1 = `<span class="name">${user.userIdentification}</span> 님`;

@@ -1,6 +1,7 @@
 package com.icontact.mypage.controller;
 
 import java.io.IOException;
+import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 
@@ -16,6 +17,7 @@ import org.json.JSONObject;
 import com.icontact.Action;
 import com.icontact.Result;
 import com.icontact.interest.dao.InterestDAO;
+import com.icontact.interest.domain.InterestDTO;
 import com.icontact.interest.domain.InterestVO;
 import com.icontact.user.dao.UserDAO;
 import com.icontact.user.domain.UserDTO;
@@ -32,6 +34,7 @@ public class ProfileMainOKController implements Action {
 		UserDAO userDAO = new UserDAO();
 		
 		InterestVO interestVO = new InterestVO();
+		InterestDTO interestDTO = new InterestDTO();
 		InterestDAO interestDAO = new InterestDAO(); 
 		
 		
@@ -65,6 +68,29 @@ public class ProfileMainOKController implements Action {
 		userDTO.setUserName(userVO.getUserName());
 		userDTO.setUserEmail(userVO.getUserEmail());
 		userDTO.setUserCall(userVO.getUserCall());
+		
+		List<InterestVO> interests = interestDAO.findInterestById(longValue);
+//		List<String> interestNames = new ArrayList<String>();
+		JSONObject interestNames = new JSONObject();
+		
+
+			int i = 1;
+			for(InterestVO interest : interests) {
+				InterestDTO inDTO = new InterestDTO();
+				inDTO = interestDAO.matchInterest(interest);
+				try {
+					interestNames.put("interest"+(i), inDTO.getScName());
+					i++;
+					System.out.println(interestNames);
+				} catch (JSONException e) {
+					e.printStackTrace();
+				}
+			}
+		
+		System.out.println(interestNames.toString()); // ["장난감", "리스트"]
+//		System.out.println(interestNames); // ["장난감", "리스트"]
+		
+//	 ------------------------	
 		
 		/*
 		 * List<InterestVO> interests = interestDAO.findInterestById(longValue);
@@ -116,6 +142,7 @@ public class ProfileMainOKController implements Action {
 		
 		
 		req.setAttribute("user", userDtoJson.toString());
+		req.setAttribute("interestNames", interestNames.toString());
 		
 		/*
 		 * req.setAttribute("user", userJson.toString()); req.setAttribute("user",

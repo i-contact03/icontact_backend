@@ -7,7 +7,7 @@
 <meta charset="UTF-8">
 <title>iContact Profile</title>
 <link rel="icon" href="${pageContext.request.contextPath}/icon/favicon.png">
-<link rel="stylesheet" href="${pageContext.request.contextPath}/static/css/profile-main.css">
+<link rel="stylesheet" href="../../static/css/profile-main.css">
 
 <style>
 
@@ -182,8 +182,8 @@
                   
                   
                   
-                  
-                  <div class="description-detail-section">
+                  <!-- 수정 전 원본 -->
+                  <!-- <div class="description-detail-section">
                      <div>
                         <div class="profile-section-title">
                            전문분야 및 상세분야
@@ -199,6 +199,35 @@
                                      웹사이트 신규 제작
                                  </div>
                               </div>
+                           </div>
+                        </div>
+                     </div>
+                  </div> -->
+                  
+                  <!-- 수정 시 참고함 -->
+                  <%-- <c:forEach var="market" items="${markets}">
+						<ul class="menu-wrap">
+							<c:forEach var="menu" items="${market.menus}">
+								<li>${menu.menuName} - ${menu.menuPrice}원</li>
+							</c:forEach>
+						</ul>
+					</c:forEach> --%>
+                  
+                  <!-- 수정 후 ~~~~~~~~ -->
+                  <div class="description-detail-section">
+                     <div>
+                        <div class="profile-section-title">
+                           나의 관심분야
+                        </div>
+                        
+                        <div class="profile-skill-section-specialty">
+                           <div>
+                              <!-- <div class="profile-skill-section-title">
+                                 IT·프로그래밍
+                              </div> -->
+                              
+                              <!-- 아래는 유저의 관심분야 뿌리는 곳 (최대 3개로 설정하는 것이 계획이었음) -->
+                              <div class="profile-skill-section-tag-group"></div>	<!--  display: flex 처리 되어 있음 -->
                            </div>
                         </div>
                      </div>
@@ -318,10 +347,45 @@
 <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 <script >
 
-
-
 	let user = `${user}`;
 	user = JSON.parse(user);
+	let interestNames = `${interestNames}`;
+	interestNames = JSON.parse(interestNames);
+	console.log(interestNames);
+	console.log(interestNames.interest1);
+	console.log(interestNames.interest2);
+	
+	let $div = $("div.profile-skill-section-tag-group");
+	let text = "";
+	
+	let interest = 1;
+
+	for (let propertyName in interestNames) {
+	  if (interestNames.hasOwnProperty(propertyName)) {
+	    interest = interestNames[propertyName];
+	    console.log(interest);
+	    text += `<div class="profile-skill-section-tag">`+ interest + `</div>`;
+	  }
+	}
+	console.log(text);
+	$div.append(text);
+	
+/* 	console.log(interestNames.length);
+	for (let i = 0; i < interestNames.length; i++) {  // interest1과 interest2 속성에 대해 루프를 수행
+		  let interest = interestNames['interest' + (i+1)];  // interestNames 객체의 interest1, interest2 속성 값을 찾음
+		  console.log("드러옴");
+		  if (interest) {
+			  console.log(interest);
+		    text += `<div class="profile-skill-section-tag">${interest}</div>`;  // interest가 존재하는 경우에만 <div> 태그를 생성하여 text 변수에 추가
+		  }
+		} */
+	
+/* 	if(interestNames.interest1){
+		
+	} */
+	
+
+	
 	
 	console.log(user);
 	console.log(user.userName);

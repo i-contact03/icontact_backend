@@ -16,6 +16,7 @@
 		<typeAlias type="com.icontact.mypage.domain.MypageVO" alias="mypageVO"/>
 		<typeAlias type="com.icontact.main.domain.MainDTO" alias="mainDTO"/>
 		
+		<typeAlias type="com.icontact.interest.domain.InterestDTO" alias="interestDTO"/>
 		<typeAlias type="com.icontact.interest.domain.InterestVO" alias="interestVO"/>
 		<typeAlias type="com.icontact.user.domain.UserDTO" alias="userDTO"/>
 	</typeAliases>
