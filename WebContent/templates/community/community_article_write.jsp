@@ -44,7 +44,7 @@
 			<nav class="sub-nav">
 				<ol class="page-course-map">
 				    <li title="정보나눔">
-				        <a href="https://support.kmong.com/hc/ko"><!-- 크몽 고객센터 -->정보나눔</a>
+				        <a href=""><!-- 크몽 고객센터 -->정보나눔</a>
 				    </li>
 				    <li title="게시물 등록">
 				        <!-- 문의 등록 -->
@@ -139,7 +139,7 @@
   				<footer>
   					<input type="submit" name="commit" value="제출" class="darker">
   				</footer>
-
+			</form>
   			</div>
 		</div>
 	
@@ -190,6 +190,7 @@
 		</div>
 	</footer>
 </body>
+<script src="https://code.jquery.com/jquery-3.6.1.min.js"></script>
 </html>
 
 

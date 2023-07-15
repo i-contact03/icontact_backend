@@ -4,7 +4,7 @@ public class ArticleVO {
 	private Long articleId;
 	private String articleTitle;
 	private String articleContent;
-	private String articleData;
+	private String articleDate;
 	private Long articleViews;
 	private Long userId;
 	
@@ -34,12 +34,12 @@ public class ArticleVO {
 		this.articleContent = articleContent;
 	}
 
-	public String getArticleData() {
-		return articleData;
+	public String getArticleDate() {
+		return articleDate;
 	}
 
-	public void setArticleData(String articleData) {
-		this.articleData = articleData;
+	public void setArticleDate(String articleDate) {
+		this.articleDate = articleDate;
 	}
 
 	public Long getArticleViews() {
@@ -61,7 +61,7 @@ public class ArticleVO {
 	@Override
 	public String toString() {
 		return "ArticleVO [articleId=" + articleId + ", articleTitle=" + articleTitle + ", articleContent="
-				+ articleContent + ", articleData=" + articleData + ", articleViews=" + articleViews + ", userId="
+				+ articleContent + ", articleDate=" + articleDate + ", articleViews=" + articleViews + ", userId="
 				+ userId + "]";
 	}
 
