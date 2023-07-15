@@ -228,7 +228,7 @@ body > main {
 }
 
 .divide-head-main {
-	border-top: 1px solid ##eacaff;
+	border-top: 1px solid #eacaff;
     margin-bottom: 20px;
 }
 
@@ -339,7 +339,7 @@ body > main {
 /* focus */
 
 .search input[type="search"]:focus {
-  border: 1px solid rgba(255, 212, 0, 1);
+  border: 2px solid #eacaff;
   color: #555;
 }
 
