@@ -56,7 +56,7 @@ public class LoginController implements Action {
 			if(autoLogin) {
 				req.setAttribute("autoLogin", autoLogin);
 			}
-			result.setPath("templates/user/login.jsp");
+			result.setPath("login_real.jsp");
 		}
 		
 		return result;
