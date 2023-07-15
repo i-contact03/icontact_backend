@@ -95,10 +95,12 @@
 								
 								<!-- = -->
 								<!-- 로그인 부속 기능 -->
+								
+							
 								<div class="login-main-login-below-wrapper">	<!-- css-70qvj9 equrxy92 -->
 									<label color="#ffd400" class="login-main-login-below-check-for-keeplogin-wrapper">	<!-- css-18pqe3v elgfge0 -->
 										<span class="login-main-login-below-check-for-keeplogin-span">	<!-- css-9ffs86 elgfge3 -->
-											<input type="checkbox" name="remember" class="login-main-login-below-check-for-keeplogin-checkbox">	<!-- css-l775cp elgfge2 -->
+											<input type="checkbox" name="auto-login" value="true" class="login-main-login-below-check-for-keeplogin-checkbox">	<!-- css-l775cp elgfge2 -->
 											<span color="#ffd400" class="login-main-login-below-check-for-keeplogin-checkbox-inner"></span>	<!-- checkbox__inner css-1t5nui elgfge4 -->
 											<span class="login-main-login-below-check-for-keeplogin-checkbox-textbox">	<!-- css-2k2mpm elgfge1 -->
 												<p variant="body2" class="login-main-login-below-p-tag" color="gray600">로그인 상태 유지</p>	<!-- css-15suf60 e870mj50 -->
@@ -141,7 +143,7 @@
 							<!-- ==== -->
 							<!-- 회원가입 이동 버튼 -->
 							<div class="gray">
-								<a role="link" color="default" href="/signup?next_page=%2F%3Futm_source%3Dgoogle%26utm_medium%3Dcpc%26utm_campaign%3D0%26utm_content%3Dmarket%26utm_group%3D0%26utm_term%3D%25ED%2581%25AC%25EB%25AA%25BD%26gclid%3DEAIaIQobChMIr867pLDt_wIV162WCh2gGwdgEAAYASAAEgJozfD_BwE" class="login-main-go-to-signup-a-tag">	<!-- css-1uk00me eklkj752 -->
+								<a role="link" color="default" href="join.jsp" class="login-main-go-to-signup-a-tag">	<!-- css-1uk00me eklkj752 -->
 									<span class="login-main-go-to-signup-span">회원가입</span>	<!-- css-1oteowz eklkj751 -->
 								</a>
 								<!-- 10만원 쿠폰 받기 -->
@@ -160,8 +162,9 @@
 
 </body>
 
+<script src="../../static/js/modal/modal.js"></script>
 <script src="https://code.jquery.com/jquery-3.7.0.min.js"></script>
-<script src="../../static/js/login_real.js"></script>
+<script src="../../static/js/login.js"></script>
 
 
 <script src="${pageContext.request.contextPath}/static/js/modal/modal.js"></script>
@@ -176,7 +179,7 @@
 </html>
 <c:if test="${not empty login}">
 	<script>
-		showWarnModal("아이디 또는 비밀번호를<br>확인해주세요");
+		showWarnModal(text);
 	</script>
 </c:if>
 
