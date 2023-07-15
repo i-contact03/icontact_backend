@@ -14,11 +14,11 @@
 	</classpathentry>
 	<classpathentry exported="true" kind="con" path="org.eclipse.jst.j2ee.internal.web.container"/>
 	<classpathentry exported="true" kind="con" path="org.eclipse.jst.j2ee.internal.module.container"/>
-	<classpathentry exported="true" kind="lib" path="C:/week_web_1900_kim/jsp/workspace/icontact_backend/WebContent/WEB-INF/lib/cos.jar"/>
-	<classpathentry exported="true" kind="lib" path="C:/week_web_1900_kim/jsp/workspace/icontact_backend/WebContent/WEB-INF/lib/jstl.jar"/>
-	<classpathentry exported="true" kind="lib" path="C:/week_web_1900_kim/jsp/workspace/icontact_backend/WebContent/WEB-INF/lib/mybatis-3.5.10.jar"/>
-	<classpathentry exported="true" kind="lib" path="C:/week_web_1900_kim/jsp/workspace/icontact_backend/WebContent/WEB-INF/lib/mysql-connector-j-8.0.31.jar"/>
-	<classpathentry exported="true" kind="lib" path="C:/week_web_1900_kim/jsp/workspace/icontact_backend/WebContent/WEB-INF/lib/org.json.jar"/>
-	<classpathentry exported="true" kind="lib" path="C:/week_web_1900_kim/jsp/workspace/icontact_backend/WebContent/WEB-INF/lib/standard.jar"/>
+	<classpathentry exported="true" kind="lib" path="E:/KoreaIT/Java_web_project/week_web_1900_jhy/jsp/workspace/my_icontact_backend/WebContent/WEB-INF/lib/cos.jar"/>
+	<classpathentry exported="true" kind="lib" path="E:/KoreaIT/Java_web_project/week_web_1900_jhy/jsp/workspace/my_icontact_backend/WebContent/WEB-INF/lib/jstl.jar"/>
+	<classpathentry exported="true" kind="lib" path="E:/KoreaIT/Java_web_project/week_web_1900_jhy/jsp/workspace/my_icontact_backend/WebContent/WEB-INF/lib/mybatis-3.5.10.jar"/>
+	<classpathentry exported="true" kind="lib" path="E:/KoreaIT/Java_web_project/week_web_1900_jhy/jsp/workspace/my_icontact_backend/WebContent/WEB-INF/lib/mysql-connector-j-8.0.31.jar"/>
+	<classpathentry exported="true" kind="lib" path="E:/KoreaIT/Java_web_project/week_web_1900_jhy/jsp/workspace/my_icontact_backend/WebContent/WEB-INF/lib/org.json.jar"/>
+	<classpathentry exported="true" kind="lib" path="E:/KoreaIT/Java_web_project/week_web_1900_jhy/jsp/workspace/my_icontact_backend/WebContent/WEB-INF/lib/standard.jar"/>
 	<classpathentry kind="output" path="build/classes"/>
 </classpath>

@@ -1,5 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <!DOCTYPE html>
 <html>
 <head>
@@ -7,8 +8,9 @@
 <title>iContact</title>
 <link rel="icon" href="kmongFavicon.png">
 
- <link rel="stylesheet" href="../../static/css/goodsMainWork.css">
- <link rel="stylesheet" href="../../static/css/ideabankWork.css">
+
+ <link rel="stylesheet" href="${pageContext.request.contextPath}/static/css/goodsMain.css">
+ <link rel="stylesheet" href="${pageContext.request.contextPath}/static/css/ideabankWork.css">
 
 <link href="https://hangeul.pstatic.net/hangeul_static/css/nanum-square-neo.css" rel="stylesheet">
 
@@ -283,13 +285,12 @@
 		         	<div class="main-middle">
 		         		<p class="merge">
 		         			<span>
-		         				7,298
-		         				개의 서비스
+								<!-- 아이디어 총 개수 -->
 		         			</span>
 		         		</p>
 		         		<div class="middle-right">
 		         			<div class="hot">
-		         				<div class="hot-packge">인기순</div>	
+		         				<div class="hot-packge">신규등록순</div>	
 		         				<span  color="#727585" rotate="0" class="hot-down">
 		         					<svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false" preserveAspectRatio="xMidYMid meet">
 		         					<path xmlns="http://www.w3.org/2000/svg" d="M16.2207159,6.10870583 C16.5916812,5.74209279 16.5932964,5.14609072 16.2243236,4.77749794 C15.8553508,4.40890516 15.2555125,4.40730026 14.8845472,4.77391329 L7.77928409,11.9296701 C7.40827322,12.2963282 7.40670988,12.7039529 7.7757925,13.0725272 L14.8810556,20.2226181 C15.2500929,20.5911471 15.8499315,20.5926484 16.2208326,20.2259713 C16.5917338,19.8592942 16.5932448,19.2632919 16.2242075,18.8947628 L9.75,12.5010986 L16.2207159,6.10870583 Z" transform="translate(12.000000, 12.500000) scale(1, -1) rotate(-270.000000) translate(-12.000000, -12.500000) ">
@@ -301,16 +302,15 @@
 		         	</div>
 		         	
 		         	<div class="main-bone">
-		         		<div class="main-padding">
-		         	
-		         		<!-- 반복시작1 -->
-			         		<article class="goods">
+		         		<div class="main-padding"> <!-- 여기 안에 반복 시작 -->
+		         		
+			         		<!-- <article class="goods"> 이거 반복 시키기
 			            		<a class="goods-link">
 			            			<div class="goods-setting">
 			            				<div class="goods-setting2">
 			            					<div class="goods-height">
 			            						<div tabindex="0" class="goods-img">
-			  <!-- 사진 -->
+			  										사진
 			            							<img onmouseover="expansion()" src="../../img/goods1.jpg" class="goods-img2">
 			            						</div>
 			            					</div>
@@ -319,320 +319,128 @@
 			            			
 			            			<div class="text-padding">
 			            				<div class="middle-right">
-			            					<div class="title-teg">
-			            					</div>
 			            					<span class="name">아이디어 제공자 id</span>
 			            				</div>
-			            					
-			            					
 			            				<h3 class="title2">아이디어 제목</h3>
 			            						<div class="price">진행상태</div>
 			            				<div class="review">
-			            					
 			            					아이디어 등록일
 			            					<span class="line"></span>
-			            					<div>
-			            						
-			            					</div>
 			            				</div>
 			            			</div>
 			            		</a>
-			         		</article>
-			         		<article class="goods">
-			            		<a class="goods-link">
-			            			<div class="goods-setting">
-			            				<div class="goods-setting2">
-			            					<div class="goods-height">
-			            						<div tabindex="0" class="goods-img">
-			  <!-- 사진 -->
-			            							<img onmouseover="expansion()" src="../../img/goods10.jpg" class="goods-img2">
-			            						</div>
-			            					</div>
-			            				</div>
-			            			</div>
-			            			
-			            			<div class="text-padding">
-			            				<div class="middle-right">
-			            					<div class="title-teg">
-			            					</div>
-			            					<span class="name">아이디어 제공자 id</span>
-			            				</div>
-			            					
-			            					
-			            				<h3 class="title2">아이디어 제목</h3>
-			            						<div class="price">진행상태</div>
-			            				<div class="review">
-			            					
-			            					아이디어 등록일
-			            					<span class="line"></span>
-			            					<div>
-			            						
-			            					</div>
-			            				</div>
-			            			</div>
-			            		</a>
-			         		</article>
-			         		<article class="goods">
-			            		<a class="goods-link">
-			            			<div class="goods-setting">
-			            				<div class="goods-setting2">
-			            					<div class="goods-height">
-			            						<div tabindex="0" class="goods-img">
-			  <!-- 사진 -->
-			            							<img onmouseover="expansion()" src="../../img/goods3.jpg" class="goods-img2">
-			            						</div>
-			            					</div>
-			            				</div>
-			            			</div>
-			            			
-			            			<div class="text-padding">
-			            				<div class="middle-right">
-			            					<div class="title-teg">
-			            					</div>
-			            					<span class="name">아이디어 제공자 id</span>
-			            				</div>
-			            					
-			            					
-			            				<h3 class="title2">아이디어 제목</h3>
-			            						<div class="price">진행상태</div>
-			            				<div class="review">
-			            					
-			            					아이디어 등록일
-			            					<span class="line"></span>
-			            					<div>
-			            						
-			            					</div>
-			            				</div>
-			            			</div>
-			            		</a>
-			         		</article>
-			         		<article class="goods">
-			            		<a class="goods-link">
-			            			<div class="goods-setting">
-			            				<div class="goods-setting2">
-			            					<div class="goods-height">
-			            						<div tabindex="0" class="goods-img">
-			  <!-- 사진 -->
-			            							<img onmouseover="expansion()" src="../../img/goods4.jpg" class="goods-img2">
-			            						</div>
-			            					</div>
-			            				</div>
-			            			</div>
-			            			
-			            			<div class="text-padding">
-			            				<div class="middle-right">
-			            					<div class="title-teg">
-			            					</div>
-			            					<span class="name">아이디어 제공자 id</span>
-			            				</div>
-			            					
-			            					
-			            				<h3 class="title2">아이디어 제목</h3>
-			            						<div class="price">진행상태</div>
-			            				<div class="review">
-			            					
-			            					아이디어 등록일
-			            					<span class="line"></span>
-			            					<div>
-			            						
-			            					</div>
-			            				</div>
-			            			</div>
-			            		</a>
-			         		</article>
-			         		<article class="goods">
-			            		<a class="goods-link">
-			            			<div class="goods-setting">
-			            				<div class="goods-setting2">
-			            					<div class="goods-height">
-			            						<div tabindex="0" class="goods-img">
-			  <!-- 사진 -->
-			            							<img onmouseover="expansion()" src="../../img/goods5.jpg" class="goods-img2">
-			            						</div>
-			            					</div>
-			            				</div>
-			            			</div>
-			            			
-			            			<div class="text-padding">
-			            				<div class="middle-right">
-			            					<div class="title-teg">
-			            					</div>
-			            					<span class="name">아이디어 제공자 id</span>
-			            				</div>
-			            					
-			            					
-			            				<h3 class="title2">아이디어 제목</h3>
-			            						<div class="price">진행상태</div>
-			            				<div class="review">
-			            					
-			            					아이디어 등록일
-			            					<span class="line"></span>
-			            					<div>
-			            						
-			            					</div>
-			            				</div>
-			            			</div>
-			            		</a>
-			         		</article>
-			         		<article class="goods">
-			            		<a class="goods-link">
-			            			<div class="goods-setting">
-			            				<div class="goods-setting2">
-			            					<div class="goods-height">
-			            						<div tabindex="0" class="goods-img">
-			  <!-- 사진 -->
-			            							<img onmouseover="expansion()" src="../../img/goods6.jpg" class="goods-img2">
-			            						</div>
-			            					</div>
-			            				</div>
-			            			</div>
-			            			
-			            			<div class="text-padding">
-			            				<div class="middle-right">
-			            					<div class="title-teg">
-			            					</div>
-			            					<span class="name">아이디어 제공자 id</span>
-			            				</div>
-			            					
-			            					
-			            				<h3 class="title2">아이디어 제목</h3>
-			            						<div class="price">진행상태</div>
-			            				<div class="review">
-			            					
-			            					아이디어 등록일
-			            					<span class="line"></span>
-			            					<div>
-			            						
-			            					</div>
-			            				</div>
-			            			</div>
-			            		</a>
-			         		</article>
-			         		<article class="goods">
-			            		<a class="goods-link">
-			            			<div class="goods-setting">
-			            				<div class="goods-setting2">
-			            					<div class="goods-height">
-			            						<div tabindex="0" class="goods-img">
-			  <!-- 사진 -->
-			            							<img onmouseover="expansion()" src="../../img/goods7.jpg" class="goods-img2">
-			            						</div>
-			            					</div>
-			            				</div>
-			            			</div>
-			            			
-			            			<div class="text-padding">
-			            				<div class="middle-right">
-			            					<div class="title-teg">
-			            					</div>
-			            					<span class="name">아이디어 제공자 id</span>
-			            				</div>
-			            					
-			            					
-			            				<h3 class="title2">아이디어 제목</h3>
-			            						<div class="price">진행상태</div>
-			            				<div class="review">
-			            					
-			            					아이디어 등록일
-			            					<span class="line"></span>
-			            					<div>
-			            						
-			            					</div>
-			            				</div>
-			            			</div>
-			            		</a>
-			         		</article>
-			         		<article class="goods">
-			            		<a class="goods-link">
-			            			<div class="goods-setting">
-			            				<div class="goods-setting2">
-			            					<div class="goods-height">
-			            						<div tabindex="0" class="goods-img">
-			  <!-- 사진 -->
-			            							<img onmouseover="expansion()" src="../../img/goods8.jpg" class="goods-img2">
-			            						</div>
-			            					</div>
-			            				</div>
-			            			</div>
-			            			
-			            			<div class="text-padding">
-			            				<div class="middle-right">
-			            					<div class="title-teg">
-			            					</div>
-			            					<span class="name">아이디어 제공자 id</span>
-			            				</div>
-			            					
-			            					
-			            				<h3 class="title2">아이디어 제목</h3>
-			            						<div class="price">진행상태</div>
-			            				<div class="review">
-			            					
-			            					아이디어 등록일
-			            					<span class="line"></span>
-			            					<div>
-			            						
-			            					</div>
-			            				</div>
-			            			</div>
-			            		</a>
-			         		</article>
-			         	<!-- 반복끝1 --><!-- 반복시작2 -->
+			         		</article> -->
+			         		
 			         		
 			 
 			         	
-			         <!-- 반복 끝5 -->
 			         	</div>
+			         	
+			         	<!-- 강사님 형식 -->
+			         	<form action="${pageContext.request.contextPath}/ideaListOk.idea" name="page-form">
+					    	<input type="hidden" name="page" value="${page}">
+					    	<%-- <input type="hidden" name="sort" value="${sort}">
+					    	<input type="hidden" name="type" value="${type}">
+					    	<input type="hidden" name="keyword" value="${keyword}"> --%>
+					    </form>
+			         	
+			         	<!----------------------------------------------------------------------------------------------------------------------------------------------------------------------------->
+			         	
 			         	<div class="number-mvp">
-			         		<ul class="number-list" disabled>
-			         			<li class="number-list2">
-			         				<button class="list-left">
-			         					<span class="">
-				         					<span class="advertisement-img">
-				         						<svg class="list-left" width="12" height="12" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false" preserveAspectRatio="xMidYMid meet">
-				         						<path xmlns="http://www.w3.org/2000/svg" d="M9.41421356,12 L15.7071068,5.70710678 C16.0976311,5.31658249 16.0976311,4.68341751 15.7071068,4.29289322 C15.3165825,3.90236893 14.6834175,3.90236893 14.2928932,4.29289322 L7.29289322,11.2928932 C6.90236893,11.6834175 6.90236893,12.3165825 7.29289322,12.7071068 L14.2928932,19.7071068 C14.6834175,20.0976311 15.3165825,20.0976311 15.7071068,19.7071068 C16.0976311,19.3165825 16.0976311,18.6834175 15.7071068,18.2928932 L9.41421356,12 Z"></path>
-				         						</svg>
-				         					</span>
+			         		<ul class="number-list">
+			         			<!-- 이전 버튼 -->
+			         			<c:if test="${prev}">
+				         			<li class="number-list2">
+				         				<a href="${startPage - 1}" class="change-page">
+					         				<button class="list-left">
+					         					<span class="">
+						         					<span class="advertisement-img">
+						         						<svg class="list-left" width="12" height="12" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false">
+						         						<path xmlns="http://www.w3.org/2000/svg" d="M9.41421356,12 L15.7071068,5.70710678 C16.0976311,5.31658249 16.0976311,4.68341751 15.7071068,4.29289322 C15.3165825,3.90236893 14.6834175,3.90236893 14.2928932,4.29289322 L7.29289322,11.2928932 C6.90236893,11.6834175 6.90236893,12.3165825 7.29289322,12.7071068 L14.2928932,19.7071068 C14.6834175,20.0976311 15.3165825,20.0976311 15.7071068,19.7071068 C16.0976311,19.3165825 16.0976311,18.6834175 15.7071068,18.2928932 L9.41421356,12 Z"></path>
+						         						</svg>
+						         					</span>
+					         					</span>
+					         				</button>
+				         				</a>
+				         			</li>
+			         			</c:if>
+			         			
+			         			<!-- 페이지 버튼 -->
+			         			
+			         			<c:forEach var="i" begin="${startPage}" end="${endPage}"> <!-- startPage와 endPage는 현재 페이지를 기준으로 연산했음 -->
+			                		<c:choose>
+			                			<c:when test="${i eq page}"> <!-- 지금 구성할 페이지 번호가 현재 페이지라면  -->
+						                	<li class="number-list2">
+						         				<button class="list-number">
+						         					<span>
+						         						<a href="javascript:void(0)" class="paging paging-checked"><c:out value="${i}"/></a>
+						         					</span>
+						         				</button>
+						         			</li> <!-- a태그를 눌렀을 때에 아무 페이지로도 이동하지 말아라 -->
+			                			</c:when>
+			                			
+			                			<c:otherwise>
+						                    <li class="number-list2">
+						         				<button class="list-number2">
+						         					<span>
+						         						<a href="${i}" class="paging change-page"><c:out value="${i}"/></a>
+						         					</span>
+						         				</button>
+						         			</li>
+			                			</c:otherwise>
+			                		</c:choose>
+			                	</c:forEach>
+			         			
+			         			<%-- <li class="number-list2">
+			         				<button class="list-number" color="default">
+			         					<span>
+			         						<a href="javascript:void(0)" class="paging paging-checked"><c:out value="${i}"/></a>
 			         					</span>
 			         				</button>
 			         			</li>
 			         			<li class="number-list2">
-			         				<button class="list-number" color="default">
-			         					<span>1</span>
-			         				</button>
-			         			</li>
-			         			<li class="number-list2">
 			         				<button class="list-number2" color="default">
-			         					<span>2</span>
+			         					<span>
+			         						<a href="${i}" class="paging change-page"><c:out value="${i}"/></a>
+			         					</span>
 			         				</button>
 			         			</li>
 			         			<li class="number-list2">
 			         				<button class="list-number2" color="default">
 			         					<span>3</span>
 			         				</button>
-			         			</li>
-			         			<li class="number-list2">
+			         			</li> --%>
+			         			<!-- <li class="number-list2">
 			         				<button class="list-number-non">
 			         					<span>…</span>
 			         				</button>
-			         			</li>
-			         			<li class="number-list2">
+			         			</li> -->
+			         			<!-- <li class="number-list2">
 			         				<button class="list-number2">
 			         					<span>206</span>
 			         				</button>
-			         			</li>
-			         			<li class="number-list2">
-			         				<button class="list-left">
-			         					<span class="">
-			         						<span role="img" rotate="0" class="advertisement-img">
-			         							<svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false" preserveAspectRatio="xMidYMid meet" class="star2">
-			         							<path xmlns="http://www.w3.org/2000/svg" d="M9.41421356,12 L15.7071068,5.70710678 C16.0976311,5.31658249 16.0976311,4.68341751 15.7071068,4.29289322 C15.3165825,3.90236893 14.6834175,3.90236893 14.2928932,4.29289322 L7.29289322,11.2928932 C6.90236893,11.6834175 6.90236893,12.3165825 7.29289322,12.7071068 L14.2928932,19.7071068 C14.6834175,20.0976311 15.3165825,20.0976311 15.7071068,19.7071068 C16.0976311,19.3165825 16.0976311,18.6834175 15.7071068,18.2928932 L9.41421356,12 Z" transform="translate(11.500000, 12.000000) scale(-1, 1) translate(-11.500000, -12.000000) "></path>
-			         							</svg>
-			         						</span>
-			         					</span>
-			         				</button>
-			         			</li>
+			         			</li> -->
+			         			
+			         			<!-- 다음 버튼 -->
+			         			<c:if test="${next}">
+				         			<li class="number-list2">
+				         				<a href="${endPage + 1}" class="change-page">
+					         				<button class="list-left">
+					         					<span class="">
+					         						<span role="img" rotate="0" class="advertisement-img">
+					         							<svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false" class="star2">
+					         							<path xmlns="http://www.w3.org/2000/svg" d="M9.41421356,12 L15.7071068,5.70710678 C16.0976311,5.31658249 16.0976311,4.68341751 15.7071068,4.29289322 C15.3165825,3.90236893 14.6834175,3.90236893 14.2928932,4.29289322 L7.29289322,11.2928932 C6.90236893,11.6834175 6.90236893,12.3165825 7.29289322,12.7071068 L14.2928932,19.7071068 C14.6834175,20.0976311 15.3165825,20.0976311 15.7071068,19.7071068 C16.0976311,19.3165825 16.0976311,18.6834175 15.7071068,18.2928932 L9.41421356,12 Z" transform="translate(11.500000, 12.000000) scale(-1, 1) translate(-11.500000, -12.000000) "></path>
+					         							</svg>
+					         						</span>
+					         					</span>
+					         				</button>
+				         				</a>
+				         			</li>
+			         			</c:if>
 			         		</ul>
 			         	</div>
+			         	
+			         	
 			        </div> 	
 		        </div>
 		     </main>
@@ -661,6 +469,37 @@
     </footer>
 </div>
 </body>
-<script type="module" src="https://code.jquery.com/jquery-3.7.0.min.js"></script>
-<script src="../../static/js/ideabank.js"></script>
+<script src="https://code.jquery.com/jquery-3.7.0.min.js"></script>
+<script src="${pageContext.request.contextPath}/static/js/ideabank.js"></script>
+
+
+<script>
+
+	let ideas = `${ideas}`;
+	// console.log(ideas); // java -> jsp
+	
+	let contextPath = `${pageContext.request.contextPath}`;
+	console.log(contextPath);
+	
+	let $form = $("form[name='page-form']");
+	$("a.change-page").on("click", function(e){
+		e.preventDefault();
+		$form.find("input[name='page']").val($(this).attr("href"));
+		$form.submit();
+	});
+
+	/* 아이디어 총 개수 추가 */
+	let $span = $("p.merge span");
+	let text = "";
+	
+	text += `${total}`;
+	console.log(text);
+	
+	text += "개의 아이디어";
+	
+	$span.append(text);
+	
+</script>
+
+<script src="${pageContext.request.contextPath}/static/js/ideaList.js"></script>
 </html>

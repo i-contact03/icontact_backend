@@ -52,6 +52,8 @@ public class MypageFrontController extends HttpServlet{
 		
 //		메인 프로필	
 		} else if(target.equals("profileMainOK")){
+			
+			System.out.println("아아아아아아아아아아아");
 			result = new ProfileMainOKController().execute(req, resp);
 			
 //		프로필 수정
