@@ -7,17 +7,16 @@
 		values(#{userIdentification},#{userPassword},#{userName},#{userCall},#{userEmail})
 	</insert>
 	
-	
 	<select id="selectIdentification" resultType="string">
 		select user_identification from tbl_user where user_identification = #{userIdentification}
 	</select>
 	
 	<select id="selectEmail" resultType="string">
-		select user_email from tbl_user where member_user = #{userEmail}
+		select user_email from tbl_user where user_user = #{userEmail}
 	</select>
 	
 	<select id="login" resultType="long">
-		select user_id from tbl_member 
+		select user_id from tbl_user 
 		where user_identification = #{userIdentification} and user_password = #{userPassword}
 	</select>
 	

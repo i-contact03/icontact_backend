@@ -18,9 +18,9 @@ public class CheckIdOkController implements Action {
 
 	@Override
 	public Result execute(HttpServletRequest req, HttpServletResponse resp) throws IOException, ServletException {
-		UserDAO memberDAO = new UserDAO();
-		String memberIdentification = memberDAO.selectIdentification(req.getParameter("memberIdentification"));
-		boolean check = memberIdentification == null;
+		UserDAO userDAO = new UserDAO();
+		String userIdentification = userDAO.selectIdentification(req.getParameter("userIdentification"));
+		boolean check = userIdentification == null;
 		
 		JSONObject result = new JSONObject();
 		try {

@@ -21,6 +21,9 @@
 </style>
 </head>
 <body style="padding-right: 17px; overflow: hidden;">
+	
+	  
+
 	<!-- 로그인 팝업 전체 틀 -->
 	<div class="login-main-container-largest-full">	<!-- kmong-modal-root --><!-- style="position: fixed;z-index: 9999;inset: 0px;" -->
 		
@@ -58,8 +61,7 @@
 							
 							<!-- ==== -->
 							<!-- 로그인 팝업 이메일, 비번, 로그인버튼, 찾기 등등 -->
-							<form class="login-main-box-login-info-big-form">	<!-- css-11e0jfa equrxy90 -->
-								
+							<form action="${pageContext.request.contextPath}/loginOk.user" name="login" method="post" class="login-main-box-login-info-big-form">	<!-- css-11e0jfa equrxy90 -->
 								<!-- 로그인 이메일 -->
 								<div>
 									<div class="login-main-email-and-pw-box">	<!-- css-18xyxwl e1fnk6ig0 -->
@@ -156,12 +158,27 @@
 	</div>
 
 
-
 </body>
+
+<script src="https://code.jquery.com/jquery-3.7.0.min.js"></script>
+<script src="../../static/js/login_real.js"></script>
+
+
+<script src="${pageContext.request.contextPath}/static/js/modal/modal.js"></script>
+<script>
+	let autoLogin ="${autoLogin}";
+	console.log(autoLogin);
+	if(autoLogin){
+		$("input[name='auto-login']").prop("checked",true);
+		checkedAutoLogin();
+	}
+</script>
 </html>
-
-
-
+<c:if test="${not empty login}">
+	<script>
+		showWarnModal("아이디 또는 비밀번호를<br>확인해주세요");
+	</script>
+</c:if>
 
 
 

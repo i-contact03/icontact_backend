@@ -45,8 +45,8 @@ public class LoginOkController implements Action {
 //			로그인 성공
 //			세션에 로그인된 회원의 번호 저장
 			session.setAttribute("userId", userId);
-//			게시글 목록으로 이동
-			result.setPath(req.getContextPath() + "/listOk.board");
+//			메인페이지로 이동
+			result.setPath(req.getContextPath() + "/templates/main/mainpage.jsp");
 			
 //			로그인 페이지에서 자동 로그인을 체크했다면,
 			if(autoLogin) {

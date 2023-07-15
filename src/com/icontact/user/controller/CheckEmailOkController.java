@@ -19,9 +19,9 @@ public class CheckEmailOkController implements Action {
 	@Override
 	public Result execute(HttpServletRequest req, HttpServletResponse resp) throws IOException, ServletException {
 		resp.setContentType("text/html;charset=utf-8");
-		String memberEmail = req.getParameter("memberEmail");
-		UserDAO memberDAO = new UserDAO();
-		boolean check = memberDAO.selectEmail(memberEmail) == null;
+		String userEmail = req.getParameter("userEmail");
+		UserDAO userDAO = new UserDAO();
+		boolean check = userDAO.selectEmail(userEmail) == null;
 		JSONObject result = new JSONObject();
 		
 		try {

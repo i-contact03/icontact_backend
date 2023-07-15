@@ -29,17 +29,17 @@ public class UserFrontController extends HttpServlet{
 		
 		System.out.println(target);
 		
-		if(target.equals("checkIdOk")) {
+		if(target.equals("templates/user/checkIdOk")) {
 			result = new CheckIdOkController().execute(req, resp);
 				
-		} else if(target.equals("checkEmailOk")) {
+		} else if(target.equals("templates/user/checkEmailOk")) {
 			result = new CheckEmailOkController().execute(req, resp);
 			
-		} else if(target.equals("join")){
+		} else if(target.equals("templates/user/join")){
 			result = new Result();
-			result.setPath("templates/user/join.jsp");
+			result.setPath("join.jsp");
 			
-		} else if(target.equals("templates/user/joinOk")){
+		} else if(target.equals("joinOk")){
 			result = new JoinOkController().execute(req, resp);
 			
 		} else if(target.equals("login")){
@@ -48,7 +48,7 @@ public class UserFrontController extends HttpServlet{
 		} else if(target.equals("loginOk")) {
 			result = new LoginOkController().execute(req, resp);
 			
-		} else if(target.equals("logout")) {
+		} else if(target.equals("templates/user/logout")) {
 			result = new LogoutController().execute(req, resp);
 		}
 		
