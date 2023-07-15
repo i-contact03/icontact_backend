@@ -666,12 +666,11 @@ a.top-header-menu:hover {
 }
 
 .profile-skill-section-tag{
-	/* font-family: 'NanumSquareAcb'; */
 	align-items: center;
 	display: flex;
 	justify-content: center;
 	padding: 0 12px;
-	background: #f7f8f9;
+	background: #f8edff;
 	border-radius: 20px;
 	height: 35px;
 	margin-right: 8px;
