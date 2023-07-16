@@ -139,7 +139,7 @@
 							<!-- ==== -->
 							<!-- 회원가입 이동 버튼 -->
 							<div class="gray">
-								<a role="link" color="default" href="/signup?next_page=%2F%3Futm_source%3Dgoogle%26utm_medium%3Dcpc%26utm_campaign%3D0%26utm_content%3Dmarket%26utm_group%3D0%26utm_term%3D%25ED%2581%25AC%25EB%25AA%25BD%26gclid%3DEAIaIQobChMIr867pLDt_wIV162WCh2gGwdgEAAYASAAEgJozfD_BwE" class="login-main-go-to-signup-a-tag">	<!-- css-1uk00me eklkj752 -->
+								<a role="link" color="default" href="join.jsp" class="login-main-go-to-signup-a-tag">	<!-- css-1uk00me eklkj752 -->
 									<span class="login-main-go-to-signup-span">회원가입</span>	<!-- css-1oteowz eklkj751 -->
 								</a>
 								<!-- 10만원 쿠폰 받기 -->
