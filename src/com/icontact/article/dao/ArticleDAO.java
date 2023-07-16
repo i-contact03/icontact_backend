@@ -5,6 +5,7 @@ import java.util.List;
 
 import org.apache.ibatis.session.SqlSession;
 
+
 import com.icontact.article.domain.ArticleVO;
 import com.icontact.mybatis.config.MyBatisConfig;
 
@@ -29,7 +30,16 @@ public class ArticleDAO {
 		System.out.println("DAO!");
 	}
 	
-}
+//	조회수 증가
+	public void updateReadCount(Long articleId) {
+		sqlSession.update("article.updateReadCount", articleId);
+	}
+	
+//		게시글 조회																																															
+	public ArticleVO select(Long articleId) {
+		return sqlSession.selectOne("article.select", articleId);
+	}
+}	
 
 
 

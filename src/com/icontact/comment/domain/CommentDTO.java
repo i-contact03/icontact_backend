@@ -1,48 +1,67 @@
 package com.icontact.comment.domain;
 
-public class CommentVO {
+public class CommentDTO {
 	private Long commentId;
 	private Long articleId;
-	private Long userId;
 	private String commentContent;
 	private String commentDate;
+	private Long userId;
+	private String userName; 
 	
-	public CommentVO() {;}
-	
+	public CommentDTO() {;}
+
 	public Long getCommentId() {
 		return commentId;
 	}
+
 	public void setCommentId(Long commentId) {
 		this.commentId = commentId;
 	}
+
 	public Long getArticleId() {
 		return articleId;
 	}
+
 	public void setArticleId(Long articleId) {
 		this.articleId = articleId;
 	}
-	public Long getUserId() {
-		return userId;
-	}
-	public void setUserId(Long userId) {
-		this.userId = userId;
-	}
+
 	public String getCommentContent() {
 		return commentContent;
 	}
+
 	public void setCommentContent(String commentContent) {
 		this.commentContent = commentContent;
 	}
+
 	public String getCommentDate() {
 		return commentDate;
 	}
+
 	public void setCommentDate(String commentDate) {
 		this.commentDate = commentDate;
 	}
+
+	public Long getUserId() {
+		return userId;
+	}
+
+	public void setUserId(Long userId) {
+		this.userId = userId;
+	}
+
+	public String getUserName() {
+		return userName;
+	}
+
+	public void setUserName(String userName) {
+		this.userName = userName;
+	}
+
 	@Override
 	public String toString() {
-		return "CommentVO [commentId=" + commentId + ", articleId=" + articleId + ", userId=" + userId
-				+ ", commentContent=" + commentContent + ", commentDate=" + commentDate + "]";
+		return "CommentDTO [commentId=" + commentId + ", articleId=" + articleId + ", commentContent=" + commentContent
+				+ ", commentDate=" + commentDate + ", userId=" + userId + ", userName=" + userName + "]";
 	}
 
 	@Override
@@ -61,7 +80,7 @@ public class CommentVO {
 			return false;
 		if (getClass() != obj.getClass())
 			return false;
-		CommentVO other = (CommentVO) obj;
+		CommentDTO other = (CommentDTO) obj;
 		if (commentId == null) {
 			if (other.commentId != null)
 				return false;
@@ -69,6 +88,7 @@ public class CommentVO {
 			return false;
 		return true;
 	}
-		
+	
+	
+	
 }
-

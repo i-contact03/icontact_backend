@@ -9,6 +9,7 @@ import javax.servlet.http.HttpServletResponse;
 
 
 import com.icontact.Result;
+import com.icontact.article.controller.DetailOkController;
 import com.icontact.article.controller.ListOkController;
 import com.icontact.article.controller.WriteOkController;
 
@@ -34,9 +35,15 @@ public class ArticleFrontController extends HttpServlet{
 			result = new Result();
 			result.setPath("templates/community/community_article_write.jsp");
 				
+//		글쓰기
 		} else if(target.equals("writeOk")) {
 			System.out.println("프컨 들어옴!");
 			result = new WriteOkController().execute(req, resp);
+
+//		상세페이지 출력
+		} else if(target.equals("detailOk")) {
+			System.out.println("프컨 들어옴!");
+			result = new DetailOkController().execute(req, resp);
 		}
 		if(result != null) {
 			if(result.isRedirect()) {
