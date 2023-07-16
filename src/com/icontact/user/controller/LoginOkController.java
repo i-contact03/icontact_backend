@@ -26,6 +26,7 @@ public class LoginOkController implements Action {
 		boolean autoLogin = Boolean.valueOf(req.getParameter("auto-login"));
 		result.setRedirect(true);
 		
+		System.out.println(autoLogin);
 		
 		if(userIdentification == null) {
 //			쿠키에 있는 아이디와 비밀번호를 LoginController에서 req.setAttribute()로 담음.
@@ -47,7 +48,6 @@ public class LoginOkController implements Action {
 //			세션에 로그인된 회원의 번호 저장
 			session.setAttribute("userId", userId);
 			
-			System.out.println(session.getAttribute("userId"));
 //			게시글 목록으로 이동
 			result.setPath(req.getContextPath() + "/templates/main/mainpage.jsp");
 			
