@@ -4,7 +4,7 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>전문가가 필요한 순간, 프리랜서 마켓 No.1 크몽</title>
+<title>전문가가 필요한 순간, 프리랜서 마켓 No.1 iContact</title>
 <link rel="icon" href="../../icon/favicon.png">
 <link href="https://hangeul.pstatic.net/hangeul_static/css/nanum-square.css" rel="stylesheet">
 <link rel="stylesheet" href="../../static/css/mainpage.css">
@@ -25,7 +25,7 @@
 <header>
 	<div class="header-wrap">
 		<div class="header">
-		<!-- 로고 + 검색바 + 아이디어등록 + 마이크몽 + 프로필-->
+		<!-- 로고 + 검색바 + 아이디어등록 + 마이iContact + 프로필-->
 			<section class="top-header">
 				<img src="../../icon/logo.png" width="170px" height="52px"> <!-- .top-header-logo -->
 				
@@ -122,7 +122,7 @@
 			<!-- 왼쪽 -->
 			<section class="main-banner-left-content">
 				<h1>
-					프리랜서 마켓 No.1 크몽에서
+					프리랜서 마켓 No.1 iContact에서
 					<br>
 					원하는 전문가를 찾아보세요!
 				</h1>
@@ -368,7 +368,7 @@
 			
 			<!-- 가장 있기있는 카테고리 -->
 			<section class="popular-category">
-				<h2 class="category-explanation">크몽에서 가장 인기있어요!</h2>
+				<h2 class="category-explanation">iContact에서 가장 인기있어요!</h2>
 				<div class="popular-category-content-wrapper">
 					<a>
 						<article class="popular-category-content">
@@ -418,7 +418,7 @@
 				</div>
 			</section>
 			
-			<!-- 크몽 신규 회원가입 하고 10만원 쿠폰팩 받자! -->
+			<!-- iContact 신규 회원가입 하고 10만원 쿠폰팩 받자! -->
 			<section class="membership-ad">
 				<a>
 					<div class="membership-ad-img-wrapper">
@@ -427,11 +427,11 @@
 				</a>
 			</section>
 			
-			<!-- 크몽을 200% 활용하는 법 -->
+			<!-- iContact을 200% 활용하는 법 -->
 			<section class="gray">
 				<div class="using-kmong-ad-wrapper">
-					<h2 class="using-kmong-ad-title">크몽을 200% 활용하는 법</h2>
-					<p>크몽까지 내 능력으로 만드는 콘텐츠</p>
+					<h2 class="using-kmong-ad-title">iContact을 200% 활용하는 법</h2>
+					<p>iContact까지 내 능력으로 만드는 콘텐츠</p>
 					
 					<section class="using-kmong-ad-content">
 						<article>
@@ -440,8 +440,8 @@
 									<img src="https://kmong.com/_next/image?url=https%3A%2F%2Fd2v80xjmx68n4w.cloudfront.net%2Fassets%2Fdesktop%2Fmodules%2Fmain-themes%2Fmain_theme_picked_business_tip_20220405_1.png&w=2880&q=75" width="376" height="247" loading="lazy" style="color: transparent;">
 								</div>
 								<div class="using-kmong-ad-explanation">
-									<h3>크몽 전문가 가이드</h3>
-									<p>전문가 인증부터 정산까지 크몽 전문가 등록의 모든 것</p>
+									<h3>iContact 전문가 가이드</h3>
+									<p>전문가 인증부터 정산까지 iContact 전문가 등록의 모든 것</p>
 								</div>
 							</a>
 						</article>
@@ -480,7 +480,7 @@
 			</section>
 			
 			
-			<!-- 크몽 엔터프라이즈에서 해결하세요! -->
+			<!-- iContact 엔터프라이즈에서 해결하세요! -->
 			<section class="kmong-enterprise-ad">
 				<a>
 					<img src="https://kmong.com/_next/image?url=https%3A%2F%2Fd2v80xjmx68n4w.cloudfront.net%2Fassets%2Fdesktop%2Fmodules%2Fmain-themes%2Fmain_themes_enterprise_single_banner_2.png&w=2880&q=100">
@@ -491,7 +491,7 @@
 			<section class="category-pro-ranking">
 				<div class="category-pro-ranking-wrapper">
 					<h2 class="category-pro-ranking-title">
-						크몽 전문가 순위
+						iContact 전문가 순위
 					</h2>
 					<p class="category-pro-ranking-subtitle">상위 카테고리에서 가장 많이 판매한 인기 전문가에요.</p>
 					

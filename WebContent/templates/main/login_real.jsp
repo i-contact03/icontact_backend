@@ -93,10 +93,11 @@
 								
 								<!-- = -->
 								<!-- 로그인 부속 기능 -->
+								
 								<div class="login-main-login-below-wrapper">	<!-- css-70qvj9 equrxy92 -->
 									<label color="#ffd400" class="login-main-login-below-check-for-keeplogin-wrapper">	<!-- css-18pqe3v elgfge0 -->
 										<span class="login-main-login-below-check-for-keeplogin-span">	<!-- css-9ffs86 elgfge3 -->
-											<input type="checkbox" name="remember" class="login-main-login-below-check-for-keeplogin-checkbox">	<!-- css-l775cp elgfge2 -->
+											<input type="checkbox" name="auto-login" value="true" class="login-main-login-below-check-for-keeplogin-checkbox">	<!-- css-l775cp elgfge2 -->
 											<span color="#ffd400" class="login-main-login-below-check-for-keeplogin-checkbox-inner"></span>	<!-- checkbox__inner css-1t5nui elgfge4 -->
 											<span class="login-main-login-below-check-for-keeplogin-checkbox-textbox">	<!-- css-2k2mpm elgfge1 -->
 												<p variant="body2" class="login-main-login-below-p-tag" color="gray600">로그인 상태 유지</p>	<!-- css-15suf60 e870mj50 -->
@@ -158,7 +159,26 @@
 
 
 </body>
+<script src="https://code.jquery.com/jquery-3.6.1.min.js"></script>
+<script src="${pageContext.request.contextPath}/static/js/login.js"></script>
+<script src="${pageContext.request.contextPath}/static/js/modal/modal.js"></script>
+<script>
+	let autoLogin = "${autoLogin}";
+	console.log(autoLogin);
+	if(autoLogin){
+		$("input[name='auto-login']").prop("checked", true);
+		checkedAutoLogin();
+	}
+</script>
 </html>
+<!-- pageScope, requestScope, sessionScope, applicationScope-->
+<c:if test="${not empty param.login}">
+	<script>
+		showWarnModal("아이디 또는 비밀번호를<br>확인해주세요");
+	</script>
+</c:if>	
+
+
 
 
 
