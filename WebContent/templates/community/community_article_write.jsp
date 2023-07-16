@@ -5,13 +5,13 @@
 <head>
 <meta charset="UTF-8">
 <title>게시물 작성하기</title>
-<link rel="icon" href="../../icon/favicon.png">
-<link rel="stylesheet" href="../../static/css/community_article_write.css" /> 
+<link rel="icon" href="${pageContext.request.contextPath}/icon/favicon.png">
+<link rel="stylesheet" href="${pageContext.request.contextPath}/static/css/community_article_write.css" /> 
 <style>
 
 	@font-face {
 		font-family: 'MetroSansMedium';
-		src: url('../../font/MetroSans-Medium.woff2');
+		src: url('${pageContext.request.contextPath}/font/MetroSans-Medium.woff2');
 	}
    
 </style>
@@ -23,7 +23,7 @@
 			<div class="logo">
 				<a>
 					<!-- <img src="//theme.zdassets.com/theme_assets/9204604/ed54b2d958a2f7b420f8412b529519e676c20bc3.png" class="logo-kmong"> -->
-					<img src="../../icon/logo.png" width="170px" height="52px"> <!-- .top-header-logo -->
+					<img src="${pageContext.request.contextPath}/icon/logo.png" width="170px" height="52px"> <!-- .top-header-logo -->
 				</a>
 				<!-- <a href="https://support.kmong.com/hc/ko">
 					<img src="//theme.zdassets.com/theme_assets/9204604/db54bfa5d2ad14572afe57b4b5582b04a38aa9e1.png" class="callcenter">
