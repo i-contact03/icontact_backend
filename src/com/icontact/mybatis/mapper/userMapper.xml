@@ -26,4 +26,11 @@
 		select user_id from tbl_user 
 		where user_identification = #{userIdentification} and user_password = #{userPassword}
 	</select>
+	
+	<update id="update">
+		update tbl_user
+		set user_name=#{userName}, user_call=#{userCall}, user_email=#{userEmail}
+		where user_id = #{userId}
+	</update>
+	
 </mapper>
