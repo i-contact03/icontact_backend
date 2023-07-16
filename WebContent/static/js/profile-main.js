@@ -2,6 +2,8 @@
  * profile-main.js
  */
 
+/*0716오전 완료*/
+
 
 showProfile();
 
@@ -33,6 +35,13 @@ function showProfile(){
 	
 	$userCall.append(text4);
 	
+	let proimg = "";
+	const $profileimg = $("#profile-img");
+	proimg += `<img src="${contextPath}/upload/profileImg/${user.userProfileName}" class="profile-imgae" style="width: 127px;">`;
+	console.log($profileimg);
+	console.log(`${contextPath}`);
+	
+	$profileimg.append(proimg);
 	
 }
 

@@ -76,11 +76,11 @@ public class UserDTO {
 		this.userStatus = userStatus;
 	}
 
-	public String getUserProfile() {
+	public String getUserProfileName() {
 		return userProfileName;
 	}
 
-	public void setUserProfile(String userProfileName) {
+	public void setUserProfileName(String userProfileName) {
 		this.userProfileName = userProfileName;
 	}
 
