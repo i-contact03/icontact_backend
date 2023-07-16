@@ -53,8 +53,15 @@ public class UserDAO {
 	
 //	프로필 수정
 	public void update(UserDTO userDTO) {
+		System.out.println("제발ㄹㄹㄹㄹㄹㄹㄹㄹ");
 		sqlSession.update("user.update", userDTO);
 	}
+	
+//	userId로 특정 회원 찾기2
+	public UserDTO findUser2(Long userId){
+		return sqlSession.selectOne("user.findUser2", userId);
+	}
+	
 	
 }
 
