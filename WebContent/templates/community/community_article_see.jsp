@@ -177,7 +177,7 @@
 									<span class="art-color-black">
 										<span class="art-font-size-large">
 											<span class="art-color-color art-font-size-large">
-												<strong>❚&nbsp;</strong>
+												<strong>❚ &nbsp;</strong>
 											</span>
 											<strong>2. 비즈니스 계획 수립</strong>
 										</span>
