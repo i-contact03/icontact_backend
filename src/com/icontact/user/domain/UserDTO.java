@@ -14,7 +14,7 @@ public class UserDTO {
 	private String userCall;
 	private String userEmail;
 	private String userStatus;
-	private String userProfile;
+	private String userProfileName;
 	
 	private List<InterestVO> interests;
 	
@@ -77,11 +77,11 @@ public class UserDTO {
 	}
 
 	public String getUserProfile() {
-		return userProfile;
+		return userProfileName;
 	}
 
-	public void setUserProfile(String userProfile) {
-		this.userProfile = userProfile;
+	public void setUserProfile(String userProfileName) {
+		this.userProfileName = userProfileName;
 	}
 
 	public List<InterestVO> getInterests() {
@@ -96,7 +96,7 @@ public class UserDTO {
 	public String toString() {
 		return "UserDTO [userId=" + userId + ", userIdentification=" + userIdentification + ", userPassword="
 				+ userPassword + ", userName=" + userName + ", userCall=" + userCall + ", userEmail=" + userEmail
-				+ ", userStatus=" + userStatus + ", userProfile=" + userProfile + ", interests=" + interests + "]";
+				+ ", userStatus=" + userStatus + ", userProfileName=" + userProfileName + ", interests=" + interests + "]";
 	}
 
 	@Override
