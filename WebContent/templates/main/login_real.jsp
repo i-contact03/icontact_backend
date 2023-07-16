@@ -58,7 +58,7 @@
 							
 							<!-- ==== -->
 							<!-- 로그인 팝업 이메일, 비번, 로그인버튼, 찾기 등등 -->
-							<form class="login-main-box-login-info-big-form">	<!-- css-11e0jfa equrxy90 -->
+							<form action="loginOk.user" class="login-main-box-login-info-big-form">	<!-- css-11e0jfa equrxy90 -->
 								
 								<!-- 로그인 이메일 -->
 								<div>

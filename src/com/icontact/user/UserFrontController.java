@@ -44,7 +44,7 @@ public class UserFrontController extends HttpServlet{
 		} else if(target.equals("templates/main/login_real")){
 			result = new LoginController().execute(req, resp);
 			
-		} else if(target.equals("loginOk")) {
+		} else if(target.equals("templates/main/loginOk")) {
 			result = new LoginOkController().execute(req, resp);
 			
 		} else if(target.equals("logout")) {
