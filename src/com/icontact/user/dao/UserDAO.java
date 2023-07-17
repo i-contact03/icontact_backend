@@ -4,7 +4,9 @@ import java.util.HashMap;
 
 import org.apache.ibatis.session.SqlSession;
 
+import com.app.reply.domain.ReplyVO;
 import com.icontact.mybatis.config.MyBatisConfig;
+import com.icontact.user.domain.UserDTO;
 import com.icontact.user.domain.UserVO;
 
 
@@ -47,6 +49,20 @@ public class UserDAO {
 		
 		return sqlSession.selectOne("user.login", loginMap);
 	}
+	
+	
+//	프로필 수정
+	public void update(UserDTO userDTO) {
+		System.out.println("제발ㄹㄹㄹㄹㄹㄹㄹㄹ");
+		sqlSession.update("user.update", userDTO);
+	}
+	
+//	userId로 특정 회원 찾기2
+	public UserDTO findUser2(Long userId){
+		return sqlSession.selectOne("user.findUser2", userId);
+	}
+	
+	
 }
 
 
