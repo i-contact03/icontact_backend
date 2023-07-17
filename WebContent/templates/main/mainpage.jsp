@@ -63,7 +63,7 @@
 				</form>
 				
 				<div class="top-header-menu-wrapper">
-					<a id='login' class="top-header-menu" href="">
+					<a id='login' class="top-header-menu" href="login_real.jsp">
 						<span></span>
 					</a>
 					<a class="top-header-menu" href="join.jsp">
@@ -117,13 +117,13 @@
 				<nav class="header-bar-nav">
 					<ul class="header-bar-nav-content-wrapper">
 						<li class="header-bar-nav-content">
-							<a>커뮤니티</a>
+							<a href="../community/community_article_main.jsp">커뮤니티</a>
 						</li>
 						<li class="header-bar-nav-content">
-							<a>FAQ</a>
+							<a href="../faq/FAQ.jsp">FAQ</a>
 						</li>
 						<li class="header-bar-nav-content">
-							<a>회사소개</a>
+							<a href="../faq/introduction.jsp">회사소개</a>
 						</li>
 					</ul>
 				</nav>
