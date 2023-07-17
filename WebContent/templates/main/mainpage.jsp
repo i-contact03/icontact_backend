@@ -63,11 +63,14 @@
 				</form>
 				
 				<div class="top-header-menu-wrapper">
-					<a id='login' class="top-header-menu" href="">
+					<a class="top-header-menu" id='login' href="javascript:location.href='${pageContext.request.contextPath}/login.user'">
 						<span></span>
 					</a>
-					<a class="top-header-menu" href="join.jsp">
-						<span id="join"></span>
+					<a class="top-header-menu" id="join" href="javascript:location.href='${pageContext.request.contextPath}/join.user'">
+						<span ></span>
+					</a>
+					<a class="top-header-menu" id="logout" href="javascript:location.href='${pageContext.request.contextPath}/logout.user'" style="display:none">
+						<span ></span>
 					</a>
 					<div>
 						<a class="top-header-user">
@@ -117,13 +120,13 @@
 				<nav class="header-bar-nav">
 					<ul class="header-bar-nav-content-wrapper">
 						<li class="header-bar-nav-content">
-							<a>커뮤니티</a>
+							<a href="javascript:location.href='${pageContext.request.contextPath}/listOk.article'">커뮤니티</a>
 						</li>
 						<li class="header-bar-nav-content">
-							<a>FAQ</a>
+							<a href="../faq/FAQ.jsp">FAQ</a>
 						</li>
 						<li class="header-bar-nav-content">
-							<a>회사소개</a>
+							<a href="../faq/introduction.jsp">회사소개</a>
 						</li>
 					</ul>
 				</nav>
@@ -227,7 +230,7 @@
 							<strong class="category-content-type">식품</strong>
 							<ul class="category-content-list-wrapper">
 								<li class="category-content-list">
-									<a>
+									<a href="javascript:location.href='${pageContext.request.contextPath}/ideaListOk.idea'">
 										<div class="category-content-logo">
 											<img src="https://cdn-icons-png.flaticon.com/128/5347/5347946.png" width="48" height="48">
 										</div>
@@ -236,16 +239,16 @@
 								</li>
 								
 								<li class="category-content-list">
-									<a>
+									<a href="javascript:location.href='${pageContext.request.contextPath}/ideaListOk.idea'">
 										<div class="category-content-logo">
 											<img src="https://cdn-icons-png.flaticon.com/128/8959/8959172.png" width="48" height="48">
 										</div>
 										<strong class="category-content-explanation">베이커리</strong>
-									</a>
+									</a href="javascript:location.href='${pageContext.request.contextPath}/ideaListOk.idea'">
 								</li>
 								
 								<li class="category-content-list">
-									<a>
+									<a href="javascript:location.href='${pageContext.request.contextPath}/ideaListOk.idea'">
 										<div class="category-content-logo">
 											<img src="https://cdn-icons-png.flaticon.com/128/8339/8339331.png" width="48" height="48">
 										</div>
@@ -254,7 +257,7 @@
 								</li>
 								
 								<li class="category-content-list">
-									<a>
+									<a href="javascript:location.href='${pageContext.request.contextPath}/ideaListOk.idea'">
 										<div class="category-content-logo">
 											<img src="https://cdn-icons-png.flaticon.com/128/5125/5125235.png" width="48" height="48">
 										</div>
@@ -263,7 +266,7 @@
 								</li>
 								
 								<li class="category-content-list">
-									<a>
+									<a href="javascript:location.href='${pageContext.request.contextPath}/ideaListOk.idea'">
 										<div class="category-content-logo">
 											<img src="https://cdn-icons-png.flaticon.com/128/38/38639.png" width="48" height="48">
 										</div>
@@ -272,7 +275,7 @@
 								</li>
 								
 								<li class="category-content-list">
-									<a>
+									<a href="javascript:location.href='${pageContext.request.contextPath}/ideaListOk.idea'">
 										<div class="category-content-logo">
 											<img src="https://cdn-icons-png.flaticon.com/128/5878/5878542.png" width="48" height="48">
 										</div>
@@ -281,7 +284,7 @@
 								</li>
 								
 								<li class="category-content-list">
-									<a>
+									<a href="javascript:location.href='${pageContext.request.contextPath}/ideaListOk.idea'">
 										<div class="category-content-logo">
 											<img src="https://cdn-icons-png.flaticon.com/128/5787/5787040.png" width="48" height="48">
 										</div>
@@ -297,7 +300,7 @@
 							<strong class="category-content-type">패션·가구</strong>
 							<ul class="category-content-list-wrapper">
 								<li class="category-content-list">
-									<a>
+									<a href="javascript:location.href='${pageContext.request.contextPath}/ideaListOk.idea'">
 										<div class="category-content-logo">
 											<img src="https://cdn-icons-png.flaticon.com/128/1655/1655738.png" width="48" height="48">
 										</div>
@@ -306,7 +309,7 @@
 								</li>
 								
 								<li class="category-content-list">
-									<a>
+									<a href="javascript:location.href='${pageContext.request.contextPath}/ideaListOk.idea'">
 										<div class="category-content-logo">
 											<img src="https://cdn-icons-png.flaticon.com/128/1720/1720858.png" width="48" height="48">
 										</div>
@@ -315,7 +318,7 @@
 								</li>
 								
 								<li class="category-content-list">
-									<a>
+									<a href="javascript:location.href='${pageContext.request.contextPath}/ideaListOk.idea'">
 										<div class="category-content-logo">
 											<img src="https://cdn-icons-png.flaticon.com/128/4437/4437654.png" width="48" height="48">
 										</div>
@@ -324,7 +327,7 @@
 								</li>
 								
 								<li class="category-content-list">
-									<a>
+									<a href="javascript:location.href='${pageContext.request.contextPath}/ideaListOk.idea'">
 										<div class="category-content-logo">
 											<img src="https://cdn-icons-png.flaticon.com/128/2400/2400629.png" width="48" height="48">
 										</div>
@@ -333,7 +336,7 @@
 								</li>
 								
 								<li class="category-content-list">
-									<a>
+									<a href="javascript:location.href='${pageContext.request.contextPath}/ideaListOk.idea'">
 										<div class="category-content-logo">
 											<img src="https://cdn-icons-png.flaticon.com/128/1497/1497726.png" width="48" height="48">
 										</div>
@@ -347,7 +350,7 @@
 							<strong class="category-content-type">문구·디자인</strong>
 							<ul class="category-content-list-wrapper">
 								<li class="category-content-list">
-									<a>
+									<a href="javascript:location.href='${pageContext.request.contextPath}/ideaListOk.idea'">
 										<div class="category-content-logo">
 											<img src="https://cdn-icons-png.flaticon.com/128/3907/3907658.png" width="48" height="48">
 										</div>
@@ -356,7 +359,7 @@
 								</li>
 								
 								<li class="category-content-list">
-									<a>
+									<a href="javascript:location.href='${pageContext.request.contextPath}/ideaListOk.idea'">
 										<div class="category-content-logo">
 											<img src="https://cdn-icons-png.flaticon.com/128/332/332972.png" width="48" height="48">
 										</div>
@@ -365,7 +368,7 @@
 								</li>
 								
 								<li class="category-content-list">
-									<a>
+									<a href="javascript:location.href='${pageContext.request.contextPath}/ideaListOk.idea'">
 										<div class="category-content-logo">
 											<img src="https://cdn-icons-png.flaticon.com/128/658/658382.png" width="48" height="48">
 										</div>
@@ -374,7 +377,7 @@
 								</li>
 								
 								<li class="category-content-list">
-									<a>
+									<a href="javascript:location.href='${pageContext.request.contextPath}/ideaListOk.idea'">
 										<div class="category-content-logo">
 											<img src="https://cdn-icons-png.flaticon.com/128/3989/3989828.png" width="48" height="48">
 										</div>
@@ -382,7 +385,7 @@
 									</a>
 								</li>
 								<li class="category-content-list">
-									<a>
+									<a href="javascript:location.href='${pageContext.request.contextPath}/ideaListOk.idea'">
 										<div class="category-content-logo">
 											<img src="https://cdn-icons-png.flaticon.com/128/2727/2727153.png" width="48" height="48">
 										</div>
@@ -391,7 +394,7 @@
 								</li>
 								
 								<li class="category-content-list">
-									<a>
+									<a href="javascript:location.href='${pageContext.request.contextPath}/ideaListOk.idea'">
 										<div class="category-content-logo">
 											<img src="https://cdn-icons-png.flaticon.com/128/470/470554.png" width="48" height="48">
 										</div>
@@ -399,7 +402,7 @@
 									</a>
 								</li>
 								<li class="category-content-list">
-									<a>
+									<a href="javascript:location.href='${pageContext.request.contextPath}/ideaListOk.idea'">
 										<div class="category-content-logo">
 											<img src="https://cdn-icons-png.flaticon.com/128/5540/5540319.png" width="48" height="48">
 										</div>
@@ -417,7 +420,7 @@
 			<section class="popular-category">
 				<h2 class="category-explanation">iContact에서 가장 인기있어요!</h2>
 				<div class="popular-category-content-wrapper">
-					<a>
+					<a href="javascript:location.href='${pageContext.request.contextPath}/ideaListOk.idea'">
 						<article class="popular-category-content">
 							<div class="popular-category-content-explanation">
 								식품
@@ -426,7 +429,7 @@
 							<img src="https://kmong.com/_next/image?url=https%3A%2F%2Fd2v80xjmx68n4w.cloudfront.net%2Fassets%2Fdesktop%2Fmodules%2Fmain-themes%2Fpicked_categories_design%403x.png&w=2880&q=75" width="217" height="300" class="" style="color: transparent;">
 						</article>
 					</a>
-					<a>
+					<a href="javascript:location.href='${pageContext.request.contextPath}/ideaListOk.idea'">
 						<article class="popular-category-content">
 							<div class="popular-category-content-explanation">
 								패션
@@ -435,7 +438,7 @@
 							<img src="https://kmong.com/_next/image?url=https%3A%2F%2Fd2v80xjmx68n4w.cloudfront.net%2Fassets%2Fdesktop%2Fmodules%2Fmain-themes%2Fpicked_categories_it%403x.png&w=2880&q=75" width="217" height="300" class="" style="color: transparent;">
 						</article>
 					</a>
-					<a>
+					<a href="javascript:location.href='${pageContext.request.contextPath}/ideaListOk.idea'">
 						<article class="popular-category-content">
 							<div class="popular-category-content-explanation">
 								가구
@@ -444,7 +447,7 @@
 							<img src="https://kmong.com/_next/image?url=https%3A%2F%2Fd2v80xjmx68n4w.cloudfront.net%2Fassets%2Fdesktop%2Fmodules%2Fmain-themes%2Fpicked_categories_marketing%403x.png&w=2880&q=75" width="217" height="300" class="" style="color: transparent;">
 						</article>
 					</a>
-					<a>
+					<a href="javascript:location.href='${pageContext.request.contextPath}/ideaListOk.idea'">
 						<article class="popular-category-content">
 							<div class="popular-category-content-explanation">
 								문구
@@ -453,7 +456,7 @@
 							<img src="https://kmong.com/_next/image?url=https%3A%2F%2Fd2v80xjmx68n4w.cloudfront.net%2Fassets%2Fdesktop%2Fmodules%2Fmain-themes%2Fpicked_categories_vod%403x.png&w=2880&q=75" width="217" height="300" class="" loading="lazy" style="color: transparent;">
 						</article>
 					</a>
-					<a>
+					<a href="javascript:location.href='${pageContext.request.contextPath}/ideaListOk.idea'">
 						<article class="popular-category-content">
 							<div class="popular-category-content-explanation">
 								디자인
@@ -480,9 +483,9 @@
 					<h2 class="using-kmong-ad-title">iContact을 200% 활용하는 법</h2>
 					<p>iContact까지 내 능력으로 만드는 콘텐츠</p>
 					
-					<section class="using-kmong-ad-content">
+					<section class="using-kmong-ad-content" >
 						<article>
-							<a class="using-kmong-ad">
+							<a class="using-kmong-ad" href="javascript:location.href='${pageContext.request.contextPath}/ideaListOk.idea'">
 								<div class="using-kmong-ad-picture">
 									<img src="https://kmong.com/_next/image?url=https%3A%2F%2Fd2v80xjmx68n4w.cloudfront.net%2Fassets%2Fdesktop%2Fmodules%2Fmain-themes%2Fmain_theme_picked_business_tip_20220405_1.png&w=2880&q=75" width="376" height="247" loading="lazy" style="color: transparent;">
 								</div>
@@ -494,7 +497,7 @@
 						</article>
 						
 						<article>
-							<a class="using-kmong-ad">
+							<a class="using-kmong-ad" href="../faq/FAQ.jsp">
 								<div class="using-kmong-ad-picture">
 									<img src="https://kmong.com/_next/image?url=https%3A%2F%2Fd2v80xjmx68n4w.cloudfront.net%2Fassets%2Fdesktop%2Fmodules%2Fmain-themes%2Fmain_theme_picked_business_tip_20220404_1_2.png&w=2880&q=75" width="376" height="247" loading="lazy" style="color: transparent;">
 								</div>
@@ -506,8 +509,8 @@
 						</article>
 						
 						<article>
-							<a class="using-kmong-ad">
-								<div class="using-kmong-ad-picture">
+							<a class="using-kmong-ad" href="../faq/introduction.jsp">
+								<div class="using-kmong-ad-picture" href="../faq/introduction.jsp">
 									<img src="https://kmong.com/_next/image?url=https%3A%2F%2Fd2v80xjmx68n4w.cloudfront.net%2Fassets%2Fdesktop%2Fmodules%2Fmain-themes%2Fmain_theme_picked_business_tip_20221125_2_3.png&w=2880&q=75" width="376" height="247" loading="lazy" style="color: transparent;">
 								</div>
 								<div class="using-kmong-ad-explanation">
@@ -555,7 +558,7 @@
 									<img src="https://kmong.com/_next/image?url=https%3A%2F%2Fd2v80xjmx68n4w.cloudfront.net%2Fassets%2Fdesktop%2Fpages%2Fmain%2Franking-01%403x.png&w=2880&q=75" width="40" height="40" loading="lazy" style="color: transparent;">
 									<div class="category-pro-ranking-explanation">
 										<strong>1,328,222,120원</strong>
-										<a>
+										<a href="../goods/goodsMain.jsp">
 											<span>
 												DAcompany
 											</span>
@@ -577,7 +580,7 @@
 									<img src="https://kmong.com/_next/image?url=https%3A%2F%2Fd2v80xjmx68n4w.cloudfront.net%2Fassets%2Fdesktop%2Fpages%2Fmain%2Franking-02%403x.png&w=2880&q=75" width="40" height="40" loading="lazy" style="color: transparent;">
 									<div class="category-pro-ranking-explanation">
 										<strong>776,242,433원</strong>
-										<a>
+										<a href="../goods/goodsMain.jsp">
 											<span>
 												지구 컴즈
 											</span>
@@ -599,7 +602,7 @@
 									<img src="https://kmong.com/_next/image?url=https%3A%2F%2Fd2v80xjmx68n4w.cloudfront.net%2Fassets%2Fdesktop%2Fpages%2Fmain%2Franking-03%403x.png&w=2880&q=75" width="40" height="40" loading="lazy" style="color: transparent;">
 									<div class="category-pro-ranking-explanation">
 										<strong>714,554,000원</strong>
-										<a>
+										<a href="../goods/goodsMain.jsp">
 											<span>
 												그리미아트디자인
 											</span>
@@ -621,7 +624,7 @@
 									<img src="https://kmong.com/_next/image?url=https%3A%2F%2Fd2v80xjmx68n4w.cloudfront.net%2Fassets%2Fdesktop%2Fpages%2Fmain%2Franking-04%403x.png&w=2880&q=75" width="40" height="40" loading="lazy" style="color: transparent;">
 									<div class="category-pro-ranking-explanation">
 										<strong>586,375,986원</strong>
-										<a>
+										<a href="../goods/goodsMain.jsp">
 											<span>
 												로고고디자인
 											</span>
@@ -643,7 +646,7 @@
 									<img src="https://kmong.com/_next/image?url=https%3A%2F%2Fd2v80xjmx68n4w.cloudfront.net%2Fassets%2Fdesktop%2Fpages%2Fmain%2Franking-05%403x.png&w=2880&q=75" width="40" height="40" loading="lazy" style="color: transparent;">
 									<div class="category-pro-ranking-explanation">
 										<strong>543,491,500원</strong>
-										<a>
+										<a href="../goods/goodsMain.jsp">
 											<span>
 												별
 											</span>
@@ -672,7 +675,7 @@
 									<img src="https://kmong.com/_next/image?url=https%3A%2F%2Fd2v80xjmx68n4w.cloudfront.net%2Fassets%2Fdesktop%2Fpages%2Fmain%2Franking-01%403x.png&w=2880&q=75" width="40" height="40" loading="lazy" style="color: transparent;">
 									<div class="category-pro-ranking-explanation">
 										<strong>257,856,640원</strong>
-										<a>
+										<a href="../goods/goodsMain.jsp">
 											<span>
 												착한 스튜디오
 											</span>
@@ -694,7 +697,7 @@
 									<img src="https://kmong.com/_next/image?url=https%3A%2F%2Fd2v80xjmx68n4w.cloudfront.net%2Fassets%2Fdesktop%2Fpages%2Fmain%2Franking-02%403x.png&w=2880&q=75" width="40" height="40" loading="lazy" style="color: transparent;">
 									<div class="category-pro-ranking-explanation">
 										<strong>238,898,342원</strong>
-										<a>
+										<a href="../goods/goodsMain.jsp">
 											<span>
 												그랑팩토리
 											</span>
@@ -716,7 +719,7 @@
 									<img src="https://kmong.com/_next/image?url=https%3A%2F%2Fd2v80xjmx68n4w.cloudfront.net%2Fassets%2Fdesktop%2Fpages%2Fmain%2Franking-03%403x.png&w=2880&q=75" width="40" height="40" loading="lazy" style="color: transparent;">
 									<div class="category-pro-ranking-explanation">
 										<strong>235,582,200원</strong>
-										<a>
+										<a href="../goods/goodsMain.jsp">
 											<span>
 												춤추는포토그래퍼
 											</span>
@@ -738,7 +741,7 @@
 									<img src="https://kmong.com/_next/image?url=https%3A%2F%2Fd2v80xjmx68n4w.cloudfront.net%2Fassets%2Fdesktop%2Fpages%2Fmain%2Franking-04%403x.png&w=2880&q=75" width="40" height="40" loading="lazy" style="color: transparent;">
 									<div class="category-pro-ranking-explanation">
 										<strong>235,540,600원</strong>
-										<a>
+										<a href="../goods/goodsMain.jsp">
 											<span>
 												Phoenix
 											</span>
@@ -760,7 +763,7 @@
 									<img src="https://kmong.com/_next/image?url=https%3A%2F%2Fd2v80xjmx68n4w.cloudfront.net%2Fassets%2Fdesktop%2Fpages%2Fmain%2Franking-05%403x.png&w=2880&q=75" width="40" height="40" loading="lazy" style="color: transparent;">
 									<div class="category-pro-ranking-explanation">
 										<strong>171,671,530원</strong>
-										<a>
+										<a href="../goods/goodsMain.jsp">
 											<span>
 												매진스튜디오
 											</span>
@@ -789,7 +792,7 @@
 									<img src="https://kmong.com/_next/image?url=https%3A%2F%2Fd2v80xjmx68n4w.cloudfront.net%2Fassets%2Fdesktop%2Fpages%2Fmain%2Franking-01%403x.png&w=2880&q=75" width="40" height="40" loading="lazy" style="color: transparent;">
 									<div class="category-pro-ranking-explanation">
 										<strong>1,130,920,000원</strong>
-										<a>
+										<a href="../goods/goodsMain.jsp">
 											<span>
 												180도
 											</span>
@@ -811,7 +814,7 @@
 									<img src="https://kmong.com/_next/image?url=https%3A%2F%2Fd2v80xjmx68n4w.cloudfront.net%2Fassets%2Fdesktop%2Fpages%2Fmain%2Franking-02%403x.png&w=2880&q=75" width="40" height="40" loading="lazy" style="color: transparent;">
 									<div class="category-pro-ranking-explanation">
 										<strong>897,185,485원</strong>
-										<a>
+										<a href="../goods/goodsMain.jsp">
 											<span>
 												홈페이지제작전문웹드림
 											</span>
@@ -833,7 +836,7 @@
 									<img src="https://kmong.com/_next/image?url=https%3A%2F%2Fd2v80xjmx68n4w.cloudfront.net%2Fassets%2Fdesktop%2Fpages%2Fmain%2Franking-03%403x.png&w=2880&q=75" width="40" height="40" loading="lazy" style="color: transparent;">
 									<div class="category-pro-ranking-explanation">
 										<strong>511,752,718원</strong>
-										<a>
+										<a href="../goods/goodsMain.jsp">
 											<span>
 												개발자홍효식
 											</span>
@@ -855,7 +858,7 @@
 									<img src="https://kmong.com/_next/image?url=https%3A%2F%2Fd2v80xjmx68n4w.cloudfront.net%2Fassets%2Fdesktop%2Fpages%2Fmain%2Franking-04%403x.png&w=2880&q=75" width="40" height="40" loading="lazy" style="color: transparent;">
 									<div class="category-pro-ranking-explanation">
 										<strong>293,780,884원</strong>
-										<a>
+										<a href="../goods/goodsMain.jsp">
 											<span>
 												영앤스마트
 											</span>
@@ -877,7 +880,7 @@
 									<img src="https://kmong.com/_next/image?url=https%3A%2F%2Fd2v80xjmx68n4w.cloudfront.net%2Fassets%2Fdesktop%2Fpages%2Fmain%2Franking-05%403x.png&w=2880&q=75" width="40" height="40" loading="lazy" style="color: transparent;">
 									<div class="category-pro-ranking-explanation">
 										<strong>236,362,400원</strong>
-										<a>
+										<a href="../goods/goodsMain.jsp">
 											<span>
 												그리딕스
 											</span>
@@ -965,8 +968,14 @@ console.log(userId);
 
 if(userId != ""){
 	 $('#join').text('마이페이지');
+	 $("#join").attr("href", "../mypage/mypage.jsp")
 	
 	 $('#login').text('아이디어등록');
+	 $("#login").attr("href", "../goods/goods_register_1Work.jsp")
+	
+	 $('#logout').show();
+	 $('#logout').text('로그아웃');
+	 
 } else {
 	 $('#join').text('회원가입');
 		
