@@ -15,18 +15,18 @@
 
 	@font-face {
 		font-family: 'MetroSansBold';
-		src: url('../../font/MetroSans-Bold.woff2'); /* 굵은글씨체 주소지정 */
+		src: url('${pageContext.request.contextPath}/font/MetroSans-Bold.woff2'); /* 굵은글씨체 주소지정 */
 	}
 	
 	@font-face {
 		font-family: 'MetroSansMedium';
-		src: url('../../font/MetroSans-Medium.woff2');
+		src: url('${pageContext.request.contextPath}/font/MetroSans-Medium.woff2');
 	}
 	
 	
 	@font-face {
 		font-family: 'MetroSansRegular';
-		src: url('../../font/MetroSans-Regular.woff2'); /* 가는글씨체 주소지정 */
+		src: url('${pageContext.request.contextPath}/font/MetroSans-Regular.woff2'); /* 가는글씨체 주소지정 */
 	}
 	
 </style>
@@ -472,7 +472,7 @@
 			<section class="membership-ad">
 				<a>
 					<div class="membership-ad-img-wrapper">
-						<img src="../../images/img.png" width="1168" height="160" loading="lazy" style="color: transparent;">
+						<img src="${pageContext.request.contextPath}/images/img.png" width="1168" height="160" loading="lazy" style="color: transparent;">
 					</div>
 				</a>
 			</section>
@@ -533,7 +533,7 @@
 			<!-- 크몽 FAQ에서 해결하세요! -->
 			<section class="kmong-enterprise-ad">
 				<a>
-					<img src="../../images/0011.png" width="1168" height="160">
+					<img src="${pageContext.request.contextPath}/images/0011.png" width="1168" height="160">
 				</a>
 			</section>
 			
@@ -557,10 +557,10 @@
 								<article class="category-pro-ranking-top-content">
 									<img src="https://kmong.com/_next/image?url=https%3A%2F%2Fd2v80xjmx68n4w.cloudfront.net%2Fassets%2Fdesktop%2Fpages%2Fmain%2Franking-01%403x.png&w=2880&q=75" width="40" height="40" loading="lazy" style="color: transparent;">
 									<div class="category-pro-ranking-explanation">
-										<strong>1,328,222,120원</strong>
+										<strong>${ideas[0].ideaTitle}</strong>
 										<a href="../goods/goodsMain.jsp">
 											<span>
-												DAcompany
+											${ideas[0].ideaDetail}
 											</span>
 										</a>
 									</div>
@@ -907,7 +907,7 @@
 
 			<section class="kmong-pro-ad">
 				<a class="kmong-pro-ad-content">
-					<img src="../../images\0010.png" width="1168" height="160" loading="lazy" style="color: transparent;">
+					<img src="${pageContext.request.contextPath}/images\0010.png" width="1168" height="160" loading="lazy" style="color: transparent;">
 				</a>
 			</section>
 		</div>
