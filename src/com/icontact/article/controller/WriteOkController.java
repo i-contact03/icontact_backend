@@ -11,6 +11,8 @@ import com.icontact.Action;
 import com.icontact.Result;
 import com.icontact.article.dao.ArticleDAO;
 import com.icontact.article.domain.ArticleVO;
+import com.icontact.user.dao.UserDAO;
+import com.icontact.user.domain.UserVO;
 import com.oreilly.servlet.MultipartRequest;
 import com.oreilly.servlet.multipart.DefaultFileRenamePolicy;
 
@@ -23,6 +25,9 @@ public class WriteOkController implements Action {
 		ArticleDAO articleDAO = new ArticleDAO();
 		Result result = new Result();
 		
+		
+		UserVO userVO = new UserVO();
+		UserDAO userDAO = new UserDAO();
 //		HttpSession session = req.getSession();
 //		
 //		String root = req.getServletContext().getRealPath("/") + "upload/";
@@ -34,11 +39,20 @@ public class WriteOkController implements Action {
 //		articleVO.setArticleContent(multipartRequest.getParameter("articleContent"));
 //		articleVO.setUserId((Long)session.getAttribute("userId"));
 		
+		  int intValue = 1;
+	      Long longValue = Long.valueOf(intValue);
+	      userVO = userDAO.findUser(longValue);
+		
+		
+		
 		String articleTitle = req.getParameter("articleTitle");
 		String articleContent = req.getParameter("articleContent");
-		articleVO.setUserId((Long)session.getAttribute("userId"));
+//		articleVO.setUserId((Long)session.getAttribute("userId"));
+		
+		System.out.println(articleVO);
 		
 		articleDAO.insert(articleVO);
+		
 		
 		result.setPath(req.getContextPath() + "/listOk.article");
 		result.setRedirect(true);

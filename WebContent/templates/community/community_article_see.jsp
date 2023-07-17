@@ -20,7 +20,7 @@
 	<div  style="background-color: #eacaff;">
 		<header class="header">
 			<div class="logo">
-				<a href="https://kmong.com">
+				<a href="">
 					<!-- <img src="//theme.zdassets.com/theme_assets/9204604/ed54b2d958a2f7b420f8412b529519e676c20bc3.png" class="logo-kmong"> -->
 					<img src="${pageContext.request.contextPath}/icon/logo.png" width="170px" height="52px" > <!-- .top-header-logo -->
 				</a>
@@ -50,7 +50,7 @@
 				    	<a href="">게시글공지사항</a>
 				    </li> -->
 				    <li >
-       					<a href="">[제목] 창업을 꿈꾸는 이들에게 알려주고 싶은 소중한 정보들<!-- 전체공지 --></a>
+       					<a href=""><c:out value="${article.articleTitle}"/><!-- 전체공지 --></a>
     				</li>
 				</ol>
 				<form role="search" class="search" action="/hc/ko/search" accept-charset="UTF-8" method="get">
@@ -67,68 +67,68 @@
 		        <ul> 
 		          
 		            <li>
-		              <a href="https://support.kmong.com/hc/ko/articles/19038976162329" class="sidenav-item ">
+		              <a href="">
 		              	<p class="sidenav-item-text">개인정보처리방침 개정 안내 (2023.07.03)</p>
 		              </a> 
 		            </li>
 		          
 		            <li>
-		              <a href="https://support.kmong.com/hc/ko/articles/18921089522201" class="sidenav-item current-article">
+		              <a href="" class="sidenav-item current-article">
 		              	<p class="sidenav-item-text">6월, 고객센터 운영 시간 안내</p>
 		              </a> 
 		            </li>
 		          
 		            <li>
-		              <a href="https://support.kmong.com/hc/ko/articles/15856540004249" class="sidenav-item ">
-		              <p class="sidenav-item-text">[공지] 구매 수수료 도입 및 혜택 안내</p>
+		              <a href="" class="sidenav-item ">
+		              <p class="">[공지] 구매 수수료 도입 및 혜택 안내</p>
 		             </a> 
 		            </li>
 		          
 		            <li>
-		              <a href="https://support.kmong.com/hc/ko/articles/15855934121369" class="sidenav-item ">
+		              <a href="" class="sidenav-item ">
 		              	<p class="sidenav-item-text">서비스 이용약관 개정 안내 (2023.04.01)</p>
 		              </a> 
 		            </li>
 		          
 		            <li>
-		              <a href="https://support.kmong.com/hc/ko/articles/360040681332" class="sidenav-item ">
+		              <a href="" class="sidenav-item ">
 		              	<p class="sidenav-item-text">크몽을 사칭하는 메시지, 조심하세요!</p>
 		              </a> 
 		            </li>
 		          
 		            <li>
-		              <a href="https://support.kmong.com/hc/ko/articles/16469236386329" class="sidenav-item ">
+		              <a href="" class="sidenav-item ">
 		              	<p class="sidenav-item-text">[업데이트] 안드로이드 지원 중단 버전 안내 (2023.02.27)</p>
 		              </a> 
 		            </li>
 		          
 		            <li>
-		              <a href="https://support.kmong.com/hc/ko/articles/14724799784345" class="sidenav-item ">
+		              <a href="" class="sidenav-item ">
 		              	<p class="sidenav-item-text">[업데이트] iOS 지원 중단 버전 안내 (2023.02.27)</p>
 		              </a> 
 		            </li>
 		          
 		            <li>
-		              <a href="https://support.kmong.com/hc/ko/articles/14178533571993" class="sidenav-item ">
+		              <a href="" class="sidenav-item ">
 		              	<p class="sidenav-item-text">[업데이트] 포트폴리오 메인 화면, 기능 개선 (2023.01.05)</p>
 		              </a> 
 		            </li>
 		          
 		            <li>
-		              <a href="https://support.kmong.com/hc/ko/articles/9652597926937" class="sidenav-item ">
+		              <a href="" class="sidenav-item ">
 		              	<p class="sidenav-item-text">개인정보처리방침 개정 안내 (2022.08.26)</p>
 		              </a> 
 		            </li>
 		          
 		            <li>
-		              <a href="https://support.kmong.com/hc/ko/articles/7549309731097" class="sidenav-item ">
+		              <a href="" class="sidenav-item ">
 		              	<p class="sidenav-item-text">페널티 정책 안내 (2022.07.04)</p>
 		              </a> 
 		            </li>
 		          
 		        </ul>
 		        
-		          <a href="https://support.kmong.com/hc/ko/sections/360004425332" class="article-sidebar-item">더보기</a>
+		          <a href="${pageContext.request.contextPath}/listOk.article" class="article-sidebar-item">더보기</a>
 		        
 		        </section>
 		      
@@ -564,9 +564,6 @@
 									</p>
 								</div>
 							
-							
-							
-							
 							</div>
 							
 							
@@ -596,11 +593,7 @@
 									</p>
 								</div>
 							
-							
-							
-							
 							</div>
-							
 							
 						</div>
 						<!-- 댓글 1번 전체 틀 -->
@@ -627,10 +620,7 @@
 										저렴한 비용에 높은 퀄리티의 기획서를 받아봤습니다. 수정도 잘 해주시고, 특히 해당 아이템에 대한 이해도가 높아서 좋았습니다.. 진즉에 의뢰를 드릴껄하는 후회가 드네요 ㅎㅎㅎ
 									</p>
 								</div>
-							
-							
-							
-							
+								
 							</div>
 							
 							
@@ -658,10 +648,7 @@
 									<p class="comment-detailDetail"> <!-- css-ao4x98 -->
 										저렴한 비용에 높은 퀄리티의 기획서를 받아봤습니다. 수정도 잘 해주시고, 특히 해당 아이템에 대한 이해도가 높아서 좋았습니다.. 진즉에 의뢰를 드릴껄하는 후회가 드네요 ㅎㅎㅎ
 									</p>
-								</div>
-							
-							
-							
+								</div>						
 							
 							</div>
 							
@@ -692,19 +679,10 @@
 									</p>
 								</div>
 							
-							
-							
-							
 							</div>
 							
 							
-						</div> -->
-						
-						
-						
-						
-						
-						
+						</div> -->		
 						
 					</div>
 					
@@ -751,18 +729,18 @@
 		        개인정보보호책임 : 한동석 | 사업자등록번호 : 613-81-65278<br>
 		        통신판매업번호 : 2015 - 서울강남 - 03148호<br>
 		        E-mail : koreais@koreaedugroup.com | Fax: 02-2135-2949 </ol>
-		    <ol><a href="https://support.kmong.com/hc/ko/categories/360001764912">커뮤니티</a></ol>
-		    <ol><a href="https://support.kmong.com/hc/ko/categories/360001643071">FAQ</a></ol>
-		    <ol><a href="https://support.kmong.com/hc/ko/articles/17612541189145"><b>회사소개</b></a></ol>
+		    <ol><a href="">커뮤니티</a></ol>
+		    <ol><a href="">FAQ</a></ol>
+		    <ol><a href=""><b>회사소개</b></a></ol>
 		</div>
 		<div class="footer-div2">
 		    &nbsp;&nbsp; iContact &nbsp;&nbsp;&nbsp;
-		    <a href="https://support.kmong.com/hc/ko/categories/360001764912">커뮤니티</a>&nbsp;
-		    <a href="https://support.kmong.com/hc/ko/categories/360001643071">FAQ</a>&nbsp;
-		    <a href="https://support.kmong.com/hc/ko/articles/12244853101081">회사소개</a>&nbsp;
+		    <a href="">커뮤니티</a>&nbsp;
+		    <a href="">FAQ</a>&nbsp;
+		    <a href="">회사소개</a>&nbsp;
 		</div>
 	</footer>
 </body>
 <script src="https://code.jquery.com/jquery-3.7.0.min.js"></script>
-<script src=".js"></script>
+<script src="${pageContext.request.contextPath}/static/js/article_see.js"></script>
 </html>

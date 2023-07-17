@@ -37,12 +37,12 @@ public class ArticleFrontController extends HttpServlet{
 				
 //		글쓰기
 		} else if(target.equals("writeOk")) {
-			System.out.println("프컨 들어옴!");
+			System.out.println("프컨 들어옴");
 			result = new WriteOkController().execute(req, resp);
 
 //		상세페이지 출력
 		} else if(target.equals("detailOk")) {
-			System.out.println("프컨 들어옴!");
+			System.out.println("프컨!");
 			result = new DetailOkController().execute(req, resp);
 		}
 		if(result != null) {
