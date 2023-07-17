@@ -5,13 +5,13 @@
 <head>
 <meta charset="UTF-8">
 <title>게시물 작성하기</title>
-<link rel="icon" href="../../icon/favicon.png">
-<link rel="stylesheet" href="../../static/css/community_article_write.css" /> 
+<link rel="icon" href="${pageContext.request.contextPath}/icon/favicon.png">
+<link rel="stylesheet" href="${pageContext.request.contextPath}/static/css/community_article_write.css" /> 
 <style>
 
 	@font-face {
 		font-family: 'MetroSansMedium';
-		src: url('../../font/MetroSans-Medium.woff2');
+		src: url('${pageContext.request.contextPath}/font/MetroSans-Medium.woff2');
 	}
    
 </style>
@@ -23,7 +23,7 @@
 			<div class="logo">
 				<a>
 					<!-- <img src="//theme.zdassets.com/theme_assets/9204604/ed54b2d958a2f7b420f8412b529519e676c20bc3.png" class="logo-kmong"> -->
-					<img src="../../icon/logo.png" width="170px" height="52px"> <!-- .top-header-logo -->
+					<img src="${pageContext.request.contextPath}/icon/logo.png" width="170px" height="52px"> <!-- .top-header-logo -->
 				</a>
 				<!-- <a href="https://support.kmong.com/hc/ko">
 					<img src="//theme.zdassets.com/theme_assets/9204604/db54bfa5d2ad14572afe57b4b5582b04a38aa9e1.png" class="callcenter">
@@ -40,6 +40,7 @@
 	</div>
 	<main role="main">
 		<div class="divide-head-main"></div>
+		<div>
 		<div class="main-container">
 			<nav class="sub-nav">
 				<ol class="page-course-map">
@@ -89,19 +90,20 @@
 			  
 			    <div class="form-field required  request_subject">
 			      <label id="request_subject_label" for="request_subject">제목</label>
-			      <input type="text" name="articleTitle" id="request_subject" maxlength="150" size="150" aria-required="true" aria-labelledby="request_subject_label">	      
+			      <input type="text" name="articleTitle" id="articleTitle" value="${article.articleTitle}" maxlength="150" size="150">	      
 			    </div>
 			
 			    <div class="suggestion-list"></div>
 			      
 			    <div class="form-field text  required  request_description">
 			      <label id="request_description_label" for="request_description"><!-- 설명 -->내용</label>
-			      <textarea name="articleContent" id="request_description" aria-required="true" aria-describedby="request_description_hint" aria-labelledby="request_description_label"></textarea>
+			      <textarea name="articleContent" id="articleContent"></textarea>
 			      <input type="hidden" name="request[description_mimetype]" id="request_description_mimetype" value="text/plain" style="display: none;" autocomplete="off">
 			      
 			      <!-- <p id="request_description_hint">문의 내용에 관한 세부 정보를 입력해 주세요. 
 					저희 지원 스태프가 가능한 빨리 자세한 답변을 드리도록 하겠습니다.</p> -->
 			    </div>
+			   </div>
 			
 			
 				<!-- <div class="form-field">
@@ -178,19 +180,20 @@
 		        개인정보보호책임 : 한동석 | 사업자등록번호 : 613-81-65278<br>
 		        통신판매업번호 : 2015 - 서울강남 - 03148호<br>
 		        E-mail : koreais@koreaedugroup.com | Fax: 02-2135-2949 </ol>
-		    <ol><a href="https://support.kmong.com/hc/ko/categories/360001764912">커뮤니티</a></ol>
-		    <ol><a href="https://support.kmong.com/hc/ko/categories/360001643071">FAQ</a></ol>
-		    <ol><a href="https://support.kmong.com/hc/ko/articles/17612541189145"><b>회사소개</b></a></ol>
+		    <ol><a href="">커뮤니티</a></ol>
+		    <ol><a href="">FAQ</a></ol>
+		    <ol><a href=""><b>회사소개</b></a></ol>
 		</div>
 		<div class="footer-div2">
 		    &nbsp;&nbsp; iContact &nbsp;&nbsp;&nbsp;
-		    <a href="https://support.kmong.com/hc/ko/categories/360001764912">커뮤니티</a>&nbsp;
+		    <a href="">커뮤니티</a>&nbsp;
 		    <a href="https://support.kmong.com/hc/ko/categories/360001643071">FAQ</a>&nbsp;
 		    <a href="https://support.kmong.com/hc/ko/articles/12244853101081">회사소개</a>&nbsp;
 		</div>
 	</footer>
 </body>
 <script src="https://code.jquery.com/jquery-3.6.1.min.js"></script>
+<script src="${pageContext.request.contextPath}/static/js/article.js"></script>
 </html>
 
 
