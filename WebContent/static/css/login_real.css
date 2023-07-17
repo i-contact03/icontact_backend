@@ -247,8 +247,8 @@ input {
     font-size: 15px;
     padding: 0px 22px;
     min-width: 64px;
-    background-color: rgb(255, 212, 0);
-    border-color: rgb(255, 212, 0);
+    background-color: #eacaff;
+    border-color: #eacaff;
     color: rgb(48, 52, 65);
 }
 
@@ -465,11 +465,20 @@ input {
 
 
 
-
-
-
-
-
+.css-check {
+    position: relative;
+    top: 0px;
+    left: 0px;
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+    border-width: 1px;
+    border-style: solid;
+    border-radius: 3px;
+    transition: border-color 0.3s cubic-bezier(0.68, -0.55, 0.27, 1.55) 0s, background-color 0.3s cubic-bezier(0.68, -0.55, 0.27, 1.55) 0s;
+    border-color: rgb(255, 212, 0);
+    background-color: rgb(255, 212, 0);
+}
 
 
 

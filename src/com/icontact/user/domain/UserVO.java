@@ -8,7 +8,7 @@ public class UserVO {
 	private String userCall;
 	private String userEmail;
 	private String userStatus;
-	private String userProfile;
+	private String userProfileName;
 	
 	public UserVO() {;}
 
@@ -68,19 +68,19 @@ public class UserVO {
 		this.userStatus = userStatus;
 	}
 
-	public String getUserProfile() {
-		return userProfile;
+	public String getUserProfileName() {
+		return userProfileName;
 	}
 
-	public void setUserProfile(String userProfile) {
-		this.userProfile = userProfile;
+	public void setUserProfileName(String userProfileName) {
+		this.userProfileName = userProfileName;
 	}
 
 	@Override
 	public String toString() {
 		return "UserVO [userId=" + userId + ", userIdentification=" + userIdentification + ", userPassword="
 				+ userPassword + ", userName=" + userName + ", userCall=" + userCall + ", userEmail=" + userEmail
-				+ ", userStatus=" + userStatus + ", userProfile=" + userProfile + "]";
+				+ ", userStatus=" + userStatus + ", userProfileName=" + userProfileName + "]";
 	}
 
 	@Override

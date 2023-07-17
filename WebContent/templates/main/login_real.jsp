@@ -5,13 +5,13 @@
 <head>
 <meta charset="UTF-8">
 <title>로그인</title>
-<link rel="icon" href="../../icon/favicon.png">
-<link rel="stylesheet" href="../../static/css/login_real.css">
+<link rel="icon" href="${pageContext.request.contextPath}/icon/favicon.png">
+ <link rel="stylesheet" href="${pageContext.request.contextPath}/static/css/login_real.css">
 <style>
 
 	@font-face {
 		font-family: 'MetroSansMedium';
-		src: url('../../font/MetroSans-Medium.woff2');
+		src: url('${pageContext.request.contextPath}/font/MetroSans-Medium.woff2');
 	}
 	
 </style>
@@ -49,19 +49,21 @@
 							<!-- ==== -->
 							<!-- 로그인 팝업 헤더 역할 - 상표 포함 -->
 							<div class="login-main-box-wrapper-header">	<!-- css-j0azdm eyci4q02 -->
-								<svg width="85" height="100%" viewBox="0 0 85 26" xmlns="http://www.w3.org/2000/svg">
-									<path d="M77.69 4.86c3.975 0 7.197 3.215 7.197 7.18l-.002.055h.002c.073 3.477.074 5.769.003 6.874-.108 1.659-.724 3.372-1.947 4.693A7.21 7.21 0 0 1 77.593 26c-2.724 0-4.998-.984-6.653-2.921l-.05-.059 3.226-2.684c.837.997 1.938 1.48 3.478 1.48.9 0 1.67-.358 2.259-.992.515-.556.817-1.263.832-1.813v-.443a7.186 7.186 0 0 1-2.995.65c-3.975 0-7.197-3.214-7.197-7.179 0-3.964 3.222-7.178 7.197-7.178zm-32.13-.225c4.131 0 7.48 3.34 7.48 7.46 0 4.121-3.349 7.462-7.48 7.462s-7.48-3.34-7.48-7.461c0-4.12 3.349-7.461 7.48-7.461zM4.533 0v10.354L8.623 5.2h5.309l-5.337 6.726 5.572 7.065h-4.98L4.534 13.42v5.572H0V0h4.533zM29.92 4.86a6.233 6.233 0 0 1 6.233 6.234v7.897H31.96v-7.908a2.04 2.04 0 0 0-4.074-.152l-.006.152v7.908h-4.193v-7.908a2.04 2.04 0 0 0-4.075-.152l-.005.152v7.908h-4.194v-7.897a6.233 6.233 0 0 1 10.371-4.662 6.201 6.201 0 0 1 4.136-1.571zm31.847 0a6.8 6.8 0 0 1 6.8 6.8v7.331h-4.194v-7.34a2.607 2.607 0 0 0-2.441-2.602l-.165-.006a2.607 2.607 0 0 0-2.602 2.442l-.005.165v7.34l-4.193.001v-7.33a6.8 6.8 0 0 1 6.8-6.8zM45.56 8.818a3.282 3.282 0 0 0-3.287 3.279 3.282 3.282 0 0 0 3.287 3.278 3.282 3.282 0 0 0 3.287-3.278 3.282 3.282 0 0 0-3.287-3.279zm32.13.226a3 3 0 0 0-3.003 2.996 3 3 0 0 0 3.003 2.996 3 3 0 0 0 3.003-2.996 3 3 0 0 0-3.003-2.996z" fill="#212224" fill-rule="evenodd"></path>
-								</svg>
+							<a class="logo-wrapper">
+				<svg width="0.1" height="100%" viewBox="0 0 85 26" xmlns="http://www.w3.org/2000/svg">
+					</svg><img src="${pageContext.request.contextPath}/icon/logo.png" width="170px" height="52px">
+				
+						</a>
 							</div>
 							
 							<!-- ==== -->
 							<!-- 로그인 팝업 이메일, 비번, 로그인버튼, 찾기 등등 -->
-							<form class="login-main-box-login-info-big-form">	<!-- css-11e0jfa equrxy90 -->
+							<form action="${pageContext.request.contextPath}/loginOk.user" class="login-main-box-login-info-big-form">	<!-- css-11e0jfa equrxy90 -->
 								
 								<!-- 로그인 이메일 -->
 								<div>
 									<div class="login-main-email-and-pw-box">	<!-- css-18xyxwl e1fnk6ig0 -->
-										<input type="email" required="" placeholder="이메일을 입력해 주세요." name="email" autocomplete="username" class="login-main-email-box-email-and-pw-area" value="">	<!-- .css-dka9py -->
+										<input type="text" required="" placeholder="아이디를 입력해 주세요." id="userIdentification" name="userIdentification" autocomplete="username" class="login-main-email-box-email-and-pw-area" value="">	<!-- .css-dka9py -->
 									</div>
 									<!-- <div>
 										<p class="login-main-warning-area">	
@@ -72,7 +74,7 @@
 								<!-- = -->
 								<div>
 									<div class="login-main-email-and-pw-box">	<!-- css-18xyxwl e1fnk6ig0 -->
-										<input type="password" required="" placeholder="비밀번호를 입력해 주세요." name="password" autocomplete="current-password" class="login-main-email-box-email-and-pw-area" value="">	<!-- css-dka9py e1fnk6ig1 -->
+										<input type="password" required="" placeholder="비밀번호를 입력해 주세요." id="userPassword" name="userPassword" autocomplete="current-password" class="login-main-email-box-email-and-pw-area" value="">	<!-- css-dka9py e1fnk6ig1 -->
 									</div>
 									<!-- <div>
 										<p class="login-main-warning-area">
@@ -91,11 +93,12 @@
 								
 								<!-- = -->
 								<!-- 로그인 부속 기능 -->
+								
 								<div class="login-main-login-below-wrapper">	<!-- css-70qvj9 equrxy92 -->
-									<label color="#ffd400" class="login-main-login-below-check-for-keeplogin-wrapper">	<!-- css-18pqe3v elgfge0 -->
+									<label for="auto-login" color="#ffd400" class="login-main-login-below-check-for-keeplogin-wrapper">	<!-- css-18pqe3v elgfge0 -->
 										<span class="login-main-login-below-check-for-keeplogin-span">	<!-- css-9ffs86 elgfge3 -->
-											<input type="checkbox" name="remember" class="login-main-login-below-check-for-keeplogin-checkbox">	<!-- css-l775cp elgfge2 -->
-											<span color="#ffd400" class="login-main-login-below-check-for-keeplogin-checkbox-inner"></span>	<!-- checkbox__inner css-1t5nui elgfge4 -->
+											<input type="checkbox" id="auto-login" name="auto-login" value="" class="login-main-login-below-check-for-keeplogin-checkbox">	<!-- css-l775cp elgfge2 -->
+											<span color="#ffd400" id="check-mark" class="login-main-login-below-check-for-keeplogin-checkbox-inner"></span>	<!-- checkbox__inner css-1t5nui elgfge4 -->
 											<span class="login-main-login-below-check-for-keeplogin-checkbox-textbox">	<!-- css-2k2mpm elgfge1 -->
 												<p variant="body2" class="login-main-login-below-p-tag" color="gray600">로그인 상태 유지</p>	<!-- css-15suf60 e870mj50 -->
 											</span>
@@ -137,7 +140,7 @@
 							<!-- ==== -->
 							<!-- 회원가입 이동 버튼 -->
 							<div class="gray">
-								<a role="link" color="default" href="/signup?next_page=%2F%3Futm_source%3Dgoogle%26utm_medium%3Dcpc%26utm_campaign%3D0%26utm_content%3Dmarket%26utm_group%3D0%26utm_term%3D%25ED%2581%25AC%25EB%25AA%25BD%26gclid%3DEAIaIQobChMIr867pLDt_wIV162WCh2gGwdgEAAYASAAEgJozfD_BwE" class="login-main-go-to-signup-a-tag">	<!-- css-1uk00me eklkj752 -->
+								<a role="link" color="default" href="join.jsp" class="login-main-go-to-signup-a-tag">	<!-- css-1uk00me eklkj752 -->
 									<span class="login-main-go-to-signup-span">회원가입</span>	<!-- css-1oteowz eklkj751 -->
 								</a>
 								<!-- 10만원 쿠폰 받기 -->
@@ -153,10 +156,43 @@
 		</div>
 	</div>
 
-
-
 </body>
+<script src="https://code.jquery.com/jquery-3.6.1.min.js"></script>
+<script src="${pageContext.request.contextPath}/static/js/login.js"></script>
+<script src="${pageContext.request.contextPath}/static/js/modal/modal.js"></script>
+
+<script>
+	var checkBox = document.getElementById("auto-login");
+	var checkMark = document.getElementById("check-mark");
+
+	$(checkMark).click(function (){
+		if( !checkBox.checked ){           //체크 안돼있는데 클릭하면 체크 시키고
+			checkBox.checked = true;
+		}else{                             //체크 돼있으면 해제 시키기
+			checkBox.checked = false;
+		}
+	});
+	
+	
+</script>
+
+<script>
+	let autoLogin = "${autoLogin}";
+	console.log(autoLogin);
+	if(autoLogin){
+		$("input[name='auto-login']").prop("checked", true);
+		checkedAutoLogin();
+	}
+</script>
 </html>
+<!-- pageScope, requestScope, sessionScope, applicationScope-->
+<c:if test="${not empty param.login}">
+	<script>
+		showWarnModal("아이디 또는 비밀번호를<br>확인해주세요");
+	</script>
+</c:if>	
+
+
 
 
 

@@ -5,13 +5,13 @@
 <head>
 <meta charset="UTF-8">
 <title>게시판 메인페이지</title>
-<link rel="icon" href="../../icon/favicon.png">
-<link rel="stylesheet" href="../../static/css/community_article_main.css" /> 
+<link rel="icon" href="${pageContext.request.contextPath}/icon/favicon.png">
+<link rel="stylesheet" href="${pageContext.request.contextPath}/static/css/community_article_main.css" /> 
 <style>
 
 	@font-face {
 		font-family: 'MetroSansMedium';
-		src: url('../../font/MetroSans-Medium.woff2');
+		src: url('${pageContext.request.contextPath}/font/MetroSans-Medium.woff2');
 	}
    
 </style>
@@ -20,9 +20,9 @@
 	<div  style="background-color: #eacaff;">
 		<header class="header">
 			<div class="logo">
-				<a href="https://kmong.com">
+				<a href="">
 					<!-- <img src="//theme.zdassets.com/theme_assets/9204604/ed54b2d958a2f7b420f8412b529519e676c20bc3.png" class="logo-kmong"> -->
-					<img src="../../icon/logo.png" width="170px" height="52px" > <!-- .top-header-logo -->
+					<img src="${pageContext.request.contextPath}/icon/logo.png" width="170px" height="52px" > <!-- .top-header-logo -->
 				</a>
 				<!-- <a href="https://support.kmong.com/hc/ko">
 					<img src="//theme.zdassets.com/theme_assets/9204604/db54bfa5d2ad14572afe57b4b5582b04a38aa9e1.png" class="callcenter">
@@ -32,7 +32,7 @@
 				</a>
 			</div>
 			<div class="nav-wrapper">
-				<a href="https://support.kmong.com/hc/ko/requests/new" target="_parent" style="color: #666666;">게시물 등록하기</a>
+				<a href="" target="_parent" style="color: #666666;">게시물 등록하기</a>
 				<a class="change-page-login" role="button" href="https://kmong.com/login?brand_id=360002309011&locale_id=69&return_to=https%3A%2F%2Fsupport.kmong.com%2Fhc%2Fko%2Frequests%2Fnew&target=zendesk&timestamp=1687257449" style="color: blue;">한동석 님</a>
 			</div>
 		</header>
@@ -55,30 +55,34 @@
 		      <div class="main-list-title">
 		      	<!-- 공지사항 -->게시글&nbsp;&nbsp;
 		      	<h5>
-		      		<a href="https://support.kmong.com/hc/ko/categories/360001764912">더보기</a>
+		      		<a href="">더보기</a>
 		      	</h5>
 		      </div>
-		      <li class="main-list"><a href="https://support.kmong.com/hc/ko/articles/18921089522201">6월, 고객센터 운영 시간 안내</a></li>
-		      <li class="main-list"><a href="https://support.kmong.com/hc/ko/articles/19038976162329">개인정보처리방침 개정 안내 (2023.07.04)</a></li>
-		      <li class="main-list"><a href="https://support.kmong.com/hc/ko/articles/19038686785945">판매/홍보 대행 약관 개정 안내 (2023.07.04)</a></li>     
-		      <li class="main-list"><a href="https://support.kmong.com/hc/ko/articles/15856540004249">[공지] 구매 수수료 도입 및 혜택 안내</a></li>
-		      <li class="main-list"><a href="https://support.kmong.com/hc/ko/articles/15855934121369">서비스 이용약관 개정 안내 (2023.04.01)</a></li>
-		      <li class="main-list"><a href="https://support.kmong.com/hc/ko/articles/360040681332">크몽을 사칭하는 메시지, 조심하세요!</a></li>
-		     <!-- </section>
-		  
-		    <section class="section">		    
-			    <div class="main-list-title">
-			    	FAQ&nbsp;&nbsp;
-			    	<h5>
-			    		<a href="https://support.kmong.com/hc/ko/categories/360001643071">더보기</a>
-			    	</h5>
-			    </div> -->
-			    <li class="main-list"><a href="https://support.kmong.com/hc/ko/articles/13179212554137">[서비스 소개] 크몽 마켓은 어떻게 이용하나요?</a></li>
-			    <li class="main-list"><a href="https://support.kmong.com/hc/ko/articles/4406941647385">[서비스 소개] 크몽 이용가이드: 의뢰인 편</a></li>
-			    <li class="main-list"><a href="https://support.kmong.com/hc/ko/articles/4402394816665">[서비스 소개] 크몽 이용가이드: 전문가 편</a></li>
-			    <li class="main-list"><a href="https://support.kmong.com/hc/ko/articles/900001834866">[구매 및 영수증] 세금계산서는 누가 발행하며, 어떻게 신청하나요?</a></li>
-			    <li class="main-list"><a href="https://support.kmong.com/hc/ko/articles/900002041706">[문제 해결] 거래 중 분쟁이 발생하면 어떻게 하나요?</a></li>      
-			    <li class="main-list"><a href="https://support.kmong.com/hc/ko/articles/900001573123">[이용방법] 크몽 캐시는 어떻게 환불받나요?</a></li>          
+		      <section id="content-wrap">
+		     	 <ul>
+				  <!--     <li class="main-list"><a href=""></a></li>
+				      <li class="main-list"><a href=""></a></li>
+				      <li class="main-list"><a href=""></a></li>     
+				      <li class="main-list"><a href=""></a></li>
+				      <li class="main-list"><a href=""></a></li>
+				      <li class="main-list"><a href=""></a></li>
+				     <!-- </section>
+				  
+				    <section class="section">		    
+					    <div class="main-list-title">
+					    	FAQ&nbsp;&nbsp;
+					    	<h5>
+					    		<a href="https://support.kmong.com/hc/ko/categories/360001643071">더보기</a>
+					    	</h5>
+					    </div> 
+					    <li class="main-list"><a href="">[서비스 소개] 크몽 마켓은 어떻게 이용하나요?</a></li>
+					    <li class="main-list"><a href="">[서비스 소개] 크몽 이용가이드: 의뢰인 편</a></li>
+					    <li class="main-list"><a href="">[서비스 소개] 크몽 이용가이드: 전문가 편</a></li>
+					    <li class="main-list"><a href="">[구매 및 영수증] 세금계산서는 누가 발행하며, 어떻게 신청하나요?</a></li>
+					    <li class="main-list"><a href="">[문제 해결] 거래 중 분쟁이 발생하면 어떻게 하나요?</a></li>      
+					    <li class="main-list"><a href="">[이용방법] 크몽 캐시는 어떻게 환불받나요?</a></li>           -->
+		       		</ul>
+	       		</section>
 	        </section>
 	        
 	        
@@ -162,23 +166,41 @@
 	        개인정보보호책임 : 한동석 | 사업자등록번호 : 613-81-65278<br>                                                
 	        통신판매업번호 : 2015 - 서울강남 - 03148호<br>                                                         
 	        E-mail : koreais@koreaedugroup.com | Fax: 02-2135-2949 </ol>                               
-	    <ol><a href="https://support.kmong.com/hc/ko/categories/360001764912">커뮤니티</a></ol>            
-	    <ol><a href="https://support.kmong.com/hc/ko/categories/360001643071">FAQ</a></ol>             
-	    <ol><a href="https://support.kmong.com/hc/ko/articles/17612541189145"><b>회사소개</b></a></ol>     
+	    <ol><a href="">커뮤니티</a></ol>            
+	    <ol><a href="">FAQ</a></ol>             
+	    <ol><a href=""><b>회사소개</b></a></ol>     
 	</div>                                                                                             
 	<div class="footer-div2">                                                                          
 	    &nbsp;&nbsp; iContact &nbsp;&nbsp;&nbsp;                                                       
-	    <a href="https://support.kmong.com/hc/ko/categories/360001764912">커뮤니티</a>&nbsp;               
-	    <a href="https://support.kmong.com/hc/ko/categories/360001643071">FAQ</a>&nbsp;                
-	    <a href="https://support.kmong.com/hc/ko/articles/12244853101081">회사소개</a>&nbsp;               
+	    <a href="">커뮤니티</a>&nbsp;               
+	    <a href="">FAQ</a>&nbsp;                
+	    <a href="">회사소개</a>&nbsp;               
 	</div>                                                                                             
 </footer>                                                                                              
+<script src="https://code.jquery.com/jquery-3.6.1.min.js"></script>
+<script src="https://rawgit.com/jackmoore/autosize/master/dist/autosize.min.js"></script>
+<script>
+
+	let articles = `${articles}`;
+	console.log(articles);
+	let contextPath = `${pageContext.request.contextPath}`;
+	let $form = $("form[name='page-form']");
+	$("a.change-page").on("click", function(e){
+		e.preventDefault();
+		$form.find("input[name='page']").val($(this).attr("href"));
+		$form.submit();
+	});
 	
 	
 	
 	
 	
+</script>
 	
 	
+	
+	
+	
+<script src="${pageContext.request.contextPath}/static/js/article_main.js"></script>
 </body>
 </html>

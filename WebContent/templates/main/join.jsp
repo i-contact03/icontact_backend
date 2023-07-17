@@ -5,8 +5,9 @@
 <head>
 <meta charset="UTF-8">
 <title>iContact 회원가입</title>
-<link rel="icon" href="../../icon/favicon.png">
+<link rel="icon" href="${pageContext.request.contextPath}/icon/favicon.png">
 <link rel="stylesheet" href="../../static/css/join.css">
+<link rel="stylesheet" href="${pageContext.request.contextPath}/static/css/join.css">
 <!-- 아래 링크는 수정용으로 임시 사용함 -->
 <link rel="stylesheet" href="join.css">
 
@@ -14,7 +15,7 @@
 
 	@font-face {
 		font-family: 'MetroSansMedium';
-		src: url('../../font/MetroSans-Medium.woff2');
+		src: url('${pageContext.request.contextPath}/font/MetroSans-Medium.woff2');
 	}
 	
 </style>
@@ -29,79 +30,86 @@
 			<a class="logo-wrapper">
 				<svg width="0.1" height="100%" viewBox="0 0 85 26" xmlns="http://www.w3.org/2000/svg">
 					<!-- <path d="M77.69 4.86c3.975 0 7.197 3.215 7.197 7.18l-.002.055h.002c.073 3.477.074 5.769.003 6.874-.108 1.659-.724 3.372-1.947 4.693A7.21 7.21 0 0 1 77.593 26c-2.724 0-4.998-.984-6.653-2.921l-.05-.059 3.226-2.684c.837.997 1.938 1.48 3.478 1.48.9 0 1.67-.358 2.259-.992.515-.556.817-1.263.832-1.813v-.443a7.186 7.186 0 0 1-2.995.65c-3.975 0-7.197-3.214-7.197-7.179 0-3.964 3.222-7.178 7.197-7.178zm-32.13-.225c4.131 0 7.48 3.34 7.48 7.46 0 4.121-3.349 7.462-7.48 7.462s-7.48-3.34-7.48-7.461c0-4.12 3.349-7.461 7.48-7.461zM4.533 0v10.354L8.623 5.2h5.309l-5.337 6.726 5.572 7.065h-4.98L4.534 13.42v5.572H0V0h4.533zM29.92 4.86a6.233 6.233 0 0 1 6.233 6.234v7.897H31.96v-7.908a2.04 2.04 0 0 0-4.074-.152l-.006.152v7.908h-4.193v-7.908a2.04 2.04 0 0 0-4.075-.152l-.005.152v7.908h-4.194v-7.897a6.233 6.233 0 0 1 10.371-4.662 6.201 6.201 0 0 1 4.136-1.571zm31.847 0a6.8 6.8 0 0 1 6.8 6.8v7.331h-4.194v-7.34a2.607 2.607 0 0 0-2.441-2.602l-.165-.006a2.607 2.607 0 0 0-2.602 2.442l-.005.165v7.34l-4.193.001v-7.33a6.8 6.8 0 0 1 6.8-6.8zM45.56 8.818a3.282 3.282 0 0 0-3.287 3.279 3.282 3.282 0 0 0 3.287 3.278 3.282 3.282 0 0 0 3.287-3.278 3.282 3.282 0 0 0-3.287-3.279zm32.13.226a3 3 0 0 0-3.003 2.996 3 3 0 0 0 3.003 2.996 3 3 0 0 0 3.003-2.996 3 3 0 0 0-3.003-2.996z" fill="#212224" fill-rule="evenodd"></path> -->
-					<img src="../../icon/logo.png" width="170px" height="52px" >
+					<img src="${pageContext.request.contextPath}/icon/logo.png" width="170px" height="52px" >
 				</svg>
 			</a>
 			
 			<div class="main-wrapper">
-				<form action="" class="join-form">
+				<form action="${pageContext.request.contextPath}/joinOk.user" class="join-form">
 					<h1 class="join-title">딱 이것만 체크하면 가입완료!</h1>
 					
 					<!-- 아이디 -->
 					<div class="content-wrapper">
 						<div class="content-title">아이디</div>
 						<div class="input-wrapper">
-							<input type="text"  placeholder="아이디를 입력해 주세요." name="user_identification" class="join-input" value=""> <!-- type="text" -->
+							<input type="text"  placeholder="아이디를 입력해 주세요." id="userIdentification" name="userIdentification" class="join-input" value=""> <!-- type="text" -->
 						</div>
 						
 						<!-- 유효성 검사 -->
-						<div></div>
+				
+					<div class="available">
+							<p class="css-ogecg id"></p>
 					</div>
 
-					<!-- 이메일 -->
+
+						<!-- 이메일 -->
 					<div class="content-wrapper">
 						<div class="content-title">이메일</div>
 						<div class="input-wrapper">
-							<input type="email" placeholder="이메일을 입력해 주세요." name="user_email" autocomplete="email" class="join-input" value="">
+							<input type="email" placeholder="이메일을 입력해 주세요." id="userEmail" name="userEmail" autocomplete="email" class="join-input" value="">
 						</div>
 						
 						<!-- 유효성 검사 -->
-						<div></div>
+					<div class="available">
+					<p class="css-ogecg email"></p>
 					</div>
 					
 					<!-- 비밀번호 -->
 					<div class="content-wrapper">
 						<div class="content-title">비밀번호</div>
 						<div class="input-wrapper">
-							<input type="password" placeholder="비밀번호를 입력해 주세요. (8자리 이상)" name="user_password" autocomplete="current-password" class="join-input" value="">
+							<input type="password" placeholder="비밀번호를 입력해 주세요. (8자리 이상)" id="userPassword" name="userPassword" autocomplete="current-password" class="join-input" value="">
 						</div>
 						
 						<!-- 유효성 검사 -->
-						<div></div>
-					</div>
+							<div class="available">
+						<p class="css-ogecgg password"></p>
+						</div>
 					
 					<!-- 비밀번호 확인 -->
 					<div class="content-wrapper" style="padding-bottom:8px;">
 						<div class="input-wrapper">
-							<input type="password" placeholder="비밀번호를 한번 더 입력해 주세요." name="passwordConfirm" autocomplete="current-password" class="join-input" value="">
+							<input type="password" placeholder="비밀번호를 한번 더 입력해 주세요." id="userPassword2" name="userPassword2" autocomplete="current-password" class="join-input" value="">
 						</div>
 						
 						<!-- 유효성 검사 -->
-						<div></div>					
-					</div>
-					
+							<div class="available">
+						<p variant="body2" class="css-ogecgg password2"></p>
+						</div>
+						
 					<!-- 이름 -->
 					<div class="content-wrapper">
 						<div class="content-title">이름</div>
 						<div class="input-wrapper">
-							<input type="text" placeholder="이름을 입력해 주세요." name="user_name" autocomplete="off" class="join-input" value="">
+							<input type="text" placeholder="이름을 입력해 주세요." id="userName" name="userName" autocomplete="off" class="join-input" value="">
 						</div>
 						
 						<!-- 유효성 검사 -->
-						<div></div>
+							<div class="available">
+						<p variant="body2" class="css-ogecgg name" ></p>
 					</div>
 					
 					<!-- 전화번호 -->
 					<div class="content-wrapper">
 						<div class="content-title">전화번호</div>
 						<div class="input-wrapper">
-							<input type="tel" placeholder="전화번호를 입력해 주세요." name="user_call" autocomplete="tel" class="join-input" value="">
+							<input type="tel" placeholder="전화번호를 입력해 주세요." id="userCall" name="userCall" autocomplete="tel" class="join-input" value="">
 						</div>
 						
 						<!-- 유효성 검사 -->
-						<div></div>
+						</div>
+						<p class="css-ogecgg phone" ></p>
 					</div>
-					
 
 					<!-- 직업 -->
 					<!-- <div class="content-wrapper">
@@ -190,8 +198,8 @@
 					<!-- 동의 버튼 -->
 					<div class="agreements-wrapper">
 						<div class="agree-all-wrapper"> 
-							<div class="agree-all-container"> <!-- 여기 배경색 바뀌는 것 -->
-								<span color="#ffffff" class="agree-all">
+							<div class="agree-all-container" id="all"> <!-- 여기 배경색 바뀌는 것 -->
+								<span color="rgb(242, 243, 247)" class="agree-all">
 									<svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" class="check">
 										<path d="M0 0h24v24H0V0z" fill="none"></path>
 										<path d="M7.13322158,10.821143 C6.77457526,10.3822153 6.17602724,10.3624856 5.79632715,10.7770754 C5.41662707,11.1916652 5.39955962,11.8835778 5.75820594,12.3225054 L9.30027691,16.6574524 C9.66714471,17.1064419 10.2826916,17.1152317 10.6590418,16.6768551 L18.2255456,7.86331213 C18.5934618,7.43475954 18.5911847,6.74257073 18.2204597,6.31726515 C17.8497347,5.89195957 17.2509477,5.89459179 16.8830316,6.32314438 L10.004578,14.3352391 L7.13322158,10.821143 Z"></path>
@@ -203,7 +211,7 @@
 						
 						<div class="agree-choice-wrapper">
 							<div class="agree-choice">
-								<div class="checkbox"> <!-- 여기 배경색 바뀌는 것 -->
+								<div class="checkbox" id="checkbox"> <!-- 여기 배경색 바뀌는 것 -->
 									<span color="#ffffff" rotate="0" class="agree-all">
 										<svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor" class="check">
 											<path d="M0 0h24v24H0V0z" fill="none"></path>
@@ -218,7 +226,7 @@
 						
 						<div class="agree-choice-wrapper">
 							<div class="agree-choice">
-								<div class="checkbox">
+								<div class="checkbox" id="checkbox2">
 									<span color="#ffffff" rotate="0" class="agree-all">
 										<svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor" class="check">
 											<path d="M0 0h24v24H0V0z" fill="none"></path>
@@ -233,7 +241,7 @@
 						
 						<div class="agree-choice-wrapper">
 							<div class="agree-choice">
-								<div class="checkbox">
+								<div class="checkbox" id="checkbox3">
 									<span color="#ffffff" rotate="0" class="agree-all">
 										<svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor" class="check">
 											<path d="M0 0h24v24H0V0z" fill="none"></path>
@@ -276,7 +284,7 @@
 					</div>
 					
 					<!-- 회원가입 버튼 -->
-					<button class="join-btn darker">
+					<button class="join-btn darker" disabled>
 						<span>버튼만 누르면 가입완료!</span>
 					</button>
 				</form>
@@ -293,5 +301,6 @@
 </body>
 <script src="https://code.jquery.com/jquery-3.7.0.min.js"></script>
 <script src="../../static/js/join.js"></script>
+<script src="${pageContext.request.contextPath}/static/js/join.js"></script>
 
 </html>

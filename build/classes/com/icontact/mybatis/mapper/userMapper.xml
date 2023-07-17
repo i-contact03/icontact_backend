@@ -7,4 +7,37 @@
 		from tbl_user
 		where user_id = #{userId}
 	</select>
+	
+	<insert id="insert">
+		insert into tbl_user
+		(user_identification, user_password, user_name, user_call, user_email)
+		values(#{userIdentification}, #{userPassword}, #{userName}, #{userCall}, #{userEmail})
+	</insert>
+	
+	<select id="selectIdentification" resultType="string">
+		select user_identification from tbl_user where user_identification = #{userIdentification}
+	</select>
+	
+	<select id="selectEmail" resultType="string">
+		select user_email from tbl_user where user_email = #{userEmail}
+	</select>
+	
+	<select id="login" resultType="long">
+		select user_id from tbl_user 
+		where user_identification = #{userIdentification} and user_password = #{userPassword}
+	</select>
+	
+	<update id="update">
+		update tbl_user
+		set user_name=#{userName}, user_call=#{userCall}, user_email=#{userEmail}
+		where user_id = #{userId}
+	</update>
+	
+	<select id="findUser2" resultType="userDTO">
+		select user_id, user_identification, user_password, user_name,
+		user_call, user_email, user_status, user_profile_name
+		from tbl_user
+		where user_id = #{userId}
+	</select>
+	
 </mapper>

@@ -26,6 +26,8 @@ public class UserFrontController extends HttpServlet{
 		String target = req.getRequestURI().replace(req.getContextPath() + "/", "").split("\\.")[0];
 		Result result = null;
 		
+		System.out.println(target);
+		
 		if(target.equals("checkIdOk")) {
 			result = new CheckIdOkController().execute(req, resp);
 				
@@ -34,7 +36,7 @@ public class UserFrontController extends HttpServlet{
 			
 		} else if(target.equals("join")){
 			result = new Result();
-			result.setPath("templates/user/join.jsp");
+			result.setPath("templates/main/join.jsp");
 			
 		} else if(target.equals("joinOk")){
 			result = new JoinOkController().execute(req, resp);
