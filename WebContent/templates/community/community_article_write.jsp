@@ -21,7 +21,7 @@
 	<div  style="background-color: #eacaff;">
 		<header class="header">
 			<div class="logo">
-				<a href="https://kmong.com">
+				<a>
 					<!-- <img src="//theme.zdassets.com/theme_assets/9204604/ed54b2d958a2f7b420f8412b529519e676c20bc3.png" class="logo-kmong"> -->
 					<img src="../../icon/logo.png" width="170px" height="52px"> <!-- .top-header-logo -->
 				</a>
@@ -33,8 +33,8 @@
 				</a>
 			</div>
 			<div class="nav-wrapper">
-				<a href="https://support.kmong.com/hc/ko/requests/new" target="_parent" style="color: #666666;">게시물 등록하기</a>
-				<a class="change-page-login" role="button" href="https://kmong.com/login?brand_id=360002309011&locale_id=69&return_to=https%3A%2F%2Fsupport.kmong.com%2Fhc%2Fko%2Frequests%2Fnew&target=zendesk&timestamp=1687257449" style="color: blue;">한동석 님</a>
+				<a href="" target="_parent" style="color: #666666;">게시물 등록하기</a>
+				<a class="change-page-login" role="button" href="" style="color: blue;">한동석 님</a>
 			</div>
 		</header>
 	</div>
@@ -43,10 +43,10 @@
 		<div class="main-container">
 			<nav class="sub-nav">
 				<ol class="page-course-map">
-				    <li title="크몽 고객센터">
-				        <a href="https://support.kmong.com/hc/ko"><!-- 크몽 고객센터 -->정보나눔</a>
+				    <li title="정보나눔">
+				        <a href=""><!-- 크몽 고객센터 -->정보나눔</a>
 				    </li>
-				    <li title="문의 등록">
+				    <li title="게시물 등록">
 				        <!-- 문의 등록 -->
 				        게시물 등록
 				    </li>
@@ -56,6 +56,7 @@
 					<input type="search" name="query" id="query" placeholder="검색" aria-label="검색">
 				</form>
 			</nav>
+			 <form action="${pageContext.request.contextPath}/writeOk.article" name="writeForm" method="post" enctype="multipart/form-data">
 			<h1>
 			    <div class="article-write-page-title">게시물 등록<!-- 문의 등록 --></div>
 			    <!-- <div class="article-write-page-details">
@@ -88,14 +89,14 @@
 			  
 			    <div class="form-field required  request_subject">
 			      <label id="request_subject_label" for="request_subject">제목</label>
-			      <input type="text" name="request[subject]" id="request_subject" maxlength="150" size="150" aria-required="true" aria-labelledby="request_subject_label">	      
+			      <input type="text" name="articleTitle" id="request_subject" maxlength="150" size="150" aria-required="true" aria-labelledby="request_subject_label">	      
 			    </div>
 			
 			    <div class="suggestion-list"></div>
 			      
 			    <div class="form-field text  required  request_description">
 			      <label id="request_description_label" for="request_description"><!-- 설명 -->내용</label>
-			      <textarea name="request[description]" id="request_description" aria-required="true" aria-describedby="request_description_hint" aria-labelledby="request_description_label"></textarea>
+			      <textarea name="articleContent" id="request_description" aria-required="true" aria-describedby="request_description_hint" aria-labelledby="request_description_label"></textarea>
 			      <input type="hidden" name="request[description_mimetype]" id="request_description_mimetype" value="text/plain" style="display: none;" autocomplete="off">
 			      
 			      <!-- <p id="request_description_hint">문의 내용에 관한 세부 정보를 입력해 주세요. 
@@ -138,7 +139,7 @@
   				<footer>
   					<input type="submit" name="commit" value="제출" class="darker">
   				</footer>
-
+			</form>
   			</div>
 		</div>
 	
@@ -189,6 +190,7 @@
 		</div>
 	</footer>
 </body>
+<script src="https://code.jquery.com/jquery-3.6.1.min.js"></script>
 </html>
 
 

@@ -8,6 +8,7 @@
 <title>iContact Profile</title>
 <link rel="icon" href="${pageContext.request.contextPath}/icon/favicon.png">
 <link rel="stylesheet" href="../../static/css/profile-main.css">
+<link rel="stylesheet" href="${pageContext.request.contextPath}/static/css/profile-main.css">
 
 <style>
 
@@ -21,6 +22,8 @@
 </head>
 <body>
 
+<!-- 0716 오전 수정 본 -->
+
 <!-- 헤더 -->
 <header>
 <div class="header-wrap">
@@ -28,7 +31,7 @@
 		<!-- 로고 + 검색바 + 아이디어등록 + 마이크몽 + 프로필-->
 			<section class="top-header">
 				<svg class="top-header-logo" width="85" height="100%" viewBox="0 0 85 26" xmlns="http://www.w3.org/2000/svg">
-					<img src="images/KakaoTalk_20230703_002357368.png" width="100%" height="100%">
+					<img src="../../images/KakaoTalk_20230703_002357368.png" width="100%" height="100%">
 				</svg>
 				
 				<form action="" class="top-header-input-form">
@@ -128,9 +131,9 @@
       <div class="profile-main-section">
       
          <div class="profile-main-section-picture">
-            <div class="member-profile-picture">
-               <img src="https://d2v80xjmx68n4w.cloudfront.net/members/thumbs/3aQLe1687185331.jpg" class="profile-imgae" style="width: 127px;">
-               <div class="online-dot" style="bottom: 13px; right: 13px;"></div>
+            <div id="profile-img" class="member-profile-picture">
+               <!-- <img src="https://d2v80xjmx68n4w.cloudfront.net/members/thumbs/3aQLe1687185331.jpg" class="profile-imgae" style="width: 127px;"> -->
+               <!-- <div class="online-dot" style="bottom: 13px; right: 13px;"></div> -->
             </div>
          </div>
          
@@ -385,11 +388,13 @@
 	} */
 	
 
-	
+	let contextPath = `${pageContext.request.contextPath}`;
+	console.log(contextPath);
 	
 	console.log(user);
 	console.log(user.userName);
 </script>
 <script src="${pageContext.request.contextPath}/static/js/profile-main.js"></script>
+<!-- <script src="../../static/js/profile-main.js"></script> -->
 </body>
 </html>

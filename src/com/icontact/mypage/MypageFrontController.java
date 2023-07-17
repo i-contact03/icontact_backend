@@ -15,6 +15,7 @@ import com.icontact.mypage.controller.MyIngListController;
 import com.icontact.mypage.controller.MyMeterializeController;
 import com.icontact.mypage.controller.ProfileMainOKController;
 import com.icontact.mypage.controller.ProfileModifyController;
+import com.icontact.mypage.controller.ProfileModifyUpdateOkController;
 
 
 
@@ -60,7 +61,11 @@ public class MypageFrontController extends HttpServlet{
 		} else if(target.equals("profileModify")){
 		result = new ProfileModifyController().execute(req, resp);
 		
-		}
+		}  else if(target.equals("profileModifyUpdateOk")){
+			System.out.println("fcfcfc");
+			result = new ProfileModifyUpdateOkController().execute(req, resp);
+			
+			}
 		
 		if(result != null) {
 			if(result.isRedirect()) {
