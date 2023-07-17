@@ -4,16 +4,29 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>전문가가 필요한 순간, 프리랜서 마켓 No.1 iContact</title>
-<link rel="icon" href="../../icon/favicon.png">
+<title>iContact</title>
+<link rel="icon" href="${pageContext.request.contextPath}/icon/favicon.png">
 <link href="https://hangeul.pstatic.net/hangeul_static/css/nanum-square.css" rel="stylesheet">
-<link rel="stylesheet" href="../../static/css/mainpage.css">
+<link rel="stylesheet" href="../../static/css/mainpageWork.css">
+<link rel="stylesheet" href="${pageContext.request.contextPath}/static/css/mainpageWork.css">
+<link rel="stylesheet" href="${pageContext.request.contextPath}/static/css/login_real.css">
 
 <style>
 
 	@font-face {
+		font-family: 'MetroSansBold';
+		src: url('../../font/MetroSans-Bold.woff2'); /* 굵은글씨체 주소지정 */
+	}
+	
+	@font-face {
 		font-family: 'MetroSansMedium';
 		src: url('../../font/MetroSans-Medium.woff2');
+	}
+	
+	
+	@font-face {
+		font-family: 'MetroSansRegular';
+		src: url('../../font/MetroSans-Regular.woff2'); /* 가는글씨체 주소지정 */
 	}
 	
 </style>
@@ -23,11 +36,18 @@
 </head>
 <body>
 <header>
+<div class="modal">
+            <div class="warn-modal">
+                <div id="content-wrap"></div>
+            </div>
+        </div>
 	<div class="header-wrap">
 		<div class="header">
-		<!-- 로고 + 검색바 + 아이디어등록 + 마이iContact + 프로필-->
+		<!-- 로고 + 검색바 + 아이디어등록 + 마이크몽 + 프로필-->
 			<section class="top-header">
-				<img src="../../icon/logo.png" width="170px" height="52px"> <!-- .top-header-logo -->
+				<svg class="top-header-logo" width="85" height="100%" viewBox="0 0 85 26" xmlns="http://www.w3.org/2000/svg">
+					<img src="${pageContext.request.contextPath}/icon/logo.png" width="170px" height="52px">
+				</svg>
 				
 				<form action="" class="top-header-input-form">
 					<div class="top-header-input-wrapper">
@@ -43,11 +63,11 @@
 				</form>
 				
 				<div class="top-header-menu-wrapper">
-					<a class="top-header-menu" href="login_real.jsp">
-						<span>로그인</span>
+					<a id='login' class="top-header-menu" href="">
+						<span></span>
 					</a>
 					<a class="top-header-menu" href="join.jsp">
-						<span>회원가입</span>
+						<span id="join"></span>
 					</a>
 					<div>
 						<a class="top-header-user">
@@ -201,162 +221,189 @@
 			<!-- 카테고리 고르기 -->
 			<section class="category">
 				<nav class="category-nav">
-					<h2 class="category-explanation">원하는 서비스를 700여개의 카테고리에서 찾아보세요</h2>
+					<h2 class="category-explanation">원하는 서비스를 카테고리에서 찾아보세요</h2>
 					<ul class="category-content-wrapper">
 						<li class="category-content">
-							<strong class="category-content-type">비즈니스</strong>
+							<strong class="category-content-type">식품</strong>
 							<ul class="category-content-list-wrapper">
 								<li class="category-content-list">
 									<a>
 										<div class="category-content-logo">
-											<img src="https://d2v80xjmx68n4w.cloudfront.net/assets/desktop/modules/directories/white/ic_category_1.png" width="48" height="48">
+											<img src="https://cdn-icons-png.flaticon.com/128/5347/5347946.png" width="48" height="48">
 										</div>
-										<strong class="category-content-explanation">디자인</strong>
+										<strong class="category-content-explanation">디저트</strong>
 									</a>
 								</li>
 								
 								<li class="category-content-list">
 									<a>
 										<div class="category-content-logo">
-											<img src="https://d2v80xjmx68n4w.cloudfront.net/assets/desktop/modules/directories/white/ic_category_6.png" width="48" height="48">
+											<img src="https://cdn-icons-png.flaticon.com/128/8959/8959172.png" width="48" height="48">
 										</div>
-										<strong class="category-content-explanation">IT·프로그래밍</strong>
+										<strong class="category-content-explanation">베이커리</strong>
 									</a>
 								</li>
 								
 								<li class="category-content-list">
 									<a>
 										<div class="category-content-logo">
-											<img src="https://d2v80xjmx68n4w.cloudfront.net/assets/desktop/modules/directories/white/ic_category_7.png" width="48" height="48">
+											<img src="https://cdn-icons-png.flaticon.com/128/8339/8339331.png" width="48" height="48">
 										</div>
-										<strong class="category-content-explanation">영상·사진·음향</strong>
+										<strong class="category-content-explanation">전통간식</strong>
 									</a>
 								</li>
 								
 								<li class="category-content-list">
 									<a>
 										<div class="category-content-logo">
-											<img src="https://d2v80xjmx68n4w.cloudfront.net/assets/desktop/modules/directories/white/ic_category_2.png" width="48" height="48">
+											<img src="https://cdn-icons-png.flaticon.com/128/5125/5125235.png" width="48" height="48">
 										</div>
-										<strong class="category-content-explanation">마케팅</strong>
+										<strong class="category-content-explanation">음료</strong>
 									</a>
 								</li>
 								
 								<li class="category-content-list">
 									<a>
 										<div class="category-content-logo">
-											<img src="https://d2v80xjmx68n4w.cloudfront.net/assets/desktop/modules/directories/white/ic_category_3.png" width="48" height="48">
+											<img src="https://cdn-icons-png.flaticon.com/128/38/38639.png" width="48" height="48">
 										</div>
-										<strong class="category-content-explanation">번역·통역</strong>
+										<strong class="category-content-explanation">주류</strong>
 									</a>
 								</li>
 								
 								<li class="category-content-list">
 									<a>
 										<div class="category-content-logo">
-											<img src="https://d2v80xjmx68n4w.cloudfront.net/assets/desktop/modules/directories/white/ic_category_4.png" width="48" height="48">
+											<img src="https://cdn-icons-png.flaticon.com/128/5878/5878542.png" width="48" height="48">
 										</div>
-										<strong class="category-content-explanation">문서·글쓰기</strong>
+										<strong class="category-content-explanation">반찬</strong>
 									</a>
 								</li>
 								
 								<li class="category-content-list">
 									<a>
 										<div class="category-content-logo">
-											<img src="https://d2v80xjmx68n4w.cloudfront.net/assets/desktop/modules/directories/white/ic_category_8.png" width="48" height="48">
+											<img src="https://cdn-icons-png.flaticon.com/128/5787/5787040.png" width="48" height="48">
 										</div>
-										<strong class="category-content-explanation">창업·사업</strong>
+										<strong class="category-content-explanation">요리/식사</strong>
+									</a>
+								</li>
+								
+							
+							</ul>
+						</li>
+						
+						<li class="category-content">
+							<strong class="category-content-type">패션·가구</strong>
+							<ul class="category-content-list-wrapper">
+								<li class="category-content-list">
+									<a>
+										<div class="category-content-logo">
+											<img src="https://cdn-icons-png.flaticon.com/128/1655/1655738.png" width="48" height="48">
+										</div>
+										<strong class="category-content-explanation">액세서리</strong>
 									</a>
 								</li>
 								
 								<li class="category-content-list">
 									<a>
 										<div class="category-content-logo">
-											<img src="https://d2v80xjmx68n4w.cloudfront.net/assets/desktop/modules/directories/white/ic_category_11.png" width="48" height="48">
+											<img src="https://cdn-icons-png.flaticon.com/128/1720/1720858.png" width="48" height="48">
 										</div>
-										<strong class="category-content-explanation">주문제작</strong>
+										<strong class="category-content-explanation">의류</strong>
 									</a>
 								</li>
 								
 								<li class="category-content-list">
 									<a>
 										<div class="category-content-logo">
-											<img src="https://d2v80xjmx68n4w.cloudfront.net/assets/desktop/modules/directories/white/ic_category_14.png" width="48" height="48">
+											<img src="https://cdn-icons-png.flaticon.com/128/4437/4437654.png" width="48" height="48">
 										</div>
-										<strong class="category-content-explanation">세무·법무·노무</strong>
+										<strong class="category-content-explanation">잡화</strong>
+									</a>
+								</li>
+								
+								<li class="category-content-list">
+									<a>
+										<div class="category-content-logo">
+											<img src="https://cdn-icons-png.flaticon.com/128/2400/2400629.png" width="48" height="48">
+										</div>
+										<strong class="category-content-explanation">인테리어 디자인</strong>
+									</a>
+								</li>
+								
+								<li class="category-content-list">
+									<a>
+										<div class="category-content-logo">
+											<img src="https://cdn-icons-png.flaticon.com/128/1497/1497726.png" width="48" height="48">
+										</div>
+										<strong class="category-content-explanation">데코용품</strong>
 									</a>
 								</li>
 							</ul>
 						</li>
 						
 						<li class="category-content">
-							<strong class="category-content-type">N잡·커리어</strong>
+							<strong class="category-content-type">문구·디자인</strong>
 							<ul class="category-content-list-wrapper">
 								<li class="category-content-list">
 									<a>
 										<div class="category-content-logo">
-											<img src="https://d2v80xjmx68n4w.cloudfront.net/assets/desktop/modules/directories/white/ic_category_12.png" width="48" height="48">
+											<img src="https://cdn-icons-png.flaticon.com/128/3907/3907658.png" width="48" height="48">
 										</div>
-										<strong class="category-content-explanation">취업·입시</strong>
+										<strong class="category-content-explanation">스티커</strong>
 									</a>
 								</li>
 								
 								<li class="category-content-list">
 									<a>
 										<div class="category-content-logo">
-											<img src="https://d2v80xjmx68n4w.cloudfront.net/assets/desktop/modules/directories/white/ic_category_13.png" width="48" height="48">
+											<img src="https://cdn-icons-png.flaticon.com/128/332/332972.png" width="48" height="48">
 										</div>
-										<strong class="category-content-explanation">투잡·노하우</strong>
+										<strong class="category-content-explanation">인형</strong>
 									</a>
 								</li>
 								
 								<li class="category-content-list">
 									<a>
 										<div class="category-content-logo">
-											<img src="https://d2v80xjmx68n4w.cloudfront.net/assets/desktop/modules/directories/white/ic_category_10.png" width="48" height="48">
+											<img src="https://cdn-icons-png.flaticon.com/128/658/658382.png" width="48" height="48">
 										</div>
-										<strong class="category-content-explanation">직무역량 레슨</strong>
-									</a>
-								</li>
-							</ul>
-						</li>
-						
-						<li class="category-content">
-							<strong class="category-content-type">취미·생활</strong>
-							<ul class="category-content-list-wrapper">
-								<li class="category-content-list">
-									<a>
-										<div class="category-content-logo">
-											<img src="https://d2v80xjmx68n4w.cloudfront.net/assets/desktop/modules/directories/white/ic_category_9.png" width="48" height="48">
-										</div>
-										<strong class="category-content-explanation">운세</strong>
+										<strong class="category-content-explanation">장난감</strong>
 									</a>
 								</li>
 								
 								<li class="category-content-list">
 									<a>
 										<div class="category-content-logo">
-											<img src="https://d2v80xjmx68n4w.cloudfront.net/assets/desktop/modules/directories/white/ic_category_17.png" width="48" height="48">
+											<img src="https://cdn-icons-png.flaticon.com/128/3989/3989828.png" width="48" height="48">
 										</div>
-										<strong class="category-content-explanation">심리상담</strong>
+										<strong class="category-content-explanation">편지지/카드</strong>
+									</a>
+								</li>
+								<li class="category-content-list">
+									<a>
+										<div class="category-content-logo">
+											<img src="https://cdn-icons-png.flaticon.com/128/2727/2727153.png" width="48" height="48">
+										</div>
+										<strong class="category-content-explanation">케이스</strong>
 									</a>
 								</li>
 								
 								<li class="category-content-list">
 									<a>
 										<div class="category-content-logo">
-											<img src="https://d2v80xjmx68n4w.cloudfront.net/assets/desktop/modules/directories/white/ic_category_15.png" width="48" height="48">
+											<img src="https://cdn-icons-png.flaticon.com/128/470/470554.png" width="48" height="48">
 										</div>
-										<strong class="category-content-explanation">취미 레슨</strong>
+										<strong class="category-content-explanation">접시</strong>
 									</a>
 								</li>
-								
 								<li class="category-content-list">
 									<a>
 										<div class="category-content-logo">
-											<img src="https://d2v80xjmx68n4w.cloudfront.net/assets/desktop/modules/directories/white/ic_category_16.png" width="48" height="48">
+											<img src="https://cdn-icons-png.flaticon.com/128/5540/5540319.png" width="48" height="48">
 										</div>
-										<strong class="category-content-explanation">생활서비스</strong>
+										<strong class="category-content-explanation">가구</strong>
 									</a>
 								</li>
 							</ul>
@@ -373,8 +420,8 @@
 					<a>
 						<article class="popular-category-content">
 							<div class="popular-category-content-explanation">
-								디자인
-								<h3>로고·브랜딩</h3>
+								식품
+								<h3>요리·식사</h3>
 							</div>
 							<img src="https://kmong.com/_next/image?url=https%3A%2F%2Fd2v80xjmx68n4w.cloudfront.net%2Fassets%2Fdesktop%2Fmodules%2Fmain-themes%2Fpicked_categories_design%403x.png&w=2880&q=75" width="217" height="300" class="" style="color: transparent;">
 						</article>
@@ -382,8 +429,8 @@
 					<a>
 						<article class="popular-category-content">
 							<div class="popular-category-content-explanation">
-								IT·프로그래밍
-								<h3>웹</h3>
+								패션
+								<h3>액세서리</h3>
 							</div>
 							<img src="https://kmong.com/_next/image?url=https%3A%2F%2Fd2v80xjmx68n4w.cloudfront.net%2Fassets%2Fdesktop%2Fmodules%2Fmain-themes%2Fpicked_categories_it%403x.png&w=2880&q=75" width="217" height="300" class="" style="color: transparent;">
 						</article>
@@ -391,8 +438,8 @@
 					<a>
 						<article class="popular-category-content">
 							<div class="popular-category-content-explanation">
-								마케팅
-								<h3>쇼핑몰·스토어</h3>
+								가구
+								<h3>인테리어·디자인</h3>
 							</div>
 							<img src="https://kmong.com/_next/image?url=https%3A%2F%2Fd2v80xjmx68n4w.cloudfront.net%2Fassets%2Fdesktop%2Fmodules%2Fmain-themes%2Fpicked_categories_marketing%403x.png&w=2880&q=75" width="217" height="300" class="" style="color: transparent;">
 						</article>
@@ -400,8 +447,8 @@
 					<a>
 						<article class="popular-category-content">
 							<div class="popular-category-content-explanation">
-								투잡·재테크
-								<h3>투잡·창업 VOD</h3>
+								문구
+								<h3>장난감</h3>
 							</div>
 							<img src="https://kmong.com/_next/image?url=https%3A%2F%2Fd2v80xjmx68n4w.cloudfront.net%2Fassets%2Fdesktop%2Fmodules%2Fmain-themes%2Fpicked_categories_vod%403x.png&w=2880&q=75" width="217" height="300" class="" loading="lazy" style="color: transparent;">
 						</article>
@@ -409,8 +456,8 @@
 					<a>
 						<article class="popular-category-content">
 							<div class="popular-category-content-explanation">
-								투잡·재테크
-								<h3>투잡·재테크 전자책</h3>
+								디자인
+								<h3>접시·가구</h3>
 							</div>
 							<img src="https://kmong.com/_next/image?url=https%3A%2F%2Fd2v80xjmx68n4w.cloudfront.net%2Fassets%2Fdesktop%2Fmodules%2Fmain-themes%2Fpicked_categories_ebook%403x.png&w=2880&q=75" width="217" height="300" class="" style="color: transparent;">
 						</article>
@@ -418,16 +465,16 @@
 				</div>
 			</section>
 			
-			<!-- iContact 신규 회원가입 하고 10만원 쿠폰팩 받자! -->
+			<!-- 크몽 신규 회원가입 하고 10만원 쿠폰팩 받자! -->
 			<section class="membership-ad">
 				<a>
 					<div class="membership-ad-img-wrapper">
-						<img src="https://kmong.com/_next/image?url=https%3A%2F%2Fd2v80xjmx68n4w.cloudfront.net%2Fassets%2Fmain%2Fmain_theme_signup_banner.jpeg&w=2880&q=100" width="1168" height="160" loading="lazy" style="color: transparent;">
+						<img src="../../images/img.png" width="1168" height="160" loading="lazy" style="color: transparent;">
 					</div>
 				</a>
 			</section>
 			
-			<!-- iContact을 200% 활용하는 법 -->
+			<!-- 크몽을 200% 활용하는 법 -->
 			<section class="gray">
 				<div class="using-kmong-ad-wrapper">
 					<h2 class="using-kmong-ad-title">iContact을 200% 활용하는 법</h2>
@@ -440,8 +487,8 @@
 									<img src="https://kmong.com/_next/image?url=https%3A%2F%2Fd2v80xjmx68n4w.cloudfront.net%2Fassets%2Fdesktop%2Fmodules%2Fmain-themes%2Fmain_theme_picked_business_tip_20220405_1.png&w=2880&q=75" width="376" height="247" loading="lazy" style="color: transparent;">
 								</div>
 								<div class="using-kmong-ad-explanation">
-									<h3>iContact 전문가 가이드</h3>
-									<p>전문가 인증부터 정산까지 iContact 전문가 등록의 모든 것</p>
+									<h3>아이디어 등록</h3>
+									<p>아이디어 등록의 모든 것</p>
 								</div>
 							</a>
 						</article>
@@ -452,7 +499,7 @@
 									<img src="https://kmong.com/_next/image?url=https%3A%2F%2Fd2v80xjmx68n4w.cloudfront.net%2Fassets%2Fdesktop%2Fmodules%2Fmain-themes%2Fmain_theme_picked_business_tip_20220404_1_2.png&w=2880&q=75" width="376" height="247" loading="lazy" style="color: transparent;">
 								</div>
 								<div class="using-kmong-ad-explanation">
-									<h3>마켓? 엔터프라이즈?</h3>
+									<h3>FAQ</h3>
 									<p>내 프로젝트에 더 맞는 서비스를 쉽게 고르는 방법</p>
 								</div>
 							</a>
@@ -464,7 +511,7 @@
 									<img src="https://kmong.com/_next/image?url=https%3A%2F%2Fd2v80xjmx68n4w.cloudfront.net%2Fassets%2Fdesktop%2Fmodules%2Fmain-themes%2Fmain_theme_picked_business_tip_20221125_2_3.png&w=2880&q=75" width="376" height="247" loading="lazy" style="color: transparent;">
 								</div>
 								<div class="using-kmong-ad-explanation">
-									<h3>긱 플랫폼 CEO 3인이 말하는 일하는 방식의 변화</h3>
+									<h3>회사소개</h3>
 									<p>프리랜서의 시대, 직장인에서 직업인으로</p>
 								</div>
 							</a>
@@ -480,10 +527,10 @@
 			</section>
 			
 			
-			<!-- iContact 엔터프라이즈에서 해결하세요! -->
+			<!-- 크몽 FAQ에서 해결하세요! -->
 			<section class="kmong-enterprise-ad">
 				<a>
-					<img src="https://kmong.com/_next/image?url=https%3A%2F%2Fd2v80xjmx68n4w.cloudfront.net%2Fassets%2Fdesktop%2Fmodules%2Fmain-themes%2Fmain_themes_enterprise_single_banner_2.png&w=2880&q=100">
+					<img src="../../images/0011.png" width="1168" height="160">
 				</a>
 			</section>
 			
@@ -491,16 +538,16 @@
 			<section class="category-pro-ranking">
 				<div class="category-pro-ranking-wrapper">
 					<h2 class="category-pro-ranking-title">
-						iContact 전문가 순위
+						iContact 일반회원 순위
 					</h2>
-					<p class="category-pro-ranking-subtitle">상위 카테고리에서 가장 많이 판매한 인기 전문가에요.</p>
+					<p class="category-pro-ranking-subtitle">상위 카테고리에서 가장 많이 판매한 인기 일반회원이에요.</p>
 					
 					
 					<div class="category-pro-ranking-top-wrapper">
 					
 					<!-- TOP 카테고리 전문가 랭킹 LEFT -->
 						<article class="category-pro-ranking-top-content-wrapper">
-							<h3>로고 디자인</h3>
+							<h3>디자인</h3>
 							
 							<!-- 1등 -->
 							<div class="category-pro-ranking-top">
@@ -617,7 +664,7 @@
 						
 						<!-- TOP 카테고리 전문가 랭킹 MIDDLE -->
 						<article class="category-pro-ranking-top-content-wrapper">
-							<h3>제품·홍보 사진</h3>
+							<h3>식품</h3>
 							
 							<!-- 1등 -->
 							<div class="category-pro-ranking-top">
@@ -734,7 +781,7 @@
 
 						<!-- TOP 카테고리 전문가 랭킹 RIGHT -->
 						<article class="category-pro-ranking-top-content-wrapper">
-							<h3>홈페이지</h3>
+							<h3>패션</h3>
 							
 							<!-- 1등 -->
 							<div class="category-pro-ranking-top">
@@ -848,17 +895,6 @@
 								
 							</div>
 						</article>
-
-						
-						
-						
-					
-						
-						
-						
-						
-						
-						
 						
 					</div>
 					
@@ -868,7 +904,7 @@
 
 			<section class="kmong-pro-ad">
 				<a class="kmong-pro-ad-content">
-					<img src="https://kmong.com/_next/image?url=https%3A%2F%2Fd2v80xjmx68n4w.cloudfront.net%2Fassets%2Fdesktop%2Fmodules%2Fmain-themes%2Fmain_theme_signup_banner_become_a_seller_3.png&w=2880&q=100" width="1168" height="160" loading="lazy" style="color: transparent;">
+					<img src="../../images\0010.png" width="1168" height="160" loading="lazy" style="color: transparent;">
 				</a>
 			</section>
 		</div>
@@ -877,11 +913,14 @@
 
 
 
-
-
 </main>
 
 
+<div class="modal">
+            <div class="warn-modal">
+                <div id="content-wrap"></div>
+            </div>
+        </div>
 
 
  <footer class="footer">
@@ -903,6 +942,37 @@
 	</div>
 </footer>
 
+
+
+
+
+
+
+<script src="https://code.jquery.com/jquery-3.7.0.min.js"></script>
 <script src="mainpage.js"></script>
+<script src="${pageContext.request.contextPath}/static/js/mainpage.js"></script>
+<script src="${pageContext.request.contextPath}/static/js/modal/modal.js"></script>
+<script>
+
+        showWarnModal(modalMessage);
+
+</script>
+
+<script>
+let userId = "${userId}";
+
+console.log(userId);
+
+if(userId != ""){
+	 $('#join').text('마이페이지');
+	
+	 $('#login').text('아이디어등록');
+} else {
+	 $('#join').text('회원가입');
+		
+	 $('#login').text('로그인');
+}
+
+</script>
 </body>
 </html>

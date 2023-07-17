@@ -5,13 +5,13 @@
 <head>
 <meta charset="UTF-8">
 <title>로그인</title>
-<link rel="icon" href="../../icon/favicon.png">
-<link rel="stylesheet" href="../../static/css/login_real.css">
+<link rel="icon" href="${pageContext.request.contextPath}/icon/favicon.png">
+ <link rel="stylesheet" href="${pageContext.request.contextPath}/static/css/login_real.css">
 <style>
 
 	@font-face {
 		font-family: 'MetroSansMedium';
-		src: url('../../font/MetroSans-Medium.woff2');
+		src: url('${pageContext.request.contextPath}/font/MetroSans-Medium.woff2');
 	}
 	
 </style>
@@ -51,14 +51,14 @@
 							<div class="login-main-box-wrapper-header">	<!-- css-j0azdm eyci4q02 -->
 							<a class="logo-wrapper">
 				<svg width="0.1" height="100%" viewBox="0 0 85 26" xmlns="http://www.w3.org/2000/svg">
-					</svg><img src="../../icon/logo.png" width="170px" height="52px">
+					</svg><img src="${pageContext.request.contextPath}/icon/logo.png" width="170px" height="52px">
 				
 						</a>
 							</div>
 							
 							<!-- ==== -->
 							<!-- 로그인 팝업 이메일, 비번, 로그인버튼, 찾기 등등 -->
-							<form action="loginOk.user" class="login-main-box-login-info-big-form">	<!-- css-11e0jfa equrxy90 -->
+							<form action="${pageContext.request.contextPath}/loginOk.user" class="login-main-box-login-info-big-form">	<!-- css-11e0jfa equrxy90 -->
 								
 								<!-- 로그인 이메일 -->
 								<div>
@@ -95,10 +95,10 @@
 								<!-- 로그인 부속 기능 -->
 								
 								<div class="login-main-login-below-wrapper">	<!-- css-70qvj9 equrxy92 -->
-									<label color="#ffd400" class="login-main-login-below-check-for-keeplogin-wrapper">	<!-- css-18pqe3v elgfge0 -->
+									<label for="auto-login" color="#ffd400" class="login-main-login-below-check-for-keeplogin-wrapper">	<!-- css-18pqe3v elgfge0 -->
 										<span class="login-main-login-below-check-for-keeplogin-span">	<!-- css-9ffs86 elgfge3 -->
-											<input type="checkbox" name="auto-login" value="true" class="login-main-login-below-check-for-keeplogin-checkbox">	<!-- css-l775cp elgfge2 -->
-											<span color="#ffd400" class="login-main-login-below-check-for-keeplogin-checkbox-inner"></span>	<!-- checkbox__inner css-1t5nui elgfge4 -->
+											<input type="checkbox" id="auto-login" name="auto-login" value="" class="login-main-login-below-check-for-keeplogin-checkbox">	<!-- css-l775cp elgfge2 -->
+											<span color="#ffd400" id="check-mark" class="login-main-login-below-check-for-keeplogin-checkbox-inner"></span>	<!-- checkbox__inner css-1t5nui elgfge4 -->
 											<span class="login-main-login-below-check-for-keeplogin-checkbox-textbox">	<!-- css-2k2mpm elgfge1 -->
 												<p variant="body2" class="login-main-login-below-p-tag" color="gray600">로그인 상태 유지</p>	<!-- css-15suf60 e870mj50 -->
 											</span>
@@ -156,12 +156,26 @@
 		</div>
 	</div>
 
-
-
 </body>
 <script src="https://code.jquery.com/jquery-3.6.1.min.js"></script>
 <script src="${pageContext.request.contextPath}/static/js/login.js"></script>
 <script src="${pageContext.request.contextPath}/static/js/modal/modal.js"></script>
+
+<script>
+	var checkBox = document.getElementById("auto-login");
+	var checkMark = document.getElementById("check-mark");
+
+	$(checkMark).click(function (){
+		if( !checkBox.checked ){           //체크 안돼있는데 클릭하면 체크 시키고
+			checkBox.checked = true;
+		}else{                             //체크 돼있으면 해제 시키기
+			checkBox.checked = false;
+		}
+	});
+	
+	
+</script>
+
 <script>
 	let autoLogin = "${autoLogin}";
 	console.log(autoLogin);
