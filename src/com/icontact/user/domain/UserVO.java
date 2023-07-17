@@ -68,11 +68,11 @@ public class UserVO {
 		this.userStatus = userStatus;
 	}
 
-	public String getuserProfileName() {
+	public String getUserProfileName() {
 		return userProfileName;
 	}
 
-	public void setUserProfile(String userProfileName) {
+	public void setUserProfileName(String userProfileName) {
 		this.userProfileName = userProfileName;
 	}
 

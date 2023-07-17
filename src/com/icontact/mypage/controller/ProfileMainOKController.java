@@ -61,7 +61,7 @@ public class ProfileMainOKController implements Action {
 		
 		
 		userDTO.setUserStatus(userVO.getUserStatus());
-		userDTO.setUserProfile(userVO.getUserProfile());
+		userDTO.setUserProfileName(userVO.getUserProfileName());
 		userDTO.setUserPassword(userVO.getUserPassword());
 		userDTO.setUserIdentification(userVO.getUserIdentification());
 		userDTO.setUserId(userVO.getUserId());
@@ -121,7 +121,7 @@ public class ProfileMainOKController implements Action {
 			userDtoJson.put("userCall", userDTO.getUserCall());
 			userDtoJson.put("userIdentification", userDTO.getUserIdentification());
 			userDtoJson.put("userPassword", userDTO.getUserPassword());
-			userDtoJson.put("userProfile", userDTO.getUserProfile());
+			userDtoJson.put("userProfileName", userDTO.getUserProfileName());
 			userDtoJson.put("userStatus", userDTO.getUserStatus());
 //			userDtoJson.put("Interests", interestsObject.toString());
 		} catch (JSONException e1) {
