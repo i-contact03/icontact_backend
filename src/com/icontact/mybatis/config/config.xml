@@ -13,6 +13,7 @@
 		<typeAlias type="com.icontact.idea.domain.IdeaDTO" alias="ideaDTO"/>
 		<typeAlias type="com.icontact.comment.domain.CommentVO" alias="commentVO"/>
 		<typeAlias type="com.icontact.article.domain.ArticleVO" alias="articleVO"/>
+		<typeAlias type="com.icontact.article.domain.ArticleDTO" alias="articleDTO"/>
 		<typeAlias type="com.icontact.mypage.domain.MypageVO" alias="mypageVO"/>
 		<typeAlias type="com.icontact.main.domain.MainDTO" alias="mainDTO"/>
 		

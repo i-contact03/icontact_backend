@@ -20,5 +20,16 @@
 		(article_id, article_title, article_content, user_id)
 		values(#{articleId}, #{articleTitle}, #{articleContent}, #{userId})
 	</insert>
+	
+	<select id="select" resultType="articleDTO">
+		select article_id, article_title, article_content, article_date, article_views, u.user_id, user_identification, user_name 
+		from tbl_user u join tbl_article a
+		on u.user_id = a.user_id and article_id = #{articleId}		
+	</select>
 
+	<update id="updateReadCount">
+		update tbl_article
+		set article_views = article_views + 1
+		where article_id = #{article_id}
+	</update>
 </mapper>
