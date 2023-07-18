@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE configuration PUBLIC "-//mybatis.org//DTD Config 3.0//EN" "https://mybatis.org/dtd/mybatis-3-config.dtd">
+
+<configuration>
+	<settings>
+		<setting name="mapUnderscoreToCamelCase" value="true"/>
+	</settings>
+	
+	<typeAliases>
+		<typeAlias type="com.icontact.user.domain.UserVO" alias="userVO"/>
+		<typeAlias type="com.icontact.detail.image.domain.DetailImageVO" alias="detailImageVO"/>
+		<typeAlias type="com.icontact.idea.domain.IdeaVO" alias="ideaVO"/>
+		<typeAlias type="com.icontact.idea.domain.IdeaDTO" alias="ideaDTO"/>
+		<typeAlias type="com.icontact.idea.domain.IdeaDTO2" alias="ideaDTO2"/>
+		<typeAlias type="com.icontact.comment.domain.CommentVO" alias="commentVO"/>
+		<typeAlias type="com.icontact.article.domain.ArticleVO" alias="articleVO"/>
+		<typeAlias type="com.icontact.article.domain.ArticleDTO" alias="articleDTO"/>
+		<typeAlias type="com.icontact.mypage.domain.MypageVO" alias="mypageVO"/>
+		<typeAlias type="com.icontact.main.domain.MainDTO" alias="mainDTO"/>
+		
+		<typeAlias type="com.icontact.interest.domain.InterestDTO" alias="interestDTO"/>
+		<typeAlias type="com.icontact.interest.domain.InterestVO" alias="interestVO"/>
+		<typeAlias type="com.icontact.user.domain.UserDTO" alias="userDTO"/>
+	</typeAliases>
+
+	<environments default="mysql">
+		<environment id="mysql">
+			<transactionManager type="JDBC"/>
+			<dataSource type="POOLED">
+				<property name="driver" value="com.mysql.cj.jdbc.Driver"/>
+				<property name="url" value="jdbc:mysql://localhost:3306/icontact"/>
+				<property name="username" value="root"/>
+				<property name="password" value="1234"/>
+			</dataSource>
+		</environment>
+	</environments>
+	
+	<mappers>
+		<mapper resource="com/icontact/mybatis/mapper/userMapper.xml"/>
+		<mapper resource="com/icontact/mybatis/mapper/ideaMapper.xml"/>
+		<mapper resource="com/icontact/mybatis/mapper/detailImageMapper.xml"/>
+		<mapper resource="com/icontact/mybatis/mapper/commentMapper.xml"/>
+		<mapper resource="com/icontact/mybatis/mapper/articleMapper.xml"/>
+		<mapper resource="com/icontact/mybatis/mapper/mypageMapper.xml"/>
+		<mapper resource="com/icontact/mybatis/mapper/mainMapper.xml"/>
+		<mapper resource="com/icontact/mybatis/mapper/interestMapper.xml"/>
+	</mappers>
+</configuration>
+
+
+
