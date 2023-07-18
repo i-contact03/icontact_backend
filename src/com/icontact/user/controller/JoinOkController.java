@@ -50,7 +50,7 @@ public class JoinOkController implements Action {
 //		초기화 되기 전에 직접 ROOT 경로를 가져와서 요청 경로 앞에 작성해줘야 한다.
 		
 //		login.user로 이동하겠다는 의미는 Controller가 필요한 페이지라는 뜻이다.
-//		로그인 페이지 이동 전, 쿠키를 검사해서 자동 로그인을 진행해야 한다.
+//		로그인 페이지 이동 전, 쿠키를 검사해서 자동 로그인을 진행해야 한다.result.setPath(req.getContextPath() + "/login.user");
 		result.setPath(req.getContextPath() + "/login_real.user");
 		
 		return result;
