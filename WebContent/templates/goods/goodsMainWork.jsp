@@ -4,30 +4,17 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>홈페이지를 꼼꼼하고 완벽하게 제작해 드립니다.</title>
-<link rel="icon" href="../../icon/kmongFavicon.png">
+<title>iContact</title>
+<link rel="icon" href="${pageContext.request.contextPath}/icon/favicon.png">
 
- <link rel="stylesheet" href="../../static/css/goodsMainWork.css">
- <link rel="stylesheet" href="../../static/css/ideabankWork.css">
-
-<link href="https://hangeul.pstatic.net/hangeul_static/css/nanum-square-neo.css" rel="stylesheet">
+ <link rel="stylesheet" href="${pageContext.request.contextPath}/static/css/goodsMainWork.css">
+ <link rel="stylesheet" href="${pageContext.request.contextPath}/static/css/ideabankWork.css">
 
 <style>
-
-	@font-face {
-		font-family: 'MetroSansBold';
-		src: url('../../font/MetroSans-Bold.woff2'); /* 굵은글씨체 주소지정 */
-	}
 	
 	@font-face {
 		font-family: 'MetroSansMedium';
-		src: url('../../font/MetroSans-Medium.woff2');
-	}
-	
-	
-	@font-face {
-		font-family: 'MetroSansRegular';
-		src: url('../../font/MetroSans-Regular.woff2'); /* 가는글씨체 주소지정 */
+		src: url('${pageContext.request.contextPath}/font/MetroSans-Medium.woff2');
 	}
 	
 </style>
@@ -148,10 +135,8 @@
 						<a color="textSecondary" class="category1">디저트</a>
 					</div>
 				</section>
-				<section class="main-goods">
-					<img width="652" height="488" src="https://image.idus.com/image/files/d5dad7620838441cb0a68cdd27bf4fad_720.jpg">
-				</section>
-				<section class="star-rating">
+				<section class="main-goods"></section> <!-- 아이디어 썸네일 이미지 -->
+				<!-- <section class="star-rating">
 					<button type="button" class="star-button">
 						<div>
 							<div class="star-ratings">
@@ -166,77 +151,60 @@
 						<div class="review-number">5.0</div>
 						<div class="reviews">(113개의 평가)</div>
 					</button>
-				</section>
+				</section> -->
 					<!-- 스티키 컨테이너 시작 -->
 				<nav class="menu-con">
 					<div class="menu-con2">
-						<div class="select-menu">기본정보</div>
-						<div class="non-select-menu">서비스 설명</div>
-						<div class="non-select-menu">상세 이미지</div>
-						<div class="non-select-menu">포트폴리오</div>
+						<div onclick="toggleMenuClassAndScroll(this, 'basic-menu')" class="select-menu">기본사항</div>
+						<div onclick="toggleMenuClassAndScroll(this, 'service-menu')" class="non-select-menu">서비스 설명</div>
+						<div onclick="toggleMenuClassAndScroll(this, 'detail-menu')" class="non-select-menu">상세 이미지</div>
+
 			<!-- 			<div class="non-select-menu">가격 정보</div>
 						<div class="non-select-menu">서비스 평가</div>   -->
 					</div>
 				</nav>
 	
-	
-				<section class="service-info">
-					<div class="service-info-title">기본정보</div>
+				<section id="basic-menu" class="service-info">
+					<div class="service-info-title">기본사항</div>
 					<div height="842" class="service-info-body">
 						<div class="service-info-text">
-							<p>상품이름</p>
-							<p>가격</p>
-							<p>수량</p>
+							<table  style="display: table;">
+		                        <colgroup>
+		                            <col width="30%">
+		                            <col width="*">
+		                        </colgroup>
+                                <tbody id="basic">
+                                     <tr>
+                                        <th>기본 정보</th>
+                                        <td></td>
+                                    </tr>
+                                    <tr>
+                                        <th>등록 일자</th>
+                                        <td></td>
+                                    </tr>
+                                </tbody>
+                            </table>
 						</div>
-						<div class="service-info-margin"></div>
-						<div class="service-info-margin2"></div>
 					</div>
 				</section>
 	
 	
-				<section class="service-info">
+				<section id="service-menu" class="service-info">
 					<div class="service-info-title">서비스 설명</div>
-					<div height="842" class="service-info-body">
-							<div class="service-info-text">
-								<p style="text-align: center;"></p>
-								<p>100% 수제 주문 제작</p>
-								<p>초코 브라우니 레터링 케이크</p>
-								
-								♥️초코 브라우니 메세지 케이크♥️
-
-								<p># 프린팅 해서 만들지 않습니다.</p>
-								<p>글씨 하나하나 레터링으로</p>
-								<p>100% 수제로 제작 합니다.</p>
-
-								<p># 브라우니 초콜렛으로 만든 초코 케이크 입니다.</p>
-								<p>케이크 1개당 50분 이상 오븐에서 만들었습니다.</p>
-								<p>정말 맛있는 케이크 입니다.</p>
-
-								<p># 세상에 하나뿐인 100% 제작케이크</p>
-								<p>핸드메이드의 특별함을 선물 합니다.</p>
-								<p>
-									<br>
-								</p>
-							</div>
-							<div class="service-info-margin"></div>
-							<div class="service-info-margin2"></div>
-						</div>
+					<div height="842" class="service-info-body detail">
+						<div class="service-info-text"></div> <!-- 아이디어 상세 정보 -->
+					</div>
 				</section>
-				<section class="service-info">
+				
+				<section id="detail-menu" class="service-info">
 					<div class="service-info-title">상세이미지</div>
 					<div height="842" class="service-info-body">
-						<div class="service-info-text">
-						<img width="652" height="488" src="https://image.idus.com/image/files/d5dad7620838441cb0a68cdd27bf4fad_720.jpg">
-						<img width="652" height="488" src="https://image.idus.com/image/files/d839aa06c2fa48d08f299b036fa0e847_720.jpg">
-						<img width="652" height="488" src="https://image.idus.com/image/files/8592cc986653437581cc5ce41d8280f8_720.jpg">
-						</div>
-						<div class="service-info-margin"></div>
-						<div class="service-info-margin2"></div>
+						<div id="detail" class="service-info-text"></div> <!-- 아이디어 상세 이미지 -->
 					</div>
 				</section>
 				
 					<!-- 포트폴리오 -->
-				<section class="portfolio-form">
+				<!-- <section class="portfolio-form">
 					<div class="portfolio-text">
 						포트폴리오
 						<span class="portfolio-text2">(36)</span>
@@ -279,7 +247,7 @@
 											</article>
 										</div>
 									</div>
-				<!-- 2번 -->					
+				2번					
 									<div style="outline:none" data-index="1" class="slick-slide" tabindex="-1" aria-hidden="false">
 										<div>
 											<article class="portfolio">
@@ -307,7 +275,7 @@
 											</article>
 										</div>
 									</div>
-					<!-- 3번 -->
+					3번
 									<div style="outline:none" data-index="2" class="slick-slide" tabindex="-1" aria-hidden="false">
 										<div>
 											<article class="portfolio">
@@ -335,7 +303,7 @@
 											</article>
 										</div>
 									</div>
-					<!-- 4번 -->
+					4번
 									<div style="outline:none" data-index="3" class="slick-slide" tabindex="-1" aria-hidden="false">
 										<div>
 											<article class="portfolio">
@@ -363,7 +331,7 @@
 											</article>
 										</div>
 									</div>
-					<!-- 5번 -->
+					5번
 									<div style="outline:none" data-index="4" class="slick-slide" tabindex="-1" aria-hidden="false">
 										<div>
 											<article class="portfolio">
@@ -391,7 +359,7 @@
 											</article>
 										</div>
 									</div>
-					<!-- 6번 -->
+					6번
 									<div style="outline:none" data-index="5" class="slick-slide" tabindex="-1" aria-hidden="false">
 										<div>
 											<article class="portfolio">
@@ -419,7 +387,7 @@
 											</article>
 										</div>
 									</div>
-					<!-- 7번 -->
+					7번
 									<div style="outline:none" data-index="6" class="slick-slide" tabindex="-1" aria-hidden="false">
 										<div>
 											<article class="portfolio">
@@ -447,7 +415,7 @@
 											</article>
 										</div>
 									</div>
-					<!-- 8번 -->
+					8번
 									<div style="outline:none" data-index="7" class="slick-slide" tabindex="-1" aria-hidden="false">
 										<div>
 											<article class="portfolio">
@@ -475,7 +443,7 @@
 											</article>
 										</div>
 									</div>
-					<!-- 9번 -->
+					9번
 									<div style="outline:none" data-index="8" class="slick-slide" tabindex="-1" aria-hidden="false">
 										<div>
 											<article class="portfolio">
@@ -503,7 +471,7 @@
 											</article>
 										</div>
 									</div>
-					<!-- 10번 -->
+					10번
 									<div style="outline:none" data-index="9" class="slick-slide" tabindex="-1" aria-hidden="false">
 										<div>
 											<article class="portfolio">
@@ -531,7 +499,7 @@
 											</article>
 										</div>
 									</div>
-					<!-- 더보기 -->
+					더보기
 									<div style="outline:none" data-index="10" class="slick-slide" tabindex="-1">
 										<div>
 											<a class="more-portfolio">
@@ -559,7 +527,7 @@
 							</button>
 						</div>
 					</div>
-				</section>
+				</section> -->
 		<!-- 	<section>서비스_태그</section>
 				<section>서비스 상세</section>
 				<section>가격정보</section>
@@ -574,7 +542,7 @@
 					
 				</section>
 				<section class="title-margin">
-					<h1 class="title">디저트를 맛있게 제작해 드립니다.</h1>
+					<h1 class="title"></h1>	<!-- 아이디어 제목 -->
 				</section>
 				<!-- <section>일단보류  및에 3번째거를 올릴생각도</section>  -->
 				
@@ -582,7 +550,7 @@
 					<div class="profile1">
 						<div class="text-logo">
 							<a color="secondary" class="text-logo1">
-								<h2 class="text-logo2">아이디어 재공자id</h2>
+								<h2 class="text-logo2">아이디어 제공자id</h2>
 							</a>
 						</div>
 						<div class="logo-img">
@@ -597,10 +565,9 @@
 					<div class="record">
 						<div class="record2">
 							<div class="record-part">
-								<span class="record-text1">136건</span>
-								<p class="record-text2">총작업수</p>
+								<span class="record-text1"></span> <!-- 해당 사용자가 등록한 총 아이디어의 갯수 -->
+								<p class="record-text2">등록한 총 아이디어 수</p>
 							</div>
-						
 						</div>
 					</div>
 				<!--	<div class="qna">
@@ -609,60 +576,31 @@
 						</button>
 					</div>    -->
 					<div class="introduce">
-						<p class="introduce-main">
-
-
-
-<div class="split">
-                    <div class="tab active" data-ui-id="info-artist">
-                        <span style="font-size: 18px">판매 작가 정보</span><br><br>
-                       
-                        <i class="icon idus-icon-arrow down"></i>
-                    </div>
-                    <table  style="display: table;">
-                        <colgroup>
-                            <col width="30%">
-                            <col width="*">
-                        </colgroup>
-                                                    <tbody>
-                                                                    <tr>
-                                        <th>상호</th>
-                                        <td>떠카나주</td>
+						<div class="split">
+		                    <table  style="display: table;">
+		                        <colgroup>
+		                            <col width="30%">
+		                            <col width="*">
+		                        </colgroup>
+                                <tbody id="contact">
+                                     <tr>
+                                        <th>성함</th>
+                                        <td>사용자 이름</td>
                                     </tr>
-                                                                                                    <tr>
-                                        <th>대표자명</th>
-                                        <td>한지원(떠카나주)</td>
-                                    </tr>
-                                                                                                    <tr>
-                                        <th>주소</th>
-                                        <td>서울 용산구 녹사평대로46길 10 (이태원동)
-1층</td>
-                                    </tr>
-                                                                                                    <tr>
-                                        <th>사업자등록번호</th>
-                                        <td>305-23-22548</td>
-                                    </tr>
-                                                                                                    <tr>
-                                        <th>통신판매업번호</th>
-                                        <td>2020-서울용산-0077</td>
-                                    </tr>
-                                                                                                    <tr>
-                                        <th>이메일</th>
-                                        <td>kkamggik2002@naver.com</td>
-                                    </tr>
-                                                                                                    <tr>
+                                    <tr>
                                         <th>전화번호</th>
-                                        <td class="first-line-black">아이디어스 고객센터 1668-3651<br>
-<br>
-작품 관련 문의는 작품 상세페이지 내, 우측 하단 “작품 문의” 버튼을 이용해 주세요.</td>
+                                        <td></td>
+                                        <td>01*-****-****</td>
                                     </tr>
-                                                            </tbody>
-                                            </table>
-                </div>
+                                    <tr>
+                                        <th>이메일</th>
+                                        <td></td>
+                                        <td>'협의하기'를 눌러 협의를 시작해보세요!</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                		</div>
 
-
-
-						</P>
 					<!-- 	<div class="more-introduce">
 							<button color="default" class="more-veview">
 								<span>자기소개 더 보기</span>
@@ -677,7 +615,13 @@
 						</div>  -->
 					</div>
 				</section>
-				
+				<section class="security">
+					<img src="https://d2v80xjmx68n4w.cloudfront.net/assets/icon/ic_escro.png" class="security-icon">
+					<h5 class="security-text">서비스 제공이 완료된 이후에 전문가에게 결제 대금이 전달됩니다.</h5>	
+				</section>
+				<section class="security darker" style="background-color: #eacaff;">
+					<h5 class="security-text" style="text-align: center; font-size: 20px;">협의하기</h5>	
+				</section>
 			</aside>
 		</section>
 		<section></section>
@@ -705,6 +649,24 @@
     </footer>
     
 </body>
-<script type="module" src="https://code.jquery.com/jquery-3.7.0.min.js"></script>
-<script src="../../static/js/goodsmain.js"></script>
+<script src="https://code.jquery.com/jquery-3.7.0.min.js"></script>
+
+<script>
+
+	let idea = `${idea}`;
+	let total = `${total}`;
+	let detailImages = `${detailImages}`;
+	
+	let contextPath = `${pageContext.request.contextPath}`;
+	console.log(contextPath);
+	
+	console.log(detailImages);
+
+</script>
+
+<script src="${pageContext.request.contextPath}/static/js/goodsmain.js"></script>
+
+
+
+
 </html>

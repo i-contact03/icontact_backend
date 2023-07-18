@@ -6,7 +6,7 @@
 <head>
 <meta charset="UTF-8">
 <title>iContact</title>
-<link rel="icon" href="kmongFavicon.png">
+<link rel="icon" href="${pageContext.request.contextPath}/icon/favicon.png">
 
 
  <link rel="stylesheet" href="${pageContext.request.contextPath}/static/css/goodsMain.css">
@@ -46,16 +46,16 @@
 					<img src="../../images/KakaoTalk_20230703_002357368.png" width="100%" height="100%">
 				</svg>
 				
-				<form action="" class="top-header-input-form">
+				<form action="${pageContext.request.contextPath}/ideaListOk.idea" class="top-header-input-form" name=search>
 					<div class="top-header-input-wrapper">
-						<input type="text" class="top-header-input" placeholder="서비스 또는 일반회원를 검색해보세요.">
-						<div class="magnifier-wrapper">
+						<input type="text" autocomplete="off" name="keyword" value="${keyword}" class="top-header-input" placeholder="서비스 또는 일반회원를 검색해보세요.">
+						<button type="submit" class="magnifier-wrapper">
 							<svg width="24" height="24" viewBox="0 0 24 24" 
 							fill="currentColor" aria-hidden="true" focusable="false" 
 							preserveAspectRatio="xMidYMid meet" class="magnifier" style="">
 								<path xmlns="http://www.w3.org/2000/svg" d="M11.2307008,3.5 C15.5002489,3.5 18.9614015,6.96828437 18.9614015,11.24663 C18.9614015,13.0978372 18.3133954,14.7973826 17.2322825,16.1299241 L20.2742127,19.178378 C20.5762688,19.4810023 20.5764739,19.9714482 20.2746708,20.2738195 C19.9728678,20.5761908 19.4833433,20.5759857 19.1812873,20.2733614 L19.1812873,20.2733614 L16.1426973,17.2288066 C14.8071694,18.3312107 13.0960911,18.9932599 11.2307008,18.9932599 C6.96115262,18.9932599 3.5,15.5249756 3.5,11.24663 C3.5,6.96828437 6.96115262,3.5 11.2307008,3.5 Z M11.2307008,5.04932599 C7.81506225,5.04932599 5.04614015,7.82395349 5.04614015,11.24663 C5.04614015,14.6693064 7.81506225,17.4439339 11.2307008,17.4439339 C14.6463393,17.4439339 17.4152614,14.6693064 17.4152614,11.24663 C17.4152614,7.82395349 14.6463393,5.04932599 11.2307008,5.04932599 Z" style=""d></path>
 							</svg>
-						</div>
+						</button>
 					</div>
 				</form>
 				
@@ -340,8 +340,8 @@
 			         	<form action="${pageContext.request.contextPath}/ideaListOk.idea" name="page-form">
 					    	<input type="hidden" name="page" value="${page}">
 					    	<%-- <input type="hidden" name="sort" value="${sort}">
-					    	<input type="hidden" name="type" value="${type}">
-					    	<input type="hidden" name="keyword" value="${keyword}"> --%>
+					    	<input type="hidden" name="type" value="${type}"> --%>
+					    	<input type="hidden" name="keyword" value="${keyword}">
 					    </form>
 			         	
 			         	<!----------------------------------------------------------------------------------------------------------------------------------------------------------------------------->

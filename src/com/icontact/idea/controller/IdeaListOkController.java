@@ -16,6 +16,7 @@ import com.icontact.Result;
 import com.icontact.idea.dao.IdeaDAO;
 import com.icontact.idea.domain.Criteria;
 import com.icontact.idea.domain.IdeaDTO;
+import com.icontact.idea.domain.Search;
 import com.icontact.user.dao.UserDAO;
 import com.icontact.user.domain.UserVO;
 
@@ -23,7 +24,6 @@ public class IdeaListOkController implements Action {
 
 	@Override
 	public Result execute(HttpServletRequest req, HttpServletResponse resp) throws IOException, ServletException {
-		System.out.println("컨트롤러 들어옴!");
 		IdeaDAO ideaDAO = new IdeaDAO();
 		UserDAO userDAO = new UserDAO();
 		Result result = new Result();
@@ -32,22 +32,33 @@ public class IdeaListOkController implements Action {
 		String temp = req.getParameter("page");
 		int page = temp == null ? 1 : Integer.parseInt(temp);
 		
-		Criteria criteria = new Criteria(page, ideaDAO.getTotal());
+//		검색에 필요-------------------------------------
+		String keyword = req.getParameter("keyword");
+		keyword = keyword == null ? "" : keyword;
+//		------------------------------------------------
+		
+		Search search = new Search(keyword);
+		Criteria criteria = new Criteria(page, ideaDAO.getTotal(search));
+		
 		HashMap<String, Object> pagable = new HashMap<String, Object>();
 		
+		pagable.put("keyword", search.getKeyword());
 		pagable.put("offset", criteria.getOffset()); // 몇 번부터
 		pagable.put("rowCount", criteria.getRowCount()); // 몇 개 가져올래 ?
 		
 		List<IdeaDTO> ideas = ideaDAO.selectAll(pagable);
 		
-		ideas.forEach(idea -> idea.setUserVO((userDAO.findUser(idea.getUserId()))));
+		for (IdeaDTO idea : ideas) {
+			UserVO userVO = new UserVO();
+			userVO = userDAO.findUser(idea.getUserId());
+			idea.setUserIdentification(userVO.getUserIdentification());
+		}
+		
 		
 		ideas.stream().map(JSONObject::new).forEach(jsonArray::put);
 		
-		System.out.println(ideas);
-		System.out.println(jsonArray.toString());
 		req.setAttribute("ideas", jsonArray.toString());
-		req.setAttribute("total", ideaDAO.getTotal());
+		req.setAttribute("total", ideaDAO.getTotal(search));
 		req.setAttribute("page", page);
 		req.setAttribute("startPage", criteria.getStartPage());
 		req.setAttribute("endPage", criteria.getEndPage());
@@ -57,6 +68,8 @@ public class IdeaListOkController implements Action {
 //		forward 방식
 		result.setPath("templates/goods/ideabankWork.jsp");
 		return result;
+		
+		
 	}
 
 }
