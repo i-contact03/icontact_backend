@@ -554,24 +554,12 @@
 							
 							<!-- 1등 -->
 							<div class="category-pro-ranking-top">
-								<article class="category-pro-ranking-top-content">
-									<img src="https://kmong.com/_next/image?url=https%3A%2F%2Fd2v80xjmx68n4w.cloudfront.net%2Fassets%2Fdesktop%2Fpages%2Fmain%2Franking-01%403x.png&w=2880&q=75" width="40" height="40" loading="lazy" style="color: transparent;">
-									<div class="category-pro-ranking-explanation">
-										<strong>${ideas[0].ideaTitle}</strong>
-										<a href="../goods/goodsMain.jsp">
-											<span>
-											${ideas[0].ideaDetail}
-											</span>
-										</a>
-									</div>
-									
-									
-									<a class="ranking-profile">
-										<div>
-											<img src="https://d2v80xjmx68n4w.cloudfront.net/members/thumbs/jUK9B1587629941.png" shape="0" loading="lazy">
-										</div>
-									</a>
-								</article>
+							
+							
+							
+							
+							
+							
 							</div>
 							
 							<div class="category-pro-ranking-bottom-wrapper">
@@ -957,11 +945,12 @@
 <script src="${pageContext.request.contextPath}/static/js/modal/modal.js"></script>
 <script>
 
-        showWarnModal(modalMessage);
+        /* showWarnModal(modalMessage); */
 
 </script>
 
 <script>
+
 let userId = "${userId}";
 
 console.log(userId);
@@ -983,5 +972,10 @@ if(userId != ""){
 }
 
 </script>
+
+
+
+
+
 </body>
 </html>

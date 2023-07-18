@@ -13,9 +13,12 @@ import org.json.JSONObject;
 
 import com.icontact.Action;
 import com.icontact.Result;
+import com.icontact.idea.dao.IdeaDAO;
+import com.icontact.idea.domain.Criteria;
 import com.icontact.idea.domain.IdeaDTO;
 import com.icontact.idea.domain.IdeaVO;
 import com.icontact.main.dao.MainDAO;
+import com.icontact.user.dao.UserDAO;
 
 public class MainAllListOKController implements Action {
 
@@ -23,14 +26,18 @@ public class MainAllListOKController implements Action {
 	public Result execute(HttpServletRequest req, HttpServletResponse resp) throws IOException, ServletException {
 		MainDAO mainDAO = new MainDAO();
 		Result result = new Result();
-	
+		JSONArray jsonArray = new JSONArray();
 		
 		mainDAO.selectAll();
 		
 		List<IdeaVO> ideas = mainDAO.selectAll();
 		
+		ideas.stream().map(JSONObject::new).forEach(jsonArray::put);
+		
 		System.out.println(ideas);
-		req.setAttribute("ideas", ideas);
+		System.out.println(jsonArray.toString());
+		
+		req.setAttribute("ideas", jsonArray.toString());
 		
 		result.setPath("templates/main/mainpage.jsp");
 		return result;

@@ -37,7 +37,7 @@ public class LogoutController implements Action {
 		}
 		
 		result.setRedirect(true);
-		result.setPath(req.getContextPath() + "/login.user");
+		result.setPath(req.getContextPath() + "/mainAllList.main");
 		return result;
 	}
 
