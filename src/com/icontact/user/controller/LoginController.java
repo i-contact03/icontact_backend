@@ -44,6 +44,7 @@ public class LoginController implements Action {
 			}
 		}
 		
+		System.out.println(autoLogin);
 //		쿠키에 사용자 아이디가 있다면
 		if(userIdentification != null) {
 //			로그인으로 쿠키에 있던 아이디와 비밀번호 전송
@@ -56,7 +57,7 @@ public class LoginController implements Action {
 			if(autoLogin) {
 				req.setAttribute("autoLogin", autoLogin);
 			}
-			result.setPath("login_real.jsp");
+			result.setPath("templates/main/login_real.jsp");
 		}
 		
 		return result;
