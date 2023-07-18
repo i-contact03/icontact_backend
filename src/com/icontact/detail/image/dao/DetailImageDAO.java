@@ -14,19 +14,9 @@ public class DetailImageDAO {
 		sqlSession = MyBatisConfig.getSqlSessionFactory().openSession(true);
 	}
 	
-//	상세 이미지 추가
-	public void insert(DetailImageVO detailImageVO) {
-		sqlSession.insert("detailImage.insert", detailImageVO);
-	}
-	
-//	파일 삭제
-	public void delete(Long ideaId) {
-		sqlSession.delete("detailImage.delete", ideaId);
-	}
-	
 //	파일 조회
-	public List<DetailImageVO> selectByBoardId(Long ideaId){
-		return sqlSession.selectList("file.selectByDiId", ideaId);
+	public List<DetailImageVO> selectByIdeaId(Long ideaId){
+		return sqlSession.selectList("detailImage.selectByIdeaId", ideaId);
 	}
 	
 }

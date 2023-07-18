@@ -1,20 +1,10 @@
 package com.icontact.idea.domain;
 
 public class Search {
-	private String type;
 	private String keyword;
 	
-	public Search(String type, String keyword) {
-		this.type = type;
+	public Search(String keyword) {
 		this.keyword = keyword;
-	}
-
-	public String getType() {
-		return type;
-	}
-
-	public void setType(String type) {
-		this.type = type;
 	}
 
 	public String getKeyword() {
@@ -25,7 +15,7 @@ public class Search {
 		this.keyword = keyword;
 	}
 
-	public String[] getTypes(){
-		return type == null ? new String[] {} : type.split("&");
-	}
+//	public String[] getTypes(){
+//		return type == null ? new String[] {} : type.split("&");
+//	}
 }

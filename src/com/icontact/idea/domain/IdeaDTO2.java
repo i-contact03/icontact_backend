@@ -1,7 +1,8 @@
 package com.icontact.idea.domain;
 
+import com.icontact.user.domain.UserVO;
 
-public class IdeaDTO {
+public class IdeaDTO2 {
 	private Long ideaId;
 	private String ideaTitle;
 	private String ideaBasic;
@@ -12,15 +13,9 @@ public class IdeaDTO {
 	private Long userId;
 	private Long scId;
 	
-	private String userIdentification;
-
-	public String getUserIdentification() {
-		return userIdentification;
-	}
-
-	public void setUserIdentification(String userIdentification) {
-		this.userIdentification = userIdentification;
-	}
+	private UserVO userVO;
+	
+	public IdeaDTO2() {;}
 
 	public Long getIdeaId() {
 		return ideaId;
@@ -86,11 +81,19 @@ public class IdeaDTO {
 		this.scId = scId;
 	}
 
+	public UserVO getUserVO() {
+		return userVO;
+	}
+
+	public void setUserVO(UserVO userVO) {
+		this.userVO = userVO;
+	}
+
 	@Override
 	public String toString() {
-		return "IdeaDTO [ideaId=" + ideaId + ", ideaTitle=" + ideaTitle + ", ideaBasic=" + ideaBasic + ", ideaDetail="
+		return "IdeaDTO2 [ideaId=" + ideaId + ", ideaTitle=" + ideaTitle + ", ideaBasic=" + ideaBasic + ", ideaDetail="
 				+ ideaDetail + ", ideaThumbnailName=" + ideaThumbnailName + ", ideaDate=" + ideaDate + ", userId="
-				+ userId + ", scId=" + scId + ", userIdentification=" + userIdentification + "]";
+				+ userId + ", scId=" + scId + ", userVO=" + userVO + "]";
 	}
 
 	@Override
@@ -109,7 +112,7 @@ public class IdeaDTO {
 			return false;
 		if (getClass() != obj.getClass())
 			return false;
-		IdeaDTO other = (IdeaDTO) obj;
+		IdeaDTO2 other = (IdeaDTO2) obj;
 		if (ideaId == null) {
 			if (other.ideaId != null)
 				return false;
@@ -117,7 +120,6 @@ public class IdeaDTO {
 			return false;
 		return true;
 	}
-
 	
 	
 }
