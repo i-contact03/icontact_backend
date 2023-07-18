@@ -4,6 +4,7 @@ import java.util.HashMap;
 
 import org.apache.ibatis.session.SqlSession;
 
+import com.app.reply.domain.ReplyVO;
 import com.icontact.mybatis.config.MyBatisConfig;
 import com.icontact.user.domain.UserDTO;
 import com.icontact.user.domain.UserVO;

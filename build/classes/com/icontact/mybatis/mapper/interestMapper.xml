@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "https://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="interest">
+
+	<select id="findInterestById" resultType="interestVO">
+		select interest_id, user_id, sc_id
+		from tbl_interest
+		where user_id = #{userId}
+	</select> 
+	
+	<select id="matchInterest" resultType="interestDTO">
+		select sc.sc_id,  sc.sc_name , sc.tc_id ,i.interest_id ,i.sc_id , i.user_id 
+		from tbl_sub_category sc inner join tbl_interest i
+		on (sc.sc_id = i.sc_id) and sc.sc_id = #{scId}
+		where i.user_id = #{userId}
+		order by sc.sc_id desc
+	</select>
+
+</mapper>

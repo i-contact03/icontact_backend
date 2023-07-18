@@ -34,17 +34,17 @@ public class UserFrontController extends HttpServlet{
 		} else if(target.equals("checkEmailOk")) {
 			result = new CheckEmailOkController().execute(req, resp);
 			
-		} else if(target.equals("join")){
+		} else if(target.equals("templates/main/join")){
 			result = new Result();
-			result.setPath("templates/main/join.jsp");
+			result.setPath("join.jsp");
 			
 		} else if(target.equals("joinOk")){
 			result = new JoinOkController().execute(req, resp);
 			
-		} else if(target.equals("login")){
+		} else if(target.equals("templates/main/login_real")){
 			result = new LoginController().execute(req, resp);
 			
-		} else if(target.equals("loginOk")) {
+		} else if(target.equals("templates/main/loginOk")) {
 			result = new LoginOkController().execute(req, resp);
 			
 		} else if(target.equals("logout")) {

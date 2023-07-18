@@ -27,7 +27,7 @@
             <a href="/">
                 <div class="header-div-flex">
                     <img src="https://profiles.greetinghr.com/group/a6600964-bab9-49e0-b100-3de1c8a6dcfb" alt="logo">
-                    <h1 color="rgba(0, 0, 0, 0.85)" type="item" class="header-iContact">iContact career</h1>
+                    <h1 color="rgba(0, 0, 0, 0.85)" type="item" class="header-kmong">kmong career</h1>
                 </div>
             </a>
 
@@ -57,9 +57,9 @@
         <div>
 
             <div class="div-happy-flex" style="position: relative;">
-                <h2 type="text" content="<p>Work Happy,</p><p>iContact이 만들어가는 기업 문화입니다.</p>" class="div-happy-font">
+                <h2 type="text" content="<p>Work Happy,</p><p>크몽이 만들어가는 기업 문화입니다.</p>" class="div-happy-font">
                     <p>Work Happy,</p>
-                    <p>iContact이 만들어가는 기업 문화입니다.</p>
+                    <p>크몽이 만들어가는 기업 문화입니다.</p>
                 </h2>
 
             </div>
@@ -91,12 +91,12 @@
 
     <div class="div-flex-wrap">
 
-        <h2 type="text" content="<p>iContact 인사이드</p>" class="h2-font">
-            <p>iContact 인사이드</p>
+        <h2 type="text" content="<p>크몽 인사이드</p>" class="h2-font">
+            <p>크몽 인사이드</p>
         </h2>
         <div type="blank"></div>
         <div type="button" name="직무인터뷰 바로가기" shape="square">
-            <a href="https://blog.iContact.com/culture/home" target="_blank" rel="noreferrer">
+            <a href="https://blog.kmong.com/culture/home" target="_blank" rel="noreferrer">
                 <button type="button" name="직무인터뷰 바로가기" shape="square" class="interview-button">
                     <span color="#eacaff" type="item" class="interview-font">직무인터뷰 바로가기</span>
                 </button>
@@ -135,15 +135,15 @@
                                     </div>
                                 </div>
                                 <div type="blank"></div>
-                                <div type="text" content="<p>iContact은 다양한 시도를 통해 개발자가 성장할 수 있는 기회를 제공해줍니다.</p><p><br></p>" class="font-bold height">
-                                    <p>iContact은 다양한 시도를 통해 개발자가 성장할 수 있는 기회를 제공해줍니다.</p>
+                                <div type="text" content="<p>크몽은 다양한 시도를 통해 개발자가 성장할 수 있는 기회를 제공해줍니다.</p><p><br></p>" class="font-bold height">
+                                    <p>크몽은 다양한 시도를 통해 개발자가 성장할 수 있는 기회를 제공해줍니다.</p>
                                     <p>
                                         <br>
                                     </p>
                                 </div>
                                 <div type="blank"></div>
                                 <div type="button" name="플랫폼기술팀 백엔드 개발자 Ellie" shape="square">
-                                    <a href="https://iContact-admin.medium.com/%ED%81%AC%EB%AA%BD-%EC%9D%B8%EC%82%AC%EC%9D%B4%EB%93%9C-%ED%94%8C%EB%9E%AB%ED%8F%BC%EA%B8%B0%EC%88%A0%ED%8C%80-ellie-5499ac7297fd" target="_blank" rel="noreferrer"><button type="button" name="플랫폼기술팀 백엔드 개발자 Ellie" shape="square" class="profile-btn">
+                                    <a href="https://kmong-admin.medium.com/%ED%81%AC%EB%AA%BD-%EC%9D%B8%EC%82%AC%EC%9D%B4%EB%93%9C-%ED%94%8C%EB%9E%AB%ED%8F%BC%EA%B8%B0%EC%88%A0%ED%8C%80-ellie-5499ac7297fd" target="_blank" rel="noreferrer"><button type="button" name="플랫폼기술팀 백엔드 개발자 Ellie" shape="square" class="profile-btn">
                                             <span color="#eacaff" type="item" class="profile-font">플랫폼기술팀 백엔드개발자 Ellie</span>
                                         </button></a>
                                 </div>
@@ -161,15 +161,15 @@
                                     </div>
                                 </div>
                                 <div type="blank"></div>
-                                <div type="text" content="<p>iContact에서는 높은 자율성을 가지고 사업에 필요한 내용을 주도적으로 진행할 수 있어요.</p><p><br></p>" class="font-bold height">
-                                    <p>iContact에서는 높은 자율성을 가지고 사업에 필요한 내용을 주도적으로 진행할 수 있어요.</p>
+                                <div type="text" content="<p>크몽에서는 높은 자율성을 가지고 사업에 필요한 내용을 주도적으로 진행할 수 있어요.</p><p><br></p>" class="font-bold height">
+                                    <p>크몽에서는 높은 자율성을 가지고 사업에 필요한 내용을 주도적으로 진행할 수 있어요.</p>
                                     <p>
                                         <br>
                                     </p>
                                 </div>
                                 <div type="blank"></div>
                                 <div type="button" name="Enterprise팀 기업외주파트 리드 Aida" shape="square">
-                                    <a href="https://iContact-admin.medium.com/%ED%81%AC%EB%AA%BD-%EC%9D%B8%EC%82%AC%EC%9D%B4%EB%93%9C-enterprise%ED%8C%80-%EA%B8%B0%EC%97%85%EC%99%B8%EC%A3%BC%ED%8C%8C%ED%8A%B8-aida-5af83404644f" target="_blank" rel="noreferrer"><button type="button" name="Enterprise팀 기업외주파트 리드 Aida" shape="square" class="profile-btn">
+                                    <a href="https://kmong-admin.medium.com/%ED%81%AC%EB%AA%BD-%EC%9D%B8%EC%82%AC%EC%9D%B4%EB%93%9C-enterprise%ED%8C%80-%EA%B8%B0%EC%97%85%EC%99%B8%EC%A3%BC%ED%8C%8C%ED%8A%B8-aida-5af83404644f" target="_blank" rel="noreferrer"><button type="button" name="Enterprise팀 기업외주파트 리드 Aida" shape="square" class="profile-btn">
                                             <span color="#eacaff" type="item" class="profile-font">Enterprise팀
                                                 기업외주파트 리드 Aida</span>
                                         </button></a>
@@ -193,7 +193,7 @@
                                 </div>
                                 <div type="blank"></div>
                                 <div type="button" name="soon팀 PO Don" shape="square">
-                                    <a href="https://iContact-admin.medium.com/%ED%81%AC%EB%AA%BD-%EC%9D%B8%EC%82%AC%EC%9D%B4%EB%93%9C-soon%ED%8C%80-po-don-44e2586f5afe" target="_blank" rel="noreferrer"><button type="button" name="soon팀 PO Don" shape="square" class="profile-btn">
+                                    <a href="https://kmong-admin.medium.com/%ED%81%AC%EB%AA%BD-%EC%9D%B8%EC%82%AC%EC%9D%B4%EB%93%9C-soon%ED%8C%80-po-don-44e2586f5afe" target="_blank" rel="noreferrer"><button type="button" name="soon팀 PO Don" shape="square" class="profile-btn">
                                             <span color="#eacaff" type="item" class="profile-font">soon팀 PO
                                                 Don </span>
                                         </button></a>
@@ -253,15 +253,15 @@
                                     </div>
                                 </div>
                                 <div type="blank"></div>
-                                <div type="text" content="<p>iContact은 무한한 확장성을 바탕으로 다양한 기회를 통해 새로운 가능성을 만들어낼 수 있는 곳입니다.</p><p><br></p>" class="font-bold height">
-                                    <p>iContact은 무한한 확장성을 바탕으로 다양한 기회를 통해 새로운 가능성을 만들어낼 수 있는 곳입니다.</p>
+                                <div type="text" content="<p>크몽은 무한한 확장성을 바탕으로 다양한 기회를 통해 새로운 가능성을 만들어낼 수 있는 곳입니다.</p><p><br></p>" class="font-bold height">
+                                    <p>크몽은 무한한 확장성을 바탕으로 다양한 기회를 통해 새로운 가능성을 만들어낼 수 있는 곳입니다.</p>
                                     <p>
                                         <br>
                                     </p>
                                 </div>
                                 <div type="blank"></div>
                                 <div type="button" name="Mass Market팀 PO Ray" shape="square">
-                                    <a href="https://iContact-admin.medium.com/%ED%81%AC%EB%AA%BD-%EC%9D%B8%EC%82%AC%EC%9D%B4%EB%93%9C-mass-market%ED%8C%80-po-ray-503e50514d5a" target="_blank" rel="noreferrer"><button type="button" name="Mass Market팀 PO Ray" shape="square" class="profile-btn">
+                                    <a href="https://kmong-admin.medium.com/%ED%81%AC%EB%AA%BD-%EC%9D%B8%EC%82%AC%EC%9D%B4%EB%93%9C-mass-market%ED%8C%80-po-ray-503e50514d5a" target="_blank" rel="noreferrer"><button type="button" name="Mass Market팀 PO Ray" shape="square" class="profile-btn">
                                             <span color="#eacaff" type="item" class="profile-font">Mass
                                                 Market팀 PO Ray</span>
                                         </button></a>
@@ -280,13 +280,13 @@
                                     </div>
                                 </div>
                                 <div type="blank"></div>
-                                <div type="text" content="<p>iContact은 표방하는 조직 문화가 실제로 잘 이행되고 있는 곳입니다. 구성원이 행복하게 일하는 것에 진심이고, 이를 통해 자연스럽게 최고의 성과를 낼 수 있도록 도와줍니다.&amp;nbsp;</p>" class="height">
-                                    <p>iContact은 표방하는 조직 문화가 실제로 잘 이행되고 있는 곳입니다. 구성원이 행복하게 일하는 것에
+                                <div type="text" content="<p>크몽은 표방하는 조직 문화가 실제로 잘 이행되고 있는 곳입니다. 구성원이 행복하게 일하는 것에 진심이고, 이를 통해 자연스럽게 최고의 성과를 낼 수 있도록 도와줍니다.&amp;nbsp;</p>" class="height">
+                                    <p>크몽은 표방하는 조직 문화가 실제로 잘 이행되고 있는 곳입니다. 구성원이 행복하게 일하는 것에
                                         진심이고, 이를 통해 자연스럽게 최고의 성과를 낼 수 있도록 도와줍니다.&nbsp;</p>
                                 </div>
                                 <div type="blank"></div>
                                 <div type="button" name="People팀 피플매니저 Joanne" shape="square">
-                                    <a href="https://iContact-admin.medium.com/%ED%81%AC%EB%AA%BD-%EC%9D%B8%EC%82%AC%EC%9D%B4%EB%93%9C-people%ED%8C%80-%ED%94%BC%ED%94%8C%EB%A7%A4%EB%8B%88%EC%A0%80-joanne-88dc3e4f6468" target="_blank" rel="noreferrer"><button type="button" name="People팀 피플매니저 Joanne" shape="square" class="profile-btn">
+                                    <a href="https://kmong-admin.medium.com/%ED%81%AC%EB%AA%BD-%EC%9D%B8%EC%82%AC%EC%9D%B4%EB%93%9C-people%ED%8C%80-%ED%94%BC%ED%94%8C%EB%A7%A4%EB%8B%88%EC%A0%80-joanne-88dc3e4f6468" target="_blank" rel="noreferrer"><button type="button" name="People팀 피플매니저 Joanne" shape="square" class="profile-btn">
                                             <span color="#eacaff" type="item" class="profile-font">People팀
                                                 피플매니저 Joanne</span>
                                         </button></a>
@@ -305,8 +305,8 @@
                                     </div>
                                 </div>
                                 <div type="blank"></div>
-                                <div type="text" content="<p>iContact은 내가 어떤 Happy를 꿈꾸든, 그 Happy가 있는 곳입니다.</p><p><br></p><p><br></p>" class="height">
-                                    <p>iContact은 내가 어떤 Happy를 꿈꾸든, 그 Happy가 있는 곳입니다.</p>
+                                <div type="text" content="<p>크몽은 내가 어떤 Happy를 꿈꾸든, 그 Happy가 있는 곳입니다.</p><p><br></p><p><br></p>" class="height">
+                                    <p>크몽은 내가 어떤 Happy를 꿈꾸든, 그 Happy가 있는 곳입니다.</p>
                                     <p>
                                         <br>
                                     </p>
@@ -316,7 +316,7 @@
                                 </div>
                                 <div type="blank"></div>
                                 <div type="button" name="Category팀 리드 Danny" shape="square">
-                                    <a href="https://iContact-admin.medium.com/%ED%81%AC%EB%AA%BD-%EC%9D%B8%EC%82%AC%EC%9D%B4%EB%93%9C-category%ED%8C%80-danny-aea934ae1d3f" target="_blank" rel="noreferrer"><button type="button" name="Category팀 리드 Danny" shape="square" class="profile-btn">
+                                    <a href="https://kmong-admin.medium.com/%ED%81%AC%EB%AA%BD-%EC%9D%B8%EC%82%AC%EC%9D%B4%EB%93%9C-category%ED%8C%80-danny-aea934ae1d3f" target="_blank" rel="noreferrer"><button type="button" name="Category팀 리드 Danny" shape="square" class="profile-btn">
                                             <span color="#eacaff" type="item" class="profile-font">Category팀
                                                 리드 Danny</span>
                                         </button></a>
@@ -381,8 +381,8 @@
                     <div size="100" class="profile-sort">
                         <div class="position-relative column">
                             <div class="profile-intro" style="position: relative;">
-                                <h2 type="text" content="<p>iContact이 걸어온 길이</p><p>긱 이코노미가 성장해온 길입니다.</p>" class="font-height height">
-                                    <p>iContact이 걸어온 길이</p>
+                                <h2 type="text" content="<p>크몽이 걸어온 길이</p><p>긱 이코노미가 성장해온 길입니다.</p>" class="font-height height">
+                                    <p>크몽이 걸어온 길이</p>
                                     <p>긱 이코노미가 성장해온 길입니다.</p>
                                 </h2>
                                 <div type="blank"></div>
@@ -469,8 +469,8 @@
                                 <div class="profile-intro" style="position: relative;">
                                     <h2 type="text" content="복지 및 혜택" class="font-height height">복지 및 혜택</h2>
                                     <div type="blank"></div>
-                                    <div type="text" content="<p>iContact 팀원이 되면 누릴 수 있는 복지와 혜택입니다.</p>" class="height">
-                                        <p>iContact 팀원이 되면 누릴 수 있는 복지와 혜택입니다.</p>
+                                    <div type="text" content="<p>크몽 팀원이 되면 누릴 수 있는 복지와 혜택입니다.</p>" class="height">
+                                        <p>크몽 팀원이 되면 누릴 수 있는 복지와 혜택입니다.</p>
                                     </div>
                                 </div>
                             </div>
@@ -549,7 +549,7 @@
                                                     </div>
                                                 </div>
                                                 <div type="blank"></div>
-                                                <div type="text" content="<p id=><strong>더 멀리 함께 나아갈 수 있도록&amp;nbsp;</strong></p><p><br></p><p>- 자기계발비 지원</p><p>- iContact 도서관 운영</p><p>- iContact캐시 지급</p>" class="font-bold  height">
+                                                <div type="text" content="<p id=><strong>더 멀리 함께 나아갈 수 있도록&amp;nbsp;</strong></p><p><br></p><p>- 자기계발비 지원</p><p>- 크몽 도서관 운영</p><p>- 크몽캐시 지급</p>" class="font-bold  height">
                                                     <p>
                                                         <strong>더 멀리 함께 나아갈 수 있도록&nbsp;</strong>
                                                     </p>
@@ -557,8 +557,8 @@
                                                         <br>
                                                     </p>
                                                     <p>- 자기계발비 지원</p>
-                                                    <p>- iContact 도서관 운영</p>
-                                                    <p>- iContact캐시 지급</p>
+                                                    <p>- 크몽 도서관 운영</p>
+                                                    <p>- 크몽캐시 지급</p>
                                                 </div>
                                             </div>
                                         </div>
@@ -701,8 +701,8 @@
                                                             <p>Q. 지원 서류 양식이 따로 있나요?</p>
                                                         </h3>
                                                         <div type="blank"></div>
-                                                        <div type="text" content="<p>iContact은 정해진 양식 없이 자유양식으로 지원을 받고 있습니다. 가지고 계신 양식의 이력서로 지원 부탁드립니다.</p>" class="height">
-                                                            <p>iContact은 정해진 양식 없이 자유양식으로 지원을 받고 있습니다. 가지고 계신 양식의 이력서로
+                                                        <div type="text" content="<p>크몽은 정해진 양식 없이 자유양식으로 지원을 받고 있습니다. 가지고 계신 양식의 이력서로 지원 부탁드립니다.</p>" class="height">
+                                                            <p>크몽은 정해진 양식 없이 자유양식으로 지원을 받고 있습니다. 가지고 계신 양식의 이력서로
                                                                 지원 부탁드립니다.</p>
                                                         </div>
                                                     </div>
@@ -758,18 +758,18 @@
                                                             <p>Q. 지원 절차가 궁금합니다.</p>
                                                         </h3>
                                                         <div type="blank"></div>
-                                                        <div type="text" content="<p>지원 절차는 직군에 따라 아래와 같이 다르게 진행하고 있습니다.</p><p><br></p><p><strong>개발 - 서류 &amp;gt; 과제(또는 전화인터뷰) &amp;gt; 1차 인터뷰 &amp;gt; 2차 인터뷰 &amp;gt; 처우 협의 &amp;gt; iContact 입사</strong></p><p><strong>비개발 - 서류 &amp;gt; 1차 인터뷰 &amp;gt; 2차 인터뷰 &amp;gt; 처우 협의 &amp;gt; iContact 입사</strong></p><p><br></p><p>* 채용 절차에서 필요에 따라 3차 인터뷰 등 추가 전형을 요청드릴 수 있습니다.</p>" class="height">
+                                                        <div type="text" content="<p>지원 절차는 직군에 따라 아래와 같이 다르게 진행하고 있습니다.</p><p><br></p><p><strong>개발 - 서류 &amp;gt; 과제(또는 전화인터뷰) &amp;gt; 1차 인터뷰 &amp;gt; 2차 인터뷰 &amp;gt; 처우 협의 &amp;gt; 크몽 입사</strong></p><p><strong>비개발 - 서류 &amp;gt; 1차 인터뷰 &amp;gt; 2차 인터뷰 &amp;gt; 처우 협의 &amp;gt; 크몽 입사</strong></p><p><br></p><p>* 채용 절차에서 필요에 따라 3차 인터뷰 등 추가 전형을 요청드릴 수 있습니다.</p>" class="height">
                                                             <p>지원 절차는 직군에 따라 아래와 같이 다르게 진행하고 있습니다.</p>
                                                             <p>
                                                                 <br>
                                                             </p>
                                                             <p>
                                                                 <strong>개발 - 서류 &gt; 과제(또는 전화인터뷰) &gt; 1차 인터뷰
-                                                                    &gt; 2차 인터뷰 &gt; 처우 협의 &gt; iContact 입사</strong>
+                                                                    &gt; 2차 인터뷰 &gt; 처우 협의 &gt; 크몽 입사</strong>
                                                             </p>
                                                             <p>
                                                                 <strong>비개발 - 서류 &gt; 1차 인터뷰 &gt; 2차 인터뷰 &gt;
-                                                                    처우 협의 &gt; iContact 입사</strong>
+                                                                    처우 협의 &gt; 크몽 입사</strong>
                                                             </p>
                                                             <p>
                                                                 <br>

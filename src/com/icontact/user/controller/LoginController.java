@@ -18,7 +18,6 @@ public class LoginController implements Action {
 		Result result = new Result();
 		boolean autoLogin = false;
 		
-		
 //		캐시: 내 PC의 메모리
 //		쿠키: 로컬에 저장
 //		세션: 서버에 저장
@@ -45,8 +44,6 @@ public class LoginController implements Action {
 			}
 		}
 		
-		System.out.println(autoLogin);
-		
 //		쿠키에 사용자 아이디가 있다면
 		if(userIdentification != null) {
 //			로그인으로 쿠키에 있던 아이디와 비밀번호 전송
@@ -59,8 +56,9 @@ public class LoginController implements Action {
 			if(autoLogin) {
 				req.setAttribute("autoLogin", autoLogin);
 			}
-			result.setPath("templates/main/login_real.jsp");
+			result.setPath("login_real.jsp");
 		}
+		
 		return result;
 	}
 
