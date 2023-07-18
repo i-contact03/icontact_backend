@@ -32,7 +32,7 @@
 				</a>
 			</div>
 			<div class="nav-wrapper">
-				<a href="" target="_parent" style="color: #666666;">게시물 등록하기</a>
+				<a href="${pageContext.request.contextPath}/articleWrite.article" target="_parent" style="color: #666666;">게시물 등록하기</a>
 				<a class="change-page-login" role="button" href="https://kmong.com/login?brand_id=360002309011&locale_id=69&return_to=https%3A%2F%2Fsupport.kmong.com%2Fhc%2Fko%2Frequests%2Fnew&target=zendesk&timestamp=1687257449" style="color: blue;">한동석 님</a>
 			</div>
 		</header>
@@ -60,7 +60,8 @@
 		      </div>
 		      <section id="content-wrap">
 		     	 <ul>
-				  <!--     <li class="main-list"><a href=""></a></li>
+				  <!--   화면 출력
+				    <li class="main-list"><a href=""></a></li>
 				      <li class="main-list"><a href=""></a></li>
 				      <li class="main-list"><a href=""></a></li>     
 				      <li class="main-list"><a href=""></a></li>

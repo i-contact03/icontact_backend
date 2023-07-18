@@ -1,4 +1,4 @@
-package com.icontact.main;
+package com.icontact.main.controller;
 
 import java.io.IOException;
 import java.util.HashMap;
