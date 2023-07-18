@@ -712,7 +712,7 @@ a.top-header-menu:hover {
 	font-weight: 500;
     margin: 0px 0px 8px;
     color: rgb(48, 52, 65);
-    font-size: 20px;
+    font-size: 30px;
     word-break: keep-all;
     line-height: 1.5;
 }
@@ -742,6 +742,14 @@ a.top-header-menu:hover {
     font-weight: 400;
     word-break: keep-all;
 }
+
+
+.darker:hover{
+   filter: brightness(80%);
+   cursor: pointer;
+}
+
+
 
 .profile {
 	display: flex;

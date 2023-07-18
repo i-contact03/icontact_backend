@@ -1,7 +1,8 @@
 /**
  * 
- */
 autosize($("textarea"));
+ */
+console.log("init");
 
 /*시간 계산*/
 function elapsedTime(date) {
@@ -28,6 +29,43 @@ function elapsedTime(date) {
   return '방금 전';
 }
 
+
+// HTML 폼의 데이터를 전송하는 함수
+function submitForm() {
+  // <input> 태그의 값을 가져오기
+  var articleTitleInput = document.getElementById("articleTitle");
+  var articleTitleValue = articleTitleInput.value;
+
+  // <textarea> 태그의 값을 가져오기
+  var articleContentTextarea = document.getElementById("articleContent");
+  var articleContentValue = articleContentTextarea.value;
+
+
+
+// 값 출력
+console.log("articleTitle:", articleTitleValue);
+console.log("articleContent:", articleContentValue);
+
+
+
+
+  // 데이터 패키징
+  var formData = new FormData();
+  formData.append("articleTitle", articleTitleValue);
+  formData.append("articleContent", articleContentValue);
+
+  // AJAX 요청 또는 폼 데이터 전송
+  var xhr = new XMLHttpRequest();
+  xhr.open("POST", "/writeok", true);
+  xhr.onreadystatechange = function() {
+    if (xhr.readyState === XMLHttpRequest.DONE && xhr.status === 200) {
+      // 요청이 완료되었을 때의 처리
+      console.log(xhr.responseText);
+    }
+  };
+  xhr.send(formData);
+}
+
 /*
 // 값 제출
 $(document).ready(function() {
@@ -45,7 +83,7 @@ $(document).ready(function() {
 
     // 서버로 데이터 전송
     $.ajax({
-      url: "${pageContext.request.contextPath}/static/templates/community/", // 데이터를 전송할 서버의 URL
+     // url: "${pageContext.request.contextPath}/static/templates/community/", // 데이터를 전송할 서버의 URL
       type: "POST", // 전송 방식 (POST, GET 등)
       data: data, // 전송할 데이터 객체
       success: function(response) {

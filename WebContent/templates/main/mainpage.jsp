@@ -15,18 +15,18 @@
 
 	@font-face {
 		font-family: 'MetroSansBold';
-		src: url('../../font/MetroSans-Bold.woff2'); /* 굵은글씨체 주소지정 */
+		src: url('${pageContext.request.contextPath}/font/MetroSans-Bold.woff2'); /* 굵은글씨체 주소지정 */
 	}
 	
 	@font-face {
 		font-family: 'MetroSansMedium';
-		src: url('../../font/MetroSans-Medium.woff2');
+		src: url('${pageContext.request.contextPath}/font/MetroSans-Medium.woff2');
 	}
 	
 	
 	@font-face {
 		font-family: 'MetroSansRegular';
-		src: url('../../font/MetroSans-Regular.woff2'); /* 가는글씨체 주소지정 */
+		src: url('${pageContext.request.contextPath}/font/MetroSans-Regular.woff2'); /* 가는글씨체 주소지정 */
 	}
 	
 </style>
@@ -472,7 +472,7 @@
 			<section class="membership-ad">
 				<a>
 					<div class="membership-ad-img-wrapper">
-						<img src="../../images/img.png" width="1168" height="160" loading="lazy" style="color: transparent;">
+						<img src="${pageContext.request.contextPath}/images/img.png" width="1168" height="160" loading="lazy" style="color: transparent;">
 					</div>
 				</a>
 			</section>
@@ -533,7 +533,7 @@
 			<!-- 크몽 FAQ에서 해결하세요! -->
 			<section class="kmong-enterprise-ad">
 				<a>
-					<img src="../../images/0011.png" width="1168" height="160">
+					<img src="${pageContext.request.contextPath}/images/0011.png" width="1168" height="160">
 				</a>
 			</section>
 			
@@ -554,24 +554,12 @@
 							
 							<!-- 1등 -->
 							<div class="category-pro-ranking-top">
-								<article class="category-pro-ranking-top-content">
-									<img src="https://kmong.com/_next/image?url=https%3A%2F%2Fd2v80xjmx68n4w.cloudfront.net%2Fassets%2Fdesktop%2Fpages%2Fmain%2Franking-01%403x.png&w=2880&q=75" width="40" height="40" loading="lazy" style="color: transparent;">
-									<div class="category-pro-ranking-explanation">
-										<strong>1,328,222,120원</strong>
-										<a href="../goods/goodsMain.jsp">
-											<span>
-												DAcompany
-											</span>
-										</a>
-									</div>
-									
-									
-									<a class="ranking-profile">
-										<div>
-											<img src="https://d2v80xjmx68n4w.cloudfront.net/members/thumbs/jUK9B1587629941.png" shape="0" loading="lazy">
-										</div>
-									</a>
-								</article>
+							
+							
+							
+							
+							
+							
 							</div>
 							
 							<div class="category-pro-ranking-bottom-wrapper">
@@ -907,7 +895,7 @@
 
 			<section class="kmong-pro-ad">
 				<a class="kmong-pro-ad-content">
-					<img src="../../images\0010.png" width="1168" height="160" loading="lazy" style="color: transparent;">
+					<img src="${pageContext.request.contextPath}/images\0010.png" width="1168" height="160" loading="lazy" style="color: transparent;">
 				</a>
 			</section>
 		</div>
@@ -957,21 +945,78 @@
 <script src="${pageContext.request.contextPath}/static/js/modal/modal.js"></script>
 <script>
 
-        showWarnModal(modalMessage);
+        /* showWarnModal(modalMessage); */
 
+        /*아이디어 목록*/
+showList();
+
+function showList() {
+	
+	let ideas = `${ideas}`;
+	
+	console.log(ideas); /* jsp -> js */
+	ideas = JSON.parse(ideas);
+	console.log(ideas);
+	
+	
+	const $div = $("div.category-pro-ranking-top");
+	let text = "";
+
+	ideas.forEach(idea => {
+		console.log(idea.ideaTitle);
+		text += `
+			<article class="category-pro-ranking-top-content">
+									<img src="https://kmong.com/_next/image?url=https%3A%2F%2Fd2v80xjmx68n4w.cloudfront.net%2Fassets%2Fdesktop%2Fpages%2Fmain%2Franking-01%403x.png&w=2880&q=75" width="40" height="40" loading="lazy" style="color: transparent;">
+									<div class="category-pro-ranking-explanation">
+										<strong>`+idea.ideaTitle+`</strong>
+										<a>
+											<span>`+
+											idea.ideaTitle+`
+											</span>
+										</a>
+									</div>
+									
+									<a class="ranking-profile">
+										<div>
+											<img src="${pageContext.request.contextPath}/upload/idea/${idea.ideaThumbnailName}" shape="0" loading="lazy">
+										</div>
+									</a>
+								</article>
+			`;
+
+	});
+
+	if (ideas.length == 0) {
+		text += `
+			<li>
+		        <div>
+					아직 등록된 아이디어가 없습니다. iContact에 아이디어를 등록해보세요 !
+				</div>
+			</li>
+		`
+	}
+
+	$div.append(text);
+}
+
+        
+        
+        
+        
 </script>
 
 <script>
+
 let userId = "${userId}";
 
 console.log(userId);
 
 if(userId != ""){
 	 $('#join').text('마이페이지');
-	 $("#join").attr("href", "../mypage/mypage.jsp")
+	 $("#join").attr("href", "${pageContext.request.contextPath}/profileMainOK.mypage")
 	
 	 $('#login').text('아이디어등록');
-	 $("#login").attr("href", "../goods/goods_register_1Work.jsp")
+	 $("#login").attr("href", "${pageContext.request.contextPath}/writeIdea.idea")
 	
 	 $('#logout').show();
 	 $('#logout').text('로그아웃');
@@ -983,5 +1028,10 @@ if(userId != ""){
 }
 
 </script>
+
+
+
+
+
 </body>
 </html>

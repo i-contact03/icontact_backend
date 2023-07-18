@@ -1,6 +1,5 @@
 package com.icontact.idea.domain;
 
-import com.icontact.user.domain.UserVO;
 
 public class IdeaDTO {
 	private Long ideaId;
@@ -13,7 +12,15 @@ public class IdeaDTO {
 	private Long userId;
 	private Long scId;
 	
-	private UserVO userVO;
+	private String userIdentification;
+
+	public String getUserIdentification() {
+		return userIdentification;
+	}
+
+	public void setUserIdentification(String userIdentification) {
+		this.userIdentification = userIdentification;
+	}
 
 	public Long getIdeaId() {
 		return ideaId;
@@ -79,19 +86,11 @@ public class IdeaDTO {
 		this.scId = scId;
 	}
 
-	public UserVO getUserVO() {
-		return userVO;
-	}
-
-	public void setUserVO(UserVO userVO) {
-		this.userVO = userVO;
-	}
-
 	@Override
 	public String toString() {
 		return "IdeaDTO [ideaId=" + ideaId + ", ideaTitle=" + ideaTitle + ", ideaBasic=" + ideaBasic + ", ideaDetail="
 				+ ideaDetail + ", ideaThumbnailName=" + ideaThumbnailName + ", ideaDate=" + ideaDate + ", userId="
-				+ userId + ", scId=" + scId + ", userVO=" + userVO + "]";
+				+ userId + ", scId=" + scId + ", userIdentification=" + userIdentification + "]";
 	}
 
 	@Override
@@ -118,6 +117,7 @@ public class IdeaDTO {
 			return false;
 		return true;
 	}
+
 	
 	
 }

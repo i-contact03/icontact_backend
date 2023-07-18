@@ -49,7 +49,7 @@ public class LoginOkController implements Action {
 			session.setAttribute("userId", userId);
 			
 //			게시글 목록으로 이동
-			result.setPath(req.getContextPath() + "/templates/main/mainpage.jsp");	//여기도 컨트롤러로 가야함
+			result.setPath(req.getContextPath() + "/mainAllList.main");	//여기도 컨트롤러로 가야함
 			
 //			로그인 페이지에서 자동 로그인을 체크했다면,
 			if(autoLogin) {

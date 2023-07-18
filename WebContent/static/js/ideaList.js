@@ -4,20 +4,22 @@ showList();
 function showList(){
 	console.log(ideas); /* jsp -> js */
 	ideas = JSON.parse(ideas);
+	console.log(ideas);
 	
 	const $div = $("div.main-padding");
 	let text = "";
 	
 	ideas.forEach(idea => {
+		console.log(idea.ideaTitle);
 		text += `
 			<article class="goods">
-        		<a class="goods-link" href="javascript:location.href='${contextPath}/detailOk.idea?ideaId=${idea.ideaId}'">
+        		<a class="goods-link" href="javascript:location.href='${contextPath}/goodsMainOk.idea?userId=${idea.userId}&ideaId=${idea.ideaId}'">
         			<div class="goods-setting">
         				<div class="goods-setting2">
         					<div class="goods-height">
         						<div tabindex="0" class="goods-img">
 									<!-- 사진 -->
-        							<img onmouseover="expansion()" src="${contextPath}/upload/idea/${idea.ideaThumbnailName}" class="goods-img2">
+        							<img src="${contextPath}/upload/idea/${idea.ideaThumbnailName}" class="goods-img2">
         						</div>
         					</div>
         				</div>
@@ -25,7 +27,7 @@ function showList(){
         			
         			<div class="text-padding">
         				<div class="middle-right">
-        					<span class="name">${idea.userVO.userIdentification}</span> <!-- 아이디어 제공자의 id -->
+        					<span class="name">` + idea.userIdentification + `</span> <!-- 아이디어 제공자의 id -->
         				</div>
         				<h3 class="title2">${idea.ideaTitle}</h3> <!-- 아이디어 제목 -->
         				<div class="price">${idea.ideaBasic}</div> <!-- 아이디어 기본정보 -->
