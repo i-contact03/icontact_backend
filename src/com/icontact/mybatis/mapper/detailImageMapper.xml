@@ -4,6 +4,7 @@
 <mapper namespace="detailImage">
 	<select id="selectByIdeaId" resultType="detailImageVO">
 		select di_id, di_system_name, di_original_name, di_file_size, idea_id
+		from tbl_detail_image
 		where idea_id = #{ideaId}
 	</select>
 </mapper>
