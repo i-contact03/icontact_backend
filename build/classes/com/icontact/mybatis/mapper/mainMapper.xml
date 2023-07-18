@@ -4,7 +4,8 @@
 
 <select id="selectAll" resultType="ideaVO">
 select idea_id,idea_title,idea_basic,idea_detail,idea_thumbnail_name,idea_date,user_id,sc_id
-from tbl_idea
+from tbl_idea 
+order by idea_id desc limit 5
 </select>
 
 </mapper>

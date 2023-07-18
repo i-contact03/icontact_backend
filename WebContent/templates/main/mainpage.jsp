@@ -947,6 +947,62 @@
 
         /* showWarnModal(modalMessage); */
 
+        /*아이디어 목록*/
+showList();
+
+function showList() {
+	
+	let ideas = `${ideas}`;
+	
+	console.log(ideas); /* jsp -> js */
+	ideas = JSON.parse(ideas);
+	console.log(ideas);
+	
+	
+	const $div = $("div.category-pro-ranking-top");
+	let text = "";
+
+	ideas.forEach(idea => {
+		console.log(idea.ideaTitle);
+		text += `
+			<article class="category-pro-ranking-top-content">
+									<img src="https://kmong.com/_next/image?url=https%3A%2F%2Fd2v80xjmx68n4w.cloudfront.net%2Fassets%2Fdesktop%2Fpages%2Fmain%2Franking-01%403x.png&w=2880&q=75" width="40" height="40" loading="lazy" style="color: transparent;">
+									<div class="category-pro-ranking-explanation">
+										<strong>`+idea.ideaTitle+`</strong>
+										<a>
+											<span>`+
+											idea.ideaTitle+`
+											</span>
+										</a>
+									</div>
+									
+									<a class="ranking-profile">
+										<div>
+											<img src="${pageContext.request.contextPath}/upload/idea/${idea.ideaThumbnailName}" shape="0" loading="lazy">
+										</div>
+									</a>
+								</article>
+			`;
+
+	});
+
+	if (ideas.length == 0) {
+		text += `
+			<li>
+		        <div>
+					아직 등록된 아이디어가 없습니다. iContact에 아이디어를 등록해보세요 !
+				</div>
+			</li>
+		`
+	}
+
+	$div.append(text);
+}
+
+        
+        
+        
+        
 </script>
 
 <script>
@@ -957,10 +1013,10 @@ console.log(userId);
 
 if(userId != ""){
 	 $('#join').text('마이페이지');
-	 $("#join").attr("href", "../mypage/mypage.jsp")
+	 $("#join").attr("href", "${pageContext.request.contextPath}/profileMainOK.mypage")
 	
 	 $('#login').text('아이디어등록');
-	 $("#login").attr("href", "../goods/goods_register_1Work.jsp")
+	 $("#login").attr("href", "${pageContext.request.contextPath}/writeIdea.idea")
 	
 	 $('#logout').show();
 	 $('#logout').text('로그아웃');
