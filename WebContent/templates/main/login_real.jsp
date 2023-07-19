@@ -93,12 +93,21 @@
 								
 								<!-- = -->
 								<!-- 로그인 부속 기능 -->
-								
+
+
+	
+
+
+
+
+
+
+
 								<div class="login-main-login-below-wrapper">	<!-- css-70qvj9 equrxy92 -->
-									<label for="auto-login" color="#ffd400" class="login-main-login-below-check-for-keeplogin-wrapper">	<!-- css-18pqe3v elgfge0 -->
+									<label for="autoLogin" id="checkId" color="#ffd400" class="login-main-login-below-check-for-keeplogin-wrapper">	<!-- css-18pqe3v elgfge0 -->
 										<span class="login-main-login-below-check-for-keeplogin-span">	<!-- css-9ffs86 elgfge3 -->
-											<input type="checkbox" id="auto-login" name="auto-login" value="" class="login-main-login-below-check-for-keeplogin-checkbox">	<!-- css-l775cp elgfge2 -->
-											<span color="#ffd400" id="check-mark" class="login-main-login-below-check-for-keeplogin-checkbox-inner"></span>	<!-- checkbox__inner css-1t5nui elgfge4 -->
+											<input type="checkbox" id="autoLogin" name="autoLogin" value="" class="login-main-login-below-check-for-keeplogin-checkbox">	<!-- css-l775cp elgfge2 -->
+											<span color="#ffd400" id="checkMark" class="login-main-login-below-check-for-keeplogin-checkbox-inner"></span>	<!-- checkbox__inner css-1t5nui elgfge4 -->
 											<span class="login-main-login-below-check-for-keeplogin-checkbox-textbox">	<!-- css-2k2mpm elgfge1 -->
 												<p variant="body2" class="login-main-login-below-p-tag" color="gray600">로그인 상태 유지</p>	<!-- css-15suf60 e870mj50 -->
 											</span>
@@ -162,14 +171,13 @@
 <script src="${pageContext.request.contextPath}/static/js/modal/modal.js"></script>
 
 <script>
-	var checkBox = document.getElementById("auto-login");
-	var checkMark = document.getElementById("check-mark");
 
-	$(checkMark).click(function (){
-		if( !checkBox.checked ){           //체크 안돼있는데 클릭하면 체크 시키고
-			checkBox.checked = true;
+
+	$('#checkId').click(function (){
+		if( $('#autoLogin').prop("checked") ){           //체크 안돼있는데 클릭하면 체크 시키고
+			$('#checkMark').attr('class','css-check');
 		}else{                             //체크 돼있으면 해제 시키기
-			checkBox.checked = false;
+			$('#checkMark').attr('class','login-main-login-below-check-for-keeplogin-checkbox-inner');
 		}
 	});
 	

@@ -28,8 +28,8 @@
     <div style="background-color:#eacaff">
         <header class="header" style="background-color:#eacaff">
             <div class="logo">
-                <a href="https://kmong.com">
-                    <img src="//theme.zdassets.com/theme_assets/9204604/ed54b2d958a2f7b420f8412b529519e676c20bc3.png" class="logo-kmong">
+                <a href="https://iContact.com">
+                      <img src="../../icon/logo.png" width="170px" height="52px" class="iContact-logo">
                 </a>
                 <a title="홈" href="/hc/ko">
                     <img src="//theme.zdassets.com/theme_assets/9204604/db54bfa5d2ad14572afe57b4b5582b04a38aa9e1.png" class="cs">
@@ -38,8 +38,8 @@
 
 
             <div class="nav-wrapper">
-                <a href="https://support.kmong.com/hc/ko/requests/new" target="_parent" style="color: #666666;">문의하기</a>
-                <a class="login" data-auth-action="signin" role="button" rel="nofollow" title="대화 상자를 엽니다." href="/hc/ko/signin?return_to=https%3A%2F%2Fsupport.kmong.com%2Fhc%2Fko%2Farticles%2F4408006274969--%25EC%2597%2594%25ED%2584%25B0%25ED%2594%2584%25EB%259D%25BC%25EC%259D%25B4%25EC%25A6%2588-%25EC%2584%259C%25EB%25B9%2584%25EC%258A%25A4-%25EC%259D%25B4%25EC%259A%25A9-%25EC%258B%259C-%25EC%259D%2598%25EB%25A2%25B0-%25EB%2582%25B4%25EC%259A%25A9%25EC%259D%2580-%25EB%25B3%25B4%25ED%2598%25B8%25EB%2590%2598%25EB%2582%2598%25EC%259A%2594-&amp;locale=ko" style="color: blue;">로그인</a>
+                <a href="https://support.iContact.com/hc/ko/requests/new" target="_parent" style="color: #666666;">문의하기</a>
+                <a class="login" data-auth-action="signin" role="button" rel="nofollow" title="대화 상자를 엽니다." href="/hc/ko/signin?return_to=https%3A%2F%2Fsupport.iContact.com%2Fhc%2Fko%2Farticles%2F4408006274969--%25EC%2597%2594%25ED%2584%25B0%25ED%2594%2584%25EB%259D%25BC%25EC%259D%25B4%25EC%25A6%2588-%25EC%2584%259C%25EB%25B9%2584%25EC%258A%25A4-%25EC%259D%25B4%25EC%259A%25A9-%25EC%258B%259C-%25EC%259D%2598%25EB%25A2%25B0-%25EB%2582%25B4%25EC%259A%25A9%25EC%259D%2580-%25EB%25B3%25B4%25ED%2598%25B8%25EB%2590%2598%25EB%2582%2598%25EC%259A%2594-&amp;locale=ko" style="color: blue;">로그인</a>
 
             </div>
         </header>
@@ -56,9 +56,9 @@
             <nav class="container-nav">
                 <ol class="container-ol">
 
-                    <li title="크몽 고객센터">
+                    <li title="iContact 고객센터">
 
-                        <a href="/hc/ko">크몽 고객센터</a>
+                        <a href="/hc/ko">iContact 고객센터</a>
 
                     </li>
 
@@ -164,8 +164,8 @@
                                 <p><span><strong><span class="orange80">■ </span>의뢰인</strong></span></p>
                                 <p>의뢰 글 작성 시 공개 불가한 내용은 제외하고 등록해 주세요. <br>전담 매니저가 배정된 경우에는 전담 매니저에게, 프로젝트에 제안한 전문가와 직접 소통하는 경우에는 해당 전문가에게만 관련 내용을 전달하셔도 됩니다.</p>
                                 <p>&nbsp;</p>
-                                <p><span><strong><span class="orange80">■ </span>크몽 <span class="font-size-medium">(전담 매니저 배정 시)</span></strong></span></p>
-                                <p><span>◾️ 의뢰하신 프로젝트 내용은 바로 사이트에 노출되지 않고 크몽 전담 매니저와 유선 상담 후 사이트에 최종 등록됩니다. 전담 매니저에게 공개 불가한 내용을 알려주시면,</span><span> 전문가가 업무 내용을 이해할 수 있을 정도의 최소한의 내용만 전달해 드립니다.<br>◾️&nbsp;필요한 경우, 크몽에서 제공하는 NDA(비밀 유지 계약서) 작성이 가능합니다. 전문가와의&nbsp; 미팅 시 전문가와 NDA 계약 체결 후 자료 공유가 가능합니다.</span></p>
+                                <p><span><strong><span class="orange80">■ </span>iContact <span class="font-size-medium">(전담 매니저 배정 시)</span></strong></span></p>
+                                <p><span>◾️ 의뢰하신 프로젝트 내용은 바로 사이트에 노출되지 않고 iContact 전담 매니저와 유선 상담 후 사이트에 최종 등록됩니다. 전담 매니저에게 공개 불가한 내용을 알려주시면,</span><span> 전문가가 업무 내용을 이해할 수 있을 정도의 최소한의 내용만 전달해 드립니다.<br>◾️&nbsp;필요한 경우, iContact에서 제공하는 NDA(비밀 유지 계약서) 작성이 가능합니다. 전문가와의&nbsp; 미팅 시 전문가와 NDA 계약 체결 후 자료 공유가 가능합니다.</span></p>
                             </div>
 
 
@@ -181,7 +181,7 @@
 
                         <p align="center">다른 질문이 있으신가요?</p>
                         <p align="center" style="margin-bottom:20px;">
-                            <a class="button-yellow" href="https://support.kmong.com/hc/ko/requests/new">문의하기</a>
+                            <a class="button-yellow" href="https://support.iContact.com/hc/ko/requests/new">문의하기</a>
                         </p>
 
                         <div class="to-top">
@@ -203,22 +203,22 @@
     <footer class="footer">
         <div class="footer-div">
             <ol style="width:40%">
-                <b>(주)크몽</b> | 서울시 서초구 사임당로 157, 3층 | 대표 : 박현호<br>
+                <b>(주)iContact</b> | 서울시 서초구 사임당로 157, 3층 | 대표 : 박현호<br>
                 개인정보보호책임 : 송준이 | 사업자등록번호 : 613-81-65278<br>
                 통신판매업신고 : 2018-서울서초-2134 | 1544-6254<br>
-                help@kmong.com | 호스팅 사업자: Amazon Web Service(AWS)</ol>
-            <ol><a href="https://support.kmong.com/hc/ko/categories/360001764912">공지사항</a></ol>
-            <ol><a href="https://support.kmong.com/hc/ko/categories/360001643071">FAQ</a></ol>
-            <ol><a href="https://support.kmong.com/hc/ko/articles/12244853101081">이용약관</a></ol>
-            <ol><a href="https://support.kmong.com/hc/ko/articles/17612541189145"><b>개인정보처리방침</b></a></ol>
+                help@iContact.com | 호스팅 사업자: Amazon Web Service(AWS)</ol>
+            <ol><a href="https://support.iContact.com/hc/ko/categories/360001764912">공지사항</a></ol>
+            <ol><a href="https://support.iContact.com/hc/ko/categories/360001643071">FAQ</a></ol>
+            <ol><a href="https://support.iContact.com/hc/ko/articles/12244853101081">이용약관</a></ol>
+            <ol><a href="https://support.iContact.com/hc/ko/articles/17612541189145"><b>개인정보처리방침</b></a></ol>
         </div>
         <div class="footer-div2">
-            &nbsp;&nbsp; (주) 크몽 &nbsp;&nbsp;&nbsp;
-            <a href="https://support.kmong.com/hc/ko/categories/360001764912">공지사항</a>&nbsp;
-            <a href="https://support.kmong.com/hc/ko/categories/360001643071">FAQ</a>&nbsp;
-            <a href="https://support.kmong.com/hc/ko/articles/12244853101081">이용약관</a>&nbsp;
+            &nbsp;&nbsp; (주) iContact &nbsp;&nbsp;&nbsp;
+            <a href="https://support.iContact.com/hc/ko/categories/360001764912">공지사항</a>&nbsp;
+            <a href="https://support.iContact.com/hc/ko/categories/360001643071">FAQ</a>&nbsp;
+            <a href="https://support.iContact.com/hc/ko/articles/12244853101081">이용약관</a>&nbsp;
             <a href=""><b>개인정보처리방침</b></a>&nbsp;
-            <a href="https://support.kmong.com/hc/ko/requests/new">1:1 문의하기</a>&nbsp;&nbsp;
+            <a href="https://support.iContact.com/hc/ko/requests/new">1:1 문의하기</a>&nbsp;&nbsp;
         </div>
 
     </footer>

@@ -92,19 +92,47 @@ $(function () {
         let checkPhone = RegExp(/^[0-9]+$/);        
         let checkEmail = RegExp(/^([a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,})$/);
 
-        function checkForm() {            
+
+        function checkForm() {      
+        
+              
             //userID         
-            $("#userIdentification").blur(function (){                
+            $("#userIdentification").blur(function (){ 
+            checkId = false;
+		/*중복 검사*/
+		$.ajax({
+			url: "checkIdOk.user",
+			data: {userIdentification: $(this).val()},
+			async: false,
+			success: function(result){		
+				result = JSON.parse(result);
+				if(result.check){
+				/*	 $(".id").text("사용가능한 아이디입니다.");  
+					 $(".id").css('color','green'); */
+					checkId = true;
+				}else{
+			 	/*	 $(".id").text("이미 사용중인 아이디입니다.");
+					$("#userIdentification").focus();*/
+					checkId = false;
+				}
+			}
+		});               
                 if($("#userIdentification").val() == "" ){
                     $(".id").text("아이디를 입력해주세요");
                     $("#userIdentification").focus();
                     return false;
                 }else if(!checkID.test($("#userIdentification").val())) {
                     $(".id").text("영문 혹은 영문과 숫자를 조합하여 최소 6자리이상 20자리로 입력해주세요.");
+                    $(".id").css('color','red'); 
                      $("#userIdentification").val("");
                     $("#userIdentification").focus();                
                     return false;
-                }else if(checkID.test($("#userIdentification").val())) {
+                }else if(!checkId){
+			 		 $(".id").text("이미 사용중인 아이디입니다.");
+			 		  $(".id").css('color','red'); 
+					$("#userIdentification").focus();
+					return false;
+				}else if(checkID.test($("#userIdentification").val())) {
                     $(".id").text("사용가능한 아이디입니다.");                
                     $(".id").css('color','green');              
                     return true;
@@ -193,6 +221,7 @@ $(function () {
         // button 클릭시        
         $('.join-btn').click(function(){
             
+            
            	 if($("#userIdentification").val() == "" ){
                     $(".id").text("아이디를 입력해주세요");
                     $("#userIdentification").focus();
@@ -202,7 +231,12 @@ $(function () {
                      $("#userIdentification").val("");
                     $("#userIdentification").focus();                
                     return false;
-         		}else if($("#userEmail").val() == "" ){                
+         		}else if(!checkId){
+			 		 $(".id").text("이미 사용중인 아이디입니다.");
+			 		  $(".id").css('color','red'); 
+					$("#userIdentification").focus();
+					return false;
+				}else if($("#userEmail").val() == "" ){                
                  $(".email").text("이메일을 입력해주세요.");
                    $("#userEmail").focus();
               		  return false;
@@ -488,7 +522,7 @@ $joinInputs.on("blur", function(){
 			url: "checkIdOk.user",
 			data: {userIdentification: $(this).val()},
 			async: false,
-			success: function(result){		// 액션에서 받은값?
+			success: function(result){		
 				result = JSON.parse(result);
 				if(result.check){
 					$joinHelp.eq(i).text("멋진 아이디네요!");

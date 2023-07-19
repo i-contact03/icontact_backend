@@ -28,7 +28,7 @@ public class UserFrontController extends HttpServlet{
 		
 		System.out.println(target);
 		
-		if(target.equals("checkIdOk")) {
+		if(target.equals("templates/main/checkIdOk")) {
 			result = new CheckIdOkController().execute(req, resp);
 				
 		} else if(target.equals("checkEmailOk")) {

@@ -31,6 +31,11 @@ public class CheckIdOkController implements Action {
 		
 		resp.setContentType("text/html;charset=utf-8");
 		
+		
+		System.out.println("안녕?");
+		System.out.println(check);
+		System.out.println(result);
+		
 		PrintWriter out = resp.getWriter();
 		out.print(result.toString());
 		out.close();
