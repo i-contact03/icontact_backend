@@ -123,10 +123,10 @@
 							<a href="javascript:location.href='${pageContext.request.contextPath}/listOk.article'">커뮤니티</a>
 						</li>
 						<li class="header-bar-nav-content">
-							<a href="../faq/FAQ.jsp">FAQ</a>
+							<a href="${pageContext.request.contextPath}/templates/faq/FAQ.jsp">FAQ</a>
 						</li>
 						<li class="header-bar-nav-content">
-							<a href="../faq/introduction.jsp">회사소개</a>
+							<a href="${pageContext.request.contextPath}/templates/faq/introduction.jsp">회사소개</a>
 						</li>
 					</ul>
 				</nav>
@@ -485,7 +485,7 @@
 					
 					<section class="using-kmong-ad-content" >
 						<article>
-							<a class="using-kmong-ad" href="javascript:location.href='${pageContext.request.contextPath}/ideaListOk.idea'">
+							<a class="using-kmong-ad" href="${pageContext.request.contextPath}/writeIdea.idea">
 								<div class="using-kmong-ad-picture">
 									<img src="https://kmong.com/_next/image?url=https%3A%2F%2Fd2v80xjmx68n4w.cloudfront.net%2Fassets%2Fdesktop%2Fmodules%2Fmain-themes%2Fmain_theme_picked_business_tip_20220405_1.png&w=2880&q=75" width="376" height="247" loading="lazy" style="color: transparent;">
 								</div>
@@ -497,7 +497,7 @@
 						</article>
 						
 						<article>
-							<a class="using-kmong-ad" href="../faq/FAQ.jsp">
+							<a class="using-kmong-ad" href="${pageContext.request.contextPath}/templates/faq/FAQ.jsp">
 								<div class="using-kmong-ad-picture">
 									<img src="https://kmong.com/_next/image?url=https%3A%2F%2Fd2v80xjmx68n4w.cloudfront.net%2Fassets%2Fdesktop%2Fmodules%2Fmain-themes%2Fmain_theme_picked_business_tip_20220404_1_2.png&w=2880&q=75" width="376" height="247" loading="lazy" style="color: transparent;">
 								</div>
@@ -509,8 +509,8 @@
 						</article>
 						
 						<article>
-							<a class="using-kmong-ad" href="../faq/introduction.jsp">
-								<div class="using-kmong-ad-picture" href="../faq/introduction.jsp">
+							<a class="using-kmong-ad" href="${pageContext.request.contextPath}/templates/faq/introduction.jsp">
+								<div class="using-kmong-ad-picture" href="${pageContext.request.contextPath}/templates/faq/introduction.jsp">
 									<img src="https://kmong.com/_next/image?url=https%3A%2F%2Fd2v80xjmx68n4w.cloudfront.net%2Fassets%2Fdesktop%2Fmodules%2Fmain-themes%2Fmain_theme_picked_business_tip_20221125_2_3.png&w=2880&q=75" width="376" height="247" loading="lazy" style="color: transparent;">
 								</div>
 								<div class="using-kmong-ad-explanation">
@@ -554,23 +554,13 @@
 							
 							<!-- 1등 -->
 							<div class="category-pro-ranking-top">
-							
-							
-							
-							
-							
-							
-							</div>
-							
-							<div class="category-pro-ranking-bottom-wrapper">
-								<!-- 2등 -->
 								<article class="category-pro-ranking-top-content">
-									<img src="https://kmong.com/_next/image?url=https%3A%2F%2Fd2v80xjmx68n4w.cloudfront.net%2Fassets%2Fdesktop%2Fpages%2Fmain%2Franking-02%403x.png&w=2880&q=75" width="40" height="40" loading="lazy" style="color: transparent;">
+									<img src="https://kmong.com/_next/image?url=https%3A%2F%2Fd2v80xjmx68n4w.cloudfront.net%2Fassets%2Fdesktop%2Fpages%2Fmain%2Franking-01%403x.png&w=2880&q=75" width="40" height="40" loading="lazy" style="color: transparent;">
 									<div class="category-pro-ranking-explanation">
-										<strong>776,242,433원</strong>
-										<a href="../goods/goodsMain.jsp">
+										<strong>${ideaVO[0].ideaTitle}</strong>
+										<a>
 											<span>
-												지구 컴즈
+												${ideaVO[0].userIdentification}
 											</span>
 										</a>
 									</div>
@@ -578,7 +568,29 @@
 									
 									<a class="ranking-profile">
 										<div>
-											<img src="https://d2v80xjmx68n4w.cloudfront.net/members/thumbs/i6dng1658458456.jpg" shape="0" loading="lazy">
+											<img src="${pageContext.request.contextPath}\upload\idea/${ideaVO[0].ideaThumbnailName}" shape="0" loading="lazy">
+										</div>
+									</a>
+								</article>
+							</div>
+							
+							<div class="category-pro-ranking-bottom-wrapper">
+								<!-- 2등 -->
+								<article class="category-pro-ranking-top-content">
+									<img src="https://kmong.com/_next/image?url=https%3A%2F%2Fd2v80xjmx68n4w.cloudfront.net%2Fassets%2Fdesktop%2Fpages%2Fmain%2Franking-02%403x.png&w=2880&q=75" width="40" height="40" loading="lazy" style="color: transparent;">
+									<div class="category-pro-ranking-explanation">
+										<strong>${ideaVO[1].ideaTitle}</strong>
+										<a>
+											<span>
+												${ideaVO[1].userIdentification}
+											</span>
+										</a>
+									</div>
+									
+									
+									<a class="ranking-profile">
+										<div>
+											<img src="${pageContext.request.contextPath}\upload\idea/${ideaVO[1].ideaThumbnailName}" shape="0" loading="lazy">
 										</div>
 									</a>
 								</article>
@@ -589,10 +601,10 @@
 								<article class="category-pro-ranking-top-content">
 									<img src="https://kmong.com/_next/image?url=https%3A%2F%2Fd2v80xjmx68n4w.cloudfront.net%2Fassets%2Fdesktop%2Fpages%2Fmain%2Franking-03%403x.png&w=2880&q=75" width="40" height="40" loading="lazy" style="color: transparent;">
 									<div class="category-pro-ranking-explanation">
-										<strong>714,554,000원</strong>
-										<a href="../goods/goodsMain.jsp">
+										<strong>${ideaVO[2].ideaTitle}</strong>
+										<a>
 											<span>
-												그리미아트디자인
+												${ideaVO[2].userIdentification}
 											</span>
 										</a>
 									</div>
@@ -600,7 +612,7 @@
 									
 									<a class="ranking-profile">
 										<div>
-											<img src="https://d2v80xjmx68n4w.cloudfront.net/members/thumbs/0WcZN1609436763.jpg" shape="0" loading="lazy">
+											<img src="${pageContext.request.contextPath}\upload\idea/${ideaVO[1].ideaThumbnailName}" shape="0" loading="lazy">
 										</div>
 									</a>
 								</article>
@@ -611,10 +623,10 @@
 								<article class="category-pro-ranking-top-content">
 									<img src="https://kmong.com/_next/image?url=https%3A%2F%2Fd2v80xjmx68n4w.cloudfront.net%2Fassets%2Fdesktop%2Fpages%2Fmain%2Franking-04%403x.png&w=2880&q=75" width="40" height="40" loading="lazy" style="color: transparent;">
 									<div class="category-pro-ranking-explanation">
-										<strong>586,375,986원</strong>
-										<a href="../goods/goodsMain.jsp">
+										<strong>${ideaVO[3].ideaTitle}</strong>
+										<a>
 											<span>
-												로고고디자인
+												${ideaVO[3].userIdentification}
 											</span>
 										</a>
 									</div>
@@ -622,7 +634,7 @@
 									
 									<a class="ranking-profile">
 										<div>
-											<img src="https://d2v80xjmx68n4w.cloudfront.net/members/thumbs/x9l1S1615524470.jpg" shape="0" loading="lazy">
+											<img src="${pageContext.request.contextPath}\upload\idea/${ideaVO[3].ideaThumbnailName}" shape="0" loading="lazy">
 										</div>
 									</a>
 								</article>
@@ -633,10 +645,10 @@
 								<article class="category-pro-ranking-top-content">
 									<img src="https://kmong.com/_next/image?url=https%3A%2F%2Fd2v80xjmx68n4w.cloudfront.net%2Fassets%2Fdesktop%2Fpages%2Fmain%2Franking-05%403x.png&w=2880&q=75" width="40" height="40" loading="lazy" style="color: transparent;">
 									<div class="category-pro-ranking-explanation">
-										<strong>543,491,500원</strong>
-										<a href="../goods/goodsMain.jsp">
+										<strong>${ideaVO[4].ideaTitle}</strong>
+										<a>
 											<span>
-												별
+												${ideaVO[4].userIdentification}
 											</span>
 										</a>
 									</div>
@@ -644,7 +656,7 @@
 									
 									<a class="ranking-profile">
 										<div>
-											<img src="https://d2v80xjmx68n4w.cloudfront.net/members/thumbs/RJ8xr1522727647.jpeg" shape="0" loading="lazy">
+											<img src="${pageContext.request.contextPath}\upload\idea/${ideaVO[4].ideaThumbnailName}" shape="0" loading="lazy">
 										</div>
 									</a>
 								</article>
@@ -662,10 +674,10 @@
 								<article class="category-pro-ranking-top-content">
 									<img src="https://kmong.com/_next/image?url=https%3A%2F%2Fd2v80xjmx68n4w.cloudfront.net%2Fassets%2Fdesktop%2Fpages%2Fmain%2Franking-01%403x.png&w=2880&q=75" width="40" height="40" loading="lazy" style="color: transparent;">
 									<div class="category-pro-ranking-explanation">
-										<strong>257,856,640원</strong>
-										<a href="../goods/goodsMain.jsp">
+										<strong>${ideaVO[0].ideaTitle}</strong>
+										<a>
 											<span>
-												착한 스튜디오
+												${ideaVO[0].userIdentification}
 											</span>
 										</a>
 									</div>
@@ -673,7 +685,7 @@
 									
 									<a class="ranking-profile">
 										<div>
-											<img src="https://d2v80xjmx68n4w.cloudfront.net/members/thumbs/V6RTW1629341463.jpg" shape="0" loading="lazy">
+											<img src="${pageContext.request.contextPath}\upload\idea/${ideaVO[0].ideaThumbnailName}" shape="0" loading="lazy">
 										</div>
 									</a>
 								</article>
@@ -684,10 +696,10 @@
 								<article class="category-pro-ranking-top-content">
 									<img src="https://kmong.com/_next/image?url=https%3A%2F%2Fd2v80xjmx68n4w.cloudfront.net%2Fassets%2Fdesktop%2Fpages%2Fmain%2Franking-02%403x.png&w=2880&q=75" width="40" height="40" loading="lazy" style="color: transparent;">
 									<div class="category-pro-ranking-explanation">
-										<strong>238,898,342원</strong>
-										<a href="../goods/goodsMain.jsp">
+										<strong>${ideaVO[1].ideaTitle}</strong>
+										<a>
 											<span>
-												그랑팩토리
+												${ideaVO[1].userIdentification}
 											</span>
 										</a>
 									</div>
@@ -695,7 +707,7 @@
 									
 									<a class="ranking-profile">
 										<div>
-											<img src="https://d2v80xjmx68n4w.cloudfront.net/members/thumbs/rmpTG8qhoj0S1523428462.jpg" shape="0" loading="lazy">
+											<img src="${pageContext.request.contextPath}\upload\idea/${ideaVO[1].ideaThumbnailName}" shape="0" loading="lazy">
 										</div>
 									</a>
 								</article>
@@ -706,10 +718,10 @@
 								<article class="category-pro-ranking-top-content">
 									<img src="https://kmong.com/_next/image?url=https%3A%2F%2Fd2v80xjmx68n4w.cloudfront.net%2Fassets%2Fdesktop%2Fpages%2Fmain%2Franking-03%403x.png&w=2880&q=75" width="40" height="40" loading="lazy" style="color: transparent;">
 									<div class="category-pro-ranking-explanation">
-										<strong>235,582,200원</strong>
-										<a href="../goods/goodsMain.jsp">
+										<strong>${ideaVO[2].ideaTitle}</strong>
+										<a>
 											<span>
-												춤추는포토그래퍼
+												${ideaVO[2].userIdentification}
 											</span>
 										</a>
 									</div>
@@ -717,7 +729,7 @@
 									
 									<a class="ranking-profile">
 										<div>
-											<img src="https://d2v80xjmx68n4w.cloudfront.net/members/thumbs/AwKLb1606737930.jpg" shape="0" loading="lazy">
+											<img src="${pageContext.request.contextPath}\upload\idea/${ideaVO[1].ideaThumbnailName}" shape="0" loading="lazy">
 										</div>
 									</a>
 								</article>
@@ -728,10 +740,10 @@
 								<article class="category-pro-ranking-top-content">
 									<img src="https://kmong.com/_next/image?url=https%3A%2F%2Fd2v80xjmx68n4w.cloudfront.net%2Fassets%2Fdesktop%2Fpages%2Fmain%2Franking-04%403x.png&w=2880&q=75" width="40" height="40" loading="lazy" style="color: transparent;">
 									<div class="category-pro-ranking-explanation">
-										<strong>235,540,600원</strong>
-										<a href="../goods/goodsMain.jsp">
+										<strong>${ideaVO[3].ideaTitle}</strong>
+										<a>
 											<span>
-												Phoenix
+												${ideaVO[3].userIdentification}
 											</span>
 										</a>
 									</div>
@@ -739,7 +751,7 @@
 									
 									<a class="ranking-profile">
 										<div>
-											<img src="	https://d2v80xjmx68n4w.cloudfront.net/members/thumbs/ePT1U1611218843.jpg" shape="0" loading="lazy">
+											<img src="${pageContext.request.contextPath}\upload\idea/${ideaVO[3].ideaThumbnailName}" shape="0" loading="lazy">
 										</div>
 									</a>
 								</article>
@@ -750,10 +762,10 @@
 								<article class="category-pro-ranking-top-content">
 									<img src="https://kmong.com/_next/image?url=https%3A%2F%2Fd2v80xjmx68n4w.cloudfront.net%2Fassets%2Fdesktop%2Fpages%2Fmain%2Franking-05%403x.png&w=2880&q=75" width="40" height="40" loading="lazy" style="color: transparent;">
 									<div class="category-pro-ranking-explanation">
-										<strong>171,671,530원</strong>
-										<a href="../goods/goodsMain.jsp">
+										<strong>${ideaVO[4].ideaTitle}</strong>
+										<a>
 											<span>
-												매진스튜디오
+												${ideaVO[4].userIdentification}
 											</span>
 										</a>
 									</div>
@@ -761,7 +773,7 @@
 									
 									<a class="ranking-profile">
 										<div>
-											<img src="https://d2v80xjmx68n4w.cloudfront.net/members/thumbs/U1WOH1647928210.png" shape="0" loading="lazy">
+											<img src="${pageContext.request.contextPath}\upload\idea/${ideaVO[4].ideaThumbnailName}" shape="0" loading="lazy">
 										</div>
 									</a>
 								</article>
@@ -774,15 +786,15 @@
 						<article class="category-pro-ranking-top-content-wrapper">
 							<h3>패션</h3>
 							
-							<!-- 1등 -->
+								<!-- 1등 -->
 							<div class="category-pro-ranking-top">
 								<article class="category-pro-ranking-top-content">
 									<img src="https://kmong.com/_next/image?url=https%3A%2F%2Fd2v80xjmx68n4w.cloudfront.net%2Fassets%2Fdesktop%2Fpages%2Fmain%2Franking-01%403x.png&w=2880&q=75" width="40" height="40" loading="lazy" style="color: transparent;">
 									<div class="category-pro-ranking-explanation">
-										<strong>1,130,920,000원</strong>
-										<a href="../goods/goodsMain.jsp">
+										<strong>${ideaVO[0].ideaTitle}</strong>
+										<a>
 											<span>
-												180도
+												${ideaVO[0].userIdentification}
 											</span>
 										</a>
 									</div>
@@ -790,7 +802,7 @@
 									
 									<a class="ranking-profile">
 										<div>
-											<img src="https://d2v80xjmx68n4w.cloudfront.net/members/thumbs/5Efuo1661826911.jpg" shape="0" loading="lazy">
+											<img src="${pageContext.request.contextPath}\upload\idea/${ideaVO[0].ideaThumbnailName}" shape="0" loading="lazy">
 										</div>
 									</a>
 								</article>
@@ -801,10 +813,10 @@
 								<article class="category-pro-ranking-top-content">
 									<img src="https://kmong.com/_next/image?url=https%3A%2F%2Fd2v80xjmx68n4w.cloudfront.net%2Fassets%2Fdesktop%2Fpages%2Fmain%2Franking-02%403x.png&w=2880&q=75" width="40" height="40" loading="lazy" style="color: transparent;">
 									<div class="category-pro-ranking-explanation">
-										<strong>897,185,485원</strong>
-										<a href="../goods/goodsMain.jsp">
+										<strong>${ideaVO[1].ideaTitle}</strong>
+										<a>
 											<span>
-												홈페이지제작전문웹드림
+												${ideaVO[1].userIdentification}
 											</span>
 										</a>
 									</div>
@@ -812,7 +824,7 @@
 									
 									<a class="ranking-profile">
 										<div>
-											<img src="https://d2v80xjmx68n4w.cloudfront.net/members/thumbs/sE3sf1510548190.jpg" shape="0" loading="lazy">
+											<img src="${pageContext.request.contextPath}\upload\idea/${ideaVO[1].ideaThumbnailName}" shape="0" loading="lazy">
 										</div>
 									</a>
 								</article>
@@ -823,10 +835,10 @@
 								<article class="category-pro-ranking-top-content">
 									<img src="https://kmong.com/_next/image?url=https%3A%2F%2Fd2v80xjmx68n4w.cloudfront.net%2Fassets%2Fdesktop%2Fpages%2Fmain%2Franking-03%403x.png&w=2880&q=75" width="40" height="40" loading="lazy" style="color: transparent;">
 									<div class="category-pro-ranking-explanation">
-										<strong>511,752,718원</strong>
-										<a href="../goods/goodsMain.jsp">
+										<strong>${ideaVO[2].ideaTitle}</strong>
+										<a>
 											<span>
-												개발자홍효식
+												${ideaVO[2].userIdentification}
 											</span>
 										</a>
 									</div>
@@ -834,7 +846,7 @@
 									
 									<a class="ranking-profile">
 										<div>
-											<img src="https://d2v80xjmx68n4w.cloudfront.net/members/thumbs/V8g511507734402.jpg" shape="0" loading="lazy">
+											<img src="${pageContext.request.contextPath}\upload\idea/${ideaVO[1].ideaThumbnailName}" shape="0" loading="lazy">
 										</div>
 									</a>
 								</article>
@@ -845,10 +857,10 @@
 								<article class="category-pro-ranking-top-content">
 									<img src="https://kmong.com/_next/image?url=https%3A%2F%2Fd2v80xjmx68n4w.cloudfront.net%2Fassets%2Fdesktop%2Fpages%2Fmain%2Franking-04%403x.png&w=2880&q=75" width="40" height="40" loading="lazy" style="color: transparent;">
 									<div class="category-pro-ranking-explanation">
-										<strong>293,780,884원</strong>
-										<a href="../goods/goodsMain.jsp">
+										<strong>${ideaVO[3].ideaTitle}</strong>
+										<a>
 											<span>
-												영앤스마트
+												${ideaVO[3].userIdentification}
 											</span>
 										</a>
 									</div>
@@ -856,7 +868,7 @@
 									
 									<a class="ranking-profile">
 										<div>
-											<img src="	https://d2v80xjmx68n4w.cloudfront.net/members/thumbs/tdCu01639067269.png" shape="0" loading="lazy">
+											<img src="${pageContext.request.contextPath}\upload\idea/${ideaVO[3].ideaThumbnailName}" shape="0" loading="lazy">
 										</div>
 									</a>
 								</article>
@@ -867,10 +879,10 @@
 								<article class="category-pro-ranking-top-content">
 									<img src="https://kmong.com/_next/image?url=https%3A%2F%2Fd2v80xjmx68n4w.cloudfront.net%2Fassets%2Fdesktop%2Fpages%2Fmain%2Franking-05%403x.png&w=2880&q=75" width="40" height="40" loading="lazy" style="color: transparent;">
 									<div class="category-pro-ranking-explanation">
-										<strong>236,362,400원</strong>
-										<a href="../goods/goodsMain.jsp">
+										<strong>${ideaVO[4].ideaTitle}</strong>
+										<a>
 											<span>
-												그리딕스
+												${ideaVO[4].userIdentification}
 											</span>
 										</a>
 									</div>
@@ -878,7 +890,7 @@
 									
 									<a class="ranking-profile">
 										<div>
-											<img src="https://d2v80xjmx68n4w.cloudfront.net/members/thumbs/nz5JW1652106868.jpg" shape="0" loading="lazy">
+											<img src="${pageContext.request.contextPath}\upload\idea/${ideaVO[4].ideaThumbnailName}" shape="0" loading="lazy">
 										</div>
 									</a>
 								</article>
@@ -921,15 +933,15 @@
 	        개인정보보호책임 : 한동석 | 사업자등록번호 : 613-81-65278<br>
 	        통신판매업번호 : 2015 - 서울강남 - 03148호<br>
 	        E-mail : koreais@koreaedugroup.com | Fax: 02-2135-2949 </ol>
-	    <ol><a href="https://support.kmong.com/hc/ko/categories/360001764912">커뮤니티</a></ol>
-	    <ol><a href="https://support.kmong.com/hc/ko/categories/360001643071">FAQ</a></ol>
-	    <ol><a href="https://support.kmong.com/hc/ko/articles/17612541189145"><b>회사소개</b></a></ol>
+	    <ol><a href="javascript:location.href='${pageContext.request.contextPath}/listOk.article'">커뮤니티</a></ol>
+	    <ol><a href="${pageContext.request.contextPath}/templates/faq/FAQ.jsp">FAQ</a></ol>
+	    <ol><a href="${pageContext.request.contextPath}/templates/faq/introduction.jsp"><b>회사소개</b></a></ol>
 	</div>
 	<div class="footer-div2">
 	    &nbsp;&nbsp; iContact &nbsp;&nbsp;&nbsp;
-	    <a href="https://support.kmong.com/hc/ko/categories/360001764912">커뮤니티</a>&nbsp;
-	    <a href="https://support.kmong.com/hc/ko/categories/360001643071">FAQ</a>&nbsp;
-	    <a href="https://support.kmong.com/hc/ko/articles/12244853101081">회사소개</a>&nbsp;
+	    <a href="javascript:location.href='${pageContext.request.contextPath}/listOk.article'">커뮤니티</a>&nbsp;
+	    <a href="${pageContext.request.contextPath}/templates/faq/FAQ.jsp">FAQ</a>&nbsp;
+	    <a href="${pageContext.request.contextPath}/templates/faq/introduction.jsp">회사소개</a>&nbsp;
 	</div>
 </footer>
 
@@ -956,7 +968,8 @@ function showList() {
 	
 	console.log(ideas); /* jsp -> js */
 	ideas = JSON.parse(ideas);
-	console.log(ideas);
+
+	
 	
 	
 	const $div = $("div.category-pro-ranking-top");
@@ -964,7 +977,7 @@ function showList() {
 
 	ideas.forEach(idea => {
 		console.log(idea.ideaTitle);
-		text += `
+/* 		text += `
 			<article class="category-pro-ranking-top-content">
 									<img src="https://kmong.com/_next/image?url=https%3A%2F%2Fd2v80xjmx68n4w.cloudfront.net%2Fassets%2Fdesktop%2Fpages%2Fmain%2Franking-01%403x.png&w=2880&q=75" width="40" height="40" loading="lazy" style="color: transparent;">
 									<div class="category-pro-ranking-explanation">
@@ -983,8 +996,9 @@ function showList() {
 									</a>
 								</article>
 			`;
+			*/
 
-	});
+	}); 
 
 	if (ideas.length == 0) {
 		text += `

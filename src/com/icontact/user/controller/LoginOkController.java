@@ -23,7 +23,7 @@ public class LoginOkController implements Action {
 		Long userId = 0L;
 		HttpSession session = req.getSession();
 		Result result = new Result();
-		boolean autoLogin = Boolean.valueOf(req.getParameter("auto-login"));
+		boolean autoLogin = Boolean.valueOf(req.getParameter("autoLogin"));
 		result.setRedirect(true);
 		
 		
@@ -41,7 +41,7 @@ public class LoginOkController implements Action {
 		if(userId == null) {
 //			로그인 실패
 //			login.jsp로 이동하면서 실패했다는 login=false를 같이 전달해준다(안내 모달창을 출력하기 위해서)
-			result.setPath(req.getContextPath() + "/templates/main/login.user?login=false");
+			result.setPath(req.getContextPath() + "login.member?login=false");
 		}else {
 //			로그인 성공
 //			세션에 로그인된 회원의 번호 저장
