@@ -6,7 +6,7 @@
 <meta charset="UTF-8">
 <title>로그인</title>
 <link rel="icon" href="${pageContext.request.contextPath}/icon/favicon.png">
-<link rel="stylesheet" href="${pageContext.request.contextPath}/static/css/login_real.css">
+ <link rel="stylesheet" href="${pageContext.request.contextPath}/static/css/login_real.css">
 <style>
 
 	@font-face {
@@ -58,7 +58,7 @@
 							
 							<!-- ==== -->
 							<!-- 로그인 팝업 이메일, 비번, 로그인버튼, 찾기 등등 -->
-							<form action="${pageContext.request.contextPath}/loginOk.user" class="login-main-box-login-info-big-form"> <!-- css-11e0jfa equrxy90 -->
+							<form action="${pageContext.request.contextPath}/loginOk.user" class="login-main-box-login-info-big-form">	<!-- css-11e0jfa equrxy90 -->
 								
 								<!-- 로그인 이메일 -->
 								<div>
@@ -93,12 +93,13 @@
 								
 								<!-- = -->
 								<!-- 로그인 부속 기능 -->
+								
 								<div class="login-main-login-below-wrapper">	<!-- css-70qvj9 equrxy92 -->
-									<label color="#ffd400" class="login-main-login-below-check-for-keeplogin-wrapper">	<!-- css-18pqe3v elgfge0 -->
-									<label for="auto-login" color="#ffd400" class="login-main-login-below-check-for-keeplogin-wrapper"> <!-- css-18pqe3v elgfge0 -->
-											<input type="checkbox" name="remember" class="login-main-login-below-check-for-keeplogin-checkbox">	<!-- css-l775cp elgfge2 -->
+									<label for="auto-login" color="#ffd400" class="login-main-login-below-check-for-keeplogin-wrapper">	<!-- css-18pqe3v elgfge0 -->
+										<span class="login-main-login-below-check-for-keeplogin-span">	<!-- css-9ffs86 elgfge3 -->
 											<input type="checkbox" id="auto-login" name="auto-login" value="" class="login-main-login-below-check-for-keeplogin-checkbox">	<!-- css-l775cp elgfge2 -->
 											<span color="#ffd400" id="check-mark" class="login-main-login-below-check-for-keeplogin-checkbox-inner"></span>	<!-- checkbox__inner css-1t5nui elgfge4 -->
+											<span class="login-main-login-below-check-for-keeplogin-checkbox-textbox">	<!-- css-2k2mpm elgfge1 -->
 												<p variant="body2" class="login-main-login-below-p-tag" color="gray600">로그인 상태 유지</p>	<!-- css-15suf60 e870mj50 -->
 											</span>
 										</span>
@@ -154,6 +155,7 @@
 			</div>
 		</div>
 	</div>
+
 </body>
 <script src="https://code.jquery.com/jquery-3.6.1.min.js"></script>
 <script src="${pageContext.request.contextPath}/static/js/login.js"></script>
@@ -162,6 +164,7 @@
 <script>
 	var checkBox = document.getElementById("auto-login");
 	var checkMark = document.getElementById("check-mark");
+
 	$(checkMark).click(function (){
 		if( !checkBox.checked ){           //체크 안돼있는데 클릭하면 체크 시키고
 			checkBox.checked = true;
@@ -188,6 +191,9 @@
 		showWarnModal("아이디 또는 비밀번호를<br>확인해주세요");
 	</script>
 </c:if>	
+
+
+
 
 
 

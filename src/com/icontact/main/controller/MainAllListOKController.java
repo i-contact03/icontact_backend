@@ -23,14 +23,18 @@ public class MainAllListOKController implements Action {
 	public Result execute(HttpServletRequest req, HttpServletResponse resp) throws IOException, ServletException {
 		MainDAO mainDAO = new MainDAO();
 		Result result = new Result();
-	
+		JSONArray jsonArray = new JSONArray();
 		
 		mainDAO.selectAll();
 		
 		List<IdeaVO> ideas = mainDAO.selectAll();
 		
+		ideas.stream().map(JSONObject::new).forEach(jsonArray::put);
+		
 		System.out.println(ideas);
-		req.setAttribute("ideas", ideas);
+		System.out.println(jsonArray.toString());
+		
+		req.setAttribute("ideas", jsonArray.toString());
 		
 		result.setPath("templates/main/mainpage.jsp");
 		return result;
