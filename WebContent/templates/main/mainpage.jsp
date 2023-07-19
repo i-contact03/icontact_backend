@@ -12,26 +12,31 @@
 <link rel="stylesheet" href="${pageContext.request.contextPath}/static/css/login_real.css">
 
 <style>
-@font-face {
+
+	@font-face {
 		font-family: 'MetroSansBold';
 		src: url('${pageContext.request.contextPath}/font/MetroSans-Bold.woff2'); /* 굵은글씨체 주소지정 */
 	}
-
+	
 	@font-face {
 		font-family: 'MetroSansMedium';
 		src: url('${pageContext.request.contextPath}/font/MetroSans-Medium.woff2');
 	}
 	
-		@font-face {
+	
+	@font-face {
 		font-family: 'MetroSansRegular';
 		src: url('${pageContext.request.contextPath}/font/MetroSans-Regular.woff2'); /* 가는글씨체 주소지정 */
 	}
+	
 </style>
+
+
 
 </head>
 <body>
 <header>
-	<div class="modal">
+<div class="modal">
             <div class="warn-modal">
                 <div id="content-wrap"></div>
             </div>
@@ -40,9 +45,10 @@
 		<div class="header">
 		<!-- 로고 + 검색바 + 아이디어등록 + 마이크몽 + 프로필-->
 			<section class="top-header">
-					<svg class="top-header-logo" width="85" height="100%" viewBox="0 0 85 26" xmlns="http://www.w3.org/2000/svg">
+				<svg class="top-header-logo" width="85" height="100%" viewBox="0 0 85 26" xmlns="http://www.w3.org/2000/svg">
 					<img src="${pageContext.request.contextPath}/icon/logo.png" width="170px" height="52px">
 				</svg>
+				
 				<form action="" class="top-header-input-form">
 					<div class="top-header-input-wrapper">
 						<input type="text" class="top-header-input" placeholder="서비스 또는 전문가를 검색해보세요.">
@@ -117,10 +123,10 @@
 							<a href="javascript:location.href='${pageContext.request.contextPath}/listOk.article'">커뮤니티</a>
 						</li>
 						<li class="header-bar-nav-content">
-							<a>FAQ</a>
+							<a href="../faq/FAQ.jsp">FAQ</a>
 						</li>
 						<li class="header-bar-nav-content">
-							<a>회사소개</a>
+							<a href="../faq/introduction.jsp">회사소개</a>
 						</li>
 					</ul>
 				</nav>
@@ -139,7 +145,7 @@
 			<!-- 왼쪽 -->
 			<section class="main-banner-left-content">
 				<h1>
-					프리랜서 마켓 No.1 크몽에서
+					프리랜서 마켓 No.1 iContact에서
 					<br>
 					원하는 전문가를 찾아보세요!
 				</h1>
@@ -225,7 +231,8 @@
 							<ul class="category-content-list-wrapper">
 								<li class="category-content-list">
 									<a href="javascript:location.href='${pageContext.request.contextPath}/ideaListOk.idea'">
-										<img src="https://cdn-icons-png.flaticon.com/128/5347/5347946.png" width="48" height="48">
+										<div class="category-content-logo">
+											<img src="https://cdn-icons-png.flaticon.com/128/5347/5347946.png" width="48" height="48">
 										</div>
 										<strong class="category-content-explanation">디저트</strong>
 									</a>
@@ -234,19 +241,19 @@
 								<li class="category-content-list">
 									<a href="javascript:location.href='${pageContext.request.contextPath}/ideaListOk.idea'">
 										<div class="category-content-logo">
-												<img src="https://cdn-icons-png.flaticon.com/128/8959/8959172.png" width="48" height="48">
+											<img src="https://cdn-icons-png.flaticon.com/128/8959/8959172.png" width="48" height="48">
 										</div>
 										<strong class="category-content-explanation">베이커리</strong>
 									</a href="javascript:location.href='${pageContext.request.contextPath}/ideaListOk.idea'">
 								</li>
 								
 								<li class="category-content-list">
-									<a>
+									<a href="javascript:location.href='${pageContext.request.contextPath}/ideaListOk.idea'">
 										<div class="category-content-logo">
 											<img src="https://cdn-icons-png.flaticon.com/128/8339/8339331.png" width="48" height="48">
 										</div>
 										<strong class="category-content-explanation">전통간식</strong>
-									<a href="javascript:location.href='${pageContext.request.contextPath}/ideaListOk.idea'">
+									</a>
 								</li>
 								
 								<li class="category-content-list">
@@ -255,22 +262,20 @@
 											<img src="https://cdn-icons-png.flaticon.com/128/5125/5125235.png" width="48" height="48">
 										</div>
 										<strong class="category-content-explanation">음료</strong>
-									<a href="javascript:location.href='${pageContext.request.contextPath}/ideaListOk.idea'">
+									</a>
 								</li>
 								
 								<li class="category-content-list">
 									<a href="javascript:location.href='${pageContext.request.contextPath}/ideaListOk.idea'">
 										<div class="category-content-logo">
-										<img src="https://cdn-icons-png.flaticon.com/128/38/38639.png" width="48" height="48">
+											<img src="https://cdn-icons-png.flaticon.com/128/38/38639.png" width="48" height="48">
 										</div>
 										<strong class="category-content-explanation">주류</strong>
-										</div>
-										<strong class="category-content-explanation">번역·통역</strong>
 									</a>
 								</li>
 								
 								<li class="category-content-list">
-									<a>
+									<a href="javascript:location.href='${pageContext.request.contextPath}/ideaListOk.idea'">
 										<div class="category-content-logo">
 											<img src="https://cdn-icons-png.flaticon.com/128/5878/5878542.png" width="48" height="48">
 										</div>
@@ -279,16 +284,18 @@
 								</li>
 								
 								<li class="category-content-list">
-									<a>
+									<a href="javascript:location.href='${pageContext.request.contextPath}/ideaListOk.idea'">
 										<div class="category-content-logo">
-																				<img src="https://cdn-icons-png.flaticon.com/128/5787/5787040.png" width="48" height="48">
+											<img src="https://cdn-icons-png.flaticon.com/128/5787/5787040.png" width="48" height="48">
 										</div>
 										<strong class="category-content-explanation">요리/식사</strong>
 									</a>
 								</li>
+								
+							
 							</ul>
 						</li>
-
+						
 						<li class="category-content">
 							<strong class="category-content-type">패션·가구</strong>
 							<ul class="category-content-list-wrapper">
@@ -302,23 +309,18 @@
 								</li>
 								
 								<li class="category-content-list">
-									<a>
+									<a href="javascript:location.href='${pageContext.request.contextPath}/ideaListOk.idea'">
 										<div class="category-content-logo">
-												<img src="https://cdn-icons-png.flaticon.com/128/1720/1720858.png" width="48" height="48">
+											<img src="https://cdn-icons-png.flaticon.com/128/1720/1720858.png" width="48" height="48">
 										</div>
 										<strong class="category-content-explanation">의류</strong>
 									</a>
 								</li>
-							</ul>
-						</li>
-						
-						<li class="category-content">
-							<strong class="category-content-type">N잡·커리어</strong>
-							<ul class="category-content-list-wrapper">
+								
 								<li class="category-content-list">
 									<a href="javascript:location.href='${pageContext.request.contextPath}/ideaListOk.idea'">
 										<div class="category-content-logo">
-										<img src="https://cdn-icons-png.flaticon.com/128/4437/4437654.png" width="48" height="48">
+											<img src="https://cdn-icons-png.flaticon.com/128/4437/4437654.png" width="48" height="48">
 										</div>
 										<strong class="category-content-explanation">잡화</strong>
 									</a>
@@ -326,6 +328,7 @@
 								
 								<li class="category-content-list">
 									<a href="javascript:location.href='${pageContext.request.contextPath}/ideaListOk.idea'">
+										<div class="category-content-logo">
 											<img src="https://cdn-icons-png.flaticon.com/128/2400/2400629.png" width="48" height="48">
 										</div>
 										<strong class="category-content-explanation">인테리어 디자인</strong>
@@ -344,19 +347,19 @@
 						</li>
 						
 						<li class="category-content">
-							<strong class="category-content-type">취미·생활</strong>
+							<strong class="category-content-type">문구·디자인</strong>
 							<ul class="category-content-list-wrapper">
 								<li class="category-content-list">
 									<a href="javascript:location.href='${pageContext.request.contextPath}/ideaListOk.idea'">
 										<div class="category-content-logo">
 											<img src="https://cdn-icons-png.flaticon.com/128/3907/3907658.png" width="48" height="48">
 										</div>
-										<strong class="category-content-type">문구·디자인</strong>
+										<strong class="category-content-explanation">스티커</strong>
 									</a>
 								</li>
-
+								
 								<li class="category-content-list">
-									<a>
+									<a href="javascript:location.href='${pageContext.request.contextPath}/ideaListOk.idea'">
 										<div class="category-content-logo">
 											<img src="https://cdn-icons-png.flaticon.com/128/332/332972.png" width="48" height="48">
 										</div>
@@ -365,7 +368,7 @@
 								</li>
 								
 								<li class="category-content-list">
-									<a>
+									<a href="javascript:location.href='${pageContext.request.contextPath}/ideaListOk.idea'">
 										<div class="category-content-logo">
 											<img src="https://cdn-icons-png.flaticon.com/128/658/658382.png" width="48" height="48">
 										</div>
@@ -374,7 +377,7 @@
 								</li>
 								
 								<li class="category-content-list">
-								<a href="javascript:location.href='${pageContext.request.contextPath}/ideaListOk.idea'">
+									<a href="javascript:location.href='${pageContext.request.contextPath}/ideaListOk.idea'">
 										<div class="category-content-logo">
 											<img src="https://cdn-icons-png.flaticon.com/128/3989/3989828.png" width="48" height="48">
 										</div>
@@ -393,7 +396,7 @@
 								<li class="category-content-list">
 									<a href="javascript:location.href='${pageContext.request.contextPath}/ideaListOk.idea'">
 										<div class="category-content-logo">
-												<img src="https://cdn-icons-png.flaticon.com/128/470/470554.png" width="48" height="48">
+											<img src="https://cdn-icons-png.flaticon.com/128/470/470554.png" width="48" height="48">
 										</div>
 										<strong class="category-content-explanation">접시</strong>
 									</a>
@@ -415,7 +418,7 @@
 			
 			<!-- 가장 있기있는 카테고리 -->
 			<section class="popular-category">
-				<h2 class="category-explanation">크몽에서 가장 인기있어요!</h2>
+				<h2 class="category-explanation">iContact에서 가장 인기있어요!</h2>
 				<div class="popular-category-content-wrapper">
 					<a href="javascript:location.href='${pageContext.request.contextPath}/ideaListOk.idea'">
 						<article class="popular-category-content">
@@ -444,7 +447,7 @@
 							<img src="https://kmong.com/_next/image?url=https%3A%2F%2Fd2v80xjmx68n4w.cloudfront.net%2Fassets%2Fdesktop%2Fmodules%2Fmain-themes%2Fpicked_categories_marketing%403x.png&w=2880&q=75" width="217" height="300" class="" style="color: transparent;">
 						</article>
 					</a>
-					<a href="javascript:location.href='${pageContext.request.contextPath}/ideaListOk.idea'">	
+					<a href="javascript:location.href='${pageContext.request.contextPath}/ideaListOk.idea'">
 						<article class="popular-category-content">
 							<div class="popular-category-content-explanation">
 								문구
@@ -467,7 +470,7 @@
 			
 			<!-- 크몽 신규 회원가입 하고 10만원 쿠폰팩 받자! -->
 			<section class="membership-ad">
-				<a class="using-kmong-ad" href="javascript:location.href='${pageContext.request.contextPath}/ideaListOk.idea'">
+				<a>
 					<div class="membership-ad-img-wrapper">
 						<img src="${pageContext.request.contextPath}/images/img.png" width="1168" height="160" loading="lazy" style="color: transparent;">
 					</div>
@@ -477,22 +480,22 @@
 			<!-- 크몽을 200% 활용하는 법 -->
 			<section class="gray">
 				<div class="using-kmong-ad-wrapper">
-					<h2 class="using-kmong-ad-title">크몽을 200% 활용하는 법</h2>
-					<p>크몽까지 내 능력으로 만드는 콘텐츠</p>
+					<h2 class="using-kmong-ad-title">iContact을 200% 활용하는 법</h2>
+					<p>iContact까지 내 능력으로 만드는 콘텐츠</p>
 					
-					<section class="using-kmong-ad-content">
+					<section class="using-kmong-ad-content" >
 						<article>
-							<a class="using-kmong-ad">
+							<a class="using-kmong-ad" href="javascript:location.href='${pageContext.request.contextPath}/ideaListOk.idea'">
 								<div class="using-kmong-ad-picture">
 									<img src="https://kmong.com/_next/image?url=https%3A%2F%2Fd2v80xjmx68n4w.cloudfront.net%2Fassets%2Fdesktop%2Fmodules%2Fmain-themes%2Fmain_theme_picked_business_tip_20220405_1.png&w=2880&q=75" width="376" height="247" loading="lazy" style="color: transparent;">
 								</div>
 								<div class="using-kmong-ad-explanation">
 									<h3>아이디어 등록</h3>
 									<p>아이디어 등록의 모든 것</p>
-									<p>전문가 인증부터 정산까지 크몽 전문가 등록의 모든 것</p>
 								</div>
 							</a>
 						</article>
+						
 						<article>
 							<a class="using-kmong-ad" href="../faq/FAQ.jsp">
 								<div class="using-kmong-ad-picture">
@@ -508,7 +511,7 @@
 						<article>
 							<a class="using-kmong-ad" href="../faq/introduction.jsp">
 								<div class="using-kmong-ad-picture" href="../faq/introduction.jsp">
-								<img src="https://kmong.com/_next/image?url=https%3A%2F%2Fd2v80xjmx68n4w.cloudfront.net%2Fassets%2Fdesktop%2Fmodules%2Fmain-themes%2Fmain_theme_picked_business_tip_20221125_2_3.png&w=2880&q=75" width="376" height="247" loading="lazy" style="color: transparent;">
+									<img src="https://kmong.com/_next/image?url=https%3A%2F%2Fd2v80xjmx68n4w.cloudfront.net%2Fassets%2Fdesktop%2Fmodules%2Fmain-themes%2Fmain_theme_picked_business_tip_20221125_2_3.png&w=2880&q=75" width="376" height="247" loading="lazy" style="color: transparent;">
 								</div>
 								<div class="using-kmong-ad-explanation">
 									<h3>회사소개</h3>
@@ -525,18 +528,24 @@
 					</div>
 				</div>
 			</section>
+			
+			
 			<!-- 크몽 FAQ에서 해결하세요! -->
 			<section class="kmong-enterprise-ad">
 				<a>
 					<img src="${pageContext.request.contextPath}/images/0011.png" width="1168" height="160">
 				</a>
 			</section>
+			
+			
 			<section class="category-pro-ranking">
 				<div class="category-pro-ranking-wrapper">
 					<h2 class="category-pro-ranking-title">
 						iContact 일반회원 순위
 					</h2>
 					<p class="category-pro-ranking-subtitle">상위 카테고리에서 가장 많이 판매한 인기 일반회원이에요.</p>
+					
+					
 					<div class="category-pro-ranking-top-wrapper">
 					
 					<!-- TOP 카테고리 전문가 랭킹 LEFT -->
@@ -545,22 +554,12 @@
 							
 							<!-- 1등 -->
 							<div class="category-pro-ranking-top">
-								<article class="category-pro-ranking-top-content">
-									<img src="https://kmong.com/_next/image?url=https%3A%2F%2Fd2v80xjmx68n4w.cloudfront.net%2Fassets%2Fdesktop%2Fpages%2Fmain%2Franking-01%403x.png&w=2880&q=75" width="40" height="40" loading="lazy" style="color: transparent;">
-									<div class="category-pro-ranking-explanation">
-										<strong>${ideas[0].ideaTitle}</strong>
-										<a href="../goods/goodsMain.jsp">
-											<span>
-												${ideas[0].ideaDetail}
-											</span>
-										</a>
-									</div>
-									<a class="ranking-profile">
-										<div>
-											<img src="https://d2v80xjmx68n4w.cloudfront.net/members/thumbs/jUK9B1587629941.png" shape="0" loading="lazy">
-										</div>
-									</a>
-								</article>
+							
+							
+							
+							
+							
+							
 							</div>
 							
 							<div class="category-pro-ranking-bottom-wrapper">
@@ -575,6 +574,8 @@
 											</span>
 										</a>
 									</div>
+									
+									
 									<a class="ranking-profile">
 										<div>
 											<img src="https://d2v80xjmx68n4w.cloudfront.net/members/thumbs/i6dng1658458456.jpg" shape="0" loading="lazy">
@@ -595,6 +596,8 @@
 											</span>
 										</a>
 									</div>
+									
+									
 									<a class="ranking-profile">
 										<div>
 											<img src="https://d2v80xjmx68n4w.cloudfront.net/members/thumbs/0WcZN1609436763.jpg" shape="0" loading="lazy">
@@ -615,6 +618,8 @@
 											</span>
 										</a>
 									</div>
+									
+									
 									<a class="ranking-profile">
 										<div>
 											<img src="https://d2v80xjmx68n4w.cloudfront.net/members/thumbs/x9l1S1615524470.jpg" shape="0" loading="lazy">
@@ -635,12 +640,16 @@
 											</span>
 										</a>
 									</div>
+									
+									
 									<a class="ranking-profile">
 										<div>
 											<img src="https://d2v80xjmx68n4w.cloudfront.net/members/thumbs/RJ8xr1522727647.jpeg" shape="0" loading="lazy">
 										</div>
 									</a>
 								</article>
+								
+								
 							</div>
 						</article>
 						
@@ -682,6 +691,8 @@
 											</span>
 										</a>
 									</div>
+									
+									
 									<a class="ranking-profile">
 										<div>
 											<img src="https://d2v80xjmx68n4w.cloudfront.net/members/thumbs/rmpTG8qhoj0S1523428462.jpg" shape="0" loading="lazy">
@@ -696,12 +707,14 @@
 									<img src="https://kmong.com/_next/image?url=https%3A%2F%2Fd2v80xjmx68n4w.cloudfront.net%2Fassets%2Fdesktop%2Fpages%2Fmain%2Franking-03%403x.png&w=2880&q=75" width="40" height="40" loading="lazy" style="color: transparent;">
 									<div class="category-pro-ranking-explanation">
 										<strong>235,582,200원</strong>
-									<a href="../goods/goodsMain.jsp">
+										<a href="../goods/goodsMain.jsp">
 											<span>
 												춤추는포토그래퍼
 											</span>
 										</a>
 									</div>
+									
+									
 									<a class="ranking-profile">
 										<div>
 											<img src="https://d2v80xjmx68n4w.cloudfront.net/members/thumbs/AwKLb1606737930.jpg" shape="0" loading="lazy">
@@ -722,6 +735,8 @@
 											</span>
 										</a>
 									</div>
+									
+									
 									<a class="ranking-profile">
 										<div>
 											<img src="	https://d2v80xjmx68n4w.cloudfront.net/members/thumbs/ePT1U1611218843.jpg" shape="0" loading="lazy">
@@ -742,12 +757,16 @@
 											</span>
 										</a>
 									</div>
+									
+									
 									<a class="ranking-profile">
 										<div>
 											<img src="https://d2v80xjmx68n4w.cloudfront.net/members/thumbs/U1WOH1647928210.png" shape="0" loading="lazy">
 										</div>
 									</a>
 								</article>
+								
+								
 							</div>
 						</article>
 
@@ -805,7 +824,8 @@
 									<img src="https://kmong.com/_next/image?url=https%3A%2F%2Fd2v80xjmx68n4w.cloudfront.net%2Fassets%2Fdesktop%2Fpages%2Fmain%2Franking-03%403x.png&w=2880&q=75" width="40" height="40" loading="lazy" style="color: transparent;">
 									<div class="category-pro-ranking-explanation">
 										<strong>511,752,718원</strong>
-										<a href="../goods/goodsMain.jsp">											<span>
+										<a href="../goods/goodsMain.jsp">
+											<span>
 												개발자홍효식
 											</span>
 										</a>
@@ -826,7 +846,7 @@
 									<img src="https://kmong.com/_next/image?url=https%3A%2F%2Fd2v80xjmx68n4w.cloudfront.net%2Fassets%2Fdesktop%2Fpages%2Fmain%2Franking-04%403x.png&w=2880&q=75" width="40" height="40" loading="lazy" style="color: transparent;">
 									<div class="category-pro-ranking-explanation">
 										<strong>293,780,884원</strong>
-										<a>
+										<a href="../goods/goodsMain.jsp">
 											<span>
 												영앤스마트
 											</span>
@@ -848,7 +868,7 @@
 									<img src="https://kmong.com/_next/image?url=https%3A%2F%2Fd2v80xjmx68n4w.cloudfront.net%2Fassets%2Fdesktop%2Fpages%2Fmain%2Franking-05%403x.png&w=2880&q=75" width="40" height="40" loading="lazy" style="color: transparent;">
 									<div class="category-pro-ranking-explanation">
 										<strong>236,362,400원</strong>
-										<a>
+										<a href="../goods/goodsMain.jsp">
 											<span>
 												그리딕스
 											</span>
@@ -862,9 +882,14 @@
 										</div>
 									</a>
 								</article>
+								
+								
 							</div>
 						</article>
+						
 					</div>
+					
+					
 				</div>
 			</section>
 
@@ -876,13 +901,18 @@
 		</div>
 	</div>
 
+
+
+
 </main>
 
-	<div class="modal">
-      <div class="warn-modal">
-            <div id="content-wrap"></div>
-       </div>
-   </div>
+
+<div class="modal">
+            <div class="warn-modal">
+                <div id="content-wrap"></div>
+            </div>
+        </div>
+
 
  <footer class="footer">
 	<div class="footer-div">
@@ -903,35 +933,23 @@
 	</div>
 </footer>
 
+
+
+
+
+
+
 <script src="https://code.jquery.com/jquery-3.7.0.min.js"></script>
 <script src="mainpage.js"></script>
 <script src="${pageContext.request.contextPath}/static/js/mainpage.js"></script>
 <script src="${pageContext.request.contextPath}/static/js/modal/modal.js"></script>
 <script>
-        showWarnModal(modalMessage);
-</script>
 
-<script>
-let userId = "${userId}";
-console.log(userId);
-if(userId != ""){
-	 $('#join').text('마이페이지');
-	 $("#join").attr("href", "${pageContext.request.contextPath}/profileMainOK.mypage")
-	
-	 $('#login').text('아이디어등록');
-	 $("#login").attr("href", "${pageContext.request.contextPath}/writeIdea.idea")
-	
-	 $('#logout').show();
-	 $('#logout').text('로그아웃');
-	 
-} else {
-	 $('#join').text('회원가입');
-		
-	 $('#login').text('로그인');
-}
+        /* showWarnModal(modalMessage); */
 
-/*아이디어 목록*/
+        /*아이디어 목록*/
 showList();
+
 function showList() {
 	
 	let ideas = `${ideas}`;
@@ -943,6 +961,7 @@ function showList() {
 	
 	const $div = $("div.category-pro-ranking-top");
 	let text = "";
+
 	ideas.forEach(idea => {
 		console.log(idea.ideaTitle);
 		text += `
@@ -964,7 +983,9 @@ function showList() {
 									</a>
 								</article>
 			`;
+
 	});
+
 	if (ideas.length == 0) {
 		text += `
 			<li>
@@ -974,8 +995,43 @@ function showList() {
 			</li>
 		`
 	}
+
 	$div.append(text);
 }
+
+        
+        
+        
+        
 </script>
+
+<script>
+
+let userId = "${userId}";
+
+console.log(userId);
+
+if(userId != ""){
+	 $('#join').text('마이페이지');
+	 $("#join").attr("href", "${pageContext.request.contextPath}/profileMainOK.mypage")
+	
+	 $('#login').text('아이디어등록');
+	 $("#login").attr("href", "${pageContext.request.contextPath}/writeIdea.idea")
+	
+	 $('#logout').show();
+	 $('#logout').text('로그아웃');
+	 
+} else {
+	 $('#join').text('회원가입');
+		
+	 $('#login').text('로그인');
+}
+
+</script>
+
+
+
+
+
 </body>
 </html>
