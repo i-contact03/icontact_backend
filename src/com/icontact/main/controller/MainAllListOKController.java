@@ -27,13 +27,14 @@ public class MainAllListOKController implements Action {
 		
 		mainDAO.selectAll();
 		
-		List<IdeaVO> ideas = mainDAO.selectAll();
+		List<IdeaDTO> ideas = mainDAO.selectAll();
 		
 		ideas.stream().map(JSONObject::new).forEach(jsonArray::put);
 		
 		System.out.println(ideas);
 		System.out.println(jsonArray.toString());
 		
+		req.setAttribute("ideaVO", ideas);
 		req.setAttribute("ideas", jsonArray.toString());
 		
 		result.setPath("templates/main/mainpage.jsp");

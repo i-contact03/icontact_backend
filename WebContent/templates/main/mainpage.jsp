@@ -219,6 +219,8 @@
 		</div>
 	</section>
 	
+	
+	
 	<div>
 		<div>
 			<!-- 카테고리 고르기 -->
@@ -1012,9 +1014,6 @@ function showList() {
 
 	$div.append(text);
 }
-
-        
-        
         
         
 </script>
