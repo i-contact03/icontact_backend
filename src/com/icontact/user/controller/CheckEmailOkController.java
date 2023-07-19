@@ -30,6 +30,9 @@ public class CheckEmailOkController implements Action {
 			e.printStackTrace();
 		}
 		
+
+		
+		
 		PrintWriter out = resp.getWriter();
 		out.print(result.toString());
 		out.close();

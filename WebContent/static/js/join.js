@@ -199,17 +199,40 @@ $(function () {
                 }
             });
 
-          $("#userEmail").on("keyup",function(){
+          $("#userEmail").blur(function(){
+          /*이메일 중복검사*/
+	$.ajax({
+		url: "checkEmailOk.user",
+		data: {userEmail: $("input[name='userEmail']").val()},
+		async: false,
+		success: function(result){
+			checkEmail2 = false;
+			result = JSON.parse(result);
+			if(result.check){
+				checkEmail2 = true;
+			}else{
+				checkEmail2 = false;
+			}
+		}
+	});
+	
                 if($("#userEmail").val() == "" ){                
                     $(".email").text("이메일을 입력해주세요.");
                     $("#userEmail").focus();
                     return false;
                 }else if(!checkEmail.test($("#userEmail").val())) {
                     $(".email").text("이메일 형식이 유효하지 않습니다.");
+                     $(".email").css('color','red'); 
                     // $("#userEmail").focus();                
                     return false;
-                }else if(checkEmail.test($("#userEmail").val())) {
-                    $(".email").text("");
+                }else if(!checkEmail2){
+			 		 $(".email").text("이미 사용중인 이메일입니다.");
+			 		  $(".email").css('color','red'); 
+					$("#email").focus();
+					return false;
+				} else if(checkEmail.test($("#userEmail").val())) {
+                    $(".email").text("사용가능한 이메일입니다.");
+                      $(".email").css('color','green'); 
                     return true;                          
                 }
             });
@@ -244,7 +267,12 @@ $(function () {
                     $(".email").text("이메일 형식이 유효하지 않습니다.");
                      $("#userEmail").focus();                
                     return false;
-                } else if($("#userPassword").val() == "" ){                
+                }else if(!checkEmail2){
+			 		 $(".email").text("이미 사용중인 이메일입니다.");
+			 		  $(".email").css('color','red'); 
+					$("#email").focus();
+					return false;
+				} else if($("#userPassword").val() == "" ){                
                     $(".password").text("비밀번호를 입력해주세요");
                     $("#userPassword").focus();
                     return false;
