@@ -1,13 +1,22 @@
 package com.icontact.mypage.controller;
 
 import java.io.IOException;
+import java.nio.file.Files;
+import java.nio.file.Path;
+import java.util.Enumeration;
 import java.util.List;
 
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 
+import org.json.JSONArray;
+import org.json.JSONException;
+import org.json.JSONObject;
 
+import com.app.reply.dao.ReplyDAO;
+import com.app.reply.domain.ReplyVO;
 import com.icontact.Action;
 import com.icontact.Result;
 import com.icontact.interest.dao.InterestDAO;
@@ -16,6 +25,8 @@ import com.icontact.interest.domain.InterestVO;
 import com.icontact.user.dao.UserDAO;
 import com.icontact.user.domain.UserDTO;
 import com.icontact.user.domain.UserVO;
+import com.oreilly.servlet.MultipartRequest;
+import com.oreilly.servlet.multipart.DefaultFileRenamePolicy;
 
 public class ProfileModifyUpdateOkController implements Action {
 
@@ -55,6 +66,11 @@ public class ProfileModifyUpdateOkController implements Action {
 		
 		
 		System.out.println(userVO);
+		
+		
+		
+		
+		
 		
 		
 		/* userDTO.setUserStatus(req.getParameter()); */
@@ -128,6 +144,60 @@ public class ProfileModifyUpdateOkController implements Action {
 		
 ////		forward 방식
 //		result.setPath("templates/mypage/profile-main.jsp");
+		
+//		=============================================
+
+		
+		Path path = null;
+		
+//		HttpSession session = req.getSession();
+		String root = req.getServletContext().getRealPath("/") + "upload/profileImg/";
+		int fileSize = 1024 * 1024 * 20;
+
+		MultipartRequest multipartRequest = new MultipartRequest(req, root, fileSize, "UTF-8", new DefaultFileRenamePolicy());
+		
+//		boardVO.setBoardTitle(multipartRequest.getParameter("boardTitle"));
+//		boardVO.setBoardContent(multipartRequest.getParameter("boardContent"));
+//		boardVO.setMemberId((Long)session.getAttribute("memberId"));
+//
+//		boardDAO.insert(boardVO);
+//		
+//		fileVO.setBoardId(boardDAO.selectCurrentSequence());
+		
+		Enumeration<String> inputTypeFileNames = multipartRequest.getFileNames();
+		
+		while(inputTypeFileNames.hasMoreElements()) {
+			String inputTypeFileName = inputTypeFileNames.nextElement();
+			String fileSystemName = multipartRequest.getFilesystemName(inputTypeFileName);
+			if(fileSystemName == null) {continue;}
+//			fileVO.setFileSystemName(fileSystemName);
+//			fileVO.setFileOriginalName(multipartRequest.getOriginalFileName(inputTypeFileName));
+//			path = Path.of(root + fileSystemName);
+//			fileVO.setFileSize(Files.size(path));
+//			
+//			fileDAO.insert(fileVO);
+			
+			userDTO.setUserProfileName(multipartRequest.getOriginalFileName(inputTypeFileName));
+//			path = Path.of(root + fileSystemName);
+			
+		}
+		
+////		result.setPath(req.getContextPath() + "/listOk.board");
+////		result.setRedirect(true);
+////		
+////		
+//
+////		userDAO.update(userDTO);
+////		
+////		System.out.println(userDTO);
+//		
+//		
+//		
+//		
+		
+		
+		
+//		=============================================
 		
 		
 		result.setRedirect(true);
