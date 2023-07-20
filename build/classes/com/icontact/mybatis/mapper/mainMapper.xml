@@ -9,4 +9,33 @@ on u.user_id = i.user_id
 order by idea_id desc limit 5
 </select>
 
+<select id="selectFood" resultType="ideaDTO">
+select  idea_title, idea_thumbnail_name, sc_id, u.user_identification
+from tbl_user u join tbl_idea i
+on u.user_id = i.user_id 
+ <![CDATA[where i.sc_id >=1 and i.sc_id <=7]]>  
+order by idea_id desc limit 5
+</select>
+
+<select id="selectFashion" resultType="ideaDTO">
+select  idea_title, idea_thumbnail_name, sc_id, u.user_identification
+from tbl_user u join tbl_idea i
+on u.user_id = i.user_id 
+ <![CDATA[where i.sc_id >=8 and i.sc_id <=10]]>  
+order by idea_id desc limit 5
+</select>
+
+<select id="selectDesign" resultType="ideaDTO">
+select  idea_title, idea_thumbnail_name, sc_id, u.user_identification
+from tbl_user u join tbl_idea i
+on u.user_id = i.user_id 
+ <![CDATA[where i.sc_id >=18 and i.sc_id <=19]]>  
+order by idea_id desc limit 5
+</select>
+
+<select id="selectProfile" resultType="string">
+select user_profile_name from tbl_user tu 
+where user_id = #{userId}
+</select>
+
 </mapper>
