@@ -72,7 +72,7 @@ goodsMainWork.jsp
 	 console.log(detailImages);
 	 for (let i = 0; i < detailImages.length; i++) {
 		   let detailImageName = detailImages[i].diSystemName;
-  		   image += `<img width="652" height="488" src="${contextPath}/upload/idea_detail/${detailImageName}">`;
+  		   image += `<img width="652" height="488" src="${contextPath}/upload/idea/${detailImageName}">`;
 	}
 	 
 	 console.log(image);

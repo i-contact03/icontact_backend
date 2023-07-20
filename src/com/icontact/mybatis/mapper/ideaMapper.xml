@@ -61,4 +61,13 @@
 	<select id="selectCurrentSequence" resultType="long">
 		select last_insert_id()
 	</select>
+	
+	<update id="updateThumbnail">
+		update tbl_idea
+		set idea_thumbnail_name = #{ideaThumbnailName}
+		where idea_id = #{ideaId}
+	</update>
+	
+	
+	
 </mapper>
