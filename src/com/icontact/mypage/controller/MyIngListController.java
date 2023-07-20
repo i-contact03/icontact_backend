@@ -19,7 +19,7 @@ import com.icontact.idea.domain.Criteria;
 import com.icontact.idea.domain.IdeaDTO;
 import com.icontact.idea.domain.IdeaDTO2;
 import com.icontact.idea.domain.Search;
-import com.icontact.idea.domain.Search2;
+import com.icontact.mypage.domain.Search2;
 import com.icontact.user.dao.UserDAO;
 import com.icontact.user.domain.UserDTO;
 import com.icontact.user.domain.UserVO;
