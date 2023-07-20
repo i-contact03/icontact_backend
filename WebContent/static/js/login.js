@@ -1,8 +1,8 @@
 
 
-	 $checkAutoLogin = $("input[name='auto-login']");
-  	 $id = $("input#id");
- 	 $password = $("input#password");
+	 $checkAutoLogin = $("input[name='autoLogin']");
+  	 $id = $("input#userIdentification");
+ 	 $password = $("input#userPassword");
 
 $checkAutoLogin.on("change", function(){
     let isChecked = $(this).prop("checked");
