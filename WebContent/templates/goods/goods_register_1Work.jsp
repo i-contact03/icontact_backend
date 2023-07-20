@@ -5,15 +5,16 @@
 <head>
 <meta charset="UTF-8">
 <title>상품등록</title>
-<link rel="icon" href="../../icon/favicon.png">
+<link rel="icon" href="${pageContext.request.contextPath}/icon/favicon.png">
 
- <link rel="stylesheet" href="../../static/css/goods_register_1Work.css">
+ <link rel="stylesheet" href="${pageContext.request.contextPath}/static/css/modal.css">
+ <link rel="stylesheet" href="${pageContext.request.contextPath}/static/css/goods_register_1Work.css">
  
 <style>
 	
 	@font-face {
 		font-family: 'MetroSansMedium';
-		src: url('../../font/MetroSans-Medium.woff2');
+		src: url('${pageContext.request.contextPath}/font/MetroSans-Medium.woff2');
 	}
 	
 </style>
@@ -22,8 +23,13 @@
 <body>
 <div class="global-body">
 	<div id="master-body">
+	<div class="modal">
+        <div class="warn-modal">
+            <div id="content-wrap"></div>
+        </div>
+    </div>
 	<!-- form 태그 시작 ---------------------------------------------------------------------------------------->
-		<form class="GigForm"  action="${pageContext.request.contextPath}/writeIdeaOk.idea" name="wirteForme" >
+		<form class="GigForm"  action="${pageContext.request.contextPath}/writeIdeaOk.idea" name="wirteForme" method="post" enctype="multipart/form-data">
 			<header class="GigFormHeader">
 				<section class="header-form-main">
 					<div class="main-logo">
@@ -81,12 +87,12 @@
 										</div>
 									</span>
 									<div class="top-input">
-										<input placeholder="서비스를 잘 드러낼 수 있는 제목을 입력해주세요" maxlength="30" type="text" autocomplete="off" class="">
+										<input name="ideaTitle" placeholder="서비스를 잘 드러낼 수 있는 제목을 입력해주세요" maxlength="30" type="text" autocomplete="off" class="">
 									</div>
 								</div>
-								<div class="form-top-wrapper">
+								<!-- <div class="form-top-wrapper">
 									<span class="">최소 10글자 이상, 30이하로 입력해주세요.</span>
-								</div>
+								</div> -->
 								<div class="main-top-wrapper">
 									<span class="top-title">
 										<div class="top-title1">
@@ -94,7 +100,7 @@
 										</div>
 									</span>
 									<div class="top-input">
-										<input placeholder="간단한 한 줄 설명을 입력해주세요" maxlength="30" type="text" autocomplete="off" class="">
+										<input name="ideaBasic" placeholder="간단한 한 줄 설명을 입력해주세요" maxlength="30" type="text" autocomplete="off" class="">
 									</div>
 								</div>
 							</div>
@@ -104,36 +110,72 @@
 								<div class="main-top-wrapper">
 									<span class="top-title">
 										<div class="top-title1">
-											<span>카테고리</span>
+											<span>카테고리 분류</span>
 										</div>
 									</span>
 									<div class="bottom-wrapper">
 										<div class="bottom-wrapper1">
-											<label  class="bottom-wrapper-title">상위 카테고리</label>
+											<label  class="bottom-wrapper-title">아이디어 카테고리</label>
 											<div class="bottom-wrapper-select">
 												<div class="select">
-													<button type="button" class="btn-select" data-target="menu1">
+													<!-- <button type="button" class="btn-select" data-target="menu1">
 														<div class="buttonLabel">
 															<span>선택해주세요</span>
 															<span class="caret"></span>
 														</div>
-													</button>
-													<div class="checkboxLayer" id="menu1" style="display: none;">
+													</button> -->
+													<select name="scId" class="selectList">
+														<option value="none" class="selectItem" hidden>선택해주세요</option>
+														<optgroup label="식품" >
+															<option value="1" class="selectItem">디저트</option>
+															<option value="2" class="selectItem">베이커리</option>
+															<option value="3" class="selectItem">전통간식</option>
+															<option value="4" class="selectItem">음료</option>
+															<option value="5" class="selectItem">주류</option>
+															<option value="6" class="selectItem">반찬</option>
+															<option value="7" class="selectItem">요리·식사</option>
+														</optgroup>
+														<optgroup label="패션" >
+															<option value="8" class="selectItem">액세서리</option>
+															<option value="9" class="selectItem">의류</option>
+															<option value="10" class="selectItem">잡화</option>
+														</optgroup>
+														<optgroup label="가구" >
+															<option value="11" class="selectItem">인테리어</option>
+															<option value="12" class="selectItem">데코용품</option>
+														</optgroup>
+														<optgroup label="문구" >
+															<option value="13" class="selectItem">스티커</option>
+															<option value="14" class="selectItem">인형</option>
+															<option value="15" class="selectItem">장난감</option>
+															<option value="16" class="selectItem">편지지·카드</option>
+															<option value="17" class="selectItem">케이스</option>
+														</optgroup>
+														<optgroup label="디자인" >
+															<option value="18" class="selectItem">접시</option>
+															<option value="19" class="selectItem">가구</option>
+														</optgroup>
+														<optgroup label="기타" >
+															<option value="20" class="selectItem">반려용품</option>
+															<option value="21" class="selectItem">제로웨이스트</option>
+														</optgroup>
+													</select>
+													<!-- <div class="checkboxLayer" id="menu1" style="display: none;">
 														<div class="checkBoxContainer">
-															<ul class="selectList">
-																<li class="selectItem">식품</li>
-																<li class="selectItem">패션</li>
-																<li class="selectItem">가구</li>
-																<li class="selectItem">문구</li>
-																<li class="selectItem">디자인</li>
-																<li class="selectItem">기타</li>
-															</ul>
+															<select name="top-category" class="selectList">
+																<option value="food" class="selectItem">식품</li>
+																<option value="fashion" class="selectItem">패션</li>
+																<option value="furniture" class="selectItem">가구</li>
+																<option value="phrase" class="selectItem">문구</li>
+																<option value="design" class="selectItem">디자인</li>
+																<option value="etc" class="selectItem">기타</li>
+															</select>
 														</div>
-													</div>
+													</div> -->
 												</div>
 											</div>
 										</div>
-										<div class="bottom-wrapper1" >
+										<!-- <div class="bottom-wrapper1" >
 											<label class="bottom-wrapper-title">하위 카테고리</label>
 											<div class="bottom-wrapper-select">
 												<div class="select">
@@ -143,6 +185,8 @@
 															<span class="caret"></span>
 														</div>
 													</button>
+													<select name="top-category" class="selectList">
+													</select>
 													<div id="menu2" class="checkboxLayer" style="display: none;">
 														<div class="helperContainer">
 															<div class="line"></div>
@@ -174,7 +218,7 @@
 													</div>
 												</div>
 											</div>
-										</div>
+										</div> -->
 									</div>
 								</div>
 			<!-- 시도 -->
@@ -190,9 +234,9 @@
 											<div class="main-text-wrapper">
 													<div class="explanation-conriner text-toolbar1">
 														<div class="explanation-editer" >
-													<textarea placeholder="
+													<textarea name="ideaDetail" placeholder="
 [유의사항]
-- 제삼자의 저작권 및 초상권을 침해하는 작업은 하지 않습니다.
+- 제삼자의 저작권 및 초상권을 침해하는 아이디어 등록은 하지 않습니다.
 - 상업적 이용 가능한 폰트 · 템플릿 · 이미지 · 음원 등을 사용합니다.
 - 최종 선택되지 않은 기획 및 작업물의 소유권은 전문가에게 있습니다.
 - 제작된 작업물은 포트폴리오로 사용될 수 있습니다. 원치 않으실 경우 미리 말씀해 주세요.
@@ -238,19 +282,40 @@
 				                     </span>
 				                     <div class="main-img-con">
 				                        <div class="add-img-con">
-				                           <div class="uplodebox">
-				                              <div class="uplodebox-img">
-				                                 <!-- <input type="file"> --><img src="https://kmong.com/img/gig_form/img_gig_form_imageupload.png" width="88px">
+				                        	<!-- 아이디어 썸네일 -------------------------------------------------------------->
+				                           	<%-- <label for="upload1" class="uplodebox attach">
+				                               <!-- <div class="uplodebox-img">
+				                                 <input type="file"><img src="https://kmong.com/img/gig_form/img_gig_form_imageupload.png" width="88px">
 				                                 <div class="uplodebox-text">
-				                                 	652 x 488px<br>
-				                                 	(4:3 비율)
-				                                 </div>
-				                              </div>
-				                              <div class="uplodebox-select"></div>
-				                              <div class="dummybox"></div>
-				                           </div>
+					                                 	652 x 488px<br>
+					                                 	(4:3 비율)
+				                                  </div>
+				                               </div> -->
+				                               
+				                                <div class="detail-img">
+			            							<img src="https://kmong.com/img/gig_form/img_gig_form_imageupload.png" width="88px">
+			            						</div>
+				                              	<div class="uplodebox-select"></div>
+				                              	<img src="" class="thumbnail">
+						                        <div class="x">
+						                            <img src="${pageContext.request.contextPath}/static/images/x.png">
+						                        </div>
+				                              <!-- <div class="dummybox"></div> -->
+				                           </label> --%>
+				                           
+				                           <label for="upload1" class="add-img-area attach""> <!-- 열 -->
+			            						<div class="detail-img">
+			            							<img src="https://kmong.com/img/gig_form/img_gig_form_imageupload.png" width="88px">
+			            						</div>
+			            						
+			            						<img src="" class="thumbnail">
+						                        <div class="x">
+						                            <img src="${pageContext.request.contextPath}/static/images/x.png">
+						                        </div>
+			            					</label>
 				                        </div>
 				                     </div>
+				                     
 				                     <div></div>
 				                  </div>
 				                  <div></div>
@@ -270,64 +335,120 @@
 				            				</span>
 				            			</span>
 				            			
-				            			<!-- 상세이미지 -->
+				            			<!-- 상세이미지-------------------------------------------------------------------------->
 				            			<div class="img-con">
 				            				<div class="add-img-con"> <!-- 행 -->
-				            					<div class="add-img-area"> <!-- 열 -->
+				            					<label for="upload2" class="add-img-area attach""> <!-- 열 -->
 				            						<div class="detail-img">
 				            							<img src="https://kmong.com/img/gig_form/img_gig_form_imageupload.png" width="88px">
 				            						</div>
-				            					</div>
-				            					<div class="add-img-area">
+				            						
+				            						<img src="" class="thumbnail">
+							                        <div class="x">
+							                            <img src="${pageContext.request.contextPath}/static/images/x.png">
+							                        </div>
+				            					</label>
+				            					<label for="upload3" class="add-img-area attach"">
 				            						<div class="detail-img">
 				            							<img src="https://kmong.com/img/gig_form/img_gig_form_imageupload.png" width="88px">
 				            						</div>
-				            					</div>
-				            					<div class="add-img-area">
+				            						
+				            						<img src="" class="thumbnail">
+							                        <div class="x">
+							                            <img src="${pageContext.request.contextPath}/static/images/x.png">
+							                        </div>
+				            					</label>
+				            					<label for="upload4" class="add-img-area attach"">
 				            						<div class="detail-img">
 				            							<img src="https://kmong.com/img/gig_form/img_gig_form_imageupload.png" width="88px">
 				            						</div>
-				            					</div>
+				            						
+				            						<img src="" class="thumbnail">
+							                        <div class="x">
+							                            <img src="${pageContext.request.contextPath}/static/images/x.png">
+							                        </div>
+				            					</label>
 				            					<!-- <div class="dummybox"></div> -->
 				            				</div>
 				            				
 				            				<div class="add-img-con">
-				            					<div class="add-img-area">
+				            					<label for="upload5" class="add-img-area attach"">
 				            						<div class="detail-img">
 				            							<img src="https://kmong.com/img/gig_form/img_gig_form_imageupload.png" width="88px">
 				            						</div>
-				            					</div>
-				            					<div class="add-img-area">
+				            						
+				            						<img src="" class="thumbnail">
+							                        <div class="x">
+							                            <img src="${pageContext.request.contextPath}/static/images/x.png">
+							                        </div>
+				            					</label>
+				            					<label for="upload6" class="add-img-area attach"">
 				            						<div class="detail-img">
 				            							<img src="https://kmong.com/img/gig_form/img_gig_form_imageupload.png" width="88px">
 				            						</div>
-				            					</div>
-				            					<div class="add-img-area">
+				            						
+				            						<img src="" class="thumbnail">
+							                        <div class="x">
+							                            <img src="${pageContext.request.contextPath}/static/images/x.png">
+							                        </div>
+				            					</label>
+				            					<label for="upload7" class="add-img-area attach"">
 				            						<div class="detail-img">
 				            							<img src="https://kmong.com/img/gig_form/img_gig_form_imageupload.png" width="88px">
 				            						</div>
-				            					</div>
+				            						
+				            						<img src="" class="thumbnail">
+							                        <div class="x">
+							                            <img src="${pageContext.request.contextPath}/static/images/x.png">
+							                        </div>
+				            					</label>
 				            					<!-- <div class="dummybox"></div> -->
 				            				</div>
 				            				
 				            				<div class="add-img-con">
-				            					<div class="add-img-area">
+				            					<label for="upload8" class="add-img-area attach"">
 				            						<div class="detail-img">
 				            							<img src="https://kmong.com/img/gig_form/img_gig_form_imageupload.png" width="88px">
 				            						</div>
-				            					</div>
-				            					<div class="add-img-area">
+				            						
+				            						<img src="" class="thumbnail">
+							                        <div class="x">
+							                            <img src="${pageContext.request.contextPath}/static/images/x.png">
+							                        </div>
+				            					</label>
+				            					<label for="upload9" class="add-img-area attach"">
 				            						<div class="detail-img">
 				            							<img src="https://kmong.com/img/gig_form/img_gig_form_imageupload.png" width="88px">
 				            						</div>
-				            					</div>
-				            					<div class="add-img-area">
+				            						
+				            						<img src="" class="thumbnail">
+							                        <div class="x">
+							                            <img src="${pageContext.request.contextPath}/static/images/x.png">
+							                        </div>
+				            					</label>
+				            					<label for="upload10" class="add-img-area attach"">
 				            						<div class="detail-img">
 				            							<img src="https://kmong.com/img/gig_form/img_gig_form_imageupload.png" width="88px">
 				            						</div>
-				            					</div>
+				            						
+				            						<img src="" class="thumbnail">
+							                        <div class="x">
+							                            <img src="${pageContext.request.contextPath}/static/images/x.png">
+							                        </div>
+				            					</label>
 				            					<!-- <div class="dummybox"></div> -->
 				            				</div>
+				            				
+				            				<input type="file" id="upload1" class="upload" name="upload1" style="display: none;">
+							                <input type="file" id="upload2" class="upload" name="upload2" style="display: none;">
+							                <input type="file" id="upload3" class="upload" name="upload3" style="display: none;">
+							                <input type="file" id="upload4" class="upload" name="upload4" style="display: none;">
+							                <input type="file" id="upload5" class="upload" name="upload5" style="display: none;">
+							                <input type="file" id="upload6" class="upload" name="upload6" style="display: none;">
+							                <input type="file" id="upload7" class="upload" name="upload7" style="display: none;">
+							                <input type="file" id="upload8" class="upload" name="upload8" style="display: none;">
+							                <input type="file" id="upload9" class="upload" name="upload9" style="display: none;">
+							                <input type="file" id="upload10" class="upload" name="upload10" style="display: none;">
 				            			</div>
 				            		</div>
 				            	</div>
@@ -344,7 +465,8 @@
 			</main>
 			<footer class="footer-form">
 				<section class="footer-wrapper">
-					<button disabled="disabled" class="header-summit">등록하기</button>
+					<button type="submit" class="header-summit">등록하기</button>
+					<!-- <button type="submit" disabled="disabled" class="header-summit">등록하기</button> -->
 					<!-- <button class="footer-save">저장</button>
 					<button class="footer-next">다음</button> -->
 				</section>
