@@ -7,14 +7,15 @@
 <head>
     <title>introduction</title>
     
-    <link rel="icon" href="../../icon/favicon.png">
+    <link rel="icon" href="${pageContext.request.contextPath}/icon/favicon.png">
     <link rel="stylesheet" href="../../static/css/introduction.css">
+    <link rel="stylesheet" href="${pageContext.request.contextPath}/static/css/introduction.css">
     
     <style>
 
 		@font-face {
 			font-family: 'MetroSansMedium';
-			src: url('../../font/MetroSans-Medium.woff2');
+			src: url('${pageContext.request.contextPath}/font/MetroSans-Medium.woff2');
 		}
 	   
 	</style>
@@ -26,7 +27,7 @@
         <div class="header-div header-div2">
             <a href="/">
                 <div class="header-div-flex">
-                    <img src="../../icon/favicon.png" alt="logo">
+                    <img src="${pageContext.request.contextPath}/icon/favicon.png" alt="logo">
                     <h1 color="rgba(0, 0, 0, 0.85)" type="item" class="header-iContact">iContact career</h1>
                 </div>
             </a>

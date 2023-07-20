@@ -152,7 +152,7 @@
 							<!-- ==== -->
 							<!-- 회원가입 이동 버튼 -->
 							<div class="gray">
-								<a role="link" color="default" href="join.jsp" class="login-main-go-to-signup-a-tag">	<!-- css-1uk00me eklkj752 -->
+								<a role="link" color="default" href="join.user" class="login-main-go-to-signup-a-tag">	<!-- css-1uk00me eklkj752 -->
 									<span class="login-main-go-to-signup-span">회원가입</span>	<!-- css-1oteowz eklkj751 -->
 								</a>
 								<!-- 10만원 쿠폰 받기 -->
