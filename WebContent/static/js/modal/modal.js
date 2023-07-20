@@ -1,5 +1,4 @@
 let modalCheck;
-
 function showWarnModal(modalMessage){
     modalCheck = false;
     $("div#content-wrap").html(modalMessage)

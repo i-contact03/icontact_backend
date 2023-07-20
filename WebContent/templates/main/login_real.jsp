@@ -1,5 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
+    <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <!DOCTYPE html>
 <html>
 <head>
@@ -144,6 +145,8 @@
 								</div>
 							</div> -->
 							
+								
+							
 							<!-- 공간 만들기 -->
 							<div class="where-something-needed-to-be"></div>
 							<!-- ==== -->
@@ -165,14 +168,25 @@
 		</div>
 	</div>
 
+
 </body>
+
+
+
+
+
 <script src="https://code.jquery.com/jquery-3.6.1.min.js"></script>
 <script src="${pageContext.request.contextPath}/static/js/login.js"></script>
 <script src="${pageContext.request.contextPath}/static/js/modal/modal.js"></script>
 
 <script>
+if(!${param.login}){
+	$(".where-something-needed-to-be").text("아이디 또는 비밀번호를 확인해주세요");
+	$(".where-something-needed-to-be").css('color','red'); 
+}
+</script>
 
-
+<script>
 	$('#checkId').click(function (){
 		if( $('#autoLogin').prop("checked") ){           //체크 안돼있는데 클릭하면 체크 시키고
 			$('#checkMark').attr('class','css-check');
@@ -180,17 +194,17 @@
 			$('#checkMark').attr('class','login-main-login-below-check-for-keeplogin-checkbox-inner');
 		}
 	});
-	
-	
 </script>
 
 <script>
 	let autoLogin = "${autoLogin}";
 	console.log(autoLogin);
 	if(autoLogin){
-		$("input[name='auto-login']").prop("checked", true);
+		$("input[name='autoLogin']").prop("checked", true);
 		checkedAutoLogin();
 	}
+	
+	
 </script>
 </html>
 <!-- pageScope, requestScope, sessionScope, applicationScope-->
@@ -199,56 +213,6 @@
 		showWarnModal("아이디 또는 비밀번호를<br>확인해주세요");
 	</script>
 </c:if>	
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
