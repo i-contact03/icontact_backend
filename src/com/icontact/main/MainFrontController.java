@@ -28,6 +28,18 @@ public class MainFrontController extends HttpServlet{
 				
 		}
 		
+//		메인화면에 전제 항목 출력
+		if(target.equals("FAQ")) {
+			result = new Result();
+			result.setPath("templates/faq/FAQ.jsp");
+		}
+		
+//		메인화면에 전제 항목 출력
+		if(target.equals("introduction")) {
+			result = new Result();
+			result.setPath("templates/faq/introduction.jsp");
+		}
+		
 		if(result != null) {
 			if(result.isRedirect()) {
 				resp.sendRedirect(result.getPath());
