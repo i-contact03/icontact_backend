@@ -5,6 +5,7 @@ import java.util.HashMap;
 import java.util.List;
 
 import javax.servlet.ServletException;
+import javax.servlet.ServletRequest;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
@@ -26,15 +27,25 @@ public class MainAllListOKController implements Action {
 		JSONArray jsonArray = new JSONArray();
 		
 		mainDAO.selectAll();
+		mainDAO.selectFood();
+		mainDAO.selectFashion();
+		mainDAO.selectDesign();
+		
+		String profileName=mainDAO.selectProfile(req.getSession().getAttribute("userId"));
 		
 		List<IdeaDTO> ideas = mainDAO.selectAll();
+		List<IdeaDTO> foods = mainDAO.selectFood();
+		List<IdeaDTO> fashions = mainDAO.selectFashion();
+		List<IdeaDTO> designs = mainDAO.selectDesign();
 		
 		ideas.stream().map(JSONObject::new).forEach(jsonArray::put);
 		
-		System.out.println(ideas);
-		System.out.println(jsonArray.toString());
 		
+		req.setAttribute("profileName", profileName);
 		req.setAttribute("ideaVO", ideas);
+		req.setAttribute("foods", foods);
+		req.setAttribute("fashions", fashions);
+		req.setAttribute("designs", designs);
 		req.setAttribute("ideas", jsonArray.toString());
 		
 		result.setPath("templates/main/mainpage.jsp");

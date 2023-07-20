@@ -25,6 +25,20 @@ public class MainDAO {
 		return sqlSession.selectList("main.selectAll");
 	}
 	
+	public List<IdeaDTO> selectFood(){
+		return sqlSession.selectList("main.selectFood");
+	}
+	public List<IdeaDTO> selectFashion(){
+		return sqlSession.selectList("main.selectFashion");
+	}
+	public List<IdeaDTO> selectDesign(){
+		return sqlSession.selectList("main.selectDesign");
+	}
+
+	public String selectProfile(Object userId) {
+		return sqlSession.selectOne("main.selectProfile", userId);
+	}
+	
 	
 }
 
