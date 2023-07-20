@@ -69,5 +69,28 @@
 	</update>
 	
 	
+	<select id="getTotalIdea" resultType="_int">
+		select count(idea_id)
+		from tbl_idea 
+	</select>
+	
+	<select id="selectAll3" resultType="ideaDTO2">
+		select idea_id, idea_title, idea_basic, idea_detail, 
+		idea_thumbnail_name, idea_date, user_id, sc_id, u.user_id
+		from tbl_user u join tbl_idea i
+		on u.user_id = i.user_id
+		where u.user_id = #{userId}
+		order by idea_id desc
+		limit #{offset}, #{rowCount}
+	</select>
+	
+	<select id="selectAll2" resultType="ideaDTO2">
+		select idea_id, idea_title, idea_basic, idea_detail, 
+		idea_thumbnail_name, idea_date, user_id, sc_id
+		from tbl_idea
+		where user_id = #{userId}
+		order by idea_id desc
+		limit #{offset}, #{rowCount}
+	</select>
 	
 </mapper>

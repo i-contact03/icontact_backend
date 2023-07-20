@@ -1,21 +1,8 @@
 /**
- * 사이드 메뉴 toggle
+ * 
  */
 
-/*const arrow = document.querySelector("#arrow-btn");
-const menu = document.querySelector("#show-menu");*/
 
-/*let toggleButton = $(".toggle_btn");
-let showMenu = $(".show-menu");
-
-toggleButton.click(function() {
-    if (showMenu.is(":hidden")) {
-        showMenu.slideDown(400);
-    } else {
-        showMenu.slideUp(400);
-    }
-});
-*/
 
 let toggleButton = $(".toggle_btn");
 let showMenu = $(".show-menu");
@@ -32,7 +19,10 @@ toggleButton.click(function() {
     }
 });
 
-/*----------------------------*/
+
+
+/* ======================== */
+
 
 
 
@@ -150,72 +140,6 @@ function showList(){
 	console.log("-----");
 	$div.append(text);
 }
-
-
-			        
-
-/*
-
-	if(ideas.length == 0){
-		text += `
-			<li>
-		        <div>
-					아직 등록된 아이디어가 없습니다. iContact에 아이디어를 등록해보세요 !
-				</div>
-			</li>
-		`
-	}
-	
-
-
-
-
-*/
-
-
-
-
-/*
-
-<div class="empty-list">
-					<div class="empty-list-text">
-						등록된 프로젝트가 없습니다.
-						<br>
-						프로젝트를 의뢰하여 전문가들의 제안을 받아보세요!
-					</div>
-					
-					<img src="https://kmong.com/img/my_kmong/kmong@2x.png" width="130px" style="margin-bottom: 30px">
-					
-					<button class="empty-list-button" style="width: 280px">프로젝트 의뢰하기</button>
-				</div>
-
-
-
-
-
-
-
-
-
-*/
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
