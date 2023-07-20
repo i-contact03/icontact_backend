@@ -44,6 +44,7 @@ public class IdeaFrontController extends HttpServlet{
 			
 //		아이디어 작성하기
 		} else if(target.equals("writeIdeaOk")){
+			System.out.println("writeIdeaOk 프컨 들어옴");
 			result = new WriteIdeaOkController().execute(req, resp);
 			
 		}

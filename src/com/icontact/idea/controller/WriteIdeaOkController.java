@@ -23,11 +23,12 @@ public class WriteIdeaOkController implements Action {
 
 	@Override
 	public Result execute(HttpServletRequest req, HttpServletResponse resp) throws IOException, ServletException {
+		System.out.println("writeIdeaOk 컨트롤러 들어옴");
 		IdeaVO ideaVO = new IdeaVO();
-		DetailImageVO detialImageVO = new DetailImageVO();
+		DetailImageVO detailImageVO = new DetailImageVO();
 		
 		IdeaDAO ideaDAO = new IdeaDAO();
-		DetailImageDAO detailimageDAO = new DetailImageDAO();
+		DetailImageDAO detailImageDAO = new DetailImageDAO();
 		Result result = new Result();
 		Path path = null;
 		
@@ -35,7 +36,8 @@ public class WriteIdeaOkController implements Action {
 		HttpSession session = req.getSession();
 
 		// 파일 업로드를 위한 루트 경로 설정
-		String root = req.getServletContext().getRealPath("/") + "upload/";
+		String thumbnailRoot = req.getServletContext().getRealPath("/") + "upload/idea/";
+//		String detailImageRoot = req.getServletContext().getRealPath("/") + "upload/idea_detail/";
 
 		// 파일의 최대 크기 설정 (20MB)
 		int fileSize = 1024 * 1024 * 20;
@@ -46,52 +48,85 @@ public class WriteIdeaOkController implements Action {
 		// - fileSize: 업로드할 파일의 최대 크기
 		// - "UTF-8": 요청의 인코딩 방식 (파일 이름 등을 인코딩하기 위해 사용)
 		// - DefaultFileRenamePolicy(): 동일한 이름의 파일이 이미 존재할 경우 파일 이름을 변경하여 저장
-		MultipartRequest multipartRequest = new MultipartRequest(req, root, fileSize, "UTF-8", new DefaultFileRenamePolicy());
+		MultipartRequest ideaMultipartRequest = new MultipartRequest(req, thumbnailRoot, fileSize, "UTF-8", new DefaultFileRenamePolicy());
+//		MultipartRequest thumbNailNameMultipartRequest = new MultipartRequest(req, thumbnailRoot, fileSize, "UTF-8", new DefaultFileRenamePolicy());
+		
+		// idea_title, idea_basic, idea_detail, idea_thumbnail_name, user_id, sc_id
+		ideaVO.setIdeaTitle(ideaMultipartRequest.getParameter("ideaTitle"));
+		ideaVO.setIdeaBasic(ideaMultipartRequest.getParameter("ideaBasic"));
+		ideaVO.setIdeaDetail(ideaMultipartRequest.getParameter("ideaDetail"));
+		ideaVO.setScId(ideaMultipartRequest.getParameter("scId"));
 		
 		
-		//idea_title, idea_basic, idea_detail, idea_thumbnail_name, user_id, sc_id
-		ideaVO.setIdeaTitle(multipartRequest.getParameter("ideaTitle"));
-		ideaVO.setIdeaBasic(multipartRequest.getParameter("ideaBasic"));
-		ideaVO.setIdeaDetail(multipartRequest.getParameter("ideaDetail"));
-		ideaVO.setIdeaThumbnailName(multipartRequest.getParameter("ideaThumbnailName"));
-		ideaVO.setUserId((Long)session.getAttribute("userId"));
-		ideaVO.setScId(multipartRequest.getParameter("scId"));
+//		임의로 세션 userId 설정
+		int userId = 1;
+		Long longUserId = Long.valueOf(userId);
+		
+		ideaVO.setUserId(longUserId);
+//		ideaVO.setUserId((Long)session.getAttribute("userId"));
 		
 		ideaDAO.insert(ideaVO);
+		
+		// 썸네일 파일 업로드
+        String thumbnailFileName = ideaMultipartRequest.getFilesystemName("upload1");
+        if (thumbnailFileName != null) {
+            ideaVO.setIdeaThumbnailName(thumbnailFileName);
+            ideaDAO.updateThumbnail(ideaVO);
+            System.out.println("썸네일 업로드 완료");
+        }
+        
+		
+//		 if(inputTypeFileName.equals("upload1")) {
+//		    	fileSystemName = thumbNailNameMultipartRequest.getFilesystemName(inputTypeFileName);
+//		    	ideaVO.setIdeaThumbnailName(fileSystemName);
+//		    	System.out.println(ideaVO.getIdeaThumbnailName());
+//		    	path = Path.of(thumbnailRoot + fileSystemName);
+//		    	ideaDAO.updateThumbnail(ideaVO);
+//		    	System.out.println("썸네일 업로드 완료");
+//		    	continue;
+//		    }
+		
 		//--------------------------------------------------------------------------------
 		
-		
 		// detialImageVO에 현재 아이디어의 ID를 설정합니다. (ideaDAO.selectCurrentSequence()를 호출하여 현재 게시물의 ID를 가져옵니다.)
-		detialImageVO.setIdeaId(ideaDAO.selectCurrentSequence());
+		detailImageVO.setIdeaId(ideaDAO.selectCurrentSequence());
 
 		// 파일 업로드된 모든 input 타입의 이름을 가져옵니다.
-		Enumeration<String> inputTypeFileNames = multipartRequest.getFileNames();
-
+		Enumeration<String> inputTypeFileNames = ideaMultipartRequest.getFileNames(); // thumbnail 1개 + detailImage 9개
+		
+		// di_system_name, di_original_name, di_file_size, idea_id
 		// 업로드된 각 파일에 대해 반복합니다.
 		while(inputTypeFileNames.hasMoreElements()) {
 		    // input 타입의 이름을 가져옵니다.
 		    String inputTypeFileName = inputTypeFileNames.nextElement();
 		    
-		    // 파일의 시스템 이름을 가져옵니다. (서버에 저장된 파일 이름)
-		    String fileSystemName = multipartRequest.getFilesystemName(inputTypeFileName);
+		    // 파일의 시스템 이름을 가져옵니다. (서버에 저장될 파일 이름)
+		    String fileSystemName = ideaMultipartRequest.getFilesystemName(inputTypeFileName);
 		    
 		    // 파일이 업로드되지 않은 경우 건너뜁니다.
 		    if(fileSystemName == null) {continue;}
 		    
+		    // input 타입의 이름이 "upload1"인 경우는 썸네일 이미지 파일이므로 건너뜁니다.
+		    if (inputTypeFileName.equals("upload1")) {continue;}
+		    
 		    // detialImageVO에 파일의 시스템 이름을 설정합니다.
-		    detialImageVO.setDiSystemName(fileSystemName);
+		    detailImageVO.setDiSystemName(fileSystemName);
 		    
 		    // 파일의 원본 이름을 가져옵니다.
-		    detialImageVO.setDiOriginalName(multipartRequest.getOriginalFileName(inputTypeFileName));
+		    detailImageVO.setDiOriginalName(ideaMultipartRequest.getOriginalFileName(inputTypeFileName));
 		    
 		    // 파일의 경로를 설정합니다. (루트 경로 + 파일의 시스템 이름)
-		    path = Path.of(root + fileSystemName);
+		    path = Path.of(thumbnailRoot + fileSystemName);
 		    
 		    // 파일의 크기를 설정합니다.
-		    detialImageVO.setDiFileSize(Files.size(path));
+		    detailImageVO.setDiFileSize(Files.size(path));
+		    
+		    System.out.println("상세 이미지 업로드 전");
 		    
 		    // 파일 정보를 데이터베이스에 저장합니다.
-		    detailimageDAO.insert(detialImageVO);
+		    detailImageDAO.insert(detailImageVO);
+		    
+		    System.out.println("상세 이미지 업로드 후");
 		}
 
 		

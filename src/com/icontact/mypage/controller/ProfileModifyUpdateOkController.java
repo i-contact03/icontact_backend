@@ -7,12 +7,7 @@ import javax.servlet.ServletException;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-import org.json.JSONArray;
-import org.json.JSONException;
-import org.json.JSONObject;
 
-import com.app.reply.dao.ReplyDAO;
-import com.app.reply.domain.ReplyVO;
 import com.icontact.Action;
 import com.icontact.Result;
 import com.icontact.interest.dao.InterestDAO;
@@ -60,11 +55,6 @@ public class ProfileModifyUpdateOkController implements Action {
 		
 		
 		System.out.println(userVO);
-		
-		
-		
-		
-		
 		
 		
 		/* userDTO.setUserStatus(req.getParameter()); */
