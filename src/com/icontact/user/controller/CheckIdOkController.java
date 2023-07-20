@@ -31,7 +31,7 @@ public class CheckIdOkController implements Action {
 		
 		resp.setContentType("text/html;charset=utf-8");
 		
-		
+		System.out.println(userIdentification);
 		
 		
 		PrintWriter out = resp.getWriter();
