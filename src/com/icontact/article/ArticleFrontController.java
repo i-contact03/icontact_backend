@@ -42,7 +42,7 @@ public class ArticleFrontController extends HttpServlet{
 
 //		상세페이지 출력
 		} else if(target.equals("detailOk")) {
-			System.out.println("프컨!");
+			System.out.println("프컨! 상세");
 			result = new DetailOkController().execute(req, resp);
 		}
 		if(result != null) {

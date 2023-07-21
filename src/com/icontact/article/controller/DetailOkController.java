@@ -20,10 +20,11 @@ public class DetailOkController implements Action {
 		Result result = new Result();
 		Long articleId = Long.valueOf(req.getParameter("articleId"));
 		articleDAO.updateReadCount(articleId);
-		
+		System.out.println("상세 컨트롤러");
 		
 		req.setAttribute("article", articleDAO.select(articleId));
 //		req.setAttribute("comment", commentDAO.selectByArticleId(articleId));
+		System.out.println("article");
 		
 		result.setPath("templates/community/community_article_see.jsp");
 		return result;

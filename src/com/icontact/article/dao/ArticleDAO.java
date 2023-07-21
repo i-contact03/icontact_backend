@@ -38,6 +38,7 @@ public class ArticleDAO {
 	
 //		게시글 조회																																															
 	public ArticleDTO select(Long articleId) {
+		System.out.println("게시글조회");
 		return sqlSession.selectOne("article.select", articleId);
 	}
 }	
