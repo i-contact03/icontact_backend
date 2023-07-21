@@ -46,7 +46,9 @@
 		<!-- 로고 + 검색바 + 아이디어등록 + 마이크몽 + 프로필-->
 			<section class="top-header">
 				<svg class="top-header-logo" width="85" height="100%" viewBox="0 0 85 26" xmlns="http://www.w3.org/2000/svg">
+					<a href="${pageContext.request.contextPath}/mainAllList.main">
 					<img src="${pageContext.request.contextPath}/icon/logo.png" width="170px" height="52px">
+				    </a>
 				</svg>
 				
 				<form action="" class="top-header-input-form">
@@ -957,19 +959,7 @@
 <script src="${pageContext.request.contextPath}/static/js/mainpage.js"></script>
 <script src="${pageContext.request.contextPath}/static/js/modal/modal.js"></script>
 
-<script>
 
-
-	$('#checkId').click(function (){
-		if( $('#autoLogin').prop("checked") ){           //체크 안돼있는데 클릭하면 체크 시키고
-			$('#checkMark').attr('class','css-check');
-		}else{                             //체크 돼있으면 해제 시키기
-			$('#checkMark').attr('class','login-main-login-below-check-for-keeplogin-checkbox-inner');
-		}
-	});
-	
-	
-</script>
 
 <script>
 
@@ -1053,13 +1043,6 @@ let modalMessage  =`
 									<!-- 로그인 부속 기능 -->
 
 
-		
-
-
-
-
-
-
 
 									<div class="login-main-login-below-wrapper">	<!-- css-70qvj9 equrxy92 -->
 										<label for="autoLogin" id="checkId" color="#ffd400" class="login-main-login-below-check-for-keeplogin-wrapper">	<!-- css-18pqe3v elgfge0 -->
@@ -1079,28 +1062,7 @@ let modalMessage  =`
 									</div>
 								</form>
 								
-								<!-- ==== -->
-								<!-- 소셜미디어 간편 로그인 -->
-								<!-- <div class="css-tbibp8 enu6cyp0">	css-tbibp8 enu6cyp0
-									<h5 variant="h5" class="css-1y19fas e870mj50" color="gray900">SNS 간편 로그인</h5>
-									<div class="css-1dqn28w enu6cyp1">
-										<a href="/signup/naver?next_page=%2F%3Futm_source%3Dgoogle%26utm_medium%3Dcpc%26utm_campaign%3D0%26utm_content%3Dmarket%26utm_group%3D0%26utm_term%3D%25ED%2581%25AC%25EB%25AA%25BD%26gclid%3DEAIaIQobChMIr867pLDt_wIV162WCh2gGwdgEAAYASAAEgJozfD_BwE" class="css-18u83hy enu6cyp2" style="background-color: rgb(30, 200, 0);">
-											<img src="https://d2v80xjmx68n4w.cloudfront.net/assets/icon/naver-logo_v2.png" width="24" height="24" alt="소셜 로고">
-										</a>
-										<a href="/signup/kakao?next_page=%2F%3Futm_source%3Dgoogle%26utm_medium%3Dcpc%26utm_campaign%3D0%26utm_content%3Dmarket%26utm_group%3D0%26utm_term%3D%25ED%2581%25AC%25EB%25AA%25BD%26gclid%3DEAIaIQobChMIr867pLDt_wIV162WCh2gGwdgEAAYASAAEgJozfD_BwE" class="css-18u83hy enu6cyp2" style="background-color: rgb(249, 224, 0);">
-											<img src="https://d2v80xjmx68n4w.cloudfront.net/assets/icon/kakao-logo_v2.png" width="24" height="24" alt="소셜 로고">
-										</a>
-										<a href="/signup/facebook?next_page=%2F%3Futm_source%3Dgoogle%26utm_medium%3Dcpc%26utm_campaign%3D0%26utm_content%3Dmarket%26utm_group%3D0%26utm_term%3D%25ED%2581%25AC%25EB%25AA%25BD%26gclid%3DEAIaIQobChMIr867pLDt_wIV162WCh2gGwdgEAAYASAAEgJozfD_BwE" class="css-18u83hy enu6cyp2" style="background-color: rgb(24, 119, 242);">
-											<img src="https://d2v80xjmx68n4w.cloudfront.net/assets/icon/facebook-logo_v2.png" width="24" height="24" alt="소셜 로고">
-										</a>
-										<a href="/signup/google?next_page=%2F%3Futm_source%3Dgoogle%26utm_medium%3Dcpc%26utm_campaign%3D0%26utm_content%3Dmarket%26utm_group%3D0%26utm_term%3D%25ED%2581%25AC%25EB%25AA%25BD%26gclid%3DEAIaIQobChMIr867pLDt_wIV162WCh2gGwdgEAAYASAAEgJozfD_BwE" class="css-18u83hy enu6cyp2" style="background-color: rgb(255, 255, 255); border: 1px solid rgb(228, 229, 237);">
-											<img src="https://d2v80xjmx68n4w.cloudfront.net/assets/icon/google-logo_v2.png" width="24" height="24" alt="소셜 로고">
-										</a>
-										<a href="/signup/apple?next_page=%2F%3Futm_source%3Dgoogle%26utm_medium%3Dcpc%26utm_campaign%3D0%26utm_content%3Dmarket%26utm_group%3D0%26utm_term%3D%25ED%2581%25AC%25EB%25AA%25BD%26gclid%3DEAIaIQobChMIr867pLDt_wIV162WCh2gGwdgEAAYASAAEgJozfD_BwE" class="css-18u83hy enu6cyp2" style="background-color: rgb(0, 0, 0);">
-											<img src="https://d2v80xjmx68n4w.cloudfront.net/assets/icon/apple-logo_v2.png" width="24" height="24" alt="소셜 로고">
-										</a>
-									</div>
-								</div> -->
+							
 								
 								<!-- 공간 만들기 -->
 								<div class="where-something-needed-to-be"></div>
@@ -1125,9 +1087,9 @@ let modalMessage  =`
 
 	</body>`;
 
-	  /* console.log(modalMessage);
+/* 	console.log(modalMessage);
 
-   showWarnModal(modalMessage);  */
+   showWarnModal(modalMessage);   */
    
 </script>  
 
@@ -1195,7 +1157,7 @@ console.log(userId);
 
 if(userId != ""){
 	 $('#join').text('마이페이지');
-	 $("#join").attr("href", "${pageContext.request.contextPath}/profileMainOK.mypage")
+	 $("#join").attr("href", "${pageContext.request.contextPath}/fullViewOK.mypage")
 	
 	 $('#login').text('아이디어등록');
 	 $("#login").attr("href", "${pageContext.request.contextPath}/writeIdea.idea")
@@ -1217,8 +1179,32 @@ if(userId != ""){
 
 </script>
 
+<script>
+if(!${param.login}){
+	$(".where-something-needed-to-be").text("아이디 또는 비밀번호를 확인해주세요");
+	$(".where-something-needed-to-be").css('color','red'); 
+}
+</script>
 
+<script>
+	$('#checkId').click(function (){
+		if( $('#autoLogin').prop("checked") ){           //체크 안돼있는데 클릭하면 체크 시키고
+			$('#checkMark').attr('class','css-check');
+		}else{                             //체크 돼있으면 해제 시키기
+			$('#checkMark').attr('class','login-main-login-below-check-for-keeplogin-checkbox-inner');
+		}
+	});
+</script>
 
+<script>
+	let autoLogin = "${autoLogin}";
+	console.log(autoLogin);
+	if(autoLogin){
+		$("input[name='autoLogin']").prop("checked", true);
+		checkedAutoLogin();
+	}
+	
+</script>
 
 
 </body>
