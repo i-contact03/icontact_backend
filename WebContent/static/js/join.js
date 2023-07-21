@@ -119,18 +119,15 @@ $(function () {
 		});               
                 if($("#userIdentification").val() == "" ){
                     $(".id").text("아이디를 입력해주세요");
-                    $("#userIdentification").focus();
                     return false;
                 }else if(!checkID.test($("#userIdentification").val())) {
                     $(".id").text("영문 혹은 영문과 숫자를 조합하여 최소 6자리이상 20자리로 입력해주세요.");
                     $(".id").css('color','red'); 
                      $("#userIdentification").val("");
-                    $("#userIdentification").focus();                
                     return false;
                 }else if(!checkId){
 			 		 $(".id").text("이미 사용중인 아이디입니다.");
 			 		  $(".id").css('color','red'); 
-					$("#userIdentification").focus();
 					return false;
 				}else if(checkID.test($("#userIdentification").val())) {
                     $(".id").text("사용가능한 아이디입니다.");                
@@ -143,11 +140,9 @@ $(function () {
             $("#userPassword").on("keyup",function(){
                 if($("#userPassword").val() == "" ){                
                     $(".password").text("비밀번호를 입력해주세요");
-                    $("#userPassword").focus();
                     return false;
                 }else if(!checkPW.test($("#userPassword").val())) {
                     $(".password").text("8자 이상, 영문 대 소문자, 숫자, 특수문자를 사용하세요.");
-                     $("#userPassword").focus();                
                     return false;
                 }else if(checkPW.test($("#userPassword").val())) {
                     $(".password").text("");
@@ -170,11 +165,10 @@ $(function () {
             $("#userName").blur(function(){
                 if($("#userName").val() == "" ){  
                     $(".name").text("이름을 입력해주세요.");             
-                     $("#userName").focus();
                     return false;
                 }else if(!checkName.test($("#userName").val())) {
                     $(".name").text("한글 또는 영문으로 입력해주세요.");
-                    $("#userName").focus();                
+                     $(".name").css('color','red'); 
                     return false;
                 }else if(checkName.test($("#userName").val())) {
                     $(".name").text("멋진 이름이내요.");                          
@@ -187,11 +181,9 @@ $(function () {
             $("#userCall").blur(function(){
                 if($("#userCall").val() == "" ){ 
                     $(".phone").text("휴대폰번호를 입력해주세요.");              
-                     $("#userCall").focus();
                     return false;
                 }else if(!checkPhone.test($("#userCall").val())) {
                     $(".phone").text("숫자만 입력해주세요.");
-                    $("#userCall").focus();                
                     return false;
                 }else if(checkPhone.test($("#userCall").val())) {
                     $(".phone").text("");
@@ -218,17 +210,14 @@ $(function () {
 	
                 if($("#userEmail").val() == "" ){                
                     $(".email").text("이메일을 입력해주세요.");
-                    $("#userEmail").focus();
                     return false;
                 }else if(!checkEmail.test($("#userEmail").val())) {
                     $(".email").text("이메일 형식이 유효하지 않습니다.");
                      $(".email").css('color','red'); 
-                    // $("#userEmail").focus();                
                     return false;
                 }else if(!checkEmail2){
 			 		 $(".email").text("이미 사용중인 이메일입니다.");
 			 		  $(".email").css('color','red'); 
-					$("#email").focus();
 					return false;
 				} else if(checkEmail.test($("#userEmail").val())) {
                     $(".email").text("사용가능한 이메일입니다.");

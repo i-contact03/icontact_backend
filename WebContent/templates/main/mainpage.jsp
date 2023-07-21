@@ -10,13 +10,11 @@
 <link rel="stylesheet" href="../../static/css/mainpageWork.css">
 <link rel="stylesheet" href="${pageContext.request.contextPath}/static/css/mainpageWork.css">
 <link rel="stylesheet" href="${pageContext.request.contextPath}/static/css/login_real.css">
+<link rel="stylesheet" href="${pageContext.request.contextPath}/static/css/modal/modal.css">
 
 <style>
 
-	@font-face {
-		font-family: 'MetroSansBold';
-		src: url('${pageContext.request.contextPath}/font/MetroSans-Bold.woff2'); /* 굵은글씨체 주소지정 */
-	}
+
 	
 	@font-face {
 		font-family: 'MetroSansMedium';
@@ -45,11 +43,11 @@
 		<div class="header">
 		<!-- 로고 + 검색바 + 아이디어등록 + 마이크몽 + 프로필-->
 			<section class="top-header">
+			<a class="goods-link" href="javascript:location.href='${pageContext.request.contextPath}/mainAllList.main?userId=${idea.userId}&ideaId=${idea.ideaId}'">
 				<svg class="top-header-logo" width="85" height="100%" viewBox="0 0 85 26" xmlns="http://www.w3.org/2000/svg">
-					<a href="${pageContext.request.contextPath}/mainAllList.main">
 					<img src="${pageContext.request.contextPath}/icon/logo.png" width="170px" height="52px">
-				    </a>
 				</svg>
+				    </a>
 				
 				<form action="" class="top-header-input-form">
 					<div class="top-header-input-wrapper">
@@ -65,7 +63,7 @@
 				</form>
 				
 				<div class="top-header-menu-wrapper">
-					<a class="top-header-menu" id='login' href="javascript:location.href='${pageContext.request.contextPath}/login.user'">
+					<a class="top-header-menu" id='login' href="#" onclick="showWarnModal(modalMessage);">
 						<span></span>
 					</a>
 					<a class="top-header-menu" id="join" href="javascript:location.href='${pageContext.request.contextPath}/join.user'">
@@ -921,11 +919,7 @@
 </main>
 
 
-<div class="modal">
-            <div class="warn-modal">
-                <div id="content-wrap"></div>
-            </div>
-        </div>
+
 
 
  <footer class="footer">
@@ -949,7 +943,11 @@
 
 
 
-
+<div class="modal2">
+            <div class="warn-modal2">
+                <div id="content-wrap2"></div>
+            </div>
+        </div>
 
 
 
@@ -988,7 +986,6 @@ let modalMessage  =`
 								</span>
 							</button>
 						</div>
-							
 						<!-- ---------------------------- -->
 						<!-- 찐 로그인 팝업 ~~ -->
 						<div class="login-main-full-popup-box-wrapper">	<!-- css-1qthg6u eyci4q00 -->
@@ -1042,8 +1039,6 @@ let modalMessage  =`
 									<!-- = -->
 									<!-- 로그인 부속 기능 -->
 
-
-
 									<div class="login-main-login-below-wrapper">	<!-- css-70qvj9 equrxy92 -->
 										<label for="autoLogin" id="checkId" color="#ffd400" class="login-main-login-below-check-for-keeplogin-wrapper">	<!-- css-18pqe3v elgfge0 -->
 											<span class="login-main-login-below-check-for-keeplogin-span">	<!-- css-9ffs86 elgfge3 -->
@@ -1087,10 +1082,6 @@ let modalMessage  =`
 
 	</body>`;
 
-/* 	console.log(modalMessage);
-
-   showWarnModal(modalMessage);   */
-   
 </script>  
 
         
@@ -1168,8 +1159,6 @@ if(userId != ""){
 	 $('#profile').html(`<div class="top-header-user-container">
 				<img src="${pageContext.request.contextPath}/upload/profileImg/${profileName}"  class="top-header-user-image">
 				</div>`);
-
-	 
 	 
 } else {
 	 $('#join').text('회원가입');
@@ -1180,14 +1169,7 @@ if(userId != ""){
 </script>
 
 <script>
-if(!${param.login}){
-	$(".where-something-needed-to-be").text("아이디 또는 비밀번호를 확인해주세요");
-	$(".where-something-needed-to-be").css('color','red'); 
-}
-</script>
-
-<script>
-	$('#checkId').click(function (){
+	$(document).on("click",'#checkId',function (){
 		if( $('#autoLogin').prop("checked") ){           //체크 안돼있는데 클릭하면 체크 시키고
 			$('#checkMark').attr('class','css-check');
 		}else{                             //체크 돼있으면 해제 시키기
@@ -1204,6 +1186,14 @@ if(!${param.login}){
 		checkedAutoLogin();
 	}
 	
+</script>
+
+
+<script>
+if(!${param.login}){
+	showWarnModal2("아이디 또는 비밀번호를<br>확인해주세요");
+	
+}
 </script>
 
 
