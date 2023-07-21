@@ -7,14 +7,14 @@
 <head>
     <title>introduction</title>
     
-    <link rel="icon" href="../../icon/favicon.png">
-    <link rel="stylesheet" href="../../static/css/introduction.css">
+    <link rel="icon" href="${pageContext.request.contextPath}/icon/favicon.png">
+    <link rel="stylesheet" href="${pageContext.request.contextPath}/static/css/introduction.css">
     
     <style>
 
 		@font-face {
 			font-family: 'MetroSansMedium';
-			src: url('../../font/MetroSans-Medium.woff2');
+			src: url('${pageContext.request.contextPath}/font/MetroSans-Medium.woff2');
 		}
 	   
 	</style>
@@ -26,7 +26,7 @@
         <div class="header-div header-div2">
             <a href="/">
                 <div class="header-div-flex">
-                    <img src="../../icon/favicon.png" alt="logo">
+                    <img src="${pageContext.request.contextPath}/icon/favicon.png" alt="logo">
                     <h1 color="rgba(0, 0, 0, 0.85)" type="item" class="header-iContact">iContact career</h1>
                 </div>
             </a>
@@ -972,7 +972,7 @@
 
                             </div>
 
-                            <button class="top-button">
+                            <button class="top-button" id="MOVE_TOP_BTN">
                                 <i "style=" width: 16px; min-width: 16px; height: 16px; transform: rotate(90deg)"><svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                                         <path id="icon__fill" d="M15.0143 4L7 12L15.0143 20L17 18.0179L10.9714 12L17 5.98213L15.0143 4Z" fill="#fff"></path>
                                     </svg></i>
@@ -981,3 +981,24 @@
 
 
 </html>
+
+<script src="https://code.jquery.com/jquery-3.6.1.min.js"></script>
+
+<script>
+    $(function() {
+        $(window).scroll(function() {
+            if ($(this).scrollTop() > 500) {
+                $('#MOVE_TOP_BTN').fadeIn();
+            } else {
+                $('#MOVE_TOP_BTN').fadeOut();
+            }
+        });
+        
+        $("#MOVE_TOP_BTN").click(function() {
+            $('html, body').animate({
+                scrollTop : 0
+            }, 400);
+            return false;
+        });
+    });
+</script>

@@ -7,14 +7,14 @@
     <meta charset="UTF-8">
     <title>FAQDetail</title>
     
-    <link rel="icon" href="../../icon/favicon.png">
-    <link rel="stylesheet" href="../../static/css/FAQDetail.css">
+    <link rel="icon" href="${pageContext.request.contextPath}/icon/favicon.png">
+    <link rel="stylesheet" href="${pageContext.request.contextPath}/static/css/FAQDetail.css">
     
     <style>
 
 		@font-face {
 			font-family: 'MetroSansMedium';
-			src: url('../../font/MetroSans-Medium.woff2');
+			src: url('${pageContext.request.contextPath}/font/MetroSans-Medium.woff2');
 		}
    
 	</style>
@@ -29,7 +29,7 @@
         <header class="header" style="background-color:#eacaff">
             <div class="logo">
                 <a href="https://iContact.com">
-                      <img src="../../icon/logo.png" width="170px" height="52px" class="iContact-logo">
+                      <img src="${pageContext.request.contextPath}/icon/logo.png" width="170px" height="52px" class="iContact-logo">
                 </a>
                 <a title="홈" href="/hc/ko">
                     <img src="//theme.zdassets.com/theme_assets/9204604/db54bfa5d2ad14572afe57b4b5582b04a38aa9e1.png" class="cs">

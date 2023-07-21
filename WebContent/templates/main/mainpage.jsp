@@ -121,10 +121,10 @@
 							<a href="javascript:location.href='${pageContext.request.contextPath}/listOk.article'">커뮤니티</a>
 						</li>
 						<li class="header-bar-nav-content">
-							<a href="${pageContext.request.contextPath}/templates/faq/FAQ.jsp">FAQ</a>
+							<a href="${pageContext.request.contextPath}/FAQ.main">FAQ</a>
 						</li>
 						<li class="header-bar-nav-content">
-							<a href="${pageContext.request.contextPath}/templates/faq/introduction.jsp">회사소개</a>
+							<a href="${pageContext.request.contextPath}/introduction.main">회사소개</a>
 						</li>
 					</ul>
 				</nav>
@@ -497,7 +497,7 @@
 						</article>
 						
 						<article>
-							<a class="using-kmong-ad" href="${pageContext.request.contextPath}/templates/faq/FAQ.jsp">
+							<a class="using-kmong-ad" href="${pageContext.request.contextPath}/FAQ.main">
 								<div class="using-kmong-ad-picture">
 									<img src="https://kmong.com/_next/image?url=https%3A%2F%2Fd2v80xjmx68n4w.cloudfront.net%2Fassets%2Fdesktop%2Fmodules%2Fmain-themes%2Fmain_theme_picked_business_tip_20220404_1_2.png&w=2880&q=75" width="376" height="247" loading="lazy" style="color: transparent;">
 								</div>
@@ -509,8 +509,8 @@
 						</article>
 						
 						<article>
-							<a class="using-kmong-ad" href="${pageContext.request.contextPath}/templates/faq/introduction.jsp">
-								<div class="using-kmong-ad-picture" href="${pageContext.request.contextPath}/templates/faq/introduction.jsp">
+							<a class="using-kmong-ad" href="${pageContext.request.contextPath}/introduction.main">
+								<div class="using-kmong-ad-picture" href="${pageContext.request.contextPath}/introduction.main">
 									<img src="https://kmong.com/_next/image?url=https%3A%2F%2Fd2v80xjmx68n4w.cloudfront.net%2Fassets%2Fdesktop%2Fmodules%2Fmain-themes%2Fmain_theme_picked_business_tip_20221125_2_3.png&w=2880&q=75" width="376" height="247" loading="lazy" style="color: transparent;">
 								</div>
 								<div class="using-kmong-ad-explanation">
@@ -934,14 +934,14 @@
 	        통신판매업번호 : 2015 - 서울강남 - 03148호<br>
 	        E-mail : koreais@koreaedugroup.com | Fax: 02-2135-2949 </ol>
 	    <ol><a href="javascript:location.href='${pageContext.request.contextPath}/listOk.article'">커뮤니티</a></ol>
-	    <ol><a href="${pageContext.request.contextPath}/templates/faq/FAQ.jsp">FAQ</a></ol>
-	    <ol><a href="${pageContext.request.contextPath}/templates/faq/introduction.jsp"><b>회사소개</b></a></ol>
+	    <ol><a href="${pageContext.request.contextPath}/FAQ.main">FAQ</a></ol>
+	    <ol><a href="${pageContext.request.contextPath}/introduction.main"><b>회사소개</b></a></ol>
 	</div>
 	<div class="footer-div2">
 	    &nbsp;&nbsp; iContact &nbsp;&nbsp;&nbsp;
 	    <a href="javascript:location.href='${pageContext.request.contextPath}/listOk.article'">커뮤니티</a>&nbsp;
-	    <a href="${pageContext.request.contextPath}/templates/faq/FAQ.jsp">FAQ</a>&nbsp;
-	    <a href="${pageContext.request.contextPath}/templates/faq/introduction.jsp">회사소개</a>&nbsp;
+	    <a href="${pageContext.request.contextPath}/FAQ.main">FAQ</a>&nbsp;
+	    <a href="${pageContext.request.contextPath}/introduction.main">회사소개</a>&nbsp;
 	</div>
 </footer>
 
@@ -1107,7 +1107,7 @@ let modalMessage  =`
 								<!-- ==== -->
 								<!-- 회원가입 이동 버튼 -->
 								<div class="gray">
-									<a role="link" color="default" href="join.jsp" class="login-main-go-to-signup-a-tag">	<!-- css-1uk00me eklkj752 -->
+									<a role="link" color="default" href="join.user" class="login-main-go-to-signup-a-tag">	<!-- css-1uk00me eklkj752 -->
 										<span class="login-main-go-to-signup-span">회원가입</span>	<!-- css-1oteowz eklkj751 -->
 									</a>
 									<!-- 10만원 쿠폰 받기 -->
