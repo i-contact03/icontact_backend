@@ -509,8 +509,8 @@
 						</article>
 						
 						<article>
-							<a class="using-kmong-ad" href="${pageContext.request.contextPath}/templates/faq/introduction.jsp">
-								<div class="using-kmong-ad-picture" href="${pageContext.request.contextPath}/templates/faq/introduction.jsp">
+							<a class="using-kmong-ad" href="${pageContext.request.contextPath}/introduction.main">
+								<div class="using-kmong-ad-picture" href="${pageContext.request.contextPath}/introduction.main">
 									<img src="https://kmong.com/_next/image?url=https%3A%2F%2Fd2v80xjmx68n4w.cloudfront.net%2Fassets%2Fdesktop%2Fmodules%2Fmain-themes%2Fmain_theme_picked_business_tip_20221125_2_3.png&w=2880&q=75" width="376" height="247" loading="lazy" style="color: transparent;">
 								</div>
 								<div class="using-kmong-ad-explanation">

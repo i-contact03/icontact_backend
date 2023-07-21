@@ -8,7 +8,10 @@
     <title>FAQ</title>
 
 	<link rel="icon" href="${pageContext.request.contextPath}/icon/favicon.png">
+<<<<<<< HEAD
     <link rel="stylesheet" href="../../static/css/FAQ.css">
+=======
+>>>>>>> icontact/dev2
     <link rel="stylesheet" href="${pageContext.request.contextPath}/static/css/FAQ.css">
     
     
