@@ -8,7 +8,10 @@
     <title>introduction</title>
     
     <link rel="icon" href="${pageContext.request.contextPath}/icon/favicon.png">
+<<<<<<< HEAD
     <link rel="stylesheet" href="../../static/css/introduction.css">
+=======
+>>>>>>> icontact/dev2
     <link rel="stylesheet" href="${pageContext.request.contextPath}/static/css/introduction.css">
     
     <style>
@@ -973,7 +976,7 @@
 
                             </div>
 
-                            <button class="top-button">
+                            <button class="top-button" id="MOVE_TOP_BTN">
                                 <i "style=" width: 16px; min-width: 16px; height: 16px; transform: rotate(90deg)"><svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                                         <path id="icon__fill" d="M15.0143 4L7 12L15.0143 20L17 18.0179L10.9714 12L17 5.98213L15.0143 4Z" fill="#fff"></path>
                                     </svg></i>
@@ -982,3 +985,24 @@
 
 
 </html>
+
+<script src="https://code.jquery.com/jquery-3.6.1.min.js"></script>
+
+<script>
+    $(function() {
+        $(window).scroll(function() {
+            if ($(this).scrollTop() > 500) {
+                $('#MOVE_TOP_BTN').fadeIn();
+            } else {
+                $('#MOVE_TOP_BTN').fadeOut();
+            }
+        });
+        
+        $("#MOVE_TOP_BTN").click(function() {
+            $('html, body').animate({
+                scrollTop : 0
+            }, 400);
+            return false;
+        });
+    });
+</script>
