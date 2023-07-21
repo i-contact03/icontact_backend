@@ -96,14 +96,6 @@
 								<!-- 로그인 부속 기능 -->
 
 
-	
-
-
-
-
-
-
-
 								<div class="login-main-login-below-wrapper">	<!-- css-70qvj9 equrxy92 -->
 									<label for="autoLogin" id="checkId" color="#ffd400" class="login-main-login-below-check-for-keeplogin-wrapper">	<!-- css-18pqe3v elgfge0 -->
 										<span class="login-main-login-below-check-for-keeplogin-span">	<!-- css-9ffs86 elgfge3 -->
@@ -203,7 +195,6 @@ if(!${param.login}){
 		$("input[name='autoLogin']").prop("checked", true);
 		checkedAutoLogin();
 	}
-	
 	
 </script>
 </html>

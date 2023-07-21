@@ -7,7 +7,7 @@ function showWarnModal(modalMessage){
     setTimeout(function(){modalCheck = true;}, 500);
 }
 
-$("div.modal").on("click", function(){
+$("div.login-main-full-popup-box-close-button-container").on("click", function(){
     if(modalCheck){
         $("div.warn-modal").css("animation", "popDown 0.5s");
         $("div.modal").fadeOut(500);
