@@ -7,4 +7,10 @@
 		from tbl_detail_image
 		where idea_id = #{ideaId}
 	</select>
+	
+	<insert id="insert">
+		insert into tbl_detail_image
+		(di_system_name, di_original_name, di_file_size, idea_id)
+		values(#{diSystemName}, #{diOriginalName}, #{diFileSize}, #{ideaId})
+	</insert>
 </mapper>

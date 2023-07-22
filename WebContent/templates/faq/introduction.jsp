@@ -8,6 +8,10 @@
     <title>introduction</title>
     
     <link rel="icon" href="${pageContext.request.contextPath}/icon/favicon.png">
+<<<<<<< HEAD
+    <link rel="stylesheet" href="../../static/css/introduction.css">
+=======
+>>>>>>> icontact/dev2
     <link rel="stylesheet" href="${pageContext.request.contextPath}/static/css/introduction.css">
     
     <style>
