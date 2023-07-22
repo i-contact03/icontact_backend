@@ -150,7 +150,7 @@ li {
 	padding: 0 0 0 7px;
 	min-height: auto;
 	min-width: auto;
-	
+	border: none;
 	display: flex;
 	padding-left: 7px;
 	justify-content: flex-end;
