@@ -65,15 +65,16 @@ public class WriteIdeaOkController implements Action {
 		ideaVO.setUserId(longUserId);
 //		ideaVO.setUserId((Long)session.getAttribute("userId"));
 		
-		ideaDAO.insert(ideaVO);
+//		ideaDAO.insert(ideaVO);
 		
-		// 썸네일 파일 업로드
+		// 썸네일 파일 업로드 // detailImageVO 분류용 칼럼 추가하기(썸네일과 상세이미지 구분 요망)
         String thumbnailFileName = ideaMultipartRequest.getFilesystemName("upload1");
-        if (thumbnailFileName != null) {
+        // if (thumbnailFileName != null) {
             ideaVO.setIdeaThumbnailName(thumbnailFileName);
             ideaDAO.updateThumbnail(ideaVO);
+            ideaDAO.insert(ideaVO);
             System.out.println("썸네일 업로드 완료");
-        }
+        // }
         
 		
 //		 if(inputTypeFileName.equals("upload1")) {
