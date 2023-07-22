@@ -41,7 +41,7 @@ public class ListOkController implements Action {
 		articleDAO.selectAll(pagable).stream().map(JSONObject::new).forEach(jsonArray::put);
 		
 		System.out.println(jsonArray.toString());
-		req.setAttribute("articles", jsonArray.toString());
+		req.setAttribute("articleList", jsonArray.toString());
 //		req.setAttribute("total", articleDAO.getTotal(search));
 		
 		result.setPath("templates/community/community_article_main.jsp");

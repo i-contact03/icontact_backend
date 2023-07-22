@@ -58,7 +58,7 @@
 				</form>
 			</nav>
 			 <form action="${pageContext.request.contextPath}/writeOk.article" name="writeForm" method="post" enctype="multipart/form-data">
-			<h1>
+				<h1>
 			    <div class="article-write-page-title">게시물 등록<!-- 문의 등록 --></div>
 			    <!-- <div class="article-write-page-details">
 			    	<a>
@@ -90,7 +90,7 @@
 			  
 			    <div class="form-field required  request_subject">
 			      <label id="request_subject_label" for="request_subject">제목</label>
-			      <input type="text" name="articleTitle" id="articleTitle" value="${article.articleTitle}" maxlength="150" size="150">	      
+			      <input type="text" name="articleTitle" id="articleTitle" maxlength="150" size="150">	      
 			    </div>
 			
 			    <div class="suggestion-list"></div>
@@ -98,7 +98,7 @@
 			    <div class="form-field text  required  request_description">
 			      <label id="request_description_label" for="request_description"><!-- 설명 -->내용</label>
 			      <textarea name="articleContent" id="articleContent"></textarea>
-			      <input type="hidden" name="request[description_mimetype]" id="request_description_mimetype" value="text/plain" style="display: none;" autocomplete="off">
+			      <input type="hidden"  id="request_description_mimetype" value="text/plain" style="display: none;" autocomplete="off">
 			      
 			      <!-- <p id="request_description_hint">문의 내용에 관한 세부 정보를 입력해 주세요. 
 					저희 지원 스태프가 가능한 빨리 자세한 답변을 드리도록 하겠습니다.</p> -->

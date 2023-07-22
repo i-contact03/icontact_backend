@@ -20,7 +20,7 @@ public class WriteOkController implements Action {
 
 	@Override
 	public Result execute(HttpServletRequest req, HttpServletResponse resp) throws IOException, ServletException {
-		System.out.println("컨트롤러 들어옴");
+		System.out.println("writeOk 컨트롤러 들어옴");
 		ArticleVO articleVO = new ArticleVO();
 		ArticleDAO articleDAO = new ArticleDAO();
 		Result result = new Result();
@@ -28,7 +28,7 @@ public class WriteOkController implements Action {
 		
 		UserVO userVO = new UserVO();
 		UserDAO userDAO = new UserDAO();
-//		HttpSession session = req.getSession();
+		HttpSession session = req.getSession();
 //		
 //		String root = req.getServletContext().getRealPath("/") + "upload/";
 //		int fileSize = 1024 * 1024 * 20;//
@@ -39,15 +39,19 @@ public class WriteOkController implements Action {
 //		articleVO.setArticleContent(multipartRequest.getParameter("articleContent"));
 //		articleVO.setUserId((Long)session.getAttribute("userId"));
 		
-		  int intValue = 1;
+		  int intValue = 3;
 	      Long longValue = Long.valueOf(intValue);
 	      userVO = userDAO.findUser(longValue);
 		
 		
 		
-		String articleTitle = req.getParameter("articleTitle");
-		String articleContent = req.getParameter("articleContent");
+//		String articleTitle = req.getParameter("articleTitle");
+//		String articleContent = req.getParameter("articleContent");
 //		articleVO.setUserId((Long)session.getAttribute("userId"));
+		
+		articleVO.setArticleTitle(req.getParameter("articleTitle"));
+		articleVO.setArticleContent(req.getParameter("articleContent"));
+		articleVO.setUserId(longValue);
 		
 		System.out.println(articleVO);
 		

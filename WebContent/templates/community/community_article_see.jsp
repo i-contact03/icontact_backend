@@ -32,7 +32,7 @@
 				</a>
 			</div>
 			<div class="nav-wrapper">
-				<a href="articleWrite.article" target="_parent" style="color: #666666;">게시물 등록하기</a>
+				<a href="articleWrite.article" target="_parent" style="color: #666666;"></a>
 				<a class="change-page-login" role="button" href="https://kmong.com/login?brand_id=360002309011&locale_id=69&return_to=https%3A%2F%2Fsupport.kmong.com%2Fhc%2Fko%2Frequests%2Fnew&target=zendesk&timestamp=1687257449" style="color: blue;">한동석 님</a>
 			</div>
 		</header>
@@ -50,7 +50,7 @@
 				    	<a href="">게시글공지사항</a>
 				    </li> -->
 				    <li >
-       					<a href=""><c:out value="${article.articleTitle}"/><!-- 전체공지 --></a>
+       					<a href="" class="now"><!-- 전체공지 --></a>
     				</li>
 				</ol>
 				<form role="search" class="search" action="/hc/ko/search" accept-charset="UTF-8" method="get">
@@ -62,67 +62,54 @@
 			<div class="article-container">
 			<section class="article-sidebar">
 	      
-		        <section class="section-articles art-sidebar">
+		        <section class="section-articles art-sidebar" id="side">
 		        <h3 class="article-sidebar-title sidenav-title"><!-- 이 섹션의 문서 -->게시글 목록</h3>
 		        <ul> 
-		          
-		            <li>
-		              <a href="">
-		              	<p class="sidenav-item-text">개인정보처리방침 개정 안내 (2023.07.03)</p>
-		              </a> 
-		            </li>
-		          
-		            <li>
-		              <a href="" class="sidenav-item current-article">
-		              	<p class="sidenav-item-text">6월, 고객센터 운영 시간 안내</p>
-		              </a> 
-		            </li>
-		          
 		            <li>
 		              <a href="" class="sidenav-item ">
-		              <p class="">[공지] 구매 수수료 도입 및 혜택 안내</p>
+		              <p class="sidenav-item-text">상픔 첫 판매 후기 공유</p>
 		             </a> 
 		            </li>
 		          
 		            <li>
 		              <a href="" class="sidenav-item ">
-		              	<p class="sidenav-item-text">서비스 이용약관 개정 안내 (2023.04.01)</p>
+		              	<p class="sidenav-item-text">상품 등록하면 진짜 잘 팔리나요?</p>
 		              </a> 
 		            </li>
 		          
 		            <li>
 		              <a href="" class="sidenav-item ">
-		              	<p class="sidenav-item-text">크몽을 사칭하는 메시지, 조심하세요!</p>
+		              	<p class="sidenav-item-text">취미로 만든 물건으로 돈 벌기</p>
 		              </a> 
 		            </li>
 		          
 		            <li>
 		              <a href="" class="sidenav-item ">
-		              	<p class="sidenav-item-text">[업데이트] 안드로이드 지원 중단 버전 안내 (2023.02.27)</p>
+		              	<p class="sidenav-item-text">역삼역 맛집 추천</p>
 		              </a> 
 		            </li>
 		          
 		            <li>
 		              <a href="" class="sidenav-item ">
-		              	<p class="sidenav-item-text">[업데이트] iOS 지원 중단 버전 안내 (2023.02.27)</p>
+		              	<p class="sidenav-item-text">밥먹으러 갔다가 우연히 만난 내 아이디어</p>
 		              </a> 
 		            </li>
 		          
 		            <li>
 		              <a href="" class="sidenav-item ">
-		              	<p class="sidenav-item-text">[업데이트] 포트폴리오 메인 화면, 기능 개선 (2023.01.05)</p>
+		              	<p class="sidenav-item-text">가장 잘 연결되는 상품은 무엇일까</p>
 		              </a> 
 		            </li>
 		          
 		            <li>
 		              <a href="" class="sidenav-item ">
-		              	<p class="sidenav-item-text">개인정보처리방침 개정 안내 (2022.08.26)</p>
+		              	<p class="sidenav-item-text">창업하고 싶다</p>
 		              </a> 
 		            </li>
 		          
 		            <li>
 		              <a href="" class="sidenav-item ">
-		              	<p class="sidenav-item-text">페널티 정책 안내 (2022.07.04)</p>
+		              	<p class="sidenav-item-text">내 상품이 잘팔리는거 같은데 창업해볼까 조언 구합니다</p>
 		              </a> 
 		            </li>
 		          
@@ -143,7 +130,7 @@
 		      </header> -->
 		      <header class="article-header">
 		        <h1 class="article-title">
-		           [제목] 창업을 꿈꾸는 이들에게 알려주고 싶은 소중한 정보들 
+		          <!--  [제목] 창업을 꿈꾸는 이들에게 알려주고 싶은 소중한 정보들  -->
 		        </h1>
 		      </header>
 
@@ -152,27 +139,29 @@
 		          <div class="article-body"> 
 					<div class="article-content">
 						<div class="article-body">
-							<p>안녕하세요, 여러분!</p>
+							<p class=""><!-- 안녕하세요, 여러분! --></p>
 							<div class="article-content">
 								<div class="article-body">
-								<p class="art-text-align-left">창업을 꿈꾸는 분들을 위해 오늘은 창업에 관한 소중한 정보들을 공유하려고 합니다. 저도 창업자로서 여러 경험을 겪어왔기 때문에 이 정보들이 여러분에게 도움이 될 것이라고 확신합니다. 함께 시작해볼까요?</p>
+								<!-- <p class="art-text-align-left"></p> -->
 								
 								<p class="art-text-align-center">&nbsp;</p>
 								<h3 id="">
 									<span class="art-color-color">
-										<strong>❚&nbsp;</strong>
+										<strong>❚&nbsp;
+										<span class="writer1"></span> 
+										</strong>
 									</span>
 									<span class="art-color-black">
-										<strong>1. 비즈니스 아이디어의 중요성</strong>
+										<strong><!-- 1. 비즈니스 아이디어의 중요성 --></strong>
 									</span>
 								</h3>
 								
-								<p class="art-text-align-left">   창업의 첫 단계는 좋은 비즈니스 아이디어를 발견하는 것입니다. 이때 가장 중요한 것은 현재 시장에서의 필요성과 경쟁력입니다. 자신의 관심 분야와 역량을 고려하여 창업 아이디어를 선정하고 타당성을 검증하는 것이 필요합니다.</p>
+								<p class="art-text-align-left">   <!-- 창업의 첫 단계는 좋은 비즈니스 아이디어를 발견하는 것입니다. 이때 가장 중요한 것은 현재 시장에서의 필요성과 경쟁력입니다. 자신의 관심 분야와 역량을 고려하여 창업 아이디어를 선정하고 타당성을 검증하는 것이 필요합니다. --></p>
 								<!-- <p>
 									<span class="art-color-black art-font-size-large">　◾ 평일 10:30 ~ 18:00</span>
 									<span class="art-color-black6">&nbsp;(점심시간 13:00 ~ 14:00)</span>
 								</p> -->
-								<p class="art-text-align-left">&nbsp;</p>
+								<!-- <p class="art-text-align-left">&nbsp;</p>
 								<p class="art-text-align-left">
 									<span class="art-color-black">
 										<span class="art-font-size-large">
@@ -185,7 +174,7 @@
 								</p>
 
 								<p class="art-text-align-left">   창업을 시작하기 전에 비즈니스 계획을 세우는 것은 매우 중요합니다. 비즈니스 모델, 시장 조사, 마케팅 전략, 재무 계획 등을 포함하여 구체적이고 실현 가능한 계획을 세우세요. 이를 토대로 향후 발전 방향을 설정할 수 있습니다.</p>
-								<!-- <p class="art-text-align-left">
+								<p class="art-text-align-left">
 									<span class="art-color-black">
 										<span class="art-font-size-large">　◾ 6월 1일(목) | 크몽 내부 행사</span>
 									</span>
@@ -194,7 +183,7 @@
 									<span class="art-color-black">
 										<span class="art-font-size-large">　◾ 6월 6일(화) | 현충일&nbsp;</span>
 									</span>
-								</p> -->
+								</p>
 								<p class="art-text-align-left">&nbsp;</p>
 								<p >
 									<span class="art-font-size-large">
@@ -208,7 +197,7 @@
 								</p>
 
 								<p class="art-text-align-left">   대부분의 창업자들은 초기 자금 조달에 어려움을 겪습니다. 자기 자본, 투자자 유치, 대출, 정부 지원 등 다양한 자금 조달 방법을 탐색해보세요. 상황에 따라 여러 방법을 조합하여 자금을 조달할 수 있습니다.</p>
-								<!-- <p>
+								<p>
 									<span class="art-font-size-large">　</span>
 									<span class="art-font-size-large">◾ </span>
 									고객센터 휴무일에는 환불금, 수익금의 출금 업무도 중단되오니 서비스 이용에 참고해 주시기 바랍니다.
@@ -220,17 +209,17 @@
 										<span class="art-color-blue">1:1 문의</span>
 									</a>
 									] 채널을 통해 접수해 주시면, 순차적으로 답변해드리겠습니다.
-								</p> -->
+								</p>
 								<p>&nbsp;</p>
-								<!-- <p class="art-text-align-left">
+								<p class="art-text-align-left">
 									본격적인 여름이 시작되는 싱그러운 6월입니다.&nbsp;
 									<br>
 									날씨만큼이나 활기찬 한 달 보내시기를 바라겠습니다.
 								</p>
 								<p class="art-text-align-left">크몽이 회원님의 비즈니스를 항상 응원하겠습니다.</p>
-								<p class="art-text-align-left">감사합니다.</p> -->
+								<p class="art-text-align-left">감사합니다.</p>
 								<p class="art-text-align-left">창업은 도전적이고 어려운 여정이지만, 올바른 정보와 준비를 통해 성공할 수 있습니다. 위의 정보들을 참고하여 자신만의 비즈니스를 성공시키는 길을 걷길 바랍니다.</p>
-								<p class="art-text-align-left">응원합니다!</p>
+								<p class="art-text-align-left">응원합니다!</p> -->
 								</div>
 							</div>
 						</div>
@@ -395,7 +384,7 @@
 					<!-- ================= -->
 					<!-- 댓글 작성하기 전체 틀 -->
 					<!-- ================= -->
-					<div class="comment-write-full-container"> <!-- .InboxDetailMessageFooter -->
+					<div class="comment-write-full-container" id="comment-write-wrap"> <!-- .InboxDetailMessageFooter -->
 						
 						<!-- 메세지 작성 큰 틀 -->
 						<div class="comment-write-reply-area">	<!-- inbox-detail-message-area -->
@@ -472,7 +461,7 @@
 					<!-- 댓글 작성하기 전체 틀 ====== 끝 ======-->
 					
 					<!-- 댓글 보기 전체 틀 -->
-					<div class="comment-container">
+					<div class="comment-container" id="comments-wrap">
 					<!-- css-0 eeze5551 -->
 					
 						<!-- 댓글 1번 전체 틀 -->
@@ -742,5 +731,18 @@
 	</footer>
 </body>
 <script src="https://code.jquery.com/jquery-3.7.0.min.js"></script>
+
+<script>
+
+	let article = `${article}`;
+	
+	let contextPath = `${pageContext.request.contextPath}`;
+	let articleId = "${article.articleId}";
+	let userId = "${sessionScope.userId}";
+
+</script>
+
+
 <script src="${pageContext.request.contextPath}/static/js/article_see.js"></script>
+<script src="${pageContext.request.contextPath}/static/js/comment.js"></script>
 </html>

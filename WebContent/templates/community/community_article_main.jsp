@@ -182,8 +182,8 @@
 <script src="https://rawgit.com/jackmoore/autosize/master/dist/autosize.min.js"></script>
 <script>
 
-	let articles = `${articles}`;
-	console.log(articles);
+	let articleList = `${articleList}`;
+	console.log(articleList);
 	let contextPath = `${pageContext.request.contextPath}`;
 	let $form = $("form[name='page-form']");
 	$("a.change-page").on("click", function(e){

@@ -26,7 +26,7 @@ public class ArticleDAO {
 	
 //	글 작성
 	public void insert(ArticleVO articleVO) {
-		System.out.println("DAO!");
+		System.out.println("제발 values");
 		sqlSession.insert("article.insert", articleVO);
 	}
 	
