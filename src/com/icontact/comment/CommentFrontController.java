@@ -7,9 +7,10 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-
 import com.icontact.Result;
+import com.icontact.comment.controller.DeleteOkController;
 import com.icontact.comment.controller.ListOkController;
+import com.icontact.comment.controller.UpdateOkController;
 import com.icontact.comment.controller.WriteOkController;
 
 
@@ -26,12 +27,19 @@ public class CommentFrontController extends HttpServlet{
 		Result result = null;
 		
 		if (target.equals("listOk")) {
-			System.out.println("프컨!!");
+			System.out.println("프컨!! list");
 			result = new ListOkController().execute(req, resp);
 
 		} else if (target.equals("writeOk")) {
+			System.out.println("프컨!! write");
 			result = new WriteOkController().execute(req, resp);
-		} 
+		}  else if (target.equals("updateOk")) {			
+			System.out.println("프컨!! update");
+			result = new UpdateOkController().execute(req, resp);
+		} else if (target.equals("deleteOk")) {
+			System.out.println("프컨!! delete");
+			result = new DeleteOkController().execute(req, resp);
+		}
 //		
 //		
 //		if(result != null) {

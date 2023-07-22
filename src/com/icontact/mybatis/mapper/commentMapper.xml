@@ -2,5 +2,28 @@
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "https://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="comment">
 
+	<select id="selectByArticleId" resultType="commentDTO">
+		select comment_id, comment_content, comment_date, u.user_name
+		from tbl_user u inner join tbl_comment c
+		on u.user_id = c.user_id and article_id = #{articleId}
+		order by comment_id desc
+		limit #{offset}, #{rowCount}
+	</select> 
+	
+	<insert id="insert">
+		insert into tbl_comment
+		(comment_content, user_id, article_id)
+		values(#{commentContent}, #{userId}, #{articleId})
+	</insert>
+	
+	<update id="update">
+		update tbl_comment
+		set comment_content = #{commentContent}, coment_updated_date = current_timestamp()
+		where comment_id = #{commentId}
+	</update>
+	
+	<delete id="delete">
+		delete from tbl_comment where comment_id = #{commentId}
+	</delete>
 
 </mapper>

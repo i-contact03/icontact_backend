@@ -76,6 +76,10 @@ public class IdeaVO {
 	public void setScId(String scId) {
 		this.scId = Long.parseLong(scId);
 	}
+	
+//	public void setScId(String string) {
+//		this.scId = string;
+//	}
 
 	@Override
 	public String toString() {

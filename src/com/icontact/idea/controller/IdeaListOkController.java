@@ -28,7 +28,6 @@ public class IdeaListOkController implements Action {
 		UserDAO userDAO = new UserDAO();
 		Result result = new Result();
 		JSONArray jsonArray = new JSONArray();
-		
 		String temp = req.getParameter("page");
 		int page = temp == null ? 1 : Integer.parseInt(temp);
 		
@@ -46,12 +45,12 @@ public class IdeaListOkController implements Action {
 		pagable.put("offset", criteria.getOffset()); // 몇 번부터
 		pagable.put("rowCount", criteria.getRowCount()); // 몇 개 가져올래 ?
 		
-		List<IdeaDTO> ideas = ideaDAO.selectAll(pagable);
+		List<IdeaDTO> ideas = ideaDAO.selectAll(pagable); // select된 모든 아이디어들 가지고 오기
 		
 		for (IdeaDTO idea : ideas) {
-			UserVO userVO = new UserVO();
+			UserVO userVO = new UserVO(); // UserVO 객체화 후
 			userVO = userDAO.findUser(idea.getUserId());
-			idea.setUserIdentification(userVO.getUserIdentification());
+			idea.setUserIdentification(userVO.getUserIdentification()); // UserIdentification Set하기
 		}
 		
 		
