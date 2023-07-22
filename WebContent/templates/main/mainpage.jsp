@@ -10,13 +10,11 @@
 <link rel="stylesheet" href="../../static/css/mainpageWork.css">
 <link rel="stylesheet" href="${pageContext.request.contextPath}/static/css/mainpageWork.css">
 <link rel="stylesheet" href="${pageContext.request.contextPath}/static/css/login_real.css">
+<link rel="stylesheet" href="${pageContext.request.contextPath}/static/css/modal/modal.css">
 
 <style>
 
-	@font-face {
-		font-family: 'MetroSansBold';
-		src: url('${pageContext.request.contextPath}/font/MetroSans-Bold.woff2'); /* 굵은글씨체 주소지정 */
-	}
+
 	
 	@font-face {
 		font-family: 'MetroSansMedium';
@@ -45,25 +43,27 @@
 		<div class="header">
 		<!-- 로고 + 검색바 + 아이디어등록 + 마이크몽 + 프로필-->
 			<section class="top-header">
+			<a class="goods-link" href="javascript:location.href='${pageContext.request.contextPath}/mainAllList.main?userId=${idea.userId}&ideaId=${idea.ideaId}'">
 				<svg class="top-header-logo" width="85" height="100%" viewBox="0 0 85 26" xmlns="http://www.w3.org/2000/svg">
 					<img src="${pageContext.request.contextPath}/icon/logo.png" width="170px" height="52px">
 				</svg>
+				    </a>
 				
-				<form action="" class="top-header-input-form">
+				<form action="${pageContext.request.contextPath}/ideaListOk.idea" class="top-header-input-form" name=search>
 					<div class="top-header-input-wrapper">
-						<input type="text" class="top-header-input" placeholder="서비스 또는 전문가를 검색해보세요.">
-						<div class="magnifier-wrapper">
+						<input type="text" autocomplete="off" name="keyword" value="${keyword}" class="top-header-input" placeholder="서비스 또는 일반회원을 검색해보세요.">
+						<button type="submit" class="magnifier-wrapper">
 							<svg width="24" height="24" viewBox="0 0 24 24" 
 							fill="currentColor" aria-hidden="true" focusable="false" 
 							preserveAspectRatio="xMidYMid meet" class="magnifier" style="">
 								<path xmlns="http://www.w3.org/2000/svg" d="M11.2307008,3.5 C15.5002489,3.5 18.9614015,6.96828437 18.9614015,11.24663 C18.9614015,13.0978372 18.3133954,14.7973826 17.2322825,16.1299241 L20.2742127,19.178378 C20.5762688,19.4810023 20.5764739,19.9714482 20.2746708,20.2738195 C19.9728678,20.5761908 19.4833433,20.5759857 19.1812873,20.2733614 L19.1812873,20.2733614 L16.1426973,17.2288066 C14.8071694,18.3312107 13.0960911,18.9932599 11.2307008,18.9932599 C6.96115262,18.9932599 3.5,15.5249756 3.5,11.24663 C3.5,6.96828437 6.96115262,3.5 11.2307008,3.5 Z M11.2307008,5.04932599 C7.81506225,5.04932599 5.04614015,7.82395349 5.04614015,11.24663 C5.04614015,14.6693064 7.81506225,17.4439339 11.2307008,17.4439339 C14.6463393,17.4439339 17.4152614,14.6693064 17.4152614,11.24663 C17.4152614,7.82395349 14.6463393,5.04932599 11.2307008,5.04932599 Z" style=""d></path>
 							</svg>
-						</div>
+						</button>
 					</div>
 				</form>
 				
 				<div class="top-header-menu-wrapper">
-					<a class="top-header-menu" id='login' href="javascript:location.href='${pageContext.request.contextPath}/login.user'">
+					<a class="top-header-menu" id='login' href="#" onclick="showWarnModal(modalMessage);">
 						<span></span>
 					</a>
 					<a class="top-header-menu" id="join" href="javascript:location.href='${pageContext.request.contextPath}/join.user'">
@@ -147,16 +147,19 @@
 					<br>
 					원하는 전문가를 찾아보세요!
 				</h1>
-				<form action="" class="main-banner-search-form">
+				<form action="${pageContext.request.contextPath}/ideaListOk.idea" class="main-banner-search-form" name=search>
 					<div class="main-banner-search-wrapper">
-						<input class="main-banner-search" placeholder="검색어를 입력하세요.">
+						<input class="main-banner-search" name="keyword" value="${keyword}" placeholder="검색어를 입력하세요.">
 						<div class="main-banner-search-magnifier">
+							<button type="submit" class="magnifier-wrapper">
 							<svg width="36" height="36" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false" preserveAspectRatio="xMidYMid meet">
 								<path xmlns="http://www.w3.org/2000/svg" d="M11.2307008,3.5 C15.5002489,3.5 18.9614015,6.96828437 18.9614015,11.24663 C18.9614015,13.0978372 18.3133954,14.7973826 17.2322825,16.1299241 L20.2742127,19.178378 C20.5762688,19.4810023 20.5764739,19.9714482 20.2746708,20.2738195 C19.9728678,20.5761908 19.4833433,20.5759857 19.1812873,20.2733614 L19.1812873,20.2733614 L16.1426973,17.2288066 C14.8071694,18.3312107 13.0960911,18.9932599 11.2307008,18.9932599 C6.96115262,18.9932599 3.5,15.5249756 3.5,11.24663 C3.5,6.96828437 6.96115262,3.5 11.2307008,3.5 Z M11.2307008,5.04932599 C7.81506225,5.04932599 5.04614015,7.82395349 5.04614015,11.24663 C5.04614015,14.6693064 7.81506225,17.4439339 11.2307008,17.4439339 C14.6463393,17.4439339 17.4152614,14.6693064 17.4152614,11.24663 C17.4152614,7.82395349 14.6463393,5.04932599 11.2307008,5.04932599 Z"></path>
 							</svg>
+						   </button>
 						</div>
 					</div>
 				</form>
+					
 					
 			<div class="main-banner-tag-wrapper">
 				<a href="" class="main-banner-tag">
@@ -919,11 +922,7 @@
 </main>
 
 
-<div class="modal">
-            <div class="warn-modal">
-                <div id="content-wrap"></div>
-            </div>
-        </div>
+
 
 
  <footer class="footer">
@@ -947,7 +946,11 @@
 
 
 
-
+<div class="modal2">
+            <div class="warn-modal2">
+                <div id="content-wrap2"></div>
+            </div>
+        </div>
 
 
 
@@ -957,19 +960,7 @@
 <script src="${pageContext.request.contextPath}/static/js/mainpage.js"></script>
 <script src="${pageContext.request.contextPath}/static/js/modal/modal.js"></script>
 
-<script>
 
-
-	$('#checkId').click(function (){
-		if( $('#autoLogin').prop("checked") ){           //체크 안돼있는데 클릭하면 체크 시키고
-			$('#checkMark').attr('class','css-check');
-		}else{                             //체크 돼있으면 해제 시키기
-			$('#checkMark').attr('class','login-main-login-below-check-for-keeplogin-checkbox-inner');
-		}
-	});
-	
-	
-</script>
 
 <script>
 
@@ -998,7 +989,6 @@ let modalMessage  =`
 								</span>
 							</button>
 						</div>
-							
 						<!-- ---------------------------- -->
 						<!-- 찐 로그인 팝업 ~~ -->
 						<div class="login-main-full-popup-box-wrapper">	<!-- css-1qthg6u eyci4q00 -->
@@ -1052,15 +1042,6 @@ let modalMessage  =`
 									<!-- = -->
 									<!-- 로그인 부속 기능 -->
 
-
-		
-
-
-
-
-
-
-
 									<div class="login-main-login-below-wrapper">	<!-- css-70qvj9 equrxy92 -->
 										<label for="autoLogin" id="checkId" color="#ffd400" class="login-main-login-below-check-for-keeplogin-wrapper">	<!-- css-18pqe3v elgfge0 -->
 											<span class="login-main-login-below-check-for-keeplogin-span">	<!-- css-9ffs86 elgfge3 -->
@@ -1079,28 +1060,7 @@ let modalMessage  =`
 									</div>
 								</form>
 								
-								<!-- ==== -->
-								<!-- 소셜미디어 간편 로그인 -->
-								<!-- <div class="css-tbibp8 enu6cyp0">	css-tbibp8 enu6cyp0
-									<h5 variant="h5" class="css-1y19fas e870mj50" color="gray900">SNS 간편 로그인</h5>
-									<div class="css-1dqn28w enu6cyp1">
-										<a href="/signup/naver?next_page=%2F%3Futm_source%3Dgoogle%26utm_medium%3Dcpc%26utm_campaign%3D0%26utm_content%3Dmarket%26utm_group%3D0%26utm_term%3D%25ED%2581%25AC%25EB%25AA%25BD%26gclid%3DEAIaIQobChMIr867pLDt_wIV162WCh2gGwdgEAAYASAAEgJozfD_BwE" class="css-18u83hy enu6cyp2" style="background-color: rgb(30, 200, 0);">
-											<img src="https://d2v80xjmx68n4w.cloudfront.net/assets/icon/naver-logo_v2.png" width="24" height="24" alt="소셜 로고">
-										</a>
-										<a href="/signup/kakao?next_page=%2F%3Futm_source%3Dgoogle%26utm_medium%3Dcpc%26utm_campaign%3D0%26utm_content%3Dmarket%26utm_group%3D0%26utm_term%3D%25ED%2581%25AC%25EB%25AA%25BD%26gclid%3DEAIaIQobChMIr867pLDt_wIV162WCh2gGwdgEAAYASAAEgJozfD_BwE" class="css-18u83hy enu6cyp2" style="background-color: rgb(249, 224, 0);">
-											<img src="https://d2v80xjmx68n4w.cloudfront.net/assets/icon/kakao-logo_v2.png" width="24" height="24" alt="소셜 로고">
-										</a>
-										<a href="/signup/facebook?next_page=%2F%3Futm_source%3Dgoogle%26utm_medium%3Dcpc%26utm_campaign%3D0%26utm_content%3Dmarket%26utm_group%3D0%26utm_term%3D%25ED%2581%25AC%25EB%25AA%25BD%26gclid%3DEAIaIQobChMIr867pLDt_wIV162WCh2gGwdgEAAYASAAEgJozfD_BwE" class="css-18u83hy enu6cyp2" style="background-color: rgb(24, 119, 242);">
-											<img src="https://d2v80xjmx68n4w.cloudfront.net/assets/icon/facebook-logo_v2.png" width="24" height="24" alt="소셜 로고">
-										</a>
-										<a href="/signup/google?next_page=%2F%3Futm_source%3Dgoogle%26utm_medium%3Dcpc%26utm_campaign%3D0%26utm_content%3Dmarket%26utm_group%3D0%26utm_term%3D%25ED%2581%25AC%25EB%25AA%25BD%26gclid%3DEAIaIQobChMIr867pLDt_wIV162WCh2gGwdgEAAYASAAEgJozfD_BwE" class="css-18u83hy enu6cyp2" style="background-color: rgb(255, 255, 255); border: 1px solid rgb(228, 229, 237);">
-											<img src="https://d2v80xjmx68n4w.cloudfront.net/assets/icon/google-logo_v2.png" width="24" height="24" alt="소셜 로고">
-										</a>
-										<a href="/signup/apple?next_page=%2F%3Futm_source%3Dgoogle%26utm_medium%3Dcpc%26utm_campaign%3D0%26utm_content%3Dmarket%26utm_group%3D0%26utm_term%3D%25ED%2581%25AC%25EB%25AA%25BD%26gclid%3DEAIaIQobChMIr867pLDt_wIV162WCh2gGwdgEAAYASAAEgJozfD_BwE" class="css-18u83hy enu6cyp2" style="background-color: rgb(0, 0, 0);">
-											<img src="https://d2v80xjmx68n4w.cloudfront.net/assets/icon/apple-logo_v2.png" width="24" height="24" alt="소셜 로고">
-										</a>
-									</div>
-								</div> -->
+							
 								
 								<!-- 공간 만들기 -->
 								<div class="where-something-needed-to-be"></div>
@@ -1125,10 +1085,6 @@ let modalMessage  =`
 
 	</body>`;
 
-	  /* console.log(modalMessage);
-
-   showWarnModal(modalMessage);  */
-   
 </script>  
 
         
@@ -1195,7 +1151,7 @@ console.log(userId);
 
 if(userId != ""){
 	 $('#join').text('마이페이지');
-	 $("#join").attr("href", "${pageContext.request.contextPath}/profileMainOK.mypage")
+	 $("#join").attr("href", "${pageContext.request.contextPath}/fullViewOK.mypage")
 	
 	 $('#login').text('아이디어등록');
 	 $("#login").attr("href", "${pageContext.request.contextPath}/writeIdea.idea")
@@ -1206,8 +1162,6 @@ if(userId != ""){
 	 $('#profile').html(`<div class="top-header-user-container">
 				<img src="${pageContext.request.contextPath}/upload/profileImg/${profileName}"  class="top-header-user-image">
 				</div>`);
-
-	 
 	 
 } else {
 	 $('#join').text('회원가입');
@@ -1217,8 +1171,33 @@ if(userId != ""){
 
 </script>
 
+<script>
+	$(document).on("click",'#checkId',function (){
+		if( $('#autoLogin').prop("checked") ){           //체크 안돼있는데 클릭하면 체크 시키고
+			$('#checkMark').attr('class','css-check');
+		}else{                             //체크 돼있으면 해제 시키기
+			$('#checkMark').attr('class','login-main-login-below-check-for-keeplogin-checkbox-inner');
+		}
+	});
+</script>
+
+<script>
+	let autoLogin = "${autoLogin}";
+	console.log(autoLogin);
+	if(autoLogin){
+		$("input[name='autoLogin']").prop("checked", true);
+		checkedAutoLogin();
+	}
+	
+</script>
 
 
+<script>
+if(!${param.login}){
+	showWarnModal2("아이디 또는 비밀번호를<br>확인해주세요");
+	
+}
+</script>
 
 
 </body>
