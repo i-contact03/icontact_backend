@@ -47,9 +47,10 @@ public class LoginOkController implements Action {
 //			세션에 로그인된 회원의 번호 저장
 			session.setAttribute("userId", userId);
 			
-			System.out.println(session.getAttribute("userId"));
 //			게시글 목록으로 이동
 			result.setPath(req.getContextPath() + "/mainAllList.main"); //여기도 컨트롤러로 가야함
+			
+//			System.out.println("autoLogin = " +autoLogin);
 			
 //			로그인 페이지에서 자동 로그인을 체크했다면,
 			if(autoLogin) {
