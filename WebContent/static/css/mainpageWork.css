@@ -32,7 +32,7 @@ li {
 
 
 .top-header{
-	font-family: 'NanumSquareAcb';
+	
 	font-size: 16px;
 	text-decoration: none solid rgb(0, 0, 0);
 	word-spacing: 0px;
@@ -53,7 +53,7 @@ li {
 }
 
 .top-header-logo{
-	font-family: 'NanumSquareAcb';
+	
 	font-size: 16px;
 	text-decoration: none solid rgb(0, 0, 238);
 	word-spacing: 0px;
@@ -87,7 +87,7 @@ li {
 
 
 .top-header-input-wrapper{
-	font-family: 'NanumSquareAcb';
+	
 	font-size: 14px;
 	text-decoration: none solid rgb(48, 52, 65);
 	word-spacing: 0px;
@@ -118,7 +118,7 @@ li {
 
 
 .top-header-input{
-	font-family: 'NanumSquareAcb';
+	
 	font-size: 15px;
 	text-align: left;
 	border: 0px;
@@ -338,7 +338,7 @@ a.top-header-menu:hover {
 }
 
 .header-bar-category{
-	font-family: 'NanumSquareAcb';
+	
 	font-size: 16px;
 	font-weight: 700;
 	text-decoration: none solid rgb(48, 52, 65);
@@ -405,7 +405,7 @@ a.top-header-menu:hover {
 
 
 .header-bar-nav-content-wrapper{	
-	font-family: 'NanumSquareAcb';
+	
 	font-size: 16px;
 	text-decoration: none solid rgb(0, 0, 0);
 	word-spacing: 0px;
@@ -449,8 +449,7 @@ a.top-header-menu:hover {
 .active-bar{
     width: 100%;
     height: 100%;
-    background-color: rgb(255, 212, 0);
-
+    background-color: #eacaff;
     display: none;
 }
 
@@ -542,7 +541,7 @@ a.top-header-menu:hover {
 }
 
 .main-banner-left-content h1{
-	font-family: 'NanumSquareAcb';
+	
 	margin: 0;
     color: #ffffff;
     font-size: 32px;
@@ -570,7 +569,7 @@ a.top-header-menu:hover {
 }
 
 .main-banner-search{
-	font-family: 'NanumSquareAcb';
+	
 	background-color: transparent;
 	border: none;
 	padding: 0px 20px 0;
@@ -600,7 +599,7 @@ a.top-header-menu:hover {
 }
 
 .main-banner-tag-content{
-	font-family: 'NanumSquareAcb';
+	
 	font-size: 18px;
 	color: #ffffff;
     text-decoration: none;
@@ -813,7 +812,7 @@ a.top-header-menu:hover {
 }
 
 .category-explanation{
-	font-family: 'NanumSquareAcb';
+	
 	font-size: 20px;
     font-weight: 500;
     margin: 0px;
@@ -882,7 +881,7 @@ a.top-header-menu:hover {
 }
 
 .category-content-explanation{
-	font-family: 'NanumSquareAcb';
+	
 	font-size: 14px;
     font-weight: 400;
     color: rgb(48, 52, 65);
@@ -974,7 +973,7 @@ a.top-header-menu:hover {
 }
 
 .using-kmong-ad-wrapper p{
-	font-family: 'NanumSquareAcb';
+	
 	margin: 8px 0px 0px;
     font-size: 16px;
     color: rgb(85, 89, 105);
@@ -1019,7 +1018,7 @@ a.top-header-menu:hover {
 
 
 .using-kmong-ad-explanation{
-	font-family: 'NanumSquareAcb';
+	
 	margin-top: 16px;
     display: flex;
     flex-direction: column;
@@ -1050,7 +1049,7 @@ a.top-header-menu:hover {
 
 
 .more-button{
-	font-family: 'NanumSquareAcb';
+	
 	outline: none;
     border-width: 1px;
     border-style: solid;
@@ -1113,7 +1112,7 @@ a.top-header-menu:hover {
 }
 
 .category-pro-ranking-title{
-	font-family: 'NanumSquareAcb';
+	
 	margin: 0px;
     font-size: 20px;
     color: rgb(33, 34, 36);
@@ -1121,7 +1120,7 @@ a.top-header-menu:hover {
 }
 
 .category-pro-ranking-subtitle{
-	font-family: 'NanumSquareAcb';
+	
 	margin: 4px 0px 0px;
     font-size: 16px;
     color: rgb(114, 117, 133);
