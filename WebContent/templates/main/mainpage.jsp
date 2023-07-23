@@ -49,7 +49,7 @@
 				</svg>
 				    </a>
 				
-				<form action="${pageContext.request.contextPath}/ideaListOk.idea" class="top-header-input-form" name=search>
+				<form action="ideaListOk.idea" class="top-header-input-form" name=search>
 					<div class="top-header-input-wrapper">
 						<input type="text" autocomplete="off" name="keyword" value="${keyword}" class="top-header-input" placeholder="서비스 또는 일반회원을 검색해보세요.">
 						<button type="submit" class="magnifier-wrapper">
@@ -106,12 +106,12 @@
 
 					<!-- 드롭다운 메뉴바 -->
 					<div class="dropdown-menu-wrapper">
-						<a href="#"><strong>식품</strong></a>
-						<a href="#"><strong>패션</strong></a>
-						<a href="#"><strong>가구</strong></a>
-						<a href="#"><strong>문구</strong></a>
-						<a href="#"><strong>디자인</strong></a>
-						<a href="#"><strong>기타</strong></a>
+						<a href="ideaListOk.idea"><strong>식품</strong></a>
+						<a href="ideaListOk.idea"><strong>패션</strong></a>
+						<a href="ideaListOk.idea"><strong>가구</strong></a>
+						<a href="ideaListOk.idea"><strong>문구</strong></a>
+						<a href="ideaListOk.idea"><strong>디자인</strong></a>
+						<a href="ideaListOk.idea"><strong>기타</strong></a>
 					  </div>
 				</div>
 				
@@ -121,10 +121,10 @@
 							<a href="javascript:location.href='${pageContext.request.contextPath}/listOk.article'">커뮤니티</a>
 						</li>
 						<li class="header-bar-nav-content">
-							<a href="${pageContext.request.contextPath}/FAQ.main">FAQ</a>
+							<a href="javascript:location.href='${pageContext.request.contextPath}/FAQ.main'">FAQ</a>
 						</li>
 						<li class="header-bar-nav-content">
-							<a href="${pageContext.request.contextPath}/introduction.main">회사소개</a>
+							<a href="javascript:location.href='${pageContext.request.contextPath}/introduction.main'">회사소개</a>
 						</li>
 					</ul>
 				</nav>
@@ -143,11 +143,11 @@
 			<!-- 왼쪽 -->
 			<section class="main-banner-left-content">
 				<h1>
-					프리랜서 마켓 No.1 iContact에서
+					아이디어 뱅크 No.1 iContact에서
 					<br>
-					원하는 전문가를 찾아보세요!
+					원하는 아이디어를 찾아보세요!
 				</h1>
-				<form action="${pageContext.request.contextPath}/ideaListOk.idea" class="main-banner-search-form" name=search>
+				<form action="ideaListOk.idea" class="main-banner-search-form" name=search>
 					<div class="main-banner-search-wrapper">
 						<input class="main-banner-search" name="keyword" value="${keyword}" placeholder="검색어를 입력하세요.">
 						<div class="main-banner-search-magnifier">
@@ -233,7 +233,7 @@
 							<strong class="category-content-type">식품</strong>
 							<ul class="category-content-list-wrapper">
 								<li class="category-content-list">
-									<a href="javascript:location.href='${pageContext.request.contextPath}/ideaListOk.idea'">
+									<a href="ideaListOk.idea">
 										<div class="category-content-logo">
 											<img src="https://cdn-icons-png.flaticon.com/128/5347/5347946.png" width="48" height="48">
 										</div>
@@ -488,7 +488,7 @@
 					
 					<section class="using-kmong-ad-content" >
 						<article>
-							<a class="using-kmong-ad" href="${pageContext.request.contextPath}/writeIdea.idea">
+							<a class="using-kmong-ad" href="javascript:location.href='${pageContext.request.contextPath}/writeIdea.idea'">
 								<div class="using-kmong-ad-picture">
 									<img src="https://kmong.com/_next/image?url=https%3A%2F%2Fd2v80xjmx68n4w.cloudfront.net%2Fassets%2Fdesktop%2Fmodules%2Fmain-themes%2Fmain_theme_picked_business_tip_20220405_1.png&w=2880&q=75" width="376" height="247" loading="lazy" style="color: transparent;">
 								</div>
@@ -500,7 +500,7 @@
 						</article>
 						
 						<article>
-							<a class="using-kmong-ad" href="${pageContext.request.contextPath}/FAQ.main">
+							<a class="using-kmong-ad" href="javascript:location.href='${pageContext.request.contextPath}/FAQ.main'">
 								<div class="using-kmong-ad-picture">
 									<img src="https://kmong.com/_next/image?url=https%3A%2F%2Fd2v80xjmx68n4w.cloudfront.net%2Fassets%2Fdesktop%2Fmodules%2Fmain-themes%2Fmain_theme_picked_business_tip_20220404_1_2.png&w=2880&q=75" width="376" height="247" loading="lazy" style="color: transparent;">
 								</div>
@@ -512,8 +512,8 @@
 						</article>
 						
 						<article>
-							<a class="using-kmong-ad" href="${pageContext.request.contextPath}/introduction.main">
-								<div class="using-kmong-ad-picture" href="${pageContext.request.contextPath}/introduction.main">
+							<a class="using-kmong-ad" href="javascript:location.href='${pageContext.request.contextPath}/introduction.main'">
+								<div class="using-kmong-ad-picture" href="javascript:location.href='${pageContext.request.contextPath}/introduction.main'">
 									<img src="https://kmong.com/_next/image?url=https%3A%2F%2Fd2v80xjmx68n4w.cloudfront.net%2Fassets%2Fdesktop%2Fmodules%2Fmain-themes%2Fmain_theme_picked_business_tip_20221125_2_3.png&w=2880&q=75" width="376" height="247" loading="lazy" style="color: transparent;">
 								</div>
 								<div class="using-kmong-ad-explanation">
@@ -551,7 +551,7 @@
 					
 					<div class="category-pro-ranking-top-wrapper">
 					
-					<!-- TOP 카테고리 전문가 랭킹 LEFT -->
+					<!-- TOP 카테고리 일반회원 랭킹 LEFT -->
 						<article class="category-pro-ranking-top-content-wrapper">
 							<h3>디자인</h3>
 							
@@ -668,7 +668,7 @@
 							</div>
 						</article>
 						
-						<!-- TOP 카테고리 전문가 랭킹 MIDDLE -->
+						<!-- TOP 카테고리 일반회원 랭킹 MIDDLE -->
 						<article class="category-pro-ranking-top-content-wrapper">
 							<h3>식품</h3>
 							
@@ -785,7 +785,7 @@
 							</div>
 						</article>
 
-						<!-- TOP 카테고리 전문가 랭킹 RIGHT -->
+						<!-- TOP 카테고리 일반회원 랭킹 RIGHT -->
 						<article class="category-pro-ranking-top-content-wrapper">
 							<h3>패션</h3>
 							
@@ -933,14 +933,14 @@
 	        통신판매업번호 : 2015 - 서울강남 - 03148호<br>
 	        E-mail : koreais@koreaedugroup.com | Fax: 02-2135-2949 </ol>
 	    <ol><a href="javascript:location.href='${pageContext.request.contextPath}/listOk.article'">커뮤니티</a></ol>
-	    <ol><a href="${pageContext.request.contextPath}/FAQ.main">FAQ</a></ol>
-	    <ol><a href="${pageContext.request.contextPath}/introduction.main"><b>회사소개</b></a></ol>
+	    <ol><a href="javascript:location.href='${pageContext.request.contextPath}/FAQ.main'">FAQ</a></ol>
+	    <ol><a href="javascript:location.href='${pageContext.request.contextPath}/introduction.main'"><b>회사소개</b></a></ol>
 	</div>
 	<div class="footer-div2">
 	    &nbsp;&nbsp; iContact &nbsp;&nbsp;&nbsp;
 	    <a href="javascript:location.href='${pageContext.request.contextPath}/listOk.article'">커뮤니티</a>&nbsp;
-	    <a href="${pageContext.request.contextPath}/FAQ.main">FAQ</a>&nbsp;
-	    <a href="${pageContext.request.contextPath}/introduction.main">회사소개</a>&nbsp;
+	    <a href="javascript:location.href='${pageContext.request.contextPath}/FAQ.main'">FAQ</a>&nbsp;
+	    <a href="javascript:location.href='${pageContext.request.contextPath}/introduction.main'">회사소개</a>&nbsp;
 	</div>
 </footer>
 
@@ -1045,7 +1045,7 @@ let modalMessage  =`
 									<div class="login-main-login-below-wrapper">	<!-- css-70qvj9 equrxy92 -->
 										<label for="autoLogin" id="checkId" color="#ffd400" class="login-main-login-below-check-for-keeplogin-wrapper">	<!-- css-18pqe3v elgfge0 -->
 											<span class="login-main-login-below-check-for-keeplogin-span">	<!-- css-9ffs86 elgfge3 -->
-												<input type="checkbox" id="autoLogin" name="autoLogin" value="" class="login-main-login-below-check-for-keeplogin-checkbox">	<!-- css-l775cp elgfge2 -->
+												<input type="checkbox" id="autoLogin" name="autoLogin" value="true" class="login-main-login-below-check-for-keeplogin-checkbox">	<!-- css-l775cp elgfge2 -->
 												<span color="#ffd400" id="checkMark" class="login-main-login-below-check-for-keeplogin-checkbox-inner"></span>	<!-- checkbox__inner css-1t5nui elgfge4 -->
 												<span class="login-main-login-below-check-for-keeplogin-checkbox-textbox">	<!-- css-2k2mpm elgfge1 -->
 													<p variant="body2" class="login-main-login-below-p-tag" color="gray600">로그인 상태 유지</p>	<!-- css-15suf60 e870mj50 -->
@@ -1160,7 +1160,9 @@ if(userId != ""){
 	 $('#logout').text('로그아웃');
 	 
 	 $('#profile').html(`<div class="top-header-user-container">
+	 			<a href="profileMainOK.mypage" >
 				<img src="${pageContext.request.contextPath}/upload/profileImg/${profileName}"  class="top-header-user-image">
+				</a>
 				</div>`);
 	 
 } else {
