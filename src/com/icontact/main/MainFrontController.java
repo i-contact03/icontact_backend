@@ -25,6 +25,7 @@ public class MainFrontController extends HttpServlet{
 //		메인화면에 전제 항목 출력
 		if(target.equals("mainAllList")) {
 			result = new MainAllListOKController().execute(req, resp);
+				
 		}
 		
 //		메인화면에 전제 항목 출력

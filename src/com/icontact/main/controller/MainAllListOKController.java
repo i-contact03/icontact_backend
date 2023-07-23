@@ -6,7 +6,6 @@ import java.util.List;
 
 import javax.servlet.ServletException;
 import javax.servlet.ServletRequest;
-import javax.servlet.http.Cookie;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
@@ -26,7 +25,6 @@ public class MainAllListOKController implements Action {
 		MainDAO mainDAO = new MainDAO();
 		Result result = new Result();
 		JSONArray jsonArray = new JSONArray();
-		
 		
 		mainDAO.selectAll();
 		mainDAO.selectFood();
