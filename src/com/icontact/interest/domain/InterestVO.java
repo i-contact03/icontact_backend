@@ -28,8 +28,8 @@ public class InterestVO {
 		return scId;
 	}
 
-	public void setScId(Long scId) {
-		this.scId = scId;
+	public void setScId(String scId) {
+		this.scId = Long.parseLong(scId);
 	}
 
 	@Override

@@ -470,13 +470,9 @@ a.top-header-menu:hover {
 .active-bar{
     width: 100%;
     height: 100%;
-    background-color: rgb(255, 212, 0);
-
+    background-color: #eacaff;
     display: none;
 }
-
-
-
 
 
 .header-bar-nav-content{

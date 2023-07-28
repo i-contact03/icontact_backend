@@ -24,5 +24,10 @@ public class InterestDAO {
 		return sqlSession.selectOne("interest.matchInterest", interestVO);
 	}
 	
+	public void insert(InterestVO interestVO) {
+		sqlSession.insert("interest.insert", interestVO);
+	}
+	
+	
 	
 }

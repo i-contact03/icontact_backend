@@ -93,4 +93,22 @@
 		limit #{offset}, #{rowCount}
 	</select>
 	
+	
+	
+	
+		
+	
+	<select id="selectAllMerterialize" resultType="ideaDTO2">
+		select i.idea_id, i.user_id, sc_id, idea_title, idea_basic, idea_detail, idea_thumbnail_name, idea_date 
+		from tbl_idea i join tbl_execution e
+		on e.execution_status = '4' and i.idea_id = e.idea_id
+		where e.ceo_id = #{userId}
+		order by idea_id desc
+		limit #{offset}, #{rowCount}
+	</select>
+	
+	
+	
+	
+	
 </mapper>

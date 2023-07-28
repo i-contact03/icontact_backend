@@ -143,9 +143,9 @@
 			<!-- 왼쪽 -->
 			<section class="main-banner-left-content">
 				<h1>
-					프리랜서 마켓 No.1 iContact에서
+					아이디어 뱅크 No.1 iContact에서
 					<br>
-					원하는 전문가를 찾아보세요!
+					원하는 아이디어를 찾아보세요!
 				</h1>
 				<form action="${pageContext.request.contextPath}/ideaListOk.idea" class="main-banner-search-form" name=search>
 					<div class="main-banner-search-wrapper">

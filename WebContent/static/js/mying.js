@@ -17,7 +17,7 @@ toggleButton.click(function() {
 });
 */
 
-let toggleButton = $(".toggle_btn");
+/*let toggleButton = $(".toggle_btn");
 let showMenu = $(".show-menu");
 let arrow = $(".arrow");
 
@@ -30,7 +30,7 @@ toggleButton.click(function() {
         showMenu.slideUp(400);
         arrow.css("transform", "rotate(0deg)");
     }
-});
+});*/
 
 /*----------------------------*/
 
@@ -46,6 +46,8 @@ function showProfile(){
 	text1 = `<a class="userprofile-picture">${user.userIdentification}</a> 님`;
 		
 	$userIdentification.append(text1);
+	
+	
 
 /*
 	let text2 = "";
@@ -73,6 +75,12 @@ function showProfile(){
 	console.log(`${contextPath}`);
 	
 	$profileimg.append(proimg);
+	
+	
+	let proimghead = "";
+	const $profileimghead = $("#profileimghead");
+	proimghead = `<img src="${contextPath}/upload/profileImg/${user.userProfileName}" class="top-header-user-image">`;
+	$profileimghead.append(proimghead);
 	
 }
 
@@ -148,6 +156,14 @@ function showList(){
 	console.log("-----");
 	console.log(ideas);
 	console.log("-----");
+	
+	
+	
+	console.log("wpwpwpwpw");
+	console.log("wpwpwpwpw");
+	
+	
+	
 	$div.append(text);
 }
 

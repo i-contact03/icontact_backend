@@ -15,13 +15,13 @@ import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
 
-import com.app.reply.dao.ReplyDAO;
-import com.app.reply.domain.ReplyVO;
 import com.icontact.Action;
 import com.icontact.Result;
 import com.icontact.interest.dao.InterestDAO;
 import com.icontact.interest.domain.InterestDTO;
 import com.icontact.interest.domain.InterestVO;
+import com.icontact.mypage.dao.MypageDAO;
+import com.icontact.mypage.domain.MypageVO;
 import com.icontact.user.dao.UserDAO;
 import com.icontact.user.domain.UserDTO;
 import com.icontact.user.domain.UserVO;
@@ -42,8 +42,9 @@ public class ProfileModifyUpdateOkController implements Action {
 		InterestDTO interestDTO = new InterestDTO();
 		InterestDAO interestDAO = new InterestDAO(); 
 		
+		MypageVO mypageVO = new MypageVO();
+		MypageDAO mypageDAO = new MypageDAO();
 		
-	
 		
 		Result result = new Result();
 //		JSONArray jsonArray = new JSONArray();
@@ -56,6 +57,8 @@ public class ProfileModifyUpdateOkController implements Action {
 //		interestVO.setUserId((Long)session.getAttribute("userId"));
 		
 		
+//		mypageVO.setCeoId((Long)session.getAttribute("userId"));
+		
 //		userVO = userDAO.findUser(userid);
 		
 		int intValue = 1;
@@ -63,12 +66,17 @@ public class ProfileModifyUpdateOkController implements Action {
 		userVO = userDAO.findUser(longValue);
 		userDTO = userDAO.findUser2(longValue);
 		
+		mypageVO.setCeoId(longValue);
+		
+//		interestVO.setUserId(longValue);
+		
+		
 		
 		
 		System.out.println(userVO);
 		
 		
-		
+		System.out.println(userDTO);
 		
 		
 		
@@ -80,19 +88,22 @@ public class ProfileModifyUpdateOkController implements Action {
 		 * userDTO.setUserIdentification(req.getParameter());
 		 * userDTO.setUserId(req.getParameter());
 		 */
-		userDTO.setUserName(req.getParameter("userName"));
-		userDTO.setUserEmail(req.getParameter("userEmail"));
-		userDTO.setUserCall(req.getParameter("userCall"));
+		
+		
+		
+		/* 내가 만든 코드 - 1 */
+//		수정 필요
+//		userDTO.setUserName(req.getParameter("userName"));
+//		userDTO.setUserEmail(req.getParameter("userEmail"));
+//		userDTO.setUserCall(req.getParameter("userCall"));
 		
 		
 		
 		
-		userDAO.update(userDTO);
-		
-		System.out.println(req.getParameter("userName"));
+//		userDAO.update(userDTO);
 		System.out.println(userDTO);
 		
-		List<InterestVO> interests = interestDAO.findInterestById(longValue);
+//		List<InterestVO> interests = interestDAO.findInterestById(longValue);
 //		List<String> interestNames = new ArrayList<String>();
 //		JSONObject interestNames = new JSONObject();
 //		
@@ -153,9 +164,86 @@ public class ProfileModifyUpdateOkController implements Action {
 //		HttpSession session = req.getSession();
 		String root = req.getServletContext().getRealPath("/") + "upload/profileImg/";
 		int fileSize = 1024 * 1024 * 20;
+		
+		System.out.println("전");
 
 		MultipartRequest multipartRequest = new MultipartRequest(req, root, fileSize, "UTF-8", new DefaultFileRenamePolicy());
 		
+		userDTO.setUserName(multipartRequest.getParameter("userName"));
+		userDTO.setUserEmail(multipartRequest.getParameter("userEmail"));
+		userDTO.setUserCall(multipartRequest.getParameter("userCall"));
+		userDTO.setUserProfileName(multipartRequest.getFilesystemName("upload1"));
+		userDAO.update(userDTO);
+		
+		
+		
+//		====================
+		
+		
+		
+		
+//		
+//		
+//		interestVO.setUserId(longValue);
+//		
+////		System.out.println("전중전중");
+//		System.out.println(multipartRequest.getParameter("scId1"));
+//		System.out.println(multipartRequest.getParameter("scId2"));
+//		System.out.println(multipartRequest.getParameter("scId3"));
+////		
+////		if(multipartRequest.getParameter("scId1") == "none") {
+////			System.out.println("znznznznz");
+////		}
+////		if(multipartRequest.getParameter("scId2") != null) {
+////			System.out.println("znznznznz222");
+////		}
+//		if(multipartRequest.getParameter("scId3") == null) {
+//			System.out.println("znznznznz333");
+//		}
+////		
+////		System.out.println("전후전후");
+//		
+//		if(multipartRequest.getParameter("scId1") != null) {
+//			System.out.println("znznznznz");
+//			InterestVO interestVO1 = new InterestVO();
+//			interestVO1.setUserId(longValue);
+//			interestVO1.setScId(multipartRequest.getParameter("scId1"));
+//			interestDAO.insert(interestVO1);
+//		}
+//		
+//		if(multipartRequest.getParameter("scId2") != null) {
+//			System.out.println("znznznznz222");
+//			InterestVO interestVO2 = new InterestVO();
+//			interestVO2.setUserId(longValue);
+//			interestVO2.setScId(multipartRequest.getParameter("scId2"));
+//			interestDAO.insert(interestVO2);
+//		}
+//		
+//		if(multipartRequest.getParameter("scId3") != null) {
+//			System.out.println("znznznznz333");
+//			InterestVO interestVO3 = new InterestVO();
+//			interestVO3.setUserId(longValue);
+//			interestVO3.setScId(multipartRequest.getParameter("scId3"));
+//			interestDAO.insert(interestVO3);
+//		}
+//		
+//		
+//		
+//		
+//		
+//		
+		
+		
+		
+		
+		
+		
+		
+//		============
+//		mypageVO.setCeoId(longValue);
+		
+		
+		System.out.println("중");
 //		boardVO.setBoardTitle(multipartRequest.getParameter("boardTitle"));
 //		boardVO.setBoardContent(multipartRequest.getParameter("boardContent"));
 //		boardVO.setMemberId((Long)session.getAttribute("memberId"));
@@ -164,12 +252,12 @@ public class ProfileModifyUpdateOkController implements Action {
 //		
 //		fileVO.setBoardId(boardDAO.selectCurrentSequence());
 		
-		Enumeration<String> inputTypeFileNames = multipartRequest.getFileNames();
+//		Enumeration<String> inputTypeFileNames = multipartRequest.getFileNames();
 		
-		while(inputTypeFileNames.hasMoreElements()) {
-			String inputTypeFileName = inputTypeFileNames.nextElement();
-			String fileSystemName = multipartRequest.getFilesystemName(inputTypeFileName);
-			if(fileSystemName == null) {continue;}
+//		while(inputTypeFileNames.hasMoreElements()) {
+//			String inputTypeFileName = inputTypeFileNames.nextElement();
+//			String fileSystemName = multipartRequest.getFilesystemName(inputTypeFileName);
+//			if(fileSystemName == null) {continue;}
 //			fileVO.setFileSystemName(fileSystemName);
 //			fileVO.setFileOriginalName(multipartRequest.getOriginalFileName(inputTypeFileName));
 //			path = Path.of(root + fileSystemName);
@@ -177,24 +265,39 @@ public class ProfileModifyUpdateOkController implements Action {
 //			
 //			fileDAO.insert(fileVO);
 			
-			userDTO.setUserProfileName(multipartRequest.getOriginalFileName(inputTypeFileName));
-//			path = Path.of(root + fileSystemName);
+//			userDTO.setUserProfileName(multipartRequest.getOriginalFileName(inputTypeFileName));
+			String fileSystemName = multipartRequest.getFilesystemName("upload2");
 			
-		}
-		
+			if(fileSystemName != null) {
+				
+				mypageVO.setCfSystemName(fileSystemName);
+				mypageVO.setCfOriginalName(multipartRequest.getOriginalFileName("upload2"));
+				
+				path = Path.of(root + fileSystemName);
+				mypageVO.setCfFileSize(Files.size(path));
+				
+				
+				System.out.println("ceo 이미지 업로드 전");
+				
+				mypageDAO.insert(mypageVO);
+				
+				System.out.println("ceo 이미지 업로드 후");
+				
+			}
+			
+			
+//		}
+//		userDAO.update(userDTO);
 ////		result.setPath(req.getContextPath() + "/listOk.board");
 ////		result.setRedirect(true);
 ////		
 ////		
 //
-////		userDAO.update(userDTO);
-////		
-////		System.out.println(userDTO);
 //		
 //		
 //		
 //		
-		
+		System.out.println("후");
 		
 		
 //		=============================================

@@ -66,6 +66,19 @@ function showList(){
 }
 
 
+
+/*---------------------------------------------------------------------------------------------*/
+
+/*showProfile2();
+
+function showProfile2(){
+   
+   let proimghead = "";
+   const $profileimghead = $("#profileimghead");
+   proimghead = `<img src="${contextPath}/upload/profileImg/${user.userProfileName}" class="top-header-user-image">`;
+   $profileimghead.append(proimghead);
+   
+}*/
 			         		
 
 
