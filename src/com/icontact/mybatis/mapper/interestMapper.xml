@@ -15,5 +15,10 @@
 		where i.user_id = #{userId}
 		order by sc.sc_id desc
 	</select>
+	
+	<insert id="insert">
+		insert into tbl_interest(user_id, sc_id) 
+		values(#{userId}, #{scId})
+	</insert>
 
 </mapper>

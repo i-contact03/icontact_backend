@@ -68,9 +68,9 @@ $("#username").attr("value", `${user.userName}`);
 $("#usercall").attr("value", `${user.userCall}`);
 
 
-	let proimg = "";
+	let proimg = `<img src="https://kmong.com/img/gig_form/img_gig_form_imageupload.png">`;
 	const $profileimg = $("#profile-img");
-	proimg += `<img src="${contextPath}/upload/profileImg/${user.userProfileName}" alt="avatar" shape="0" loading="lazy" class="profile-imgae">`;
+	proimg = `<img src="${contextPath}/upload/profileImg/${user.userProfileName}" alt="avatar" shape="0" loading="lazy" class="profile-imgae thumbnail">`;
 	console.log($profileimg);
 	console.log(`${contextPath}`);
 	

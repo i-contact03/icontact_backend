@@ -1274,7 +1274,12 @@ footer hr{
 
 
 
-
+.active-bar{
+    width: 100%;
+    height: 100%;
+    background-color: #eacaff;
+    display: none;
+}
 
 
 

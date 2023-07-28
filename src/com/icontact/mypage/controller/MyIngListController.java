@@ -119,7 +119,7 @@ public class MyIngListController implements Action {
 		
 		
 		
-		Criteria criteria = new Criteria(page, ideaDAO.getTotalIdea());
+		Criteria criteria = new Criteria(page, ideaDAO.getTotalByUserId(longValue));
 		HashMap<String, Object> pagable = new HashMap<String, Object>();
 		
 		pagable.put("userId", search.getKeyword());

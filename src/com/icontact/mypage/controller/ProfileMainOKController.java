@@ -81,13 +81,13 @@ public class ProfileMainOKController implements Action {
 				try {
 					interestNames.put("interest"+(i), inDTO.getScName());
 					i++;
-					System.out.println(interestNames);
+//					System.out.println(interestNames);
 				} catch (JSONException e) {
 					e.printStackTrace();
 				}
 			}
 		
-		System.out.println(interestNames.toString()); // ["장난감", "리스트"]
+//		System.out.println(interestNames.toString()); // ["장난감", "리스트"]
 //		System.out.println(interestNames); // ["장난감", "리스트"]
 		
 //	 ------------------------	

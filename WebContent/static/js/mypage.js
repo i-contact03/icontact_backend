@@ -64,6 +64,14 @@ function showProfile(){
 	
 	$profileimg.append(proimg);
 	
+	
+	
+	
+	let proimghead = "";
+	const $profileimghead = $("#profileimghead");
+	proimghead = `<img src="${contextPath}/upload/profileImg/${user.userProfileName}" class="top-header-user-image">`;
+	$profileimghead.append(proimghead);
+	
 }
 
 
@@ -79,10 +87,16 @@ showList();
 
 function showList(){
 	console.log(ideas); /* jsp -> js */
-	ideas = JSON.parse(ideas);
 	
 	const $div = $("div.main-padding");
 	let text = "";
+	
+	if (ideas){
+		console.log("있다");
+		ideas = JSON.parse(ideas);
+	} else {
+		alert("사업가 등록을 해주세요");
+	}
 	
 	ideas.forEach(idea => {
 		text += `

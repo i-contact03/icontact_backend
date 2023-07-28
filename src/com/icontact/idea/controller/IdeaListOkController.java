@@ -63,6 +63,7 @@ public class IdeaListOkController implements Action {
 		req.setAttribute("endPage", criteria.getEndPage());
 		req.setAttribute("prev", criteria.isPrev());
 		req.setAttribute("next", criteria.isNext());
+		req.setAttribute("keyword", keyword);
 		
 //		forward 방식
 		result.setPath("templates/goods/ideabankWork.jsp");

@@ -26,11 +26,11 @@
 <div>
 	<header class="header-wrapper">
 		<div class="profile-modify-header">
-			<a class="main-page-link">
+			<a  href="javascript:location.href='${pageContext.request.contextPath}/mainAllList.main'">	<!-- class="main-page-link" -->
 				<svg width="85" height="100%" viewBox="0 0 85 26" xmlns="http://www.w3.org/2000/svg">
 					<!-- <path d="M77.69 4.86c3.975 0 7.197 3.215 7.197 7.18l-.002.055h.002c.073 3.477.074 5.769.003 6.874-.108 1.659-.724 3.372-1.947 4.693A7.21 7.21 0 0 1 77.593 26c-2.724 0-4.998-.984-6.653-2.921l-.05-.059 3.226-2.684c.837.997 1.938 1.48 3.478 1.48.9 0 1.67-.358 2.259-.992.515-.556.817-1.263.832-1.813v-.443a7.186 7.186 0 0 1-2.995.65c-3.975 0-7.197-3.214-7.197-7.179 0-3.964 3.222-7.178 7.197-7.178zm-32.13-.225c4.131 0 7.48 3.34 7.48 7.46 0 4.121-3.349 7.462-7.48 7.462s-7.48-3.34-7.48-7.461c0-4.12 3.349-7.461 7.48-7.461zM4.533 0v10.354L8.623 5.2h5.309l-5.337 6.726 5.572 7.065h-4.98L4.534 13.42v5.572H0V0h4.533zM29.92 4.86a6.233 6.233 0 0 1 6.233 6.234v7.897H31.96v-7.908a2.04 2.04 0 0 0-4.074-.152l-.006.152v7.908h-4.193v-7.908a2.04 2.04 0 0 0-4.075-.152l-.005.152v7.908h-4.194v-7.897a6.233 6.233 0 0 1 10.371-4.662 6.201 6.201 0 0 1 4.136-1.571zm31.847 0a6.8 6.8 0 0 1 6.8 6.8v7.331h-4.194v-7.34a2.607 2.607 0 0 0-2.441-2.602l-.165-.006a2.607 2.607 0 0 0-2.602 2.442l-.005.165v7.34l-4.193.001v-7.33a6.8 6.8 0 0 1 6.8-6.8zM45.56 8.818a3.282 3.282 0 0 0-3.287 3.279 3.282 3.282 0 0 0 3.287 3.278 3.282 3.282 0 0 0 3.287-3.278 3.282 3.282 0 0 0-3.287-3.279zm32.13.226a3 3 0 0 0-3.003 2.996 3 3 0 0 0 3.003 2.996 3 3 0 0 0 3.003-2.996 3 3 0 0 0-3.003-2.996z" fill="#212224" fill-rule="evenodd"></path> -->
 					<!-- <img src="../../images/KakaoTalk_20230703_002357368.png" width="100%" height="100%"> -->
-					<img src="../../icon/logo.png" width="170px" height="52px" >
+					<img src="${pageContext.request.contextPath}/icon/logo.png" width="170px" height="52px" >
 				</svg>
 			</a>
 		</div>
@@ -39,7 +39,7 @@
 	
 	
 	<!-- 프로필 수정하는 form -->
-	<form action="${pageContext.request.contextPath}/profileModifyUpdateOk.mypage" class="kmong-profile-modify-form-wrapper">
+	<form action="${pageContext.request.contextPath}/profileModifyUpdateOk.mypage" class="kmong-profile-modify-form-wrapper" method="post" enctype="multipart/form-data" >
 		<div class="kmong-profile-modify-form">
 			<!-- <nav class="kmong-profile-modify-nav">
 				<div class="kmong-profile-modify-nav-content">
@@ -78,16 +78,47 @@
 									<!-- <img src="https://d2v80xjmx68n4w.cloudfront.net/members/thumbs/3aQLe1687185331.jpg" alt="avatar" shape="0" loading="lazy" class="profile-imgae"> -->
 								</div>
 								
-								<div class="profile-image-modify-btn-wrapper">
-									<button class="profile-image-modify-btn">
+								<div class="profile-image-modify-btn-wrapper" style="min-height:0px">
+									<button type="button" class="profile-image-modify-btn">
 										<span class="profile-image-modify-btn-inner">
-											<label class="profile-image-modify-btn-inner-label">
-												프로필 변경
-												<input type="file" class="profile-image-modify-btn-inner-input">
+											<label for="upload1" class="profile-image-modify-btn-inner-label detail-img" >
+												프로필 사진 변경
+											</label>
+											<%-- <label for="" class="add-img-area attach">
+			            						<!-- <div class="detail-img">
+			            							<img src="https://kmong.com/img/gig_form/img_gig_form_imageupload.png" width="88px">
+			            						</div> -->
+			            						
+			            						<!-- <img src="" class="thumbnail"> -->
+						                        <div class="x">
+						                            <img src="${pageContext.request.contextPath}/static/images/x.png">
+						                        </div>
+						                     </label> --%>
+										</span>
+									</button>
+								</div>
+								<div class="profile-image-modify-btn-wrapper">
+									<label for="upload2" class="add-img-area attach" style="height: 0px;">
+	            						<!-- <div class="detail-img">
+	            							<img src="https://kmong.com/img/gig_form/img_gig_form_imageupload.png" width="88px">
+	            						</div> -->
+	            						<div class="thumbnail">
+	            							<img src="" >
+	            						</div>
+				                        <%-- <div class="x">
+				                            <img src="${pageContext.request.contextPath}/static/images/x.png">
+				                        </div> --%>
+	            					</label>
+									<button type="button" class="profile-image-modify-btn">
+										<span class="profile-image-modify-btn-inner">
+											<label for="upload2" class="profile-image-modify-btn-inner-label">
+												사업자 등록증 등록
 											</label>
 										</span>
 									</button>
 								</div>
+								<input type="file" class="profile-image-modify-btn-inner-input upload" id="upload1"  name="upload1" style="display: none;" >
+								<input type="file" class="profile-image-modify-btn-inner-input upload" id="upload2"  name="upload2" style="display: none;" >
 							</div>
 							
 							
@@ -116,14 +147,14 @@
 										<div class="tip-title">Tip</div>
 										<div class="tip-content-list-wrapper">
 											<div class="tip-list">
-												• 닉네임 변경은 가입 후 1회만 가능합니다.
+												• 아이디 변경은 가입 후 불가능합니다.
 											</div>
-											<div class="tip-list">
+											<!-- <div class="tip-list">
 												• 닉네임 변경 이력이 있다면 수정 기능이 비활성화되며, 추가 변경은 불가합니다.
 											</div>
 											<div class="tip-list">
 												• 한글/영문/숫자만 사용할 수 있으며, 이메일 아이디와 동일한 문자열은 사용이 불가합니다.
-											</div>
+											</div> -->
 										</div>
 									</div>
 								</div>
@@ -364,13 +395,13 @@
 							<div class="information-content-skill-detail">
 								<span class="detail-restricted-conditions">
 									최대 3개를 선택해 주세요.
-									<span class="mandatory">필수</span>
+									<!-- <span class="mandatory">필수</span> -->
 								</span>
 								
 								<div>
 									<div class="field-wrapper">
 										<!-- 전문분야 -->
-										<div class="choose-wrapper">
+										<!-- <div class="choose-wrapper">
 											<span class="choose-title">전문분야</span>
 											<div class="choose-list">
 												<div class="choose-list-content-container">
@@ -378,7 +409,7 @@
 													<div class="choose-list-content">
 														<div class="choose-list-detail">
 															<div class="choose">선택해주세요</div>
-															<!-- <input> -->
+															<input>
 														</div>
 														<div class="choose-list-arrow-wrapper">
 															<span></span>
@@ -391,19 +422,89 @@
 													</div>
 												</div>
 											</div>
-										</div>
+										</div> -->
 										
 										<!-- 상세분야 -->
-										<div class="choose-wrapper">
-											<span class="choose-title">상세분야</span>
+										<!-- <div class="choose-wrapper">
+											<span class="choose-title">관심 분야</span>
 											<div class="choose-list">
 												<div class="choose-list-content-container">
 													<span></span>
 													<div class="choose-list-content">
 														<div class="choose-list-detail">
 															<div class="choose">선택해주세요</div>
-															<!-- <input> -->
+															<input>
 														</div>
+														<div class="all-list-form">	
+									         				<div class="all-list-born" style="display: none;">
+									         					<ul class="all-list">
+									         						<ul class="top-list">
+									         							<div class="all-list-topText">디저트</div>
+									         						</ul>
+									         						<ul class="top-list">
+									         							<div class="all-list-topText">베이커리</div>
+									         						</ul>
+									         						<ul class="top-list">
+									         							<div class="all-list-topText">전통간식</div>
+									         						</ul>
+									         						<ul class="top-list">
+									         							<div class="all-list-topText">음료</div>
+									         						</ul>
+									         						<ul class="top-list">
+									         							<div class="all-list-topText">주류</div>
+									         						</ul>
+									         						<ul class="top-list">
+									         							<div class="all-list-topText">반찬</div>
+									         						</ul>
+									         						<ul class="top-list">
+									         							<div class="all-list-topText">요리/식사</div>
+									         						</ul>
+									         						<ul class="top-list">
+									         							<div class="all-list-topText">액세서리</div>
+									         						</ul>
+									         						<ul class="top-list">
+									         							<div class="all-list-topText">의류</div>
+									         						</ul>
+									         						<ul class="top-list">
+									         							<div class="all-list-topText">잡화</div>
+									         						</ul>
+									         						<ul class="top-list">
+									         							<div class="all-list-topText">인테리어</div>
+									         						</ul>
+									         						<ul class="top-list">
+									         							<div class="all-list-topText">데코용품</div>
+									         						</ul>
+									         						<ul class="top-list">
+									         							<div class="all-list-topText">스티커</div>
+									         						</ul>
+									         						<ul class="top-list">
+									         							<div class="all-list-topText">인형</div>
+									         						</ul>
+									         						<ul class="top-list">
+									         							<div class="all-list-topText">장난감</div>
+									         						</ul>
+									         						<ul class="top-list">
+									         							<div class="all-list-topText">편지지·카드</div>
+									         						</ul>
+									         						<ul class="top-list">
+									         							<div class="all-list-topText">케이스</div>
+									         						</ul>
+									         						<ul class="top-list">
+									         							<div class="all-list-topText">접시</div>
+									         						</ul>
+									         						<ul class="top-list">
+									         							<div class="all-list-topText">가구</div>
+									         						</ul>
+									         						<ul class="top-list">
+									         							<div class="all-list-topText">반려용품</div>
+									         						</ul>
+									         						<ul class="top-list">
+									         							<div class="all-list-topText">제로웨이스트</div>
+									         						</ul>
+									         					</ul>
+									         				</div>
+									         			</div>	
+														
 														<div class="choose-list-arrow-wrapper">
 															<span></span>
 															<div class="choose-list-arrow">
@@ -415,13 +516,214 @@
 													</div>
 												</div>
 											</div>
+										</div> -->
+										
+										<!-- ======= -->
+										
+										<div class="bottom-wrapper">
+										<div class="bottom-wrapper1">
+											<label class="bottom-wrapper-title">아이디어 카테고리1</label>
+											<div class="bottom-wrapper-select">
+												<div class="select">
+													<!-- <button type="button" class="btn-select" data-target="menu1">
+														<div class="buttonLabel">
+															<span>선택해주세요</span>
+															<span class="caret"></span>
+														</div>
+													</button> -->
+													<select name="scId1" class="selectList">
+														<option value="" class="selectItem" hidden>선택해주세요</option>
+														<optgroup label="식품" >
+															<option value="1" class="selectItem">디저트</option>
+															<option value="2" class="selectItem">베이커리</option>
+															<option value="3" class="selectItem">전통간식</option>
+															<option value="4" class="selectItem">음료</option>
+															<option value="5" class="selectItem">주류</option>
+															<option value="6" class="selectItem">반찬</option>
+															<option value="7" class="selectItem">요리·식사</option>
+														</optgroup>
+														<optgroup label="패션" >
+															<option value="8" class="selectItem">액세서리</option>
+															<option value="9" class="selectItem">의류</option>
+															<option value="10" class="selectItem">잡화</option>
+														</optgroup>
+														<optgroup label="가구" >
+															<option value="11" class="selectItem">인테리어</option>
+															<option value="12" class="selectItem">데코용품</option>
+														</optgroup>
+														<optgroup label="문구" >
+															<option value="13" class="selectItem">스티커</option>
+															<option value="14" class="selectItem">인형</option>
+															<option value="15" class="selectItem">장난감</option>
+															<option value="16" class="selectItem">편지지·카드</option>
+															<option value="17" class="selectItem">케이스</option>
+														</optgroup>
+														<optgroup label="디자인" >
+															<option value="18" class="selectItem">접시</option>
+															<option value="19" class="selectItem">가구</option>
+														</optgroup>
+														<optgroup label="기타" >
+															<option value="20" class="selectItem">반려용품</option>
+															<option value="21" class="selectItem">제로웨이스트</option>
+														</optgroup>
+													</select>
+													<!-- <div class="checkboxLayer" id="menu1" style="display: none;">
+														<div class="checkBoxContainer">
+															<select name="top-category" class="selectList">
+																<option value="food" class="selectItem">식품</li>
+																<option value="fashion" class="selectItem">패션</li>
+																<option value="furniture" class="selectItem">가구</li>
+																<option value="phrase" class="selectItem">문구</li>
+																<option value="design" class="selectItem">디자인</li>
+																<option value="etc" class="selectItem">기타</li>
+															</select>
+														</div>
+													</div> -->
+												</div>
+											</div>
 										</div>
+									</div>
+									
+									<!-- 2 -->
+									<div class="bottom-wrapper">
+										<div class="bottom-wrapper1">
+											<label  class="bottom-wrapper-title">아이디어 카테고리2</label>
+											<div class="bottom-wrapper-select">
+												<div class="select">
+													<!-- <button type="button" class="btn-select" data-target="menu1">
+														<div class="buttonLabel">
+															<span>선택해주세요</span>
+															<span class="caret"></span>
+														</div>
+													</button> -->
+													<select name="scId2" class="selectList">
+														<option value="" class="selectItem" hidden>선택해주세요</option>
+														<optgroup label="식품" >
+															<option value="1" class="selectItem">디저트</option>
+															<option value="2" class="selectItem">베이커리</option>
+															<option value="3" class="selectItem">전통간식</option>
+															<option value="4" class="selectItem">음료</option>
+															<option value="5" class="selectItem">주류</option>
+															<option value="6" class="selectItem">반찬</option>
+															<option value="7" class="selectItem">요리·식사</option>
+														</optgroup>
+														<optgroup label="패션" >
+															<option value="8" class="selectItem">액세서리</option>
+															<option value="9" class="selectItem">의류</option>
+															<option value="10" class="selectItem">잡화</option>
+														</optgroup>
+														<optgroup label="가구" >
+															<option value="11" class="selectItem">인테리어</option>
+															<option value="12" class="selectItem">데코용품</option>
+														</optgroup>
+														<optgroup label="문구" >
+															<option value="13" class="selectItem">스티커</option>
+															<option value="14" class="selectItem">인형</option>
+															<option value="15" class="selectItem">장난감</option>
+															<option value="16" class="selectItem">편지지·카드</option>
+															<option value="17" class="selectItem">케이스</option>
+														</optgroup>
+														<optgroup label="디자인" >
+															<option value="18" class="selectItem">접시</option>
+															<option value="19" class="selectItem">가구</option>
+														</optgroup>
+														<optgroup label="기타" >
+															<option value="20" class="selectItem">반려용품</option>
+															<option value="21" class="selectItem">제로웨이스트</option>
+														</optgroup>
+													</select>
+													<!-- <div class="checkboxLayer" id="menu1" style="display: none;">
+														<div class="checkBoxContainer">
+															<select name="top-category" class="selectList">
+																<option value="food" class="selectItem">식품</li>
+																<option value="fashion" class="selectItem">패션</li>
+																<option value="furniture" class="selectItem">가구</li>
+																<option value="phrase" class="selectItem">문구</li>
+																<option value="design" class="selectItem">디자인</li>
+																<option value="etc" class="selectItem">기타</li>
+															</select>
+														</div>
+													</div> -->
+												</div>
+											</div>
+										</div>
+									</div>
+									
+									
+									<!-- 3 -->
+									<div class="bottom-wrapper">
+										<div class="bottom-wrapper1">
+											<label  class="bottom-wrapper-title">아이디어 카테고리3</label>
+											<div class="bottom-wrapper-select">
+												<div class="select">
+													<!-- <button type="button" class="btn-select" data-target="menu1">
+														<div class="buttonLabel">
+															<span>선택해주세요</span>
+															<span class="caret"></span>
+														</div>
+													</button> -->
+													<select name="scId3" class="selectList">
+														<option value="" class="selectItem" hidden>선택해주세요</option>
+														<optgroup label="식품" >
+															<option value="1" class="selectItem">디저트</option>
+															<option value="2" class="selectItem">베이커리</option>
+															<option value="3" class="selectItem">전통간식</option>
+															<option value="4" class="selectItem">음료</option>
+															<option value="5" class="selectItem">주류</option>
+															<option value="6" class="selectItem">반찬</option>
+															<option value="7" class="selectItem">요리·식사</option>
+														</optgroup>
+														<optgroup label="패션" >
+															<option value="8" class="selectItem">액세서리</option>
+															<option value="9" class="selectItem">의류</option>
+															<option value="10" class="selectItem">잡화</option>
+														</optgroup>
+														<optgroup label="가구" >
+															<option value="11" class="selectItem">인테리어</option>
+															<option value="12" class="selectItem">데코용품</option>
+														</optgroup>
+														<optgroup label="문구" >
+															<option value="13" class="selectItem">스티커</option>
+															<option value="14" class="selectItem">인형</option>
+															<option value="15" class="selectItem">장난감</option>
+															<option value="16" class="selectItem">편지지·카드</option>
+															<option value="17" class="selectItem">케이스</option>
+														</optgroup>
+														<optgroup label="디자인" >
+															<option value="18" class="selectItem">접시</option>
+															<option value="19" class="selectItem">가구</option>
+														</optgroup>
+														<optgroup label="기타" >
+															<option value="20" class="selectItem">반려용품</option>
+															<option value="21" class="selectItem">제로웨이스트</option>
+														</optgroup>
+													</select>
+													<!-- <div class="checkboxLayer" id="menu1" style="display: none;">
+														<div class="checkBoxContainer">
+															<select name="top-category" class="selectList">
+																<option value="food" class="selectItem">식품</li>
+																<option value="fashion" class="selectItem">패션</li>
+																<option value="furniture" class="selectItem">가구</li>
+																<option value="phrase" class="selectItem">문구</li>
+																<option value="design" class="selectItem">디자인</li>
+																<option value="etc" class="selectItem">기타</li>
+															</select>
+														</div>
+													</div> -->
+												</div>
+											</div>
+										</div>
+									</div>
+									<!-- end -->
+										
+										
+										<!-- ======= -->
 										
 										<!-- 선택태그 -->
-										<div  class="choose-tag-wrapper">
+										<!-- <div  class="choose-tag-wrapper">
 											<div class="choose-type-title-wrapper">
 												<span class="choose-type-title">IT·프로그래밍</span>
-												<button class="delete-tag-all">
+												<button type="button" class="delete-tag-all">
 													<span>전체 삭제</span>
 												</button>
 											</div>
@@ -429,7 +731,7 @@
 											<div class="choose-tag-list-wrapper">
 												<div class="choose-tag">
 													웹사이트 신규 제작
-													<button class="close-choose-tag-btn">
+													<button type="button" class="close-choose-tag-btn">
 														<span class="cross-wrapper">
 															<svg width="17" height="17" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false" preserveAspectRatio="xMidYMid meet" class="cross">
 																<path xmlns="http://www.w3.org/2000/svg" d="M6.34314575,4.92893219 L12.000039,10.585039 L17.6568542,4.92893219 C18.0473785,4.5384079 18.6805435,4.5384079 19.0710678,4.92893219 C19.4615921,5.31945648 19.4615921,5.95262146 19.0710678,6.34314575 L13.415039,12.000039 L19.0710678,17.6568542 C19.4615921,18.0473785 19.4615921,18.6805435 19.0710678,19.0710678 C18.6805435,19.4615921 18.0473785,19.4615921 17.6568542,19.0710678 L12.000039,13.415039 L6.34314575,19.0710678 C5.95262146,19.4615921 5.31945648,19.4615921 4.92893219,19.0710678 C4.5384079,18.6805435 4.5384079,18.0473785 4.92893219,17.6568542 L10.585039,12.000039 L4.92893219,6.34314575 C4.5384079,5.95262146 4.5384079,5.31945648 4.92893219,4.92893219 C5.31945648,4.5384079 5.95262146,4.5384079 6.34314575,4.92893219 Z"></path>
@@ -438,7 +740,7 @@
 													</button>
 												</div>
 											</div>
-										</div>
+										</div> -->
 									</div>
 								</div>
 							</div>
@@ -751,7 +1053,7 @@
 		<!-- footer -->
 		<footer class="kmong-profile-modify-form-footer-wrapper">
 			<div class="kmong-profile-modify-form-footer">
-				<button type="submit" class="modify-button darker">
+				<button type="submit" class="modify-button darker">	<!-- type="submit" -->
 					<span>프로필 저장</span>
 				</button>
 			</div>
@@ -773,7 +1075,8 @@ console.log(interestNames);
 console.log(interestNames.interest1);
 console.log(interestNames.interest2);
 
-let $div = $("div.profile-skill-section-tag-group");
+/* let $div = $(".selectList"); */
+let $div = $("");
 let text = "";
 
 let interest = 1;
@@ -783,10 +1086,11 @@ for (let propertyName in interestNames) {
     interest = interestNames[propertyName];
     console.log(interest);
     text += `<div class="profile-skill-section-tag">`+ interest + `</div>`;
+    text += `<option value="${interestNames}" class="selectItem">` + interest + `</option>`;
   }
 }
 console.log(text);
-$div.append(text);
+/* $div.append(text); */
 
 
 
@@ -798,7 +1102,10 @@ console.log(user);
 console.log(user.userName);
 
 </script>
-<script src="../../static/js/profile-modify.js"></script>
-<script src="../../static/js/profile-modify-real.js"></script>
+<script src="${pageContext.request.contextPath}/static/js/modal/modal.js"></script>
+<script src="https://rawgit.com/jackmoore/autosize/master/dist/autosize.min.js"></script>
+<script src="${pageContext.request.contextPath}/static/js/profile-modify.js"></script>
+<script src="${pageContext.request.contextPath}/static/js/profile-modify-real.js"></script>
+<script src="${pageContext.request.contextPath}/static/js/thumb-profile.js"></script>
 
 </html>

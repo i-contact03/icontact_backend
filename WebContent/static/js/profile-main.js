@@ -10,6 +10,7 @@ showProfile();
 function showProfile(){
 	const $userIdentification = $("#userIdentification");
 	
+	
 	let text1 = "";
 	
 	text1 = `<span class="name">${user.userIdentification}</span> 님`;
@@ -42,6 +43,11 @@ function showProfile(){
 	console.log(`${contextPath}`);
 	
 	$profileimg.append(proimg);
+	
+	let proimghead = "";
+	const $profileimghead = $("#profileimghead");
+	proimghead = `<img src="${contextPath}/upload/profileImg/${user.userProfileName}" class="top-header-user-image">`;
+	$profileimghead.append(proimghead);
 	
 }
 
