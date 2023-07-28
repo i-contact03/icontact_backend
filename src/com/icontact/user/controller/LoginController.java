@@ -44,7 +44,10 @@ public class LoginController implements Action {
 			}
 		}
 		
+		System.out.println(userIdentification);
+		System.out.println(userPassword);
 		System.out.println(autoLogin);
+		
 //		쿠키에 사용자 아이디가 있다면
 		if(userIdentification != null) {
 //			로그인으로 쿠키에 있던 아이디와 비밀번호 전송

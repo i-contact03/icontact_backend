@@ -32,9 +32,7 @@
                 <a href="https://iContact.com">
                     <img src="${pageContext.request.contextPath}/icon/logo.png" width="170px" height="52px" class="iContact-logo">
                 </a>
-                <a title="홈" href="">
-                    <img src="//theme.zdassets.com/theme_assets/9204604/db54bfa5d2ad14572afe57b4b5582b04a38aa9e1.png" class="customer">
-                </a>
+               
             </div>
 
 
@@ -58,9 +56,9 @@
             <nav class="sub-nav">
                 <ol class="ol">
 
-                    <li title="iContact 고객센터">
+                    <li title="iContact ">
 
-                        <a href="">iContact 고객센터</a>
+                        <a href="">iContact </a>
 
                     </li>
 
